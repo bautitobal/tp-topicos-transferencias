@@ -1,0 +1,20 @@
+# codeblocks
+bin/
+obj/
+*.depend
+*.layout
+
+# compilados
+*.o
+*.a
+*.so
+*.out
+*.exe
+*.lib
+
+# temps
+*.tmp
+.DS_Store
+
+# vscode
+.vscode/
