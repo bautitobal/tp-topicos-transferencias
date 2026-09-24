@@ -1,0 +1,199 @@
+PAIS_COD;PAIS_DESC;CONTINENTE
+AD;Andorra;Europe
+AE;Emiratos Árabes Unidos;Asia
+AF;Afganistán;Asia
+AG;Antigua y Barbuda;Americas
+AI;Anguila;Americas
+AL;Albania;Europe
+AM;Armenia;Asia
+AN;Antillas Neerlandesas;Indeterminado
+AO;Angola;Africa
+AQ;Antártida;Antarctica
+AT;Austria;Europe
+AU;Australia;Oceania
+AW;Aruba;Americas
+AZ;Azerbaiyán;Asia
+BA;Bosnia y Herzegovina;Europe
+BB;Barbados;Americas
+BD;Bangladesh;Asia
+BE;Bélgica;Europe
+BF;Burkina Faso;Africa
+BG;Bulgaria;Europe
+BH;Bahrein;Asia
+BI;Burundi;Africa
+BJ;Benin;Africa
+BM;Bermudas;Americas
+BN;Brunei;Asia
+BO;Bolivia;Americas
+BQ;Bonaire, San Eustaquio y Saba;Americas
+BR;Brasil;Americas
+BS;Bahamas;Americas
+BT;Bhután;Asia
+BW;Botswana;Africa
+BY;Belarús;Europe
+BZ;Belice;Americas
+CA;Canadá;Americas
+CC;Islas Cocos;Indeterminado
+CD;República Democrática del Congo;Africa
+CF;República Centroafricana;Africa
+CG;República del Congo;Africa
+CH;Suiza;Europe
+CI;Costa de Marfil;Africa
+CL;Chile;Americas
+CM;Camerún;Africa
+CN;China;Asia
+CO;Colombia;Americas
+CR;Costa Rica;Americas
+CU;Cuba;Americas
+CV;Cabo Verde;Africa
+CW;Curaçao;Americas
+CY;Chipre;Asia
+CZ;República Checa;Europe
+DE;Alemania;Europe
+DK;Dinamarca;Europe
+DM;Dominica;Americas
+DO;República Dominicana;Americas
+DZ;Argelia;Africa
+EC;Ecuador;Americas
+EE;Estonia;Europe
+EG;Egipto;Africa
+ES;España;Europe
+ET;Etiopía;Africa
+FI;Finlandia;Europe
+FJ;Fiji;Oceania
+FK;Islas Malvinas;Americas
+FO;Islas Feroe;Europe
+FR;Francia;Europe
+GA;Gabón;Africa
+GB;Reino Unido;Europe
+GD;Granada;Americas
+GE;Georgia;Asia
+GH;Ghana;Africa
+GI;Gibraltar;Europe
+GL;Groenlandia;Americas
+GM;Gambia;Africa
+GN;Guinea;Africa
+GQ;Guinea Ecuatorial;Africa
+GR;Grecia;Europe
+GT;Guatemala;Americas
+GU;Guam;Oceania
+GW;Guinea-Bissau;Africa
+GY;Guyana;Americas
+HK;Hong Kong;Asia
+HN;Honduras;Americas
+HR;Croacia;Europe
+HT;Haití;Americas
+HU;Hungría;Europe
+ID;Indonesia;Asia
+IE;Irlanda;Europe
+IL;Israel;Asia
+IM;Isla de Man;Europe
+IN;India;Asia
+IO;Territorio Británico del Océano Indico;Indeterminado
+IR;Irán;Asia
+IS;Islandia;Europe
+IT;Italia;Europe
+JE;Jersey;Europe
+JM;Jamaica;Americas
+JO;Jordania;Asia
+JP;Japón;Asia
+KE;Kenia;Africa
+KG;Kirguistán;Asia
+KH;Camboya;Asia
+KP;Corea del Norte;Asia
+KR;Corea del Sur;Asia
+KW;Kuwait;Asia
+KY;Islas Caimán;Americas
+KZ;Kazajstán;Asia
+LA;Laos;Asia
+LB;Líbano;Asia
+LC;Santa Lucía;Americas
+LI;Liechtenstein;Europe
+LK;Sri Lanka;Asia
+LR;Liberia;Africa
+LT;Lituania;Europe
+LU;Luxemburgo;Europe
+LV;Letonia;Europe
+MA;Marruecos;Africa
+MC;Mónaco;Europe
+ME;Montenegro;Europe
+MK;Macedonia;Europe
+ML;Malí;Africa
+MM;Myanmar;Asia
+MN;Mongolia;Asia
+MO;Macao;Asia
+MQ;Martinica;Americas
+MT;Malta;Europe
+MU;Mauricio;Africa
+MV;Maldivas;Asia
+MW;Malawi;Africa
+MX;México;Americas
+MY;Malasia;Asia
+MZ;Mozambique;Africa
+NC;Nueva Caledonia;Oceania
+NE;Níger;Africa
+NG;Nigeria;Africa
+NI;Nicaragua;Americas
+NL;Países Bajos;Europe
+NO;Noruega;Europe
+NP;Nepal;Asia
+NR;Nauru;Oceania
+NZ;Nueva Zelanda;Oceania
+OM;Omán;Asia
+PA;Panamá;Americas
+PE;Perú;Americas
+PF;Polinesia Francesa;Oceania
+PG;Papua Nueva Guinea;Oceania
+PH;Filipinas;Asia
+PK;Pakistán;Asia
+PL;Polonia;Europe
+PR;Puerto Rico;Americas
+PS;Palestina;Asia
+PT;Portugal;Europe
+PY;Paraguay;Americas
+QA;Qatar;Asia
+RE;Reunión;Africa
+RO;Rumania;Europe
+RS;Serbia;Europe
+RU;Rusia;Europe
+SA;Arabia Saudita;Asia
+SC;Seychelles;Africa
+SE;Suecia;Europe
+SG;Singapur;Asia
+SI;Eslovenia;Europe
+SK;Eslovaquia;Europe
+SL;Sierra Leona;Africa
+SM;San Marino;Europe
+SN;Senegal;Africa
+SR;Surinam;Americas
+ST;Santo Tomé y Príncipe;Africa
+SV;El Salvador;Americas
+SX;San Martín (PB);Americas
+SZ;Swazilandia;Africa
+TC;Islas Turcas y Caicos;Americas
+TG;Togo;Africa
+TH;Tailandia;Asia
+TK;Tokelau;Oceania
+TM;Turkmenistán;Asia
+TN;Túnez;Africa
+TO;Tonga;Oceania
+TR;Turquía;Asia
+TT;Trinidad y Tobago;Americas
+TW;Taiwan;Asia
+TZ;Tanzania;Africa
+UA;Ucrania;Europe
+UG;Uganda;Africa
+UM;Islas ultramarinas de los Estados Unidos;Indeterminado
+US;Estados Unidos;Americas
+UY;Uruguay;Americas
+VA;Vaticano;Europe
+VC;San Vicente y las Granadinas;Americas
+VE;Venezuela;Americas
+VG;Islas Vírgenes Británicas;Americas
+VI;Islas Vírgenes de Estados Unidos;Americas
+VN;Viet Nam;Asia
+YE;Yemen;Asia
+ZA;Sudáfrica;Africa
+ZM;Zambia;Africa
+ZW;Zimbabwe;Africa
+;Namibia;Indeterminado

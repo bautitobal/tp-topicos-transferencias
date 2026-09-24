@@ -1,0 +1,5412 @@
+ANIO;TRIMESTRE;PAIS_COD;PAIS_DESC;OPERACION;MONTO
+2015;1;BE;Bélgica;C;0.19
+2015;1;BO;Bolivia;D;16.86
+2015;1;BR;Brasil;C;0.87
+2015;1;BR;Brasil;D;1.45
+2015;1;CA;Canadá;C;0.08
+2015;1;CL;Chile;C;2.31
+2015;1;CL;Chile;D;2.23
+2015;1;CN;China;D;0.22
+2015;1;DO;República Dominicana;D;1.96
+2015;1;ES;España;C;7.83
+2015;1;GB;Reino Unido;C;7.66
+2015;1;IT;Italia;C;1.74
+2015;1;PE;Perú;C;7.66
+2015;1;PE;Perú;D;41.35
+2015;1;PY;Paraguay;C;1.11
+2015;1;PY;Paraguay;D;24.76
+2015;1;US;Estados Unidos;C;17.37
+2015;1;UY;Uruguay;C;1.16
+2015;1;UY;Uruguay;D;0.94
+2015;2;BE;Bélgica;C;0.21
+2015;2;BO;Bolivia;D;16.16
+2015;2;BR;Brasil;C;0.87
+2015;2;BR;Brasil;D;1.43
+2015;2;CL;Chile;C;2.23
+2015;2;CL;Chile;D;2.3
+2015;2;CN;China;D;0.14
+2015;2;CO;Colombia;C;5.63
+2015;2;CO;Colombia;D;1.64
+2015;2;ES;España;C;8.92
+2015;2;IT;Italia;C;1.77
+2015;2;PE;Perú;C;6.94
+2015;2;PE;Perú;D;42.74
+2015;2;PY;Paraguay;C;1.03
+2015;2;PY;Paraguay;D;33.47
+2015;2;US;Estados Unidos;C;16.89
+2015;2;UY;Uruguay;C;1.17
+2015;2;UY;Uruguay;D;0.9
+2015;3;BE;Bélgica;C;0.21
+2015;3;BO;Bolivia;D;18.95
+2015;3;BR;Brasil;C;0.77
+2015;3;BR;Brasil;D;1.54
+2015;3;CL;Chile;C;1.97
+2015;3;CL;Chile;D;1.9
+2015;3;CN;China;D;0.07
+2015;3;DO;República Dominicana;D;1.92
+2015;3;ES;España;C;6.85
+2015;3;GB;Reino Unido;C;7.28
+2015;3;IT;Italia;C;1.63
+2015;3;PE;Perú;C;7.97
+2015;3;PE;Perú;D;47.17
+2015;3;PY;Paraguay;C;0.79
+2015;3;PY;Paraguay;D;31.27
+2015;3;US;Estados Unidos;C;17.68
+2015;3;UY;Uruguay;C;1.03
+2015;3;UY;Uruguay;D;0.83
+2015;4;BE;Bélgica;C;0.16
+2015;4;BO;Bolivia;D;20.93
+2015;4;BR;Brasil;C;0.66
+2015;4;BR;Brasil;D;2.35
+2015;4;CL;Chile;C;1.91
+2015;4;CL;Chile;D;1.91
+2015;4;CN;China;D;0.04
+2015;4;CO;Colombia;C;0.21
+2015;4;CO;Colombia;D;2.86
+2015;4;ES;España;C;8.5
+2015;4;GB;Reino Unido;C;6.93
+2015;4;IT;Italia;C;1.67
+2015;4;PE;Perú;C;7.69
+2015;4;PE;Perú;D;48.58
+2015;4;PY;Paraguay;C;0.72
+2015;4;PY;Paraguay;D;27.32
+2015;4;US;Estados Unidos;C;17.06
+2015;4;UY;Uruguay;C;0.97
+2015;4;UY;Uruguay;D;0.91
+2016;1;BO;Bolivia;D;15.84
+2016;1;BR;Brasil;C;0.96
+2016;1;BR;Brasil;D;3.9
+2016;1;CL;Chile;C;2.59
+2016;1;CL;Chile;D;4.13
+2016;1;CN;China;D;7.04
+2016;1;CO;Colombia;C;0.1
+2016;1;CO;Colombia;D;1.61
+2016;1;EC;Ecuador;C;0.1
+2016;1;ES;España;C;8.24
+2016;1;GB;Reino Unido;C;2.31
+2016;1;IT;Italia;C;2.15
+2016;1;PE;Perú;C;4.62
+2016;1;PE;Perú;D;29.45
+2016;1;PY;Paraguay;C;1.2
+2016;1;PY;Paraguay;D;31.64
+2016;1;US;Estados Unidos;C;15.3
+2016;1;UY;Uruguay;C;1.5
+2016;1;UY;Uruguay;D;1.73
+2016;2;BE;Bélgica;C;0.12
+2016;2;BO;Bolivia;D;20.05
+2016;2;BR;Brasil;C;1.75
+2016;2;BR;Brasil;D;3.36
+2016;2;CL;Chile;C;3.43
+2016;2;CL;Chile;D;3.51
+2016;2;CN;China;D;1.7
+2016;2;CO;Colombia;C;0.21
+2016;2;CO;Colombia;D;2.13
+2016;2;DO;República Dominicana;D;0.61
+2016;2;EC;Ecuador;C;2.24
+2016;2;ES;España;C;9.08
+2016;2;GB;Reino Unido;C;3.6
+2016;2;IT;Italia;C;2.36
+2016;2;PE;Perú;C;5.21
+2016;2;PE;Perú;D;30.47
+2016;2;PY;Paraguay;C;1.76
+2016;2;PY;Paraguay;D;43.41
+2016;2;US;Estados Unidos;C;19.23
+2016;2;UY;Uruguay;C;1.95
+2016;2;UY;Uruguay;D;1.68
+2016;3;BE;Bélgica;C;0.16
+2016;3;BO;Bolivia;C;6.71
+2016;3;BO;Bolivia;D;16.74
+2016;3;BR;Brasil;C;1.88
+2016;3;BR;Brasil;D;4.89
+2016;3;CL;Chile;C;3.86
+2016;3;CL;Chile;D;6.27
+2016;3;CO;Colombia;D;1.71
+2016;3;DO;República Dominicana;D;0.48
+2016;3;ES;España;C;9.2
+2016;3;ES;España;D;9.58
+2016;3;GB;Reino Unido;C;0.9
+2016;3;IT;Italia;C;2.32
+2016;3;IT;Italia;D;4.76
+2016;3;PE;Perú;C;20.1
+2016;3;PE;Perú;D;7.98
+2016;3;PY;Paraguay;C;2.45
+2016;3;PY;Paraguay;D;49.59
+2016;3;US;Estados Unidos;C;15.28
+2016;3;US;Estados Unidos;D;1.54
+2016;3;UY;Uruguay;C;2.25
+2016;3;UY;Uruguay;D;2.23
+2016;4;BE;Bélgica;C;0.15
+2016;4;BO;Bolivia;D;17.9
+2016;4;BR;Brasil;C;2.04
+2016;4;BR;Brasil;D;8.8
+2016;4;CL;Chile;C;4.38
+2016;4;CL;Chile;D;7.02
+2016;4;CN;China;D;1.15
+2016;4;CO;Colombia;C;0.16
+2016;4;CO;Colombia;D;1.81
+2016;4;DO;República Dominicana;D;1.16
+2016;4;EC;Ecuador;C;2.63
+2016;4;ES;España;C;10.44
+2016;4;GB;Reino Unido;C;3.74
+2016;4;IT;Italia;C;2.5
+2016;4;PE;Perú;C;5.64
+2016;4;PE;Perú;D;27.21
+2016;4;PY;Paraguay;C;2.18
+2016;4;PY;Paraguay;D;46.03
+2016;4;US;Estados Unidos;C;22.52
+2016;4;UY;Uruguay;C;2.43
+2016;4;UY;Uruguay;D;3.51
+2017;1;AM;Armenia;C;0.01
+2017;1;AM;Armenia;D;0.05
+2017;1;AU;Australia;C;0.05
+2017;1;BE;Bélgica;C;0.1
+2017;1;BJ;Benin;D;0.01
+2017;1;BO;Bolivia;C;8.99
+2017;1;BO;Bolivia;D;17.77
+2017;1;BR;Brasil;C;2.58
+2017;1;BR;Brasil;D;7.04
+2017;1;BS;Bahamas;C;0.01
+2017;1;CA;Canadá;C;0.12
+2017;1;CG;República del Congo;D;0.02
+2017;1;CL;Chile;C;5.17
+2017;1;CL;Chile;D;10.18
+2017;1;CM;Camerún;C;0.02
+2017;1;CM;Camerún;D;0.01
+2017;1;CN;China;D;0.04
+2017;1;CO;Colombia;C;3.56
+2017;1;CO;Colombia;D;10.88
+2017;1;CR;Costa Rica;C;0.03
+2017;1;CR;Costa Rica;D;0.04
+2017;1;DE;Alemania;C;0.04
+2017;1;DO;República Dominicana;C;0.89
+2017;1;DO;República Dominicana;D;6.69
+2017;1;EC;Ecuador;C;0.44
+2017;1;EC;Ecuador;D;1.68
+2017;1;ES;España;C;10
+2017;1;ES;España;D;9.43
+2017;1;FR;Francia;C;0.03
+2017;1;FR;Francia;D;0.02
+2017;1;GB;Reino Unido;C;0.06
+2017;1;GB;Reino Unido;D;4.28
+2017;1;GH;Ghana;D;0.07
+2017;1;GN;Guinea;D;0.01
+2017;1;GT;Guatemala;C;0.01
+2017;1;GT;Guatemala;D;0.03
+2017;1;HN;Honduras;C;0.01
+2017;1;HN;Honduras;D;0.01
+2017;1;HT;Haití;C;0.06
+2017;1;HT;Haití;D;0.09
+2017;1;IL;Israel;C;0.02
+2017;1;IL;Israel;D;0.05
+2017;1;IN;India;D;0.07
+2017;1;IT;Italia;C;3.09
+2017;1;IT;Italia;D;0.31
+2017;1;JP;Japón;C;0.02
+2017;1;MX;México;C;0.1
+2017;1;MX;México;D;0.17
+2017;1;NG;Nigeria;D;0.08
+2017;1;NI;Nicaragua;C;0
+2017;1;NI;Nicaragua;D;0.01
+2017;1;NZ;Nueva Zelanda;C;0
+2017;1;PA;Panamá;C;0.02
+2017;1;PA;Panamá;D;0.01
+2017;1;PE;Perú;C;24.64
+2017;1;PE;Perú;D;15.05
+2017;1;PH;Filipinas;D;0.04
+2017;1;PR;Puerto Rico;C;0.01
+2017;1;PY;Paraguay;C;2.8
+2017;1;PY;Paraguay;D;53.73
+2017;1;RU;Rusia;C;0.01
+2017;1;RU;Rusia;D;0.03
+2017;1;SN;Senegal;C;0.67
+2017;1;SN;Senegal;D;7.16
+2017;1;SV;El Salvador;C;0.02
+2017;1;TG;Togo;D;0.02
+2017;1;UA;Ucrania;C;0.01
+2017;1;US;Estados Unidos;C;17.38
+2017;1;US;Estados Unidos;D;9.66
+2017;1;UY;Uruguay;C;2.49
+2017;1;UY;Uruguay;D;0.04
+2017;1;VE;Venezuela;D;0.01
+2017;2;AE;Emiratos Árabes Unidos;C;0.23
+2017;2;AM;Armenia;C;0
+2017;2;AM;Armenia;D;0.01
+2017;2;AT;Austria;C;0.01
+2017;2;AU;Australia;C;0.65
+2017;2;AU;Australia;D;0.29
+2017;2;AW;Aruba;C;0
+2017;2;BD;Bangladesh;D;0.5
+2017;2;BE;Bélgica;C;0.41
+2017;2;BE;Bélgica;D;0
+2017;2;BG;Bulgaria;D;0.01
+2017;2;BJ;Benin;D;0.01
+2017;2;BO;Bolivia;C;4.52
+2017;2;BO;Bolivia;D;25.15
+2017;2;BR;Brasil;C;3.51
+2017;2;BR;Brasil;D;4.69
+2017;2;BS;Bahamas;C;0
+2017;2;CA;Canadá;C;1.51
+2017;2;CA;Canadá;D;0.51
+2017;2;CG;República del Congo;D;0
+2017;2;CH;Suiza;C;1.26
+2017;2;CI;Costa de Marfil;D;0.21
+2017;2;CL;Chile;C;6.69
+2017;2;CL;Chile;D;7
+2017;2;CM;Camerún;C;0.01
+2017;2;CM;Camerún;D;0.01
+2017;2;CN;China;C;0.36
+2017;2;CN;China;D;2.4
+2017;2;CO;Colombia;C;3.89
+2017;2;CO;Colombia;D;14.77
+2017;2;CR;Costa Rica;C;0.26
+2017;2;CR;Costa Rica;D;0.25
+2017;2;CU;Cuba;D;0.4
+2017;2;DE;Alemania;C;1.18
+2017;2;DE;Alemania;D;0.45
+2017;2;DO;República Dominicana;C;0.38
+2017;2;DO;República Dominicana;D;7.6
+2017;2;EC;Ecuador;C;3.65
+2017;2;EC;Ecuador;D;2.32
+2017;2;ES;España;C;10.77
+2017;2;ES;España;D;10.26
+2017;2;FR;Francia;C;1.41
+2017;2;FR;Francia;D;0.75
+2017;2;GB;Reino Unido;C;6.14
+2017;2;GB;Reino Unido;D;0
+2017;2;GH;Ghana;D;0.58
+2017;2;GN;Guinea;D;0.01
+2017;2;GR;Grecia;C;0
+2017;2;GT;Guatemala;C;0.17
+2017;2;GT;Guatemala;D;0.03
+2017;2;HN;Honduras;C;0.22
+2017;2;HN;Honduras;D;0.01
+2017;2;HT;Haití;C;0.23
+2017;2;HT;Haití;D;0.97
+2017;2;ID;Indonesia;D;0.38
+2017;2;IL;Israel;C;0.36
+2017;2;IL;Israel;D;0.37
+2017;2;IN;India;D;0.56
+2017;2;IT;Italia;C;2.85
+2017;2;IT;Italia;D;1.94
+2017;2;JP;Japón;C;0.25
+2017;2;LB;Líbano;C;0.12
+2017;2;MX;México;C;1.59
+2017;2;MX;México;D;2.29
+2017;2;MY;Malasia;D;0.23
+2017;2;NG;Nigeria;D;0.46
+2017;2;NI;Nicaragua;C;0
+2017;2;NI;Nicaragua;D;0.01
+2017;2;NL;Países Bajos;C;0.2
+2017;2;NO;Noruega;D;0
+2017;2;NZ;Nueva Zelanda;C;0
+2017;2;OM;Omán;C;0
+2017;2;PA;Panamá;C;0.9
+2017;2;PA;Panamá;D;0.55
+2017;2;PE;Perú;C;7.65
+2017;2;PE;Perú;D;33.56
+2017;2;PH;Filipinas;D;0.01
+2017;2;PK;Pakistán;D;0.01
+2017;2;PR;Puerto Rico;C;0.01
+2017;2;PR;Puerto Rico;D;0.01
+2017;2;PT;Portugal;C;0.13
+2017;2;PT;Portugal;D;0.33
+2017;2;PY;Paraguay;C;2.87
+2017;2;PY;Paraguay;D;63.28
+2017;2;QA;Qatar;C;0.01
+2017;2;RU;Rusia;C;0.36
+2017;2;RU;Rusia;D;0.3
+2017;2;SA;Arabia Saudita;C;0.13
+2017;2;SE;Suecia;D;0
+2017;2;SL;Sierra Leona;D;0
+2017;2;SN;Senegal;D;5.07
+2017;2;SV;El Salvador;C;0.04
+2017;2;TG;Togo;D;0.27
+2017;2;TN;Túnez;D;0
+2017;2;TR;Turquía;C;0
+2017;2;TR;Turquía;D;0
+2017;2;UA;Ucrania;C;0
+2017;2;UA;Ucrania;D;0.23
+2017;2;US;Estados Unidos;C;24.03
+2017;2;US;Estados Unidos;D;6.07
+2017;2;UY;Uruguay;C;2.7
+2017;2;UY;Uruguay;D;2.35
+2017;2;VE;Venezuela;C;0.08
+2017;2;VE;Venezuela;D;0.02
+2017;3;AE;Emiratos Árabes Unidos;C;0.23
+2017;3;AE;Emiratos Árabes Unidos;D;0
+2017;3;AM;Armenia;C;0
+2017;3;AM;Armenia;D;0.02
+2017;3;AT;Austria;C;0.02
+2017;3;AU;Australia;C;0.67
+2017;3;AU;Australia;D;0.28
+2017;3;BD;Bangladesh;D;0.53
+2017;3;BE;Bélgica;C;0.35
+2017;3;BE;Bélgica;D;0
+2017;3;BH;Bahrein;C;0.01
+2017;3;BJ;Benin;D;0.01
+2017;3;BO;Bolivia;C;4.52
+2017;3;BO;Bolivia;D;28.73
+2017;3;BR;Brasil;C;3.39
+2017;3;BR;Brasil;D;7.1
+2017;3;BS;Bahamas;C;0
+2017;3;CA;Canadá;C;1.57
+2017;3;CA;Canadá;D;0.43
+2017;3;CG;República del Congo;D;0.01
+2017;3;CH;Suiza;C;1.27
+2017;3;CH;Suiza;D;0.01
+2017;3;CI;Costa de Marfil;D;0.3
+2017;3;CL;Chile;C;7.01
+2017;3;CL;Chile;D;8.07
+2017;3;CM;Camerún;C;0
+2017;3;CM;Camerún;D;0.01
+2017;3;CN;China;C;0.52
+2017;3;CN;China;D;6.25
+2017;3;CO;Colombia;C;4.05
+2017;3;CO;Colombia;D;20.13
+2017;3;CR;Costa Rica;C;0.3
+2017;3;CR;Costa Rica;D;0.28
+2017;3;CU;Cuba;D;0.46
+2017;3;DE;Alemania;C;1.23
+2017;3;DE;Alemania;D;0.48
+2017;3;DO;República Dominicana;C;0.38
+2017;3;DO;República Dominicana;D;7.55
+2017;3;EC;Ecuador;C;4.03
+2017;3;EC;Ecuador;D;2.65
+2017;3;ES;España;C;11.85
+2017;3;ES;España;D;11.14
+2017;3;FR;Francia;C;1.46
+2017;3;FR;Francia;D;0.93
+2017;3;GB;Reino Unido;C;5.85
+2017;3;GB;Reino Unido;D;0.01
+2017;3;GH;Ghana;D;0.73
+2017;3;GN;Guinea;D;0
+2017;3;GR;Grecia;C;0.01
+2017;3;GR;Grecia;D;0
+2017;3;GT;Guatemala;C;0.18
+2017;3;GT;Guatemala;D;0.03
+2017;3;HN;Honduras;C;0.23
+2017;3;HN;Honduras;D;0.01
+2017;3;HT;Haití;C;0.23
+2017;3;HT;Haití;D;0.39
+2017;3;ID;Indonesia;D;0.42
+2017;3;IL;Israel;C;0.35
+2017;3;IL;Israel;D;0.46
+2017;3;IN;India;D;0.51
+2017;3;IT;Italia;C;2.87
+2017;3;IT;Italia;D;2.1
+2017;3;JP;Japón;C;0.31
+2017;3;LB;Líbano;C;0.15
+2017;3;MA;Marruecos;D;0
+2017;3;MX;México;C;1.83
+2017;3;MX;México;D;2.8
+2017;3;MY;Malasia;D;0.22
+2017;3;NG;Nigeria;D;0.57
+2017;3;NI;Nicaragua;C;0
+2017;3;NI;Nicaragua;D;0.01
+2017;3;NL;Países Bajos;C;0.19
+2017;3;NZ;Nueva Zelanda;C;0
+2017;3;PA;Panamá;C;0.93
+2017;3;PA;Panamá;D;0.79
+2017;3;PE;Perú;C;7.85
+2017;3;PE;Perú;D;36.23
+2017;3;PH;Filipinas;D;0.02
+2017;3;PK;Pakistán;D;0.01
+2017;3;PR;Puerto Rico;C;0.01
+2017;3;PR;Puerto Rico;D;0
+2017;3;PT;Portugal;C;0.14
+2017;3;PT;Portugal;D;0.34
+2017;3;PY;Paraguay;C;2.95
+2017;3;PY;Paraguay;D;74.95
+2017;3;QA;Qatar;C;0.01
+2017;3;RU;Rusia;C;0.2
+2017;3;RU;Rusia;D;0.34
+2017;3;SA;Arabia Saudita;C;0.14
+2017;3;SE;Suecia;D;0
+2017;3;SN;Senegal;D;4.85
+2017;3;SV;El Salvador;C;0.05
+2017;3;TG;Togo;D;0.4
+2017;3;UA;Ucrania;C;0.01
+2017;3;UA;Ucrania;D;0.27
+2017;3;US;Estados Unidos;C;24.1
+2017;3;US;Estados Unidos;D;6.69
+2017;3;UY;Uruguay;C;2.59
+2017;3;UY;Uruguay;D;3.08
+2017;3;VE;Venezuela;C;0.04
+2017;3;VE;Venezuela;D;0.04
+2017;3;ZA;Sudáfrica;D;0
+2017;4;AE;Emiratos Árabes Unidos;C;0.29
+2017;4;AE;Emiratos Árabes Unidos;D;0
+2017;4;AM;Armenia;C;0
+2017;4;AM;Armenia;D;0.02
+2017;4;AU;Australia;C;0.67
+2017;4;AU;Australia;D;0.29
+2017;4;BD;Bangladesh;D;0.59
+2017;4;BE;Bélgica;C;0.46
+2017;4;BE;Bélgica;D;0
+2017;4;BJ;Benin;D;0.04
+2017;4;BO;Bolivia;C;4.72
+2017;4;BO;Bolivia;D;31.65
+2017;4;BR;Brasil;C;3.25
+2017;4;BR;Brasil;D;12.25
+2017;4;BS;Bahamas;C;0
+2017;4;CA;Canadá;C;1.52
+2017;4;CA;Canadá;D;0.47
+2017;4;CG;República del Congo;D;0.01
+2017;4;CH;Suiza;C;1.37
+2017;4;CI;Costa de Marfil;D;0.42
+2017;4;CL;Chile;C;7.63
+2017;4;CL;Chile;D;11.44
+2017;4;CM;Camerún;C;0.01
+2017;4;CM;Camerún;D;0.02
+2017;4;CN;China;C;0.4
+2017;4;CN;China;D;11.62
+2017;4;CO;Colombia;C;4.07
+2017;4;CO;Colombia;D;28.8
+2017;4;CR;Costa Rica;C;0.29
+2017;4;CR;Costa Rica;D;0.26
+2017;4;CU;Cuba;D;0.62
+2017;4;DE;Alemania;C;1.36
+2017;4;DE;Alemania;D;0.6
+2017;4;DO;República Dominicana;C;0.37
+2017;4;DO;República Dominicana;D;7.96
+2017;4;EC;Ecuador;C;4.71
+2017;4;EC;Ecuador;D;3.3
+2017;4;ES;España;C;12.45
+2017;4;ES;España;D;12.78
+2017;4;FR;Francia;C;1.47
+2017;4;FR;Francia;D;0.9
+2017;4;GB;Reino Unido;C;7.73
+2017;4;GB;Reino Unido;D;0.01
+2017;4;GH;Ghana;D;0.73
+2017;4;GN;Guinea;D;0
+2017;4;GQ;Guinea Ecuatorial;C;0.01
+2017;4;GR;Grecia;C;0.01
+2017;4;GT;Guatemala;C;0.18
+2017;4;GT;Guatemala;D;0.03
+2017;4;HN;Honduras;C;0.2
+2017;4;HN;Honduras;D;0.01
+2017;4;HT;Haití;C;0.27
+2017;4;HT;Haití;D;0.52
+2017;4;ID;Indonesia;D;0.68
+2017;4;IL;Israel;C;0.34
+2017;4;IL;Israel;D;0.52
+2017;4;IN;India;D;0.58
+2017;4;IT;Italia;C;3.06
+2017;4;IT;Italia;D;2.41
+2017;4;JP;Japón;C;0.31
+2017;4;KE;Kenia;D;0
+2017;4;LB;Líbano;C;0.1
+2017;4;MA;Marruecos;D;0
+2017;4;MX;México;C;1.98
+2017;4;MX;México;D;3.37
+2017;4;MY;Malasia;D;0.16
+2017;4;NG;Nigeria;D;0.71
+2017;4;NI;Nicaragua;C;0
+2017;4;NI;Nicaragua;D;0.01
+2017;4;NL;Países Bajos;C;0.2
+2017;4;NL;Países Bajos;D;0
+2017;4;NZ;Nueva Zelanda;C;0
+2017;4;PA;Panamá;C;0.86
+2017;4;PA;Panamá;D;0.82
+2017;4;PE;Perú;C;8.28
+2017;4;PE;Perú;D;39.72
+2017;4;PH;Filipinas;D;0.02
+2017;4;PK;Pakistán;D;0
+2017;4;PR;Puerto Rico;C;0.01
+2017;4;PR;Puerto Rico;D;0
+2017;4;PT;Portugal;C;0.19
+2017;4;PT;Portugal;D;0.27
+2017;4;PY;Paraguay;C;3.18
+2017;4;PY;Paraguay;D;90.36
+2017;4;RU;Rusia;C;0.3
+2017;4;RU;Rusia;D;0.4
+2017;4;SA;Arabia Saudita;C;0.18
+2017;4;SE;Suecia;D;0
+2017;4;SL;Sierra Leona;D;0
+2017;4;SN;Senegal;D;5.31
+2017;4;SV;El Salvador;C;0.03
+2017;4;SV;El Salvador;D;0
+2017;4;TG;Togo;D;0.57
+2017;4;TR;Turquía;D;0
+2017;4;UA;Ucrania;C;0
+2017;4;UA;Ucrania;D;0.29
+2017;4;US;Estados Unidos;C;25.1
+2017;4;US;Estados Unidos;D;8.02
+2017;4;UY;Uruguay;C;2.72
+2017;4;UY;Uruguay;D;6.09
+2017;4;VE;Venezuela;C;0.04
+2017;4;VE;Venezuela;D;0.03
+2017;4;ZA;Sudáfrica;D;0
+2018;1;AE;Emiratos Árabes Unidos;C;0.33
+2018;1;AE;Emiratos Árabes Unidos;D;0.01
+2018;1;AF;Afganistán;C;0.01
+2018;1;AM;Armenia;C;0.01
+2018;1;AM;Armenia;D;0.06
+2018;1;AO;Angola;C;0.01
+2018;1;AT;Austria;C;0.02
+2018;1;AT;Austria;D;0.03
+2018;1;AU;Australia;C;0.74
+2018;1;AU;Australia;D;0.45
+2018;1;BD;Bangladesh;D;0.65
+2018;1;BE;Bélgica;C;0.44
+2018;1;BE;Bélgica;D;0.03
+2018;1;BH;Bahrein;C;0.01
+2018;1;BJ;Benin;D;0.06
+2018;1;BO;Bolivia;C;4.07
+2018;1;BO;Bolivia;D;27.98
+2018;1;BR;Brasil;C;3.49
+2018;1;BR;Brasil;D;9.83
+2018;1;BS;Bahamas;C;0.01
+2018;1;BY;Belarús;C;0
+2018;1;BY;Belarús;D;0
+2018;1;BZ;Belice;C;0
+2018;1;CA;Canadá;C;1.53
+2018;1;CA;Canadá;D;0.61
+2018;1;CD;República Democrática del Congo;D;0.49
+2018;1;CG;República del Congo;D;0.02
+2018;1;CH;Suiza;C;1.38
+2018;1;CH;Suiza;D;0.04
+2018;1;CI;Costa de Marfil;D;0.38
+2018;1;CL;Chile;C;6.83
+2018;1;CL;Chile;D;10.93
+2018;1;CM;Camerún;C;0.02
+2018;1;CM;Camerún;D;0.05
+2018;1;CN;China;C;0.26
+2018;1;CN;China;D;6.87
+2018;1;CO;Colombia;C;3.33
+2018;1;CO;Colombia;D;25.03
+2018;1;CR;Costa Rica;C;0.26
+2018;1;CR;Costa Rica;D;0.27
+2018;1;CU;Cuba;D;0.54
+2018;1;CV;Cabo Verde;C;0
+2018;1;CZ;República Checa;C;0
+2018;1;CZ;República Checa;D;0.01
+2018;1;DE;Alemania;C;1.46
+2018;1;DE;Alemania;D;0.67
+2018;1;DK;Dinamarca;C;0.01
+2018;1;DK;Dinamarca;D;0.05
+2018;1;DO;República Dominicana;C;0.45
+2018;1;DO;República Dominicana;D;7.84
+2018;1;DZ;Argelia;D;0
+2018;1;EC;Ecuador;C;3.29
+2018;1;EC;Ecuador;D;2.78
+2018;1;EE;Estonia;C;0
+2018;1;EE;Estonia;D;0
+2018;1;EG;Egipto;C;0
+2018;1;EG;Egipto;D;0
+2018;1;ES;España;C;12.86
+2018;1;ES;España;D;14.13
+2018;1;FI;Finlandia;D;0
+2018;1;FK;Islas Malvinas;D;0
+2018;1;FR;Francia;C;1.58
+2018;1;FR;Francia;D;0.97
+2018;1;GB;Reino Unido;C;6.2
+2018;1;GB;Reino Unido;D;0.22
+2018;1;GH;Ghana;D;0.73
+2018;1;GM;Gambia;D;0
+2018;1;GN;Guinea;D;0.02
+2018;1;GQ;Guinea Ecuatorial;C;0
+2018;1;GR;Grecia;D;0.01
+2018;1;GT;Guatemala;C;0.12
+2018;1;GT;Guatemala;D;0.05
+2018;1;HK;Hong Kong;C;0.02
+2018;1;HN;Honduras;C;0.14
+2018;1;HN;Honduras;D;0.02
+2018;1;HR;Croacia;D;0
+2018;1;HT;Haití;C;0.37
+2018;1;HT;Haití;D;0.53
+2018;1;ID;Indonesia;C;0
+2018;1;ID;Indonesia;D;0.69
+2018;1;IE;Irlanda;C;0.01
+2018;1;IE;Irlanda;D;0.02
+2018;1;IL;Israel;C;0.42
+2018;1;IL;Israel;D;0.57
+2018;1;IN;India;C;0.01
+2018;1;IN;India;D;0.75
+2018;1;IS;Islandia;C;0.01
+2018;1;IT;Italia;C;3.85
+2018;1;IT;Italia;D;2.67
+2018;1;JM;Jamaica;C;0
+2018;1;JO;Jordania;C;0
+2018;1;JP;Japón;C;0.27
+2018;1;JP;Japón;D;0.03
+2018;1;KE;Kenia;C;0
+2018;1;KG;Kirguistán;D;0
+2018;1;KH;Camboya;C;0.01
+2018;1;KR;Corea del Sur;C;0.01
+2018;1;KR;Corea del Sur;D;0
+2018;1;KW;Kuwait;D;0
+2018;1;KY;Islas Caimán;D;0
+2018;1;LB;Líbano;C;0.09
+2018;1;LK;Sri Lanka;D;0.01
+2018;1;LT;Lituania;D;0
+2018;1;LU;Luxemburgo;C;0.02
+2018;1;LV;Letonia;C;0
+2018;1;MA;Marruecos;C;0
+2018;1;MA;Marruecos;D;0
+2018;1;MC;Mónaco;C;0
+2018;1;ML;Malí;C;0
+2018;1;ML;Malí;D;0
+2018;1;MO;Macao;C;0
+2018;1;MT;Malta;D;0.01
+2018;1;MX;México;C;2.01
+2018;1;MX;México;D;3.13
+2018;1;MY;Malasia;C;0.01
+2018;1;MY;Malasia;D;0.15
+2018;1;NC;Nueva Caledonia;C;0.01
+2018;1;NE;Níger;D;0
+2018;1;NG;Nigeria;D;0.75
+2018;1;NI;Nicaragua;C;0
+2018;1;NI;Nicaragua;D;0.01
+2018;1;NL;Países Bajos;C;0.26
+2018;1;NL;Países Bajos;D;0.03
+2018;1;NO;Noruega;C;0
+2018;1;NO;Noruega;D;0
+2018;1;NZ;Nueva Zelanda;C;0.02
+2018;1;NZ;Nueva Zelanda;D;0.03
+2018;1;PA;Panamá;C;0.94
+2018;1;PA;Panamá;D;0.87
+2018;1;PE;Perú;C;7.54
+2018;1;PE;Perú;D;35.7
+2018;1;PF;Polinesia Francesa;D;0
+2018;1;PH;Filipinas;D;0.04
+2018;1;PK;Pakistán;D;0.01
+2018;1;PL;Polonia;C;0
+2018;1;PL;Polonia;D;0.01
+2018;1;PR;Puerto Rico;C;0.02
+2018;1;PR;Puerto Rico;D;0.02
+2018;1;PT;Portugal;C;0.17
+2018;1;PT;Portugal;D;0.33
+2018;1;PY;Paraguay;C;3.24
+2018;1;PY;Paraguay;D;75.3
+2018;1;QA;Qatar;C;0.03
+2018;1;RO;Rumania;D;0.01
+2018;1;RU;Rusia;C;0.29
+2018;1;RU;Rusia;D;0.34
+2018;1;SA;Arabia Saudita;C;0.2
+2018;1;SE;Suecia;C;0.04
+2018;1;SE;Suecia;D;0.02
+2018;1;SG;Singapur;C;0.01
+2018;1;SG;Singapur;D;0
+2018;1;SI;Eslovenia;C;0.01
+2018;1;SI;Eslovenia;D;0
+2018;1;SL;Sierra Leona;D;0
+2018;1;SN;Senegal;D;8.19
+2018;1;SV;El Salvador;C;0.03
+2018;1;SV;El Salvador;D;0.01
+2018;1;SX;San Martín (PB);D;0
+2018;1;TG;Togo;D;0.61
+2018;1;TH;Tailandia;C;0.02
+2018;1;TH;Tailandia;D;0
+2018;1;TR;Turquía;C;0.02
+2018;1;TR;Turquía;D;0.02
+2018;1;TW;Taiwan;D;0
+2018;1;UA;Ucrania;C;0.01
+2018;1;UA;Ucrania;D;0.25
+2018;1;UM;Islas ultramarinas de los Estados Unidos;D;0
+2018;1;US;Estados Unidos;C;25.34
+2018;1;US;Estados Unidos;D;8.28
+2018;1;UY;Uruguay;C;2.91
+2018;1;UY;Uruguay;D;4.66
+2018;1;VE;Venezuela;C;0.12
+2018;1;VE;Venezuela;D;0.05
+2018;1;VG;Islas Vírgenes Británicas;C;0
+2018;1;VN;Viet Nam;D;0
+2018;1;ZA;Sudáfrica;C;0
+2018;1;ZA;Sudáfrica;D;0.03
+2018;2;AD;Andorra;C;0
+2018;2;AE;Emiratos Árabes Unidos;C;0.32
+2018;2;AE;Emiratos Árabes Unidos;D;0.02
+2018;2;AF;Afganistán;C;0
+2018;2;AL;Albania;D;0
+2018;2;AM;Armenia;C;0
+2018;2;AM;Armenia;D;0.03
+2018;2;AO;Angola;C;0.01
+2018;2;AT;Austria;C;0.02
+2018;2;AT;Austria;D;0.01
+2018;2;AU;Australia;C;0.76
+2018;2;AU;Australia;D;0.42
+2018;2;BD;Bangladesh;D;0.35
+2018;2;BE;Bélgica;C;0.34
+2018;2;BE;Bélgica;D;0.03
+2018;2;BF;Burkina Faso;D;0
+2018;2;BG;Bulgaria;C;0
+2018;2;BG;Bulgaria;D;0
+2018;2;BH;Bahrein;C;0.01
+2018;2;BJ;Benin;D;0.1
+2018;2;BM;Bermudas;D;0
+2018;2;BO;Bolivia;C;4.83
+2018;2;BO;Bolivia;D;27.61
+2018;2;BR;Brasil;C;4.03
+2018;2;BR;Brasil;D;6.14
+2018;2;BS;Bahamas;C;0.01
+2018;2;BT;Bhután;D;0
+2018;2;BY;Belarús;C;0
+2018;2;BZ;Belice;C;0
+2018;2;CA;Canadá;C;1.78
+2018;2;CA;Canadá;D;0.59
+2018;2;CC;Islas Cocos;D;0
+2018;2;CG;República del Congo;D;0
+2018;2;CH;Suiza;C;1.58
+2018;2;CH;Suiza;D;0.04
+2018;2;CI;Costa de Marfil;D;0.37
+2018;2;CL;Chile;C;8.32
+2018;2;CL;Chile;D;6.59
+2018;2;CM;Camerún;C;0.01
+2018;2;CM;Camerún;D;0.01
+2018;2;CN;China;C;0.4
+2018;2;CN;China;D;5.59
+2018;2;CO;Colombia;C;4.39
+2018;2;CO;Colombia;D;24.41
+2018;2;CR;Costa Rica;C;0.3
+2018;2;CR;Costa Rica;D;0.28
+2018;2;CU;Cuba;D;0.59
+2018;2;CV;Cabo Verde;C;0
+2018;2;CW;Curaçao;D;0
+2018;2;CZ;República Checa;C;0
+2018;2;CZ;República Checa;D;0.02
+2018;2;DE;Alemania;C;1.43
+2018;2;DE;Alemania;D;0.66
+2018;2;DK;Dinamarca;C;0.01
+2018;2;DK;Dinamarca;D;0.05
+2018;2;DO;República Dominicana;C;0.5
+2018;2;DO;República Dominicana;D;7.7
+2018;2;EC;Ecuador;C;4.7
+2018;2;EC;Ecuador;D;2.65
+2018;2;EG;Egipto;C;0.01
+2018;2;EG;Egipto;D;0.01
+2018;2;ES;España;C;13.59
+2018;2;ES;España;D;13.44
+2018;2;FI;Finlandia;C;0
+2018;2;FI;Finlandia;D;0
+2018;2;FR;Francia;C;1.73
+2018;2;FR;Francia;D;0.87
+2018;2;GB;Reino Unido;C;5.44
+2018;2;GB;Reino Unido;D;0.21
+2018;2;GH;Ghana;D;0.96
+2018;2;GM;Gambia;D;0
+2018;2;GN;Guinea;D;0
+2018;2;GR;Grecia;C;0
+2018;2;GR;Grecia;D;0.01
+2018;2;GT;Guatemala;C;0.14
+2018;2;GT;Guatemala;D;0.04
+2018;2;HK;Hong Kong;C;0.01
+2018;2;HK;Hong Kong;D;0.01
+2018;2;HN;Honduras;C;0.19
+2018;2;HN;Honduras;D;0.03
+2018;2;HR;Croacia;C;0.01
+2018;2;HR;Croacia;D;0
+2018;2;HT;Haití;C;0.44
+2018;2;HT;Haití;D;1.05
+2018;2;HU;Hungría;C;0
+2018;2;HU;Hungría;D;0
+2018;2;ID;Indonesia;D;0.74
+2018;2;IE;Irlanda;C;0.03
+2018;2;IE;Irlanda;D;0.03
+2018;2;IL;Israel;C;0.38
+2018;2;IL;Israel;D;0.51
+2018;2;IM;Isla de Man;C;0
+2018;2;IN;India;C;0
+2018;2;IN;India;D;0.57
+2018;2;IO;Territorio Británico del Océano Indico;D;0
+2018;2;IT;Italia;C;3.33
+2018;2;IT;Italia;D;2.69
+2018;2;JE;Jersey;C;0
+2018;2;JM;Jamaica;C;0
+2018;2;JP;Japón;C;0.34
+2018;2;JP;Japón;D;0.02
+2018;2;KE;Kenia;C;0
+2018;2;KH;Camboya;C;0.01
+2018;2;KR;Corea del Sur;C;0
+2018;2;LA;Laos;D;0
+2018;2;LB;Líbano;C;0.1
+2018;2;LB;Líbano;D;0
+2018;2;LI;Liechtenstein;C;0
+2018;2;LK;Sri Lanka;D;0.01
+2018;2;LU;Luxemburgo;C;0.02
+2018;2;MA;Marruecos;D;0
+2018;2;MC;Mónaco;C;0
+2018;2;ML;Malí;D;0
+2018;2;MO;Macao;C;0
+2018;2;MO;Macao;D;0
+2018;2;MT;Malta;D;0
+2018;2;MX;México;C;2.31
+2018;2;MX;México;D;2.89
+2018;2;MY;Malasia;C;0
+2018;2;MY;Malasia;D;0.13
+2018;2;NC;Nueva Caledonia;C;0.01
+2018;2;NG;Nigeria;D;0.75
+2018;2;NI;Nicaragua;C;0
+2018;2;NI;Nicaragua;D;0.01
+2018;2;NL;Países Bajos;C;0.26
+2018;2;NL;Países Bajos;D;0.04
+2018;2;NO;Noruega;C;0
+2018;2;NO;Noruega;D;0.01
+2018;2;NP;Nepal;D;0
+2018;2;NZ;Nueva Zelanda;C;0.01
+2018;2;NZ;Nueva Zelanda;D;0.03
+2018;2;PA;Panamá;C;1.14
+2018;2;PA;Panamá;D;0.89
+2018;2;PE;Perú;C;8.62
+2018;2;PE;Perú;D;35.08
+2018;2;PH;Filipinas;D;0.01
+2018;2;PK;Pakistán;D;0
+2018;2;PL;Polonia;C;0.01
+2018;2;PL;Polonia;D;0.02
+2018;2;PR;Puerto Rico;C;0.01
+2018;2;PR;Puerto Rico;D;0.02
+2018;2;PT;Portugal;C;0.21
+2018;2;PT;Portugal;D;0.41
+2018;2;PY;Paraguay;C;3.54
+2018;2;PY;Paraguay;D;69.99
+2018;2;QA;Qatar;C;0.01
+2018;2;RO;Rumania;C;0
+2018;2;RO;Rumania;D;0
+2018;2;RS;Serbia;C;0
+2018;2;RU;Rusia;C;0.26
+2018;2;RU;Rusia;D;0.47
+2018;2;SA;Arabia Saudita;C;0.12
+2018;2;SE;Suecia;C;0.03
+2018;2;SE;Suecia;D;0.02
+2018;2;SG;Singapur;C;0.01
+2018;2;SG;Singapur;D;0
+2018;2;SI;Eslovenia;C;0
+2018;2;SK;Eslovaquia;C;0
+2018;2;SL;Sierra Leona;D;0
+2018;2;SN;Senegal;D;4.59
+2018;2;SV;El Salvador;C;0.04
+2018;2;SV;El Salvador;D;0.01
+2018;2;TG;Togo;D;0.47
+2018;2;TH;Tailandia;C;0
+2018;2;TH;Tailandia;D;0
+2018;2;TR;Turquía;C;0.01
+2018;2;TR;Turquía;D;0.02
+2018;2;TW;Taiwan;C;0
+2018;2;TW;Taiwan;D;0
+2018;2;TZ;Tanzania;D;0
+2018;2;UA;Ucrania;C;0.01
+2018;2;UA;Ucrania;D;0.2
+2018;2;UM;Islas ultramarinas de los Estados Unidos;D;0
+2018;2;US;Estados Unidos;C;28.51
+2018;2;US;Estados Unidos;D;7.71
+2018;2;UY;Uruguay;C;2.99
+2018;2;UY;Uruguay;D;2.71
+2018;2;VE;Venezuela;C;0.1
+2018;2;VE;Venezuela;D;0.04
+2018;2;ZA;Sudáfrica;C;0.01
+2018;2;ZA;Sudáfrica;D;0.01
+2018;3;AE;Emiratos Árabes Unidos;C;0.32
+2018;3;AE;Emiratos Árabes Unidos;D;0.01
+2018;3;AF;Afganistán;C;0
+2018;3;AM;Armenia;C;0
+2018;3;AM;Armenia;D;0.02
+2018;3;AO;Angola;C;0.02
+2018;3;AT;Austria;C;0.01
+2018;3;AT;Austria;D;0.01
+2018;3;AU;Australia;C;0.71
+2018;3;AU;Australia;D;0.32
+2018;3;AW;Aruba;C;0
+2018;3;BB;Barbados;D;0
+2018;3;BD;Bangladesh;D;0.31
+2018;3;BE;Bélgica;C;0.36
+2018;3;BE;Bélgica;D;0.05
+2018;3;BG;Bulgaria;D;0
+2018;3;BH;Bahrein;C;0
+2018;3;BH;Bahrein;D;0
+2018;3;BI;Burundi;C;0
+2018;3;BJ;Benin;D;0.11
+2018;3;BO;Bolivia;C;5.04
+2018;3;BO;Bolivia;D;20.72
+2018;3;BR;Brasil;C;3.59
+2018;3;BR;Brasil;D;5.89
+2018;3;BS;Bahamas;C;0
+2018;3;CA;Canadá;C;1.7
+2018;3;CA;Canadá;D;0.51
+2018;3;CG;República del Congo;D;0.01
+2018;3;CH;Suiza;C;1.1
+2018;3;CH;Suiza;D;0.05
+2018;3;CI;Costa de Marfil;D;0.23
+2018;3;CL;Chile;C;7.69
+2018;3;CL;Chile;D;5.17
+2018;3;CM;Camerún;C;0
+2018;3;CM;Camerún;D;0.01
+2018;3;CN;China;C;0.22
+2018;3;CN;China;D;4.21
+2018;3;CO;Colombia;C;4.08
+2018;3;CO;Colombia;D;19.76
+2018;3;CR;Costa Rica;C;0.33
+2018;3;CR;Costa Rica;D;0.25
+2018;3;CU;Cuba;D;0.52
+2018;3;CW;Curaçao;C;0
+2018;3;CZ;República Checa;D;0
+2018;3;DE;Alemania;C;1.43
+2018;3;DE;Alemania;D;0.63
+2018;3;DK;Dinamarca;C;0
+2018;3;DK;Dinamarca;D;0.06
+2018;3;DO;República Dominicana;C;0.44
+2018;3;DO;República Dominicana;D;6.2
+2018;3;EC;Ecuador;C;4.45
+2018;3;EC;Ecuador;D;2.21
+2018;3;EG;Egipto;C;0
+2018;3;EG;Egipto;D;0
+2018;3;ES;España;C;14.18
+2018;3;ES;España;D;10.75
+2018;3;FI;Finlandia;C;0
+2018;3;FI;Finlandia;D;0
+2018;3;FK;Islas Malvinas;D;0
+2018;3;FR;Francia;C;1.73
+2018;3;FR;Francia;D;0.71
+2018;3;GB;Reino Unido;C;5.04
+2018;3;GB;Reino Unido;D;0.22
+2018;3;GD;Granada;D;0
+2018;3;GH;Ghana;D;0.61
+2018;3;GI;Gibraltar;C;0
+2018;3;GM;Gambia;D;0
+2018;3;GN;Guinea;D;0
+2018;3;GQ;Guinea Ecuatorial;C;0
+2018;3;GR;Grecia;C;0.01
+2018;3;GR;Grecia;D;0.01
+2018;3;GT;Guatemala;C;0.18
+2018;3;GT;Guatemala;D;0.02
+2018;3;HK;Hong Kong;C;0.01
+2018;3;HK;Hong Kong;D;0.01
+2018;3;HN;Honduras;C;0.19
+2018;3;HN;Honduras;D;0.01
+2018;3;HR;Croacia;C;0.02
+2018;3;HR;Croacia;D;0
+2018;3;HT;Haití;C;0.39
+2018;3;HT;Haití;D;0.36
+2018;3;HU;Hungría;C;0
+2018;3;HU;Hungría;D;0.01
+2018;3;ID;Indonesia;C;0
+2018;3;ID;Indonesia;D;0.45
+2018;3;IE;Irlanda;C;0.01
+2018;3;IE;Irlanda;D;0.04
+2018;3;IL;Israel;C;0.38
+2018;3;IL;Israel;D;0.39
+2018;3;IM;Isla de Man;C;0
+2018;3;IN;India;C;0
+2018;3;IN;India;D;0.44
+2018;3;IS;Islandia;C;0
+2018;3;IT;Italia;C;3.41
+2018;3;IT;Italia;D;2.19
+2018;3;JM;Jamaica;C;0
+2018;3;JP;Japón;C;0.29
+2018;3;JP;Japón;D;0.03
+2018;3;KE;Kenia;C;0
+2018;3;KH;Camboya;C;0.01
+2018;3;KR;Corea del Sur;C;0
+2018;3;KR;Corea del Sur;D;0
+2018;3;KW;Kuwait;C;0
+2018;3;KY;Islas Caimán;C;0
+2018;3;KY;Islas Caimán;D;0
+2018;3;LB;Líbano;C;0.09
+2018;3;LB;Líbano;D;0
+2018;3;LI;Liechtenstein;C;0.01
+2018;3;LK;Sri Lanka;D;0
+2018;3;LT;Lituania;C;0
+2018;3;LT;Lituania;D;0.01
+2018;3;LU;Luxemburgo;C;0.02
+2018;3;LU;Luxemburgo;D;0
+2018;3;LV;Letonia;D;0
+2018;3;MA;Marruecos;D;0
+2018;3;MC;Mónaco;D;0
+2018;3;ML;Malí;D;0
+2018;3;MM;Myanmar;D;0
+2018;3;MO;Macao;C;0
+2018;3;MT;Malta;C;0
+2018;3;MX;México;C;2.14
+2018;3;MX;México;D;2.36
+2018;3;MY;Malasia;C;0
+2018;3;MY;Malasia;D;0.04
+2018;3;NC;Nueva Caledonia;C;0.01
+2018;3;NG;Nigeria;D;0.72
+2018;3;NI;Nicaragua;C;0.01
+2018;3;NI;Nicaragua;D;0.01
+2018;3;NL;Países Bajos;C;0.25
+2018;3;NL;Países Bajos;D;0.04
+2018;3;NO;Noruega;C;0.01
+2018;3;NO;Noruega;D;0.01
+2018;3;NZ;Nueva Zelanda;C;0.02
+2018;3;NZ;Nueva Zelanda;D;0.06
+2018;3;OM;Omán;C;0.01
+2018;3;PA;Panamá;C;1.19
+2018;3;PA;Panamá;D;0.88
+2018;3;PE;Perú;C;8.87
+2018;3;PE;Perú;D;28.76
+2018;3;PF;Polinesia Francesa;D;0
+2018;3;PH;Filipinas;D;0.03
+2018;3;PK;Pakistán;D;0
+2018;3;PL;Polonia;C;0
+2018;3;PL;Polonia;D;0.01
+2018;3;PR;Puerto Rico;C;0.01
+2018;3;PR;Puerto Rico;D;0.01
+2018;3;PT;Portugal;C;0.19
+2018;3;PT;Portugal;D;0.31
+2018;3;PY;Paraguay;C;3.71
+2018;3;PY;Paraguay;D;58.81
+2018;3;QA;Qatar;C;0.01
+2018;3;RO;Rumania;C;0
+2018;3;RO;Rumania;D;0
+2018;3;RU;Rusia;C;0.28
+2018;3;RU;Rusia;D;0.28
+2018;3;SA;Arabia Saudita;C;0.13
+2018;3;SA;Arabia Saudita;D;0
+2018;3;SE;Suecia;C;0.31
+2018;3;SE;Suecia;D;0.02
+2018;3;SG;Singapur;C;0.02
+2018;3;SG;Singapur;D;0
+2018;3;SI;Eslovenia;C;0.01
+2018;3;SK;Eslovaquia;D;0
+2018;3;SL;Sierra Leona;D;0
+2018;3;SN;Senegal;D;3.27
+2018;3;SV;El Salvador;C;0.03
+2018;3;SV;El Salvador;D;0
+2018;3;SZ;Swazilandia;D;0
+2018;3;TG;Togo;D;0.41
+2018;3;TH;Tailandia;C;0.01
+2018;3;TH;Tailandia;D;0
+2018;3;TN;Túnez;D;0
+2018;3;TR;Turquía;C;0.01
+2018;3;TR;Turquía;D;0.01
+2018;3;TT;Trinidad y Tobago;C;0
+2018;3;TW;Taiwan;D;0.01
+2018;3;UA;Ucrania;C;0
+2018;3;UA;Ucrania;D;0.18
+2018;3;UM;Islas ultramarinas de los Estados Unidos;D;0
+2018;3;US;Estados Unidos;C;30.12
+2018;3;US;Estados Unidos;D;6.5
+2018;3;UY;Uruguay;C;2.93
+2018;3;UY;Uruguay;D;2.61
+2018;3;VE;Venezuela;C;0.13
+2018;3;VE;Venezuela;D;0.04
+2018;3;ZA;Sudáfrica;C;0.01
+2018;3;ZA;Sudáfrica;D;0.01
+2018;4;AD;Andorra;C;0
+2018;4;AD;Andorra;D;0.01
+2018;4;AE;Emiratos Árabes Unidos;C;0.43
+2018;4;AE;Emiratos Árabes Unidos;D;0.01
+2018;4;AF;Afganistán;C;0.01
+2018;4;AM;Armenia;C;0
+2018;4;AM;Armenia;D;0.01
+2018;4;AN;Antillas Neerlandesas;C;0
+2018;4;AO;Angola;C;0.02
+2018;4;AT;Austria;C;0.01
+2018;4;AT;Austria;D;0.01
+2018;4;AU;Australia;C;0.84
+2018;4;AU;Australia;D;0.31
+2018;4;AW;Aruba;C;0
+2018;4;BD;Bangladesh;D;0.27
+2018;4;BE;Bélgica;C;0.38
+2018;4;BE;Bélgica;D;0.03
+2018;4;BF;Burkina Faso;D;0
+2018;4;BG;Bulgaria;D;0
+2018;4;BH;Bahrein;C;0.01
+2018;4;BJ;Benin;D;0.13
+2018;4;BO;Bolivia;C;6.19
+2018;4;BO;Bolivia;D;17.15
+2018;4;BR;Brasil;C;3.99
+2018;4;BR;Brasil;D;6.58
+2018;4;BS;Bahamas;C;0
+2018;4;BY;Belarús;C;0
+2018;4;BZ;Belice;C;0.01
+2018;4;CA;Canadá;C;1.96
+2018;4;CA;Canadá;D;0.44
+2018;4;CC;Islas Cocos;D;0
+2018;4;CG;República del Congo;D;0
+2018;4;CH;Suiza;C;1.2
+2018;4;CH;Suiza;D;0.04
+2018;4;CI;Costa de Marfil;C;0
+2018;4;CI;Costa de Marfil;D;0.07
+2018;4;CL;Chile;C;8.63
+2018;4;CL;Chile;D;5.17
+2018;4;CM;Camerún;C;0
+2018;4;CM;Camerún;D;0.01
+2018;4;CN;China;C;0.18
+2018;4;CN;China;D;2.13
+2018;4;CO;Colombia;C;4.05
+2018;4;CO;Colombia;D;18.33
+2018;4;CR;Costa Rica;C;0.33
+2018;4;CR;Costa Rica;D;0.24
+2018;4;CU;Cuba;D;0.52
+2018;4;CY;Chipre;D;0.01
+2018;4;CZ;República Checa;D;0.01
+2018;4;DE;Alemania;C;1.71
+2018;4;DE;Alemania;D;0.47
+2018;4;DK;Dinamarca;C;0
+2018;4;DK;Dinamarca;D;0.04
+2018;4;DO;República Dominicana;C;0.54
+2018;4;DO;República Dominicana;D;5.4
+2018;4;DZ;Argelia;D;0
+2018;4;EC;Ecuador;C;4.55
+2018;4;EC;Ecuador;D;1.89
+2018;4;EE;Estonia;D;0
+2018;4;EG;Egipto;C;0.01
+2018;4;EG;Egipto;D;0
+2018;4;ES;España;C;16.32
+2018;4;ES;España;D;9.71
+2018;4;FI;Finlandia;C;0
+2018;4;FR;Francia;C;2.07
+2018;4;FR;Francia;D;0.6
+2018;4;GB;Reino Unido;C;4.22
+2018;4;GB;Reino Unido;D;0.25
+2018;4;GE;Georgia;D;0
+2018;4;GH;Ghana;D;0.26
+2018;4;GI;Gibraltar;C;0
+2018;4;GM;Gambia;D;0
+2018;4;GN;Guinea;D;0
+2018;4;GR;Grecia;C;0
+2018;4;GR;Grecia;D;0.01
+2018;4;GT;Guatemala;C;0.21
+2018;4;GT;Guatemala;D;0.01
+2018;4;HK;Hong Kong;C;0
+2018;4;HN;Honduras;C;0.19
+2018;4;HN;Honduras;D;0.01
+2018;4;HR;Croacia;C;0
+2018;4;HR;Croacia;D;0
+2018;4;HT;Haití;C;0.36
+2018;4;HT;Haití;D;0.33
+2018;4;HU;Hungría;C;0
+2018;4;HU;Hungría;D;0
+2018;4;ID;Indonesia;C;0.01
+2018;4;ID;Indonesia;D;0.18
+2018;4;IE;Irlanda;C;0.02
+2018;4;IE;Irlanda;D;0.04
+2018;4;IL;Israel;C;0.38
+2018;4;IL;Israel;D;0.42
+2018;4;IM;Isla de Man;C;0
+2018;4;IN;India;C;0
+2018;4;IN;India;D;0.32
+2018;4;IR;Irán;C;0
+2018;4;IT;Italia;C;3.84
+2018;4;IT;Italia;D;1.87
+2018;4;JE;Jersey;C;0
+2018;4;JM;Jamaica;C;0
+2018;4;JP;Japón;C;0.33
+2018;4;JP;Japón;D;0.02
+2018;4;KE;Kenia;C;0
+2018;4;KH;Camboya;C;0.01
+2018;4;KH;Camboya;D;0
+2018;4;KR;Corea del Sur;C;0
+2018;4;KR;Corea del Sur;D;0
+2018;4;KY;Islas Caimán;C;0
+2018;4;LB;Líbano;C;0.15
+2018;4;LB;Líbano;D;0.01
+2018;4;LI;Liechtenstein;C;0
+2018;4;LT;Lituania;D;0
+2018;4;LU;Luxemburgo;C;0.02
+2018;4;LU;Luxemburgo;D;0
+2018;4;MA;Marruecos;D;0
+2018;4;MC;Mónaco;C;0.01
+2018;4;ML;Malí;D;0
+2018;4;MO;Macao;C;0
+2018;4;MT;Malta;C;0
+2018;4;MW;Malawi;D;0
+2018;4;MX;México;C;2.39
+2018;4;MX;México;D;1.99
+2018;4;MY;Malasia;C;0
+2018;4;MY;Malasia;D;0.04
+2018;4;NC;Nueva Caledonia;C;0.01
+2018;4;NG;Nigeria;D;0.67
+2018;4;NI;Nicaragua;C;0
+2018;4;NI;Nicaragua;D;0.01
+2018;4;NL;Países Bajos;C;0.28
+2018;4;NL;Países Bajos;D;0.03
+2018;4;NO;Noruega;C;0.01
+2018;4;NO;Noruega;D;0.01
+2018;4;NP;Nepal;D;0
+2018;4;NZ;Nueva Zelanda;C;0.01
+2018;4;NZ;Nueva Zelanda;D;0.06
+2018;4;OM;Omán;C;0
+2018;4;PA;Panamá;C;1.26
+2018;4;PA;Panamá;D;0.57
+2018;4;PE;Perú;C;9.77
+2018;4;PE;Perú;D;25.54
+2018;4;PH;Filipinas;D;0.02
+2018;4;PK;Pakistán;D;0.02
+2018;4;PL;Polonia;C;0
+2018;4;PL;Polonia;D;0
+2018;4;PR;Puerto Rico;C;0.01
+2018;4;PR;Puerto Rico;D;0.01
+2018;4;PT;Portugal;C;0.22
+2018;4;PT;Portugal;D;0.14
+2018;4;PY;Paraguay;C;4.49
+2018;4;PY;Paraguay;D;49.79
+2018;4;QA;Qatar;C;0.02
+2018;4;RE;Reunión;D;0
+2018;4;RO;Rumania;D;0.01
+2018;4;RS;Serbia;C;0
+2018;4;RU;Rusia;C;0.27
+2018;4;RU;Rusia;D;0.24
+2018;4;SA;Arabia Saudita;C;0.16
+2018;4;SE;Suecia;C;0.33
+2018;4;SE;Suecia;D;0.01
+2018;4;SG;Singapur;C;0.01
+2018;4;SG;Singapur;D;0.01
+2018;4;SI;Eslovenia;C;0
+2018;4;SK;Eslovaquia;C;0.01
+2018;4;SK;Eslovaquia;D;0
+2018;4;SL;Sierra Leona;D;0
+2018;4;SM;San Marino;C;0
+2018;4;SN;Senegal;D;2.49
+2018;4;SV;El Salvador;C;0.03
+2018;4;SV;El Salvador;D;0
+2018;4;TG;Togo;D;0.13
+2018;4;TH;Tailandia;C;0.01
+2018;4;TH;Tailandia;D;0.01
+2018;4;TR;Turquía;C;0.01
+2018;4;TR;Turquía;D;0.02
+2018;4;TT;Trinidad y Tobago;C;0
+2018;4;TW;Taiwan;C;0
+2018;4;TW;Taiwan;D;0
+2018;4;UA;Ucrania;C;0
+2018;4;UA;Ucrania;D;0.19
+2018;4;US;Estados Unidos;C;33.96
+2018;4;US;Estados Unidos;D;5.74
+2018;4;UY;Uruguay;C;3.23
+2018;4;UY;Uruguay;D;2.9
+2018;4;VE;Venezuela;C;0.1
+2018;4;VE;Venezuela;D;0.06
+2018;4;VN;Viet Nam;C;0
+2018;4;ZA;Sudáfrica;C;0
+2018;4;ZA;Sudáfrica;D;0.02
+2019;1;AD;Andorra;C;0
+2019;1;AD;Andorra;D;0
+2019;1;AE;Emiratos Árabes Unidos;C;0.29
+2019;1;AE;Emiratos Árabes Unidos;D;0.01
+2019;1;AF;Afganistán;C;0
+2019;1;AG;Antigua y Barbuda;C;0
+2019;1;AM;Armenia;C;0
+2019;1;AM;Armenia;D;0.01
+2019;1;AN;Antillas Neerlandesas;D;0
+2019;1;AO;Angola;C;0.01
+2019;1;AT;Austria;C;0.02
+2019;1;AT;Austria;D;0.02
+2019;1;AU;Australia;C;0.5
+2019;1;AU;Australia;D;0.29
+2019;1;BD;Bangladesh;D;0.32
+2019;1;BE;Bélgica;C;0.29
+2019;1;BE;Bélgica;D;0.04
+2019;1;BF;Burkina Faso;D;0.01
+2019;1;BG;Bulgaria;D;0.01
+2019;1;BH;Bahrein;C;0.01
+2019;1;BJ;Benin;D;0.06
+2019;1;BM;Bermudas;C;0
+2019;1;BO;Bolivia;C;4.79
+2019;1;BO;Bolivia;D;12.23
+2019;1;BR;Brasil;C;2.65
+2019;1;BR;Brasil;D;4.74
+2019;1;BS;Bahamas;C;0
+2019;1;BZ;Belice;C;0
+2019;1;CA;Canadá;C;1.25
+2019;1;CA;Canadá;D;0.29
+2019;1;CC;Islas Cocos;D;0
+2019;1;CD;República Democrática del Congo;D;0.97
+2019;1;CG;República del Congo;D;0
+2019;1;CH;Suiza;C;0.81
+2019;1;CH;Suiza;D;0.03
+2019;1;CI;Costa de Marfil;D;0.01
+2019;1;CL;Chile;C;6.15
+2019;1;CL;Chile;D;3.91
+2019;1;CM;Camerún;C;0
+2019;1;CM;Camerún;D;0.02
+2019;1;CN;China;C;0.12
+2019;1;CN;China;D;3.54
+2019;1;CO;Colombia;C;2.29
+2019;1;CO;Colombia;D;11.65
+2019;1;CR;Costa Rica;C;0.21
+2019;1;CR;Costa Rica;D;0.13
+2019;1;CU;Cuba;D;0.33
+2019;1;CW;Curaçao;C;0.01
+2019;1;CY;Chipre;C;0
+2019;1;CY;Chipre;D;0
+2019;1;CZ;República Checa;C;0
+2019;1;CZ;República Checa;D;0.01
+2019;1;DE;Alemania;C;1.08
+2019;1;DE;Alemania;D;0.44
+2019;1;DK;Dinamarca;C;0
+2019;1;DK;Dinamarca;D;0.04
+2019;1;DO;República Dominicana;C;0.35
+2019;1;DO;República Dominicana;D;2.99
+2019;1;EC;Ecuador;C;2.49
+2019;1;EC;Ecuador;D;1.23
+2019;1;EE;Estonia;D;0
+2019;1;EG;Egipto;D;0
+2019;1;ES;España;C;11.6
+2019;1;ES;España;D;7.16
+2019;1;FI;Finlandia;C;0.01
+2019;1;FI;Finlandia;D;0
+2019;1;FR;Francia;C;1.25
+2019;1;FR;Francia;D;0.46
+2019;1;GB;Reino Unido;C;3.63
+2019;1;GB;Reino Unido;D;0.28
+2019;1;GH;Ghana;D;0.24
+2019;1;GN;Guinea;D;0
+2019;1;GQ;Guinea Ecuatorial;C;0.01
+2019;1;GR;Grecia;C;0.01
+2019;1;GR;Grecia;D;0.01
+2019;1;GT;Guatemala;C;0.13
+2019;1;GT;Guatemala;D;0.02
+2019;1;GU;Guam;D;0.09
+2019;1;HK;Hong Kong;C;0.02
+2019;1;HK;Hong Kong;D;0
+2019;1;HN;Honduras;C;0.01
+2019;1;HN;Honduras;D;0.01
+2019;1;HR;Croacia;C;0
+2019;1;HR;Croacia;D;0.01
+2019;1;HT;Haití;C;0.23
+2019;1;HT;Haití;D;0.21
+2019;1;HU;Hungría;C;0
+2019;1;HU;Hungría;D;0
+2019;1;ID;Indonesia;C;0.01
+2019;1;ID;Indonesia;D;0.04
+2019;1;IE;Irlanda;C;0.01
+2019;1;IE;Irlanda;D;0.04
+2019;1;IL;Israel;C;0.29
+2019;1;IL;Israel;D;0.32
+2019;1;IM;Isla de Man;C;0
+2019;1;IN;India;D;0.27
+2019;1;IS;Islandia;D;0
+2019;1;IT;Italia;C;2.66
+2019;1;IT;Italia;D;1.35
+2019;1;JE;Jersey;C;0
+2019;1;JP;Japón;C;0.24
+2019;1;JP;Japón;D;0.02
+2019;1;KE;Kenia;C;0
+2019;1;KH;Camboya;C;0.01
+2019;1;KR;Corea del Sur;C;0
+2019;1;KR;Corea del Sur;D;0
+2019;1;KY;Islas Caimán;C;0.01
+2019;1;LB;Líbano;C;0.01
+2019;1;LB;Líbano;D;0.01
+2019;1;LT;Lituania;D;0
+2019;1;LU;Luxemburgo;C;0.03
+2019;1;LU;Luxemburgo;D;0
+2019;1;LV;Letonia;D;0
+2019;1;MA;Marruecos;C;0
+2019;1;MA;Marruecos;D;0.01
+2019;1;MO;Macao;C;0
+2019;1;MV;Maldivas;D;0
+2019;1;MX;México;C;1.56
+2019;1;MX;México;D;1.34
+2019;1;MY;Malasia;C;0
+2019;1;MY;Malasia;D;0
+2019;1;NC;Nueva Caledonia;C;0
+2019;1;NG;Nigeria;D;0.35
+2019;1;NI;Nicaragua;C;0
+2019;1;NI;Nicaragua;D;0.11
+2019;1;NL;Países Bajos;C;0.2
+2019;1;NL;Países Bajos;D;0.11
+2019;1;NO;Noruega;C;0.01
+2019;1;NO;Noruega;D;0.01
+2019;1;NZ;Nueva Zelanda;C;0.11
+2019;1;NZ;Nueva Zelanda;D;0.04
+2019;1;OM;Omán;C;0.01
+2019;1;PA;Panamá;C;0.84
+2019;1;PA;Panamá;D;0.38
+2019;1;PE;Perú;C;8.21
+2019;1;PE;Perú;D;19.6
+2019;1;PH;Filipinas;D;0.11
+2019;1;PK;Pakistán;D;0.01
+2019;1;PL;Polonia;D;0.01
+2019;1;PR;Puerto Rico;C;0.01
+2019;1;PR;Puerto Rico;D;0.01
+2019;1;PS;Palestina;C;0
+2019;1;PT;Portugal;C;0.15
+2019;1;PT;Portugal;D;0.04
+2019;1;PY;Paraguay;C;2.86
+2019;1;PY;Paraguay;D;28.77
+2019;1;QA;Qatar;C;0.11
+2019;1;RE;Reunión;D;0
+2019;1;RO;Rumania;D;0
+2019;1;RS;Serbia;C;0
+2019;1;RU;Rusia;C;0.17
+2019;1;RU;Rusia;D;0.11
+2019;1;SA;Arabia Saudita;C;0.01
+2019;1;SE;Suecia;C;0.22
+2019;1;SE;Suecia;D;0.02
+2019;1;SG;Singapur;C;0.01
+2019;1;SI;Eslovenia;C;0
+2019;1;SI;Eslovenia;D;0.01
+2019;1;SL;Sierra Leona;D;0
+2019;1;SN;Senegal;C;0
+2019;1;SN;Senegal;D;1.24
+2019;1;SR;Surinam;D;0.01
+2019;1;SV;El Salvador;C;0.12
+2019;1;TG;Togo;D;0.02
+2019;1;TH;Tailandia;C;0
+2019;1;TH;Tailandia;D;0
+2019;1;TN;Túnez;C;0
+2019;1;TN;Túnez;D;0
+2019;1;TR;Turquía;C;0
+2019;1;TR;Turquía;D;0.02
+2019;1;TT;Trinidad y Tobago;C;0
+2019;1;TW;Taiwan;D;0
+2019;1;UA;Ucrania;C;0.01
+2019;1;UA;Ucrania;D;0.14
+2019;1;UG;Uganda;D;0.01
+2019;1;US;Estados Unidos;C;23.9
+2019;1;US;Estados Unidos;D;4.01
+2019;1;UY;Uruguay;C;2.32
+2019;1;UY;Uruguay;D;1.73
+2019;1;VE;Venezuela;C;0.16
+2019;1;VE;Venezuela;D;0.1
+2019;1;VI;Islas Vírgenes de Estados Unidos;C;0
+2019;1;VN;Viet Nam;D;0
+2019;1;ZA;Sudáfrica;C;0
+2019;1;ZA;Sudáfrica;D;0.01
+2019;2;AD;Andorra;D;0
+2019;2;AE;Emiratos Árabes Unidos;C;0.36
+2019;2;AE;Emiratos Árabes Unidos;D;0.02
+2019;2;AF;Afganistán;C;0
+2019;2;AI;Anguila;C;0.01
+2019;2;AM;Armenia;C;0.01
+2019;2;AM;Armenia;D;0.01
+2019;2;AN;Antillas Neerlandesas;D;0
+2019;2;AO;Angola;C;0.01
+2019;2;AT;Austria;C;0.02
+2019;2;AT;Austria;D;0.01
+2019;2;AU;Australia;C;0.79
+2019;2;AU;Australia;D;0.3
+2019;2;AW;Aruba;C;0
+2019;2;AW;Aruba;D;0
+2019;2;BB;Barbados;C;0
+2019;2;BB;Barbados;D;0
+2019;2;BE;Bélgica;C;0.29
+2019;2;BE;Bélgica;D;0.16
+2019;2;BF;Burkina Faso;D;0
+2019;2;BG;Bulgaria;D;0
+2019;2;BH;Bahrein;C;0
+2019;2;BM;Bermudas;C;0
+2019;2;BO;Bolivia;C;7.28
+2019;2;BO;Bolivia;D;13.93
+2019;2;BR;Brasil;C;4.45
+2019;2;BR;Brasil;D;4.34
+2019;2;BY;Belarús;C;0
+2019;2;BZ;Belice;C;0
+2019;2;CA;Canadá;C;1.96
+2019;2;CA;Canadá;D;0.34
+2019;2;CH;Suiza;C;1.12
+2019;2;CH;Suiza;D;0.04
+2019;2;CI;Costa de Marfil;D;0.01
+2019;2;CL;Chile;C;8.41
+2019;2;CL;Chile;D;5.51
+2019;2;CM;Camerún;C;0.01
+2019;2;CM;Camerún;D;0
+2019;2;CN;China;C;0.21
+2019;2;CN;China;D;1.75
+2019;2;CO;Colombia;C;5.21
+2019;2;CO;Colombia;D;15.91
+2019;2;CR;Costa Rica;C;0.31
+2019;2;CR;Costa Rica;D;0.2
+2019;2;CU;Cuba;C;0.01
+2019;2;CU;Cuba;D;0.46
+2019;2;CV;Cabo Verde;C;0
+2019;2;CW;Curaçao;C;0.01
+2019;2;CW;Curaçao;D;0
+2019;2;CY;Chipre;D;0
+2019;2;CZ;República Checa;C;0
+2019;2;CZ;República Checa;D;0
+2019;2;DE;Alemania;C;1.73
+2019;2;DE;Alemania;D;0.54
+2019;2;DK;Dinamarca;C;0
+2019;2;DK;Dinamarca;D;0.04
+2019;2;DO;República Dominicana;C;0.79
+2019;2;DO;República Dominicana;D;4.2
+2019;2;EC;Ecuador;C;2.89
+2019;2;EC;Ecuador;D;3.08
+2019;2;EG;Egipto;C;0
+2019;2;EG;Egipto;D;0
+2019;2;ES;España;C;16.61
+2019;2;ES;España;D;10.5
+2019;2;FI;Finlandia;C;0
+2019;2;FI;Finlandia;D;0
+2019;2;FR;Francia;C;1.93
+2019;2;FR;Francia;D;0.54
+2019;2;GB;Reino Unido;C;1.46
+2019;2;GB;Reino Unido;D;2.95
+2019;2;GD;Granada;C;0
+2019;2;GE;Georgia;D;0.01
+2019;2;GH;Ghana;D;0.2
+2019;2;GR;Grecia;C;0.01
+2019;2;GR;Grecia;D;0.01
+2019;2;GT;Guatemala;C;0.21
+2019;2;GT;Guatemala;D;0.04
+2019;2;HK;Hong Kong;C;0.02
+2019;2;HK;Hong Kong;D;0
+2019;2;HN;Honduras;C;0.2
+2019;2;HN;Honduras;D;0.02
+2019;2;HR;Croacia;C;0
+2019;2;HR;Croacia;D;0.01
+2019;2;HT;Haití;C;0.33
+2019;2;HT;Haití;D;0.3
+2019;2;HU;Hungría;C;0.01
+2019;2;HU;Hungría;D;0
+2019;2;ID;Indonesia;C;0.01
+2019;2;ID;Indonesia;D;0.04
+2019;2;IE;Irlanda;C;0.01
+2019;2;IE;Irlanda;D;0.03
+2019;2;IL;Israel;C;0.43
+2019;2;IL;Israel;D;0.39
+2019;2;IN;India;C;0
+2019;2;IN;India;D;0.32
+2019;2;IS;Islandia;D;0
+2019;2;IT;Italia;C;3.57
+2019;2;IT;Italia;D;2.03
+2019;2;JP;Japón;C;0.37
+2019;2;JP;Japón;D;0.04
+2019;2;KE;Kenia;C;0
+2019;2;KH;Camboya;C;0.01
+2019;2;KR;Corea del Sur;C;0.01
+2019;2;KR;Corea del Sur;D;0
+2019;2;KY;Islas Caimán;C;0
+2019;2;KZ;Kazajstán;D;0
+2019;2;LB;Líbano;C;0
+2019;2;LB;Líbano;D;0.01
+2019;2;LI;Liechtenstein;C;0
+2019;2;LR;Liberia;C;0.01
+2019;2;LT;Lituania;C;0
+2019;2;LT;Lituania;D;0
+2019;2;LU;Luxemburgo;C;0.03
+2019;2;LU;Luxemburgo;D;0
+2019;2;LV;Letonia;C;0
+2019;2;MA;Marruecos;D;0
+2019;2;MC;Mónaco;C;0
+2019;2;ML;Malí;C;0
+2019;2;ML;Malí;D;0
+2019;2;MN;Mongolia;D;0
+2019;2;MO;Macao;C;0
+2019;2;MX;México;C;2.46
+2019;2;MX;México;D;1.76
+2019;2;MY;Malasia;C;0
+2019;2;MY;Malasia;D;0.01
+2019;2;MZ;Mozambique;D;0
+2019;2;NC;Nueva Caledonia;C;0.01
+2019;2;NC;Nueva Caledonia;D;0
+2019;2;NG;Nigeria;D;0.41
+2019;2;NI;Nicaragua;D;0.01
+2019;2;NL;Países Bajos;C;0.32
+2019;2;NL;Países Bajos;D;0.08
+2019;2;NO;Noruega;C;0
+2019;2;NO;Noruega;D;0.01
+2019;2;NZ;Nueva Zelanda;C;0.18
+2019;2;NZ;Nueva Zelanda;D;0.04
+2019;2;PA;Panamá;C;1.2
+2019;2;PA;Panamá;D;0.47
+2019;2;PE;Perú;C;16.83
+2019;2;PE;Perú;D;14.68
+2019;2;PH;Filipinas;D;0.14
+2019;2;PK;Pakistán;D;0
+2019;2;PL;Polonia;C;0
+2019;2;PL;Polonia;D;0.01
+2019;2;PR;Puerto Rico;C;0.01
+2019;2;PR;Puerto Rico;D;0
+2019;2;PS;Palestina;C;0
+2019;2;PT;Portugal;C;0.2
+2019;2;PT;Portugal;D;0.04
+2019;2;PY;Paraguay;C;4.31
+2019;2;PY;Paraguay;D;42.37
+2019;2;RE;Reunión;D;0
+2019;2;RO;Rumania;C;0
+2019;2;RO;Rumania;D;0.01
+2019;2;RU;Rusia;C;0.32
+2019;2;RU;Rusia;D;0.23
+2019;2;SA;Arabia Saudita;C;0.01
+2019;2;SE;Suecia;C;0.31
+2019;2;SE;Suecia;D;0.04
+2019;2;SG;Singapur;C;0.01
+2019;2;SI;Eslovenia;C;0
+2019;2;SL;Sierra Leona;D;0
+2019;2;SN;Senegal;C;0.08
+2019;2;SN;Senegal;D;0.75
+2019;2;ST;Santo Tomé y Príncipe;C;0
+2019;2;SV;El Salvador;C;0.21
+2019;2;SV;El Salvador;D;0
+2019;2;TG;Togo;D;0.01
+2019;2;TH;Tailandia;D;0.11
+2019;2;TR;Turquía;C;0.01
+2019;2;TR;Turquía;D;0.13
+2019;2;TW;Taiwan;C;0.01
+2019;2;UA;Ucrania;C;0.01
+2019;2;UA;Ucrania;D;0.18
+2019;2;UG;Uganda;D;0
+2019;2;US;Estados Unidos;C;30.52
+2019;2;US;Estados Unidos;D;9.43
+2019;2;UY;Uruguay;C;3.43
+2019;2;UY;Uruguay;D;1.77
+2019;2;VE;Venezuela;C;0.27
+2019;2;VE;Venezuela;D;0.15
+2019;2;VG;Islas Vírgenes Británicas;D;0
+2019;2;ZA;Sudáfrica;C;0
+2019;2;ZA;Sudáfrica;D;0
+2019;3;AD;Andorra;D;0
+2019;3;AE;Emiratos Árabes Unidos;C;0.38
+2019;3;AE;Emiratos Árabes Unidos;D;0.01
+2019;3;AF;Afganistán;C;0.02
+2019;3;AM;Armenia;C;0
+2019;3;AM;Armenia;D;0.01
+2019;3;AO;Angola;C;0.01
+2019;3;AT;Austria;C;0.01
+2019;3;AT;Austria;D;0.01
+2019;3;AU;Australia;C;0.75
+2019;3;AU;Australia;D;0.33
+2019;3;AW;Aruba;C;0
+2019;3;AZ;Azerbaiyán;D;0
+2019;3;BB;Barbados;C;0
+2019;3;BB;Barbados;D;0
+2019;3;BD;Bangladesh;D;0.19
+2019;3;BE;Bélgica;C;0.38
+2019;3;BE;Bélgica;D;0.05
+2019;3;BF;Burkina Faso;D;0.01
+2019;3;BH;Bahrein;C;0.01
+2019;3;BH;Bahrein;D;0
+2019;3;BJ;Benin;D;0.01
+2019;3;BO;Bolivia;C;5.81
+2019;3;BO;Bolivia;D;13.82
+2019;3;BR;Brasil;C;4.57
+2019;3;BR;Brasil;D;5.08
+2019;3;BS;Bahamas;C;0
+2019;3;CA;Canadá;C;2.02
+2019;3;CA;Canadá;D;0.4
+2019;3;CH;Suiza;C;1.19
+2019;3;CH;Suiza;D;0.05
+2019;3;CI;Costa de Marfil;D;0.02
+2019;3;CL;Chile;C;9.41
+2019;3;CL;Chile;D;4.36
+2019;3;CM;Camerún;D;0.01
+2019;3;CN;China;C;0.03
+2019;3;CN;China;D;2.34
+2019;3;CO;Colombia;C;4.21
+2019;3;CO;Colombia;D;16.47
+2019;3;CR;Costa Rica;C;0.31
+2019;3;CR;Costa Rica;D;0.18
+2019;3;CU;Cuba;D;0.47
+2019;3;CW;Curaçao;C;0.01
+2019;3;CW;Curaçao;D;0
+2019;3;CZ;República Checa;C;0
+2019;3;CZ;República Checa;D;0
+2019;3;DE;Alemania;C;1.68
+2019;3;DE;Alemania;D;0.54
+2019;3;DK;Dinamarca;C;0.01
+2019;3;DK;Dinamarca;D;0.02
+2019;3;DO;República Dominicana;C;0.52
+2019;3;DO;República Dominicana;D;3.96
+2019;3;EC;Ecuador;C;4.71
+2019;3;EC;Ecuador;D;1.67
+2019;3;EE;Estonia;D;0
+2019;3;ES;España;C;18.78
+2019;3;ES;España;D;10.09
+2019;3;FI;Finlandia;C;0
+2019;3;FI;Finlandia;D;0
+2019;3;FR;Francia;C;2.01
+2019;3;FR;Francia;D;0.56
+2019;3;GB;Reino Unido;C;4.42
+2019;3;GB;Reino Unido;D;0.35
+2019;3;GH;Ghana;C;0
+2019;3;GH;Ghana;D;0.22
+2019;3;GI;Gibraltar;C;0
+2019;3;GN;Guinea;C;0
+2019;3;GR;Grecia;C;0.01
+2019;3;GR;Grecia;D;0.01
+2019;3;GT;Guatemala;C;0.23
+2019;3;GT;Guatemala;D;0.13
+2019;3;HK;Hong Kong;C;0.01
+2019;3;HK;Hong Kong;D;0
+2019;3;HN;Honduras;C;0.22
+2019;3;HN;Honduras;D;0.01
+2019;3;HR;Croacia;C;0
+2019;3;HR;Croacia;D;0.01
+2019;3;HT;Haití;C;0.49
+2019;3;HT;Haití;D;0.29
+2019;3;HU;Hungría;C;0.01
+2019;3;ID;Indonesia;D;0.02
+2019;3;IE;Irlanda;C;0.02
+2019;3;IE;Irlanda;D;0.06
+2019;3;IL;Israel;C;0.45
+2019;3;IL;Israel;D;0.36
+2019;3;IM;Isla de Man;C;0
+2019;3;IN;India;C;0
+2019;3;IN;India;D;0.27
+2019;3;IS;Islandia;C;0
+2019;3;IS;Islandia;D;0
+2019;3;IT;Italia;C;3.76
+2019;3;IT;Italia;D;1.84
+2019;3;JM;Jamaica;C;0
+2019;3;JP;Japón;C;0.44
+2019;3;JP;Japón;D;0.03
+2019;3;KE;Kenia;C;0
+2019;3;KH;Camboya;C;0.01
+2019;3;KR;Corea del Sur;C;0.02
+2019;3;KR;Corea del Sur;D;0
+2019;3;KW;Kuwait;C;0
+2019;3;KY;Islas Caimán;D;0
+2019;3;LB;Líbano;C;0.01
+2019;3;LB;Líbano;D;0
+2019;3;LI;Liechtenstein;C;0
+2019;3;LR;Liberia;C;0.01
+2019;3;LT;Lituania;D;0
+2019;3;LU;Luxemburgo;C;0.02
+2019;3;LU;Luxemburgo;D;0
+2019;3;LV;Letonia;C;0
+2019;3;LV;Letonia;D;0
+2019;3;MA;Marruecos;D;0
+2019;3;MC;Mónaco;C;0
+2019;3;ME;Montenegro;D;0
+2019;3;MO;Macao;C;0
+2019;3;MT;Malta;D;0
+2019;3;MX;México;C;2.54
+2019;3;MX;México;D;1.67
+2019;3;MY;Malasia;D;0
+2019;3;MZ;Mozambique;D;0.01
+2019;3;NC;Nueva Caledonia;C;0
+2019;3;NE;Níger;D;0
+2019;3;NG;Nigeria;D;0.39
+2019;3;NI;Nicaragua;C;0.01
+2019;3;NI;Nicaragua;D;0.01
+2019;3;NL;Países Bajos;C;0.32
+2019;3;NL;Países Bajos;D;0.17
+2019;3;NO;Noruega;C;0.17
+2019;3;NO;Noruega;D;0.01
+2019;3;NP;Nepal;C;0
+2019;3;NP;Nepal;D;0
+2019;3;NR;Nauru;C;0
+2019;3;NZ;Nueva Zelanda;C;0.17
+2019;3;NZ;Nueva Zelanda;D;0.03
+2019;3;PA;Panamá;C;1.2
+2019;3;PA;Panamá;D;0.46
+2019;3;PE;Perú;C;9.8
+2019;3;PE;Perú;D;19.89
+2019;3;PH;Filipinas;C;0
+2019;3;PH;Filipinas;D;0.03
+2019;3;PK;Pakistán;D;0.13
+2019;3;PL;Polonia;C;0
+2019;3;PL;Polonia;D;0
+2019;3;PR;Puerto Rico;C;0
+2019;3;PR;Puerto Rico;D;0.01
+2019;3;PT;Portugal;C;0.23
+2019;3;PT;Portugal;D;0.16
+2019;3;PY;Paraguay;C;4.34
+2019;3;PY;Paraguay;D;42.39
+2019;3;QA;Qatar;C;0.01
+2019;3;RE;Reunión;D;0
+2019;3;RO;Rumania;D;0.01
+2019;3;RS;Serbia;C;0
+2019;3;RU;Rusia;C;0.38
+2019;3;RU;Rusia;D;0.23
+2019;3;SA;Arabia Saudita;C;0.03
+2019;3;SE;Suecia;C;0.36
+2019;3;SE;Suecia;D;0.04
+2019;3;SG;Singapur;C;0.01
+2019;3;SG;Singapur;D;0.01
+2019;3;SI;Eslovenia;C;0
+2019;3;SI;Eslovenia;D;0
+2019;3;SN;Senegal;D;0.91
+2019;3;SR;Surinam;C;0
+2019;3;ST;Santo Tomé y Príncipe;C;0
+2019;3;SV;El Salvador;C;0.25
+2019;3;SV;El Salvador;D;0
+2019;3;TG;Togo;D;0.01
+2019;3;TH;Tailandia;C;0
+2019;3;TH;Tailandia;D;0.01
+2019;3;TR;Turquía;C;0
+2019;3;TR;Turquía;D;0.02
+2019;3;TW;Taiwan;D;0.01
+2019;3;TZ;Tanzania;D;0
+2019;3;UA;Ucrania;C;0.01
+2019;3;UA;Ucrania;D;0.19
+2019;3;UM;Islas ultramarinas de los Estados Unidos;D;0
+2019;3;US;Estados Unidos;C;34.9
+2019;3;US;Estados Unidos;D;5
+2019;3;UY;Uruguay;C;3.48
+2019;3;UY;Uruguay;D;2.01
+2019;3;VC;San Vicente y las Granadinas;C;0
+2019;3;VE;Venezuela;C;0.31
+2019;3;VE;Venezuela;D;0.1
+2019;3;VN;Viet Nam;D;0
+2019;3;ZA;Sudáfrica;C;0.01
+2019;3;ZA;Sudáfrica;D;0
+2019;4;AD;Andorra;C;0
+2019;4;AD;Andorra;D;0.01
+2019;4;AE;Emiratos Árabes Unidos;C;0.44
+2019;4;AF;Afganistán;C;0
+2019;4;AM;Armenia;C;0
+2019;4;AM;Armenia;D;0.01
+2019;4;AO;Angola;C;0.03
+2019;4;AT;Austria;C;0.03
+2019;4;AT;Austria;D;0.01
+2019;4;AU;Australia;C;0.9
+2019;4;AU;Australia;D;0.19
+2019;4;AW;Aruba;C;0
+2019;4;BD;Bangladesh;D;0.08
+2019;4;BE;Bélgica;C;0.52
+2019;4;BE;Bélgica;D;0.01
+2019;4;BG;Bulgaria;C;0
+2019;4;BH;Bahrein;C;0
+2019;4;BJ;Benin;D;0.01
+2019;4;BO;Bolivia;C;4.86
+2019;4;BO;Bolivia;D;11.87
+2019;4;BR;Brasil;C;11.53
+2019;4;BR;Brasil;D;4.6
+2019;4;BS;Bahamas;C;0
+2019;4;BY;Belarús;C;0
+2019;4;CA;Canadá;C;2.15
+2019;4;CA;Canadá;D;0.25
+2019;4;CG;República del Congo;C;0
+2019;4;CH;Suiza;C;1.59
+2019;4;CH;Suiza;D;0
+2019;4;CI;Costa de Marfil;D;0.01
+2019;4;CL;Chile;C;10.1
+2019;4;CL;Chile;D;2.93
+2019;4;CM;Camerún;D;0.03
+2019;4;CN;China;C;0.05
+2019;4;CN;China;D;0.81
+2019;4;CO;Colombia;C;4.24
+2019;4;CO;Colombia;D;10.58
+2019;4;CR;Costa Rica;C;0.38
+2019;4;CR;Costa Rica;D;0.16
+2019;4;CW;Curaçao;C;0.02
+2019;4;CY;Chipre;C;0.19
+2019;4;CZ;República Checa;C;0
+2019;4;CZ;República Checa;D;0
+2019;4;DE;Alemania;C;2.39
+2019;4;DE;Alemania;D;0.3
+2019;4;DK;Dinamarca;C;0.01
+2019;4;DK;Dinamarca;D;0
+2019;4;DO;República Dominicana;C;0.56
+2019;4;DO;República Dominicana;D;3.36
+2019;4;EC;Ecuador;C;4.01
+2019;4;EC;Ecuador;D;1.2
+2019;4;EE;Estonia;C;0.01
+2019;4;EE;Estonia;D;0
+2019;4;ES;España;C;20.48
+2019;4;ES;España;D;7.31
+2019;4;FI;Finlandia;C;0
+2019;4;FI;Finlandia;D;0
+2019;4;FR;Francia;C;3.49
+2019;4;FR;Francia;D;0.45
+2019;4;GB;Reino Unido;C;5.51
+2019;4;GB;Reino Unido;D;0.18
+2019;4;GH;Ghana;C;0
+2019;4;GH;Ghana;D;0.21
+2019;4;GR;Grecia;C;0.01
+2019;4;GT;Guatemala;C;0.28
+2019;4;GT;Guatemala;D;0.03
+2019;4;HK;Hong Kong;C;0.01
+2019;4;HN;Honduras;C;0.27
+2019;4;HN;Honduras;D;0.01
+2019;4;HR;Croacia;C;0
+2019;4;HR;Croacia;D;0
+2019;4;HT;Haití;C;0.46
+2019;4;HT;Haití;D;0.22
+2019;4;HU;Hungría;C;0.02
+2019;4;ID;Indonesia;C;0
+2019;4;ID;Indonesia;D;0.09
+2019;4;IE;Irlanda;C;0.22
+2019;4;IE;Irlanda;D;0.01
+2019;4;IL;Israel;C;0.55
+2019;4;IL;Israel;D;0.18
+2019;4;IM;Isla de Man;C;0.01
+2019;4;IN;India;C;0
+2019;4;IN;India;D;0.21
+2019;4;IT;Italia;C;4.34
+2019;4;IT;Italia;D;1.24
+2019;4;JE;Jersey;C;0.01
+2019;4;JM;Jamaica;C;0
+2019;4;JP;Japón;C;0.47
+2019;4;JP;Japón;D;0.03
+2019;4;KH;Camboya;C;0.01
+2019;4;KR;Corea del Sur;C;0.01
+2019;4;KW;Kuwait;C;0
+2019;4;LB;Líbano;C;0.01
+2019;4;LI;Liechtenstein;C;0.01
+2019;4;LT;Lituania;C;0
+2019;4;LU;Luxemburgo;C;0.03
+2019;4;MC;Mónaco;C;0.01
+2019;4;MO;Macao;C;0
+2019;4;MT;Malta;C;0
+2019;4;MV;Maldivas;C;0.01
+2019;4;MX;México;C;2.63
+2019;4;MX;México;D;1.07
+2019;4;MY;Malasia;C;0
+2019;4;NC;Nueva Caledonia;C;0.01
+2019;4;NG;Nigeria;D;0.27
+2019;4;NL;Países Bajos;C;0.65
+2019;4;NL;Países Bajos;D;0.1
+2019;4;NO;Noruega;C;0.02
+2019;4;NZ;Nueva Zelanda;C;0.02
+2019;4;NZ;Nueva Zelanda;D;0.01
+2019;4;OM;Omán;C;0
+2019;4;PA;Panamá;C;1.38
+2019;4;PA;Panamá;D;0.25
+2019;4;PE;Perú;C;10.18
+2019;4;PE;Perú;D;20.91
+2019;4;PH;Filipinas;C;0.01
+2019;4;PH;Filipinas;D;0.02
+2019;4;PK;Pakistán;C;0
+2019;4;PL;Polonia;C;0.02
+2019;4;PL;Polonia;D;0.01
+2019;4;PR;Puerto Rico;C;0.01
+2019;4;PR;Puerto Rico;D;0
+2019;4;PT;Portugal;C;0.23
+2019;4;PT;Portugal;D;0.1
+2019;4;PY;Paraguay;C;4.12
+2019;4;PY;Paraguay;D;26.51
+2019;4;QA;Qatar;C;0.02
+2019;4;RO;Rumania;C;0
+2019;4;RO;Rumania;D;0
+2019;4;RU;Rusia;C;0.5
+2019;4;RU;Rusia;D;0.1
+2019;4;SA;Arabia Saudita;C;0.01
+2019;4;SE;Suecia;C;0.42
+2019;4;SE;Suecia;D;0.03
+2019;4;SG;Singapur;C;0.01
+2019;4;SI;Eslovenia;C;0.01
+2019;4;SN;Senegal;D;0.96
+2019;4;SR;Surinam;C;0.01
+2019;4;ST;Santo Tomé y Príncipe;C;0.01
+2019;4;SV;El Salvador;C;0.29
+2019;4;SV;El Salvador;D;0
+2019;4;TG;Togo;D;0
+2019;4;TH;Tailandia;C;0
+2019;4;TH;Tailandia;D;0
+2019;4;TR;Turquía;C;0.01
+2019;4;TR;Turquía;D;0.08
+2019;4;TT;Trinidad y Tobago;C;0
+2019;4;TW;Taiwan;C;0
+2019;4;TW;Taiwan;D;0
+2019;4;UA;Ucrania;C;0.01
+2019;4;UA;Ucrania;D;0.12
+2019;4;US;Estados Unidos;C;40.78
+2019;4;US;Estados Unidos;D;2.74
+2019;4;UY;Uruguay;C;3.84
+2019;4;UY;Uruguay;D;1.7
+2019;4;VE;Venezuela;C;0.19
+2019;4;VE;Venezuela;D;0.08
+2019;4;VN;Viet Nam;D;0
+2019;4;ZA;Sudáfrica;C;0.01
+2020;1;AD;Andorra;C;0
+2020;1;AE;Emiratos Árabes Unidos;C;0.36
+2020;1;AF;Afganistán;C;0
+2020;1;AM;Armenia;D;0.01
+2020;1;AO;Angola;C;0.01
+2020;1;AQ;Antártida;C;0
+2020;1;AT;Austria;C;0.29
+2020;1;AU;Australia;C;0.84
+2020;1;AU;Australia;D;0.2
+2020;1;AW;Aruba;C;0
+2020;1;BD;Bangladesh;D;0.09
+2020;1;BE;Bélgica;C;0.64
+2020;1;BE;Bélgica;D;0
+2020;1;BH;Bahrein;C;0.01
+2020;1;BJ;Benin;D;0.01
+2020;1;BO;Bolivia;C;4.01
+2020;1;BO;Bolivia;D;10.43
+2020;1;BR;Brasil;C;12.99
+2020;1;BR;Brasil;D;3.77
+2020;1;BS;Bahamas;C;0.01
+2020;1;CA;Canadá;C;1.91
+2020;1;CA;Canadá;D;0.16
+2020;1;CF;República Centroafricana;C;0
+2020;1;CH;Suiza;C;1.7
+2020;1;CI;Costa de Marfil;D;0.01
+2020;1;CL;Chile;C;8.41
+2020;1;CL;Chile;D;2.69
+2020;1;CM;Camerún;D;0.07
+2020;1;CN;China;C;0.02
+2020;1;CN;China;D;0.36
+2020;1;CO;Colombia;C;3.18
+2020;1;CO;Colombia;D;9.29
+2020;1;CR;Costa Rica;C;0.33
+2020;1;CR;Costa Rica;D;0.15
+2020;1;CW;Curaçao;C;0.01
+2020;1;CZ;República Checa;D;0
+2020;1;DE;Alemania;C;3.52
+2020;1;DE;Alemania;D;0.22
+2020;1;DK;Dinamarca;C;0.24
+2020;1;DK;Dinamarca;D;0
+2020;1;DO;República Dominicana;C;0.41
+2020;1;DO;República Dominicana;D;2.81
+2020;1;EC;Ecuador;C;3.26
+2020;1;EC;Ecuador;D;0.92
+2020;1;EE;Estonia;C;0
+2020;1;EG;Egipto;C;0
+2020;1;ES;España;C;16.32
+2020;1;ES;España;D;5.79
+2020;1;FI;Finlandia;C;0.01
+2020;1;FR;Francia;C;6.16
+2020;1;FR;Francia;D;0.22
+2020;1;GB;Reino Unido;C;4.85
+2020;1;GB;Reino Unido;D;0.16
+2020;1;GD;Granada;D;0
+2020;1;GH;Ghana;D;0.23
+2020;1;GN;Guinea;C;0
+2020;1;GQ;Guinea Ecuatorial;C;0.01
+2020;1;GR;Grecia;C;0
+2020;1;GT;Guatemala;C;0.02
+2020;1;HK;Hong Kong;C;0.01
+2020;1;HN;Honduras;C;0.01
+2020;1;HN;Honduras;D;0
+2020;1;HR;Croacia;C;0
+2020;1;HT;Haití;C;0.46
+2020;1;HT;Haití;D;0.24
+2020;1;HU;Hungría;C;0.01
+2020;1;ID;Indonesia;C;0
+2020;1;ID;Indonesia;D;0.07
+2020;1;IE;Irlanda;C;0.3
+2020;1;IE;Irlanda;D;0
+2020;1;IL;Israel;C;0.46
+2020;1;IL;Israel;D;0.14
+2020;1;IM;Isla de Man;C;0
+2020;1;IN;India;C;0
+2020;1;IN;India;D;0.29
+2020;1;IT;Italia;C;3.55
+2020;1;IT;Italia;D;0.94
+2020;1;JE;Jersey;C;0.01
+2020;1;JP;Japón;C;0.37
+2020;1;KE;Kenia;C;0
+2020;1;KH;Camboya;C;0.01
+2020;1;KR;Corea del Sur;C;0
+2020;1;LB;Líbano;C;0
+2020;1;LI;Liechtenstein;C;0
+2020;1;LT;Lituania;C;0
+2020;1;LT;Lituania;D;0
+2020;1;LU;Luxemburgo;C;0.03
+2020;1;MA;Marruecos;D;0.07
+2020;1;MU;Mauricio;C;0.01
+2020;1;MV;Maldivas;C;0.01
+2020;1;MX;México;C;2.2
+2020;1;MX;México;D;0.88
+2020;1;MY;Malasia;C;0
+2020;1;NC;Nueva Caledonia;C;0
+2020;1;NG;Nigeria;C;0
+2020;1;NG;Nigeria;D;0.24
+2020;1;NI;Nicaragua;C;0.01
+2020;1;NL;Países Bajos;C;1.06
+2020;1;NL;Países Bajos;D;0
+2020;1;NO;Noruega;C;0.02
+2020;1;NZ;Nueva Zelanda;C;0.02
+2020;1;NZ;Nueva Zelanda;D;0.01
+2020;1;PA;Panamá;C;0.97
+2020;1;PA;Panamá;D;0.18
+2020;1;PE;Perú;C;7.82
+2020;1;PE;Perú;D;15.35
+2020;1;PH;Filipinas;C;0
+2020;1;PH;Filipinas;D;0.01
+2020;1;PK;Pakistán;D;0.01
+2020;1;PL;Polonia;C;0.02
+2020;1;PR;Puerto Rico;C;0.01
+2020;1;PS;Palestina;C;0
+2020;1;PT;Portugal;C;0.26
+2020;1;PT;Portugal;D;0.06
+2020;1;PY;Paraguay;C;3.18
+2020;1;PY;Paraguay;D;22.74
+2020;1;QA;Qatar;C;0.03
+2020;1;RO;Rumania;C;0
+2020;1;RU;Rusia;C;0.54
+2020;1;RU;Rusia;D;0.1
+2020;1;SA;Arabia Saudita;C;0.02
+2020;1;SC;Seychelles;C;0
+2020;1;SE;Suecia;C;0.43
+2020;1;SE;Suecia;D;0
+2020;1;SG;Singapur;C;0.01
+2020;1;SI;Eslovenia;C;0
+2020;1;SN;Senegal;D;1.6
+2020;1;SR;Surinam;C;0
+2020;1;ST;Santo Tomé y Príncipe;C;0.01
+2020;1;SV;El Salvador;C;0.27
+2020;1;TG;Togo;D;0
+2020;1;TH;Tailandia;D;0
+2020;1;TR;Turquía;C;0
+2020;1;TR;Turquía;D;0.01
+2020;1;UA;Ucrania;C;0
+2020;1;UA;Ucrania;D;0.1
+2020;1;US;Estados Unidos;C;34.86
+2020;1;US;Estados Unidos;D;1.92
+2020;1;UY;Uruguay;C;3.24
+2020;1;UY;Uruguay;D;1.02
+2020;1;VE;Venezuela;C;0.11
+2020;1;VE;Venezuela;D;0.01
+2020;1;VN;Viet Nam;C;0
+2020;1;ZA;Sudáfrica;C;0.01
+2020;2;AD;Andorra;C;0.01
+2020;2;AE;Emiratos Árabes Unidos;C;0.26
+2020;2;AE;Emiratos Árabes Unidos;D;0
+2020;2;AM;Armenia;C;0
+2020;2;AM;Armenia;D;0
+2020;2;AO;Angola;C;0.01
+2020;2;AT;Austria;C;0.04
+2020;2;AT;Austria;D;0
+2020;2;AU;Australia;C;0.94
+2020;2;AU;Australia;D;0.13
+2020;2;AW;Aruba;C;0
+2020;2;AZ;Azerbaiyán;C;0
+2020;2;BE;Bélgica;C;0.34
+2020;2;BE;Bélgica;D;0
+2020;2;BG;Bulgaria;C;0
+2020;2;BG;Bulgaria;D;0
+2020;2;BH;Bahrein;C;0
+2020;2;BJ;Benin;D;0
+2020;2;BO;Bolivia;C;2.99
+2020;2;BO;Bolivia;D;5.66
+2020;2;BQ;Bonaire, San Eustaquio y Saba;C;0
+2020;2;BR;Brasil;C;5.9
+2020;2;BR;Brasil;D;1.75
+2020;2;CA;Canadá;C;2.01
+2020;2;CA;Canadá;D;0.12
+2020;2;CF;República Centroafricana;C;0
+2020;2;CH;Suiza;C;1.74
+2020;2;CH;Suiza;D;0
+2020;2;CL;Chile;C;8.52
+2020;2;CL;Chile;D;2.19
+2020;2;CM;Camerún;D;0
+2020;2;CN;China;C;0.02
+2020;2;CN;China;D;1.32
+2020;2;CO;Colombia;C;2.85
+2020;2;CO;Colombia;D;7.35
+2020;2;CR;Costa Rica;C;0.29
+2020;2;CR;Costa Rica;D;0.14
+2020;2;CU;Cuba;D;0
+2020;2;CW;Curaçao;C;0.01
+2020;2;CY;Chipre;C;0.2
+2020;2;CZ;República Checa;C;0
+2020;2;DE;Alemania;C;2.72
+2020;2;DE;Alemania;D;0.17
+2020;2;DK;Dinamarca;C;0.25
+2020;2;DK;Dinamarca;D;0
+2020;2;DO;República Dominicana;C;0.31
+2020;2;DO;República Dominicana;D;1.82
+2020;2;EC;Ecuador;C;3.76
+2020;2;EC;Ecuador;D;0.79
+2020;2;EE;Estonia;C;0
+2020;2;EE;Estonia;D;0
+2020;2;EG;Egipto;C;0
+2020;2;ES;España;C;15.49
+2020;2;ES;España;D;5.34
+2020;2;ET;Etiopía;C;0
+2020;2;FI;Finlandia;C;0.03
+2020;2;FR;Francia;C;3.51
+2020;2;FR;Francia;D;0.2
+2020;2;GA;Gabón;C;0
+2020;2;GB;Reino Unido;C;2.09
+2020;2;GB;Reino Unido;D;0.1
+2020;2;GH;Ghana;D;0.04
+2020;2;GN;Guinea;C;0
+2020;2;GQ;Guinea Ecuatorial;C;0.02
+2020;2;GR;Grecia;C;0.01
+2020;2;GT;Guatemala;C;0.03
+2020;2;GT;Guatemala;D;0.06
+2020;2;HK;Hong Kong;C;0
+2020;2;HN;Honduras;C;0.02
+2020;2;HN;Honduras;D;0.01
+2020;2;HR;Croacia;C;0
+2020;2;HT;Haití;C;0.3
+2020;2;HT;Haití;D;0.1
+2020;2;HU;Hungría;C;0.02
+2020;2;ID;Indonesia;C;0
+2020;2;ID;Indonesia;D;0.06
+2020;2;IE;Irlanda;C;0.37
+2020;2;IE;Irlanda;D;0
+2020;2;IL;Israel;C;0.37
+2020;2;IL;Israel;D;0.13
+2020;2;IM;Isla de Man;C;0
+2020;2;IN;India;C;0
+2020;2;IN;India;D;0.09
+2020;2;IR;Irán;C;0
+2020;2;IS;Islandia;C;0
+2020;2;IT;Italia;C;3.57
+2020;2;IT;Italia;D;0.8
+2020;2;JE;Jersey;C;0.02
+2020;2;JM;Jamaica;D;0
+2020;2;JP;Japón;C;0.37
+2020;2;JP;Japón;D;0
+2020;2;KE;Kenia;D;0
+2020;2;KH;Camboya;C;0.01
+2020;2;KP;Corea del Norte;C;0
+2020;2;KR;Corea del Sur;C;0
+2020;2;KW;Kuwait;C;0
+2020;2;LB;Líbano;C;0
+2020;2;LI;Liechtenstein;C;0.01
+2020;2;LT;Lituania;C;0
+2020;2;LU;Luxemburgo;C;0.02
+2020;2;MC;Mónaco;C;0.02
+2020;2;MK;Macedonia;C;0
+2020;2;ML;Malí;C;0
+2020;2;MV;Maldivas;C;0.01
+2020;2;MX;México;C;1.67
+2020;2;MX;México;D;0.96
+2020;2;NC;Nueva Caledonia;C;0.01
+2020;2;NG;Nigeria;C;0.01
+2020;2;NG;Nigeria;D;0.27
+2020;2;NI;Nicaragua;C;0
+2020;2;NL;Países Bajos;C;0.54
+2020;2;NL;Países Bajos;D;0
+2020;2;NO;Noruega;C;0.03
+2020;2;NZ;Nueva Zelanda;C;0.29
+2020;2;PA;Panamá;C;0.66
+2020;2;PA;Panamá;D;0.14
+2020;2;PE;Perú;C;7.43
+2020;2;PE;Perú;D;11.9
+2020;2;PH;Filipinas;C;0
+2020;2;PK;Pakistán;D;0.05
+2020;2;PL;Polonia;C;0.02
+2020;2;PR;Puerto Rico;C;0.01
+2020;2;PT;Portugal;C;0.22
+2020;2;PT;Portugal;D;0.07
+2020;2;PY;Paraguay;C;4.4
+2020;2;PY;Paraguay;D;15.22
+2020;2;QA;Qatar;C;0.01
+2020;2;RO;Rumania;C;0
+2020;2;RO;Rumania;D;0
+2020;2;RU;Rusia;C;0.42
+2020;2;RU;Rusia;D;0.07
+2020;2;SA;Arabia Saudita;C;0.02
+2020;2;SE;Suecia;C;0.36
+2020;2;SE;Suecia;D;0
+2020;2;SG;Singapur;C;0.01
+2020;2;SI;Eslovenia;C;0
+2020;2;SN;Senegal;D;0.71
+2020;2;ST;Santo Tomé y Príncipe;C;0.01
+2020;2;SV;El Salvador;C;0.38
+2020;2;SX;San Martín (PB);C;0
+2020;2;TG;Togo;D;0.01
+2020;2;TH;Tailandia;C;0
+2020;2;TR;Turquía;C;0.01
+2020;2;TR;Turquía;D;0.01
+2020;2;TW;Taiwan;C;0
+2020;2;TZ;Tanzania;D;0
+2020;2;UA;Ucrania;C;0.01
+2020;2;UA;Ucrania;D;0.06
+2020;2;US;Estados Unidos;C;34.21
+2020;2;US;Estados Unidos;D;1.38
+2020;2;UY;Uruguay;C;3.82
+2020;2;UY;Uruguay;D;1.18
+2020;2;VA;Vaticano;C;0.01
+2020;2;VE;Venezuela;C;0.03
+2020;2;VE;Venezuela;D;0.01
+2020;2;VN;Viet Nam;C;0
+2020;2;ZA;Sudáfrica;C;0.01
+2020;3;AD;Andorra;C;0.01
+2020;3;AD;Andorra;D;0
+2020;3;AE;Emiratos Árabes Unidos;C;0.33
+2020;3;AE;Emiratos Árabes Unidos;D;0.01
+2020;3;AM;Armenia;C;0
+2020;3;AM;Armenia;D;0.01
+2020;3;AO;Angola;C;0.02
+2020;3;AT;Austria;C;0.04
+2020;3;AT;Austria;D;0
+2020;3;AU;Australia;C;1.47
+2020;3;AU;Australia;D;0.15
+2020;3;AW;Aruba;C;0
+2020;3;AZ;Azerbaiyán;C;0
+2020;3;BB;Barbados;C;0
+2020;3;BE;Bélgica;C;0.48
+2020;3;BE;Bélgica;D;0.01
+2020;3;BG;Bulgaria;C;0
+2020;3;BG;Bulgaria;D;0
+2020;3;BH;Bahrein;C;0
+2020;3;BO;Bolivia;C;5.42
+2020;3;BO;Bolivia;D;13.23
+2020;3;BQ;Bonaire, San Eustaquio y Saba;C;0
+2020;3;BR;Brasil;C;3.96
+2020;3;BR;Brasil;D;2.94
+2020;3;BS;Bahamas;C;0.01
+2020;3;CA;Canadá;C;2.81
+2020;3;CA;Canadá;D;0.21
+2020;3;CH;Suiza;C;2.35
+2020;3;CL;Chile;C;14.35
+2020;3;CL;Chile;D;2.56
+2020;3;CM;Camerún;D;0.04
+2020;3;CN;China;C;0.03
+2020;3;CN;China;D;3.79
+2020;3;CO;Colombia;C;3.62
+2020;3;CO;Colombia;D;17.01
+2020;3;CR;Costa Rica;C;0.37
+2020;3;CR;Costa Rica;D;0.18
+2020;3;CU;Cuba;D;0
+2020;3;CV;Cabo Verde;C;0
+2020;3;CW;Curaçao;C;0.01
+2020;3;CY;Chipre;D;0
+2020;3;CZ;República Checa;C;0
+2020;3;DE;Alemania;C;3.68
+2020;3;DE;Alemania;D;0.28
+2020;3;DK;Dinamarca;C;0.02
+2020;3;DK;Dinamarca;D;0
+2020;3;DO;República Dominicana;C;0.43
+2020;3;DO;República Dominicana;D;2.8
+2020;3;EC;Ecuador;C;4.45
+2020;3;EC;Ecuador;D;1.28
+2020;3;EG;Egipto;C;0.01
+2020;3;ES;España;C;22.22
+2020;3;ES;España;D;7.83
+2020;3;ET;Etiopía;C;0
+2020;3;FI;Finlandia;C;0.02
+2020;3;FR;Francia;C;3.64
+2020;3;FR;Francia;D;0.29
+2020;3;GA;Gabón;C;0
+2020;3;GB;Reino Unido;C;2.86
+2020;3;GB;Reino Unido;D;0.18
+2020;3;GH;Ghana;D;0.05
+2020;3;GN;Guinea;C;0
+2020;3;GQ;Guinea Ecuatorial;C;0.01
+2020;3;GR;Grecia;C;0.01
+2020;3;GT;Guatemala;C;0.27
+2020;3;HN;Honduras;C;0.22
+2020;3;HR;Croacia;C;0.01
+2020;3;HT;Haití;C;0.35
+2020;3;HT;Haití;D;0.17
+2020;3;HU;Hungría;C;0
+2020;3;ID;Indonesia;C;0
+2020;3;IE;Irlanda;C;0.06
+2020;3;IE;Irlanda;D;0
+2020;3;IL;Israel;C;0.48
+2020;3;IL;Israel;D;0.23
+2020;3;IM;Isla de Man;C;0
+2020;3;IN;India;C;0
+2020;3;IN;India;D;0.18
+2020;3;IS;Islandia;C;0
+2020;3;IT;Italia;C;4.71
+2020;3;IT;Italia;D;1.15
+2020;3;JE;Jersey;C;0.01
+2020;3;JP;Japón;C;0.54
+2020;3;JP;Japón;D;0
+2020;3;KE;Kenia;C;0
+2020;3;KE;Kenia;D;0.01
+2020;3;KH;Camboya;C;0.01
+2020;3;KR;Corea del Sur;C;0.01
+2020;3;KY;Islas Caimán;C;0
+2020;3;KZ;Kazajstán;C;0
+2020;3;LI;Liechtenstein;C;0.01
+2020;3;LK;Sri Lanka;C;0
+2020;3;LT;Lituania;C;0.01
+2020;3;LT;Lituania;D;0
+2020;3;LU;Luxemburgo;C;0.02
+2020;3;MA;Marruecos;D;0.08
+2020;3;MK;Macedonia;C;0
+2020;3;MU;Mauricio;C;0
+2020;3;MV;Maldivas;C;0.01
+2020;3;MX;México;C;2.38
+2020;3;MX;México;D;1.4
+2020;3;MY;Malasia;C;0.01
+2020;3;MZ;Mozambique;D;0
+2020;3;NC;Nueva Caledonia;C;0.01
+2020;3;NG;Nigeria;C;0
+2020;3;NG;Nigeria;D;0.62
+2020;3;NL;Países Bajos;C;0.72
+2020;3;NL;Países Bajos;D;0
+2020;3;NO;Noruega;C;0.04
+2020;3;NZ;Nueva Zelanda;C;0.47
+2020;3;NZ;Nueva Zelanda;D;0
+2020;3;PA;Panamá;C;0.9
+2020;3;PA;Panamá;D;0.22
+2020;3;PE;Perú;C;11.66
+2020;3;PE;Perú;D;20.56
+2020;3;PH;Filipinas;C;0.01
+2020;3;PH;Filipinas;D;0.11
+2020;3;PK;Pakistán;C;0
+2020;3;PK;Pakistán;D;0.09
+2020;3;PL;Polonia;C;0.04
+2020;3;PR;Puerto Rico;C;0.01
+2020;3;PT;Portugal;C;0.35
+2020;3;PY;Paraguay;C;5.88
+2020;3;PY;Paraguay;D;29.2
+2020;3;QA;Qatar;C;0.01
+2020;3;RO;Rumania;C;0
+2020;3;RU;Rusia;C;0.51
+2020;3;RU;Rusia;D;0.15
+2020;3;SA;Arabia Saudita;C;0.02
+2020;3;SE;Suecia;C;0.06
+2020;3;SE;Suecia;D;0
+2020;3;SG;Singapur;C;0.01
+2020;3;SI;Eslovenia;C;0
+2020;3;SI;Eslovenia;D;0
+2020;3;SM;San Marino;C;0
+2020;3;SN;Senegal;D;1.51
+2020;3;ST;Santo Tomé y Príncipe;C;0
+2020;3;SV;El Salvador;C;0.48
+2020;3;TC;Islas Turcas y Caicos;D;0
+2020;3;TG;Togo;D;0
+2020;3;TH;Tailandia;C;0
+2020;3;TH;Tailandia;D;0
+2020;3;TO;Tonga;C;0
+2020;3;TR;Turquía;C;0.01
+2020;3;TR;Turquía;D;0.11
+2020;3;TT;Trinidad y Tobago;C;0.35
+2020;3;UA;Ucrania;C;0.01
+2020;3;UA;Ucrania;D;0.1
+2020;3;US;Estados Unidos;C;43.43
+2020;3;US;Estados Unidos;D;2.16
+2020;3;UY;Uruguay;C;4.8
+2020;3;UY;Uruguay;D;1.93
+2020;3;VE;Venezuela;C;0.04
+2020;3;VE;Venezuela;D;0.01
+2020;3;VN;Viet Nam;C;0.01
+2020;3;ZA;Sudáfrica;C;0.01
+2020;3;ZW;Zimbabwe;C;0
+2020;4;AD;Andorra;C;0.01
+2020;4;AE;Emiratos Árabes Unidos;C;0.38
+2020;4;AM;Armenia;C;0
+2020;4;AM;Armenia;D;0.04
+2020;4;AO;Angola;C;0.02
+2020;4;AT;Austria;C;0.02
+2020;4;AT;Austria;D;0
+2020;4;AU;Australia;C;2.03
+2020;4;AU;Australia;D;0.13
+2020;4;AW;Aruba;C;0
+2020;4;AZ;Azerbaiyán;C;0
+2020;4;BE;Bélgica;C;0.61
+2020;4;BE;Bélgica;D;0.01
+2020;4;BO;Bolivia;C;7.17
+2020;4;BO;Bolivia;D;13.73
+2020;4;BQ;Bonaire, San Eustaquio y Saba;C;0
+2020;4;BR;Brasil;C;4.5
+2020;4;BR;Brasil;D;2.3
+2020;4;BS;Bahamas;C;0.01
+2020;4;CA;Canadá;C;3.17
+2020;4;CA;Canadá;D;0.19
+2020;4;CH;Suiza;C;2.87
+2020;4;CL;Chile;C;18.78
+2020;4;CL;Chile;D;2.23
+2020;4;CM;Camerún;D;0.02
+2020;4;CN;China;C;0.03
+2020;4;CN;China;D;1.81
+2020;4;CO;Colombia;C;4.09
+2020;4;CO;Colombia;D;19.67
+2020;4;CR;Costa Rica;C;0.43
+2020;4;CR;Costa Rica;D;0.14
+2020;4;CU;Cuba;D;0
+2020;4;CV;Cabo Verde;C;0
+2020;4;CW;Curaçao;C;0.01
+2020;4;CY;Chipre;C;0
+2020;4;CZ;República Checa;C;0
+2020;4;DE;Alemania;C;4.2
+2020;4;DE;Alemania;D;0.24
+2020;4;DK;Dinamarca;C;0.03
+2020;4;DK;Dinamarca;D;0
+2020;4;DO;República Dominicana;C;0.61
+2020;4;DO;República Dominicana;D;2.41
+2020;4;EC;Ecuador;C;4.68
+2020;4;EC;Ecuador;D;1.17
+2020;4;ES;España;C;25.3
+2020;4;ES;España;D;7.08
+2020;4;ET;Etiopía;C;0
+2020;4;FI;Finlandia;C;0.02
+2020;4;FR;Francia;C;4.8
+2020;4;FR;Francia;D;0.27
+2020;4;GB;Reino Unido;C;3.35
+2020;4;GB;Reino Unido;D;0.15
+2020;4;GH;Ghana;D;0.04
+2020;4;GN;Guinea;C;0
+2020;4;GR;Grecia;C;0.01
+2020;4;GR;Grecia;D;0
+2020;4;GT;Guatemala;C;0.34
+2020;4;GT;Guatemala;D;0.07
+2020;4;GU;Guam;C;0
+2020;4;GY;Guyana;C;0
+2020;4;HN;Honduras;C;0.28
+2020;4;HR;Croacia;C;0
+2020;4;HT;Haití;C;0.37
+2020;4;HT;Haití;D;0.15
+2020;4;HU;Hungría;C;0.01
+2020;4;ID;Indonesia;C;0.01
+2020;4;ID;Indonesia;D;0.09
+2020;4;IE;Irlanda;C;0.04
+2020;4;IL;Israel;C;0.52
+2020;4;IL;Israel;D;0.17
+2020;4;IM;Isla de Man;C;0
+2020;4;IN;India;C;0
+2020;4;IN;India;D;0.14
+2020;4;IT;Italia;C;5.95
+2020;4;IT;Italia;D;1.15
+2020;4;JE;Jersey;C;0
+2020;4;JP;Japón;C;0.58
+2020;4;KE;Kenia;C;0
+2020;4;KH;Camboya;C;0.01
+2020;4;KR;Corea del Sur;C;0.01
+2020;4;KY;Islas Caimán;C;0
+2020;4;LI;Liechtenstein;C;0.01
+2020;4;LT;Lituania;C;0.01
+2020;4;LU;Luxemburgo;C;0.02
+2020;4;MC;Mónaco;C;0.01
+2020;4;MV;Maldivas;C;0.01
+2020;4;MX;México;C;3
+2020;4;MX;México;D;1.14
+2020;4;NC;Nueva Caledonia;C;0.01
+2020;4;NG;Nigeria;D;0.27
+2020;4;NI;Nicaragua;C;0.11
+2020;4;NL;Países Bajos;C;0.84
+2020;4;NL;Países Bajos;D;0
+2020;4;NO;Noruega;C;0.04
+2020;4;NZ;Nueva Zelanda;C;0.53
+2020;4;PA;Panamá;C;1.04
+2020;4;PA;Panamá;D;0.19
+2020;4;PE;Perú;C;14.48
+2020;4;PE;Perú;D;20.21
+2020;4;PH;Filipinas;C;0.01
+2020;4;PH;Filipinas;D;0.09
+2020;4;PK;Pakistán;D;0.01
+2020;4;PL;Polonia;C;0.05
+2020;4;PR;Puerto Rico;C;0.01
+2020;4;PT;Portugal;C;0.41
+2020;4;PT;Portugal;D;0.08
+2020;4;PY;Paraguay;C;6.8
+2020;4;PY;Paraguay;D;27.34
+2020;4;RO;Rumania;C;0
+2020;4;RU;Rusia;C;0.69
+2020;4;RU;Rusia;D;0.14
+2020;4;SA;Arabia Saudita;C;0.02
+2020;4;SE;Suecia;C;0.66
+2020;4;SE;Suecia;D;0
+2020;4;SG;Singapur;C;0
+2020;4;SN;Senegal;D;1.28
+2020;4;ST;Santo Tomé y Príncipe;C;0
+2020;4;SV;El Salvador;C;0.5
+2020;4;TG;Togo;D;0.11
+2020;4;TH;Tailandia;D;0
+2020;4;TM;Turkmenistán;C;0.01
+2020;4;TR;Turquía;C;0
+2020;4;TR;Turquía;D;0.08
+2020;4;UA;Ucrania;C;0
+2020;4;UA;Ucrania;D;0.1
+2020;4;UG;Uganda;C;0.01
+2020;4;US;Estados Unidos;C;47.34
+2020;4;US;Estados Unidos;D;1.9
+2020;4;UY;Uruguay;C;5.28
+2020;4;UY;Uruguay;D;1.78
+2020;4;VE;Venezuela;C;0.01
+2020;4;VE;Venezuela;D;0.01
+2020;4;VN;Viet Nam;C;0
+2020;4;ZA;Sudáfrica;C;0.01
+2020;4;ZW;Zimbabwe;C;0
+2021;1;AD;Andorra;C;0.02
+2021;1;AE;Emiratos Árabes Unidos;C;0.41
+2021;1;AG;Antigua y Barbuda;C;0
+2021;1;AL;Albania;C;0.01
+2021;1;AM;Armenia;C;0
+2021;1;AM;Armenia;D;0
+2021;1;AO;Angola;C;0.02
+2021;1;AT;Austria;C;0.06
+2021;1;AT;Austria;D;0
+2021;1;AU;Australia;C;2.05
+2021;1;AU;Australia;D;0.12
+2021;1;AW;Aruba;C;0.01
+2021;1;AW;Aruba;D;0
+2021;1;AZ;Azerbaiyán;C;0
+2021;1;BB;Barbados;C;0
+2021;1;BD;Bangladesh;D;0.23
+2021;1;BE;Bélgica;C;0.62
+2021;1;BF;Burkina Faso;D;0
+2021;1;BG;Bulgaria;C;0
+2021;1;BO;Bolivia;C;7.25
+2021;1;BO;Bolivia;D;20.7
+2021;1;BQ;Bonaire, San Eustaquio y Saba;C;0
+2021;1;BR;Brasil;C;4.07
+2021;1;BR;Brasil;D;2.4
+2021;1;CA;Canadá;C;3.27
+2021;1;CA;Canadá;D;0.19
+2021;1;CH;Suiza;C;2.85
+2021;1;CL;Chile;C;20.34
+2021;1;CL;Chile;D;2.06
+2021;1;CN;China;C;0.03
+2021;1;CO;Colombia;C;3.52
+2021;1;CO;Colombia;D;18.22
+2021;1;CR;Costa Rica;C;0.42
+2021;1;CR;Costa Rica;D;0.14
+2021;1;CU;Cuba;D;0
+2021;1;CV;Cabo Verde;C;0
+2021;1;CW;Curaçao;C;0.01
+2021;1;CZ;República Checa;C;0.01
+2021;1;DE;Alemania;C;4.85
+2021;1;DE;Alemania;D;0.23
+2021;1;DK;Dinamarca;C;0.05
+2021;1;DM;Dominica;C;0
+2021;1;DO;República Dominicana;C;0.52
+2021;1;DO;República Dominicana;D;2.47
+2021;1;EC;Ecuador;C;3.61
+2021;1;EC;Ecuador;D;0.96
+2021;1;EE;Estonia;C;0
+2021;1;EG;Egipto;C;0
+2021;1;EG;Egipto;D;0
+2021;1;ES;España;C;25.93
+2021;1;ES;España;D;6.06
+2021;1;ET;Etiopía;C;0.01
+2021;1;FI;Finlandia;C;0.05
+2021;1;FR;Francia;C;5.14
+2021;1;FR;Francia;D;0.23
+2021;1;GB;Reino Unido;C;4
+2021;1;GB;Reino Unido;D;0.12
+2021;1;GH;Ghana;C;0
+2021;1;GH;Ghana;D;0.14
+2021;1;GR;Grecia;C;0.02
+2021;1;GT;Guatemala;C;0.33
+2021;1;GT;Guatemala;D;0.07
+2021;1;GU;Guam;C;0
+2021;1;GY;Guyana;C;0
+2021;1;HK;Hong Kong;C;0
+2021;1;HN;Honduras;C;0.26
+2021;1;HN;Honduras;D;0
+2021;1;HR;Croacia;C;0
+2021;1;HT;Haití;C;0.24
+2021;1;HT;Haití;D;0.15
+2021;1;HU;Hungría;C;0
+2021;1;ID;Indonesia;D;0.01
+2021;1;IE;Irlanda;C;0.11
+2021;1;IL;Israel;C;0.57
+2021;1;IL;Israel;D;0.14
+2021;1;IM;Isla de Man;C;0
+2021;1;IN;India;C;0
+2021;1;IN;India;D;0.15
+2021;1;IR;Irán;C;0
+2021;1;IS;Islandia;C;0
+2021;1;IT;Italia;C;5.95
+2021;1;IT;Italia;D;1.06
+2021;1;JE;Jersey;C;0.01
+2021;1;JP;Japón;C;0.54
+2021;1;KE;Kenia;C;0
+2021;1;KE;Kenia;D;0
+2021;1;KR;Corea del Sur;C;0
+2021;1;KY;Islas Caimán;C;0
+2021;1;KZ;Kazajstán;C;0
+2021;1;LI;Liechtenstein;C;0.01
+2021;1;LT;Lituania;C;0.01
+2021;1;LU;Luxemburgo;C;0.02
+2021;1;MA;Marruecos;D;0.07
+2021;1;MC;Mónaco;C;0
+2021;1;MT;Malta;C;0
+2021;1;MU;Mauricio;C;0
+2021;1;MV;Maldivas;C;0.01
+2021;1;MX;México;C;2.98
+2021;1;MX;México;D;1.17
+2021;1;MY;Malasia;C;0
+2021;1;NC;Nueva Caledonia;C;0
+2021;1;NG;Nigeria;D;0.1
+2021;1;NI;Nicaragua;C;0
+2021;1;NI;Nicaragua;D;0
+2021;1;NL;Países Bajos;C;0.93
+2021;1;NO;Noruega;C;0.05
+2021;1;NZ;Nueva Zelanda;C;0.76
+2021;1;NZ;Nueva Zelanda;D;0
+2021;1;PA;Panamá;C;0.96
+2021;1;PA;Panamá;D;0.16
+2021;1;PE;Perú;C;13.26
+2021;1;PE;Perú;D;17.7
+2021;1;PG;Papua Nueva Guinea;C;0
+2021;1;PH;Filipinas;C;0.01
+2021;1;PH;Filipinas;D;0.09
+2021;1;PL;Polonia;C;0.04
+2021;1;PR;Puerto Rico;C;0.01
+2021;1;PT;Portugal;C;0.37
+2021;1;PY;Paraguay;C;6.85
+2021;1;PY;Paraguay;D;25.85
+2021;1;QA;Qatar;C;0.01
+2021;1;RO;Rumania;C;0.01
+2021;1;RU;Rusia;C;0.64
+2021;1;RU;Rusia;D;0.1
+2021;1;SA;Arabia Saudita;C;0.01
+2021;1;SC;Seychelles;C;0
+2021;1;SE;Suecia;C;0.67
+2021;1;SE;Suecia;D;0
+2021;1;SG;Singapur;C;0.01
+2021;1;SK;Eslovaquia;C;0
+2021;1;SN;Senegal;D;1.54
+2021;1;SV;El Salvador;C;0.46
+2021;1;SV;El Salvador;D;0
+2021;1;TG;Togo;D;0.14
+2021;1;TH;Tailandia;D;0
+2021;1;TR;Turquía;C;0.1
+2021;1;TR;Turquía;D;0.16
+2021;1;UA;Ucrania;D;0.01
+2021;1;US;Estados Unidos;C;52.94
+2021;1;US;Estados Unidos;D;1.79
+2021;1;UY;Uruguay;C;4.99
+2021;1;UY;Uruguay;D;1.57
+2021;1;VE;Venezuela;C;0.02
+2021;1;VE;Venezuela;D;0.04
+2021;1;ZA;Sudáfrica;C;0.01
+2021;1;ZM;Zambia;C;0
+2021;2;AD;Andorra;C;0.01
+2021;2;AE;Emiratos Árabes Unidos;C;0.41
+2021;2;AL;Albania;C;0
+2021;2;AM;Armenia;C;0
+2021;2;AM;Armenia;D;0
+2021;2;AO;Angola;C;0.01
+2021;2;AT;Austria;C;0.05
+2021;2;AT;Austria;D;0
+2021;2;AU;Australia;C;2.29
+2021;2;AU;Australia;D;0.11
+2021;2;AW;Aruba;C;0
+2021;2;AZ;Azerbaiyán;C;0.01
+2021;2;BB;Barbados;C;0.01
+2021;2;BD;Bangladesh;C;0
+2021;2;BD;Bangladesh;D;0.15
+2021;2;BE;Bélgica;C;0.69
+2021;2;BE;Bélgica;D;0.02
+2021;2;BF;Burkina Faso;D;0.01
+2021;2;BH;Bahrein;C;0
+2021;2;BM;Bermudas;C;0
+2021;2;BO;Bolivia;C;7.15
+2021;2;BO;Bolivia;D;21.47
+2021;2;BQ;Bonaire, San Eustaquio y Saba;C;0
+2021;2;BR;Brasil;C;4.96
+2021;2;BR;Brasil;D;2.57
+2021;2;CA;Canadá;C;3.83
+2021;2;CA;Canadá;D;0.15
+2021;2;CF;República Centroafricana;C;0
+2021;2;CH;Suiza;C;3.12
+2021;2;CL;Chile;C;27.34
+2021;2;CL;Chile;D;1.88
+2021;2;CM;Camerún;D;0.01
+2021;2;CN;China;C;0.03
+2021;2;CN;China;D;0.42
+2021;2;CO;Colombia;C;4.14
+2021;2;CO;Colombia;D;8.55
+2021;2;CR;Costa Rica;C;0.48
+2021;2;CR;Costa Rica;D;0.21
+2021;2;CW;Curaçao;C;0.01
+2021;2;CY;Chipre;C;0.28
+2021;2;DE;Alemania;C;5.22
+2021;2;DE;Alemania;D;0.23
+2021;2;DK;Dinamarca;C;0.03
+2021;2;DO;República Dominicana;C;0.64
+2021;2;DO;República Dominicana;D;2.65
+2021;2;EC;Ecuador;C;4.2
+2021;2;EC;Ecuador;D;0.98
+2021;2;EG;Egipto;D;0
+2021;2;ES;España;C;27.51
+2021;2;ES;España;D;5.99
+2021;2;ET;Etiopía;C;0
+2021;2;FI;Finlandia;C;0.04
+2021;2;FR;Francia;C;5.23
+2021;2;FR;Francia;D;0.23
+2021;2;GB;Reino Unido;C;4.59
+2021;2;GB;Reino Unido;D;0.14
+2021;2;GH;Ghana;D;0.09
+2021;2;GN;Guinea;C;0
+2021;2;GR;Grecia;C;0.02
+2021;2;GT;Guatemala;C;0.36
+2021;2;GT;Guatemala;D;0.07
+2021;2;GU;Guam;C;0
+2021;2;HK;Hong Kong;C;0.01
+2021;2;HN;Honduras;C;0.28
+2021;2;HN;Honduras;D;0.06
+2021;2;HR;Croacia;C;0.01
+2021;2;HR;Croacia;D;0
+2021;2;HT;Haití;C;0.27
+2021;2;HT;Haití;D;0.14
+2021;2;HU;Hungría;C;0.01
+2021;2;HU;Hungría;D;0
+2021;2;ID;Indonesia;C;0.01
+2021;2;ID;Indonesia;D;0.02
+2021;2;IE;Irlanda;C;0.09
+2021;2;IL;Israel;C;0.57
+2021;2;IL;Israel;D;0.15
+2021;2;IN;India;C;0
+2021;2;IN;India;D;0.12
+2021;2;IS;Islandia;C;0.02
+2021;2;IT;Italia;C;6.2
+2021;2;IT;Italia;D;1.24
+2021;2;JE;Jersey;C;0.01
+2021;2;JO;Jordania;C;0
+2021;2;JP;Japón;C;0.57
+2021;2;KE;Kenia;C;0
+2021;2;KR;Corea del Sur;C;0
+2021;2;KY;Islas Caimán;C;0
+2021;2;LI;Liechtenstein;C;0.01
+2021;2;LT;Lituania;C;0.01
+2021;2;LU;Luxemburgo;C;0.04
+2021;2;MA;Marruecos;C;0
+2021;2;MA;Marruecos;D;0
+2021;2;MC;Mónaco;C;0
+2021;2;ME;Montenegro;C;0
+2021;2;MK;Macedonia;C;0
+2021;2;MU;Mauricio;C;0
+2021;2;MV;Maldivas;C;0.01
+2021;2;MX;México;C;3.67
+2021;2;MX;México;D;1.25
+2021;2;MY;Malasia;C;0
+2021;2;NC;Nueva Caledonia;C;0
+2021;2;NG;Nigeria;C;0
+2021;2;NG;Nigeria;D;0.12
+2021;2;NI;Nicaragua;D;0
+2021;2;NL;Países Bajos;C;1.01
+2021;2;NO;Noruega;C;0.06
+2021;2;NZ;Nueva Zelanda;C;0.87
+2021;2;NZ;Nueva Zelanda;D;0
+2021;2;PA;Panamá;C;1.1
+2021;2;PA;Panamá;D;0.16
+2021;2;PE;Perú;C;12.75
+2021;2;PE;Perú;D;18.88
+2021;2;PH;Filipinas;C;0
+2021;2;PH;Filipinas;D;0.08
+2021;2;PK;Pakistán;D;0.08
+2021;2;PL;Polonia;C;0.04
+2021;2;PR;Puerto Rico;C;0.02
+2021;2;PT;Portugal;C;0.41
+2021;2;PY;Paraguay;C;7.1
+2021;2;PY;Paraguay;D;27.42
+2021;2;QA;Qatar;C;0.01
+2021;2;RO;Rumania;C;0.02
+2021;2;RU;Rusia;C;0.72
+2021;2;RU;Rusia;D;0.11
+2021;2;SA;Arabia Saudita;C;0.01
+2021;2;SE;Suecia;C;0.07
+2021;2;SG;Singapur;C;0.01
+2021;2;SI;Eslovenia;C;0
+2021;2;SN;Senegal;C;0
+2021;2;SN;Senegal;D;0.61
+2021;2;SV;El Salvador;C;0.47
+2021;2;SV;El Salvador;D;0
+2021;2;SX;San Martín (PB);C;0
+2021;2;TG;Togo;D;0.11
+2021;2;TH;Tailandia;C;0
+2021;2;TK;Tokelau;C;0
+2021;2;TR;Turquía;C;0
+2021;2;TR;Turquía;D;0.09
+2021;2;TW;Taiwan;C;0
+2021;2;UA;Ucrania;C;0.01
+2021;2;UA;Ucrania;D;0
+2021;2;UG;Uganda;C;0
+2021;2;US;Estados Unidos;C;60.99
+2021;2;US;Estados Unidos;D;1.64
+2021;2;UY;Uruguay;C;5.74
+2021;2;UY;Uruguay;D;1.5
+2021;2;VE;Venezuela;C;0.03
+2021;2;VE;Venezuela;D;0.04
+2021;2;ZA;Sudáfrica;C;0.02
+2021;3;AD;Andorra;C;0.01
+2021;3;AE;Emiratos Árabes Unidos;C;0.38
+2021;3;AM;Armenia;C;0
+2021;3;AM;Armenia;D;0.01
+2021;3;AO;Angola;C;0.01
+2021;3;AT;Austria;C;0.04
+2021;3;AT;Austria;D;0
+2021;3;AU;Australia;C;2.63
+2021;3;AU;Australia;D;0.12
+2021;3;AW;Aruba;C;0.01
+2021;3;AZ;Azerbaiyán;C;0
+2021;3;BB;Barbados;C;0.01
+2021;3;BD;Bangladesh;D;0.28
+2021;3;BE;Bélgica;C;0.69
+2021;3;BE;Bélgica;D;0.01
+2021;3;BF;Burkina Faso;D;0.01
+2021;3;BO;Bolivia;C;7.36
+2021;3;BO;Bolivia;D;24.24
+2021;3;BQ;Bonaire, San Eustaquio y Saba;C;0
+2021;3;BR;Brasil;C;4.16
+2021;3;BR;Brasil;D;2.71
+2021;3;CA;Canadá;C;3.66
+2021;3;CA;Canadá;D;0.17
+2021;3;CH;Suiza;C;2.98
+2021;3;CH;Suiza;D;0
+2021;3;CI;Costa de Marfil;D;0.01
+2021;3;CL;Chile;C;27.98
+2021;3;CL;Chile;D;2.51
+2021;3;CM;Camerún;D;0.01
+2021;3;CN;China;C;0.01
+2021;3;CN;China;D;0.78
+2021;3;CO;Colombia;C;3.81
+2021;3;CO;Colombia;D;9.61
+2021;3;CR;Costa Rica;C;0.55
+2021;3;CR;Costa Rica;D;0.22
+2021;3;CU;Cuba;C;0
+2021;3;CU;Cuba;D;0
+2021;3;CV;Cabo Verde;D;0
+2021;3;CW;Curaçao;C;0.01
+2021;3;CY;Chipre;C;0.27
+2021;3;DE;Alemania;C;4.87
+2021;3;DE;Alemania;D;0.29
+2021;3;DK;Dinamarca;C;0.03
+2021;3;DO;República Dominicana;C;0.68
+2021;3;DO;República Dominicana;D;2.88
+2021;3;EC;Ecuador;C;4.51
+2021;3;EC;Ecuador;D;1.08
+2021;3;EG;Egipto;D;0
+2021;3;ES;España;C;28.64
+2021;3;ES;España;D;6.93
+2021;3;ET;Etiopía;C;0.01
+2021;3;FI;Finlandia;C;0.03
+2021;3;FR;Francia;C;4.78
+2021;3;FR;Francia;D;0.25
+2021;3;GB;Reino Unido;C;4.61
+2021;3;GB;Reino Unido;D;0.13
+2021;3;GH;Ghana;C;0
+2021;3;GH;Ghana;D;0.2
+2021;3;GI;Gibraltar;C;0
+2021;3;GR;Grecia;C;0.03
+2021;3;GR;Grecia;D;0
+2021;3;GT;Guatemala;C;0.36
+2021;3;GT;Guatemala;D;0.08
+2021;3;GU;Guam;C;0
+2021;3;HK;Hong Kong;C;0.01
+2021;3;HN;Honduras;C;0.32
+2021;3;HN;Honduras;D;0
+2021;3;HR;Croacia;C;0
+2021;3;HT;Haití;C;0.27
+2021;3;HT;Haití;D;0.18
+2021;3;HU;Hungría;C;0.01
+2021;3;ID;Indonesia;D;0.01
+2021;3;IE;Irlanda;C;0.1
+2021;3;IL;Israel;C;0.59
+2021;3;IL;Israel;D;0.16
+2021;3;IN;India;C;0
+2021;3;IN;India;D;0.14
+2021;3;IS;Islandia;C;0.01
+2021;3;IT;Italia;C;5.93
+2021;3;IT;Italia;D;1.66
+2021;3;JE;Jersey;C;0.01
+2021;3;JP;Japón;C;0.54
+2021;3;KE;Kenia;C;0
+2021;3;KR;Corea del Sur;C;0.01
+2021;3;LI;Liechtenstein;C;0.01
+2021;3;LT;Lituania;C;0.01
+2021;3;LU;Luxemburgo;C;0.03
+2021;3;MA;Marruecos;D;0.01
+2021;3;MK;Macedonia;C;0
+2021;3;MX;México;C;3.71
+2021;3;MX;México;D;1.43
+2021;3;MY;Malasia;C;0
+2021;3;NC;Nueva Caledonia;C;0.01
+2021;3;NG;Nigeria;D;0.09
+2021;3;NL;Países Bajos;C;0.17
+2021;3;NO;Noruega;C;0.05
+2021;3;NZ;Nueva Zelanda;C;0.77
+2021;3;PA;Panamá;C;1.04
+2021;3;PA;Panamá;D;0.21
+2021;3;PE;Perú;C;14.14
+2021;3;PE;Perú;D;21.09
+2021;3;PH;Filipinas;C;0.01
+2021;3;PH;Filipinas;D;0.08
+2021;3;PK;Pakistán;D;0.1
+2021;3;PL;Polonia;C;0.01
+2021;3;PR;Puerto Rico;C;0.02
+2021;3;PT;Portugal;C;0.43
+2021;3;PY;Paraguay;C;6.1
+2021;3;PY;Paraguay;D;29.09
+2021;3;QA;Qatar;C;0.02
+2021;3;RO;Rumania;C;0.01
+2021;3;RU;Rusia;C;0.68
+2021;3;RU;Rusia;D;0.1
+2021;3;SA;Arabia Saudita;C;0.01
+2021;3;SE;Suecia;C;0.05
+2021;3;SG;Singapur;C;0.01
+2021;3;SN;Senegal;D;1.06
+2021;3;SV;El Salvador;C;0.47
+2021;3;SV;El Salvador;D;0
+2021;3;TG;Togo;D;0.02
+2021;3;TH;Tailandia;D;0
+2021;3;TR;Turquía;C;0.16
+2021;3;TR;Turquía;D;0.11
+2021;3;TT;Trinidad y Tobago;C;0
+2021;3;UA;Ucrania;C;0.01
+2021;3;UA;Ucrania;D;0.1
+2021;3;US;Estados Unidos;C;59.66
+2021;3;US;Estados Unidos;D;2.17
+2021;3;UY;Uruguay;C;5.99
+2021;3;UY;Uruguay;D;1.5
+2021;3;VE;Venezuela;C;0.02
+2021;3;VE;Venezuela;D;0.05
+2021;3;ZA;Sudáfrica;C;0.01
+2021;3;ZA;Sudáfrica;D;0.01
+2021;4;AD;Andorra;C;0
+2021;4;AE;Emiratos Árabes Unidos;C;0.51
+2021;4;AM;Armenia;C;0
+2021;4;AO;Angola;C;0.01
+2021;4;AT;Austria;C;0.55
+2021;4;AU;Australia;C;2.98
+2021;4;AU;Australia;D;0.09
+2021;4;AW;Aruba;C;0.01
+2021;4;AZ;Azerbaiyán;C;0
+2021;4;BE;Bélgica;C;0.88
+2021;4;BF;Burkina Faso;D;0.07
+2021;4;BG;Bulgaria;C;0.01
+2021;4;BH;Bahrein;C;0
+2021;4;BO;Bolivia;C;8.56
+2021;4;BO;Bolivia;D;22.54
+2021;4;BQ;Bonaire, San Eustaquio y Saba;C;0
+2021;4;BR;Brasil;C;11.13
+2021;4;BR;Brasil;D;2.73
+2021;4;BY;Belarús;C;0
+2021;4;CA;Canadá;C;4.25
+2021;4;CA;Canadá;D;0.15
+2021;4;CH;Suiza;C;3.9
+2021;4;CL;Chile;C;28.36
+2021;4;CL;Chile;D;2.27
+2021;4;CM;Camerún;D;0.02
+2021;4;CN;China;C;0.01
+2021;4;CN;China;D;0.27
+2021;4;CO;Colombia;C;4.47
+2021;4;CO;Colombia;D;6.37
+2021;4;CR;Costa Rica;C;0.57
+2021;4;CR;Costa Rica;D;0.17
+2021;4;CU;Cuba;D;0
+2021;4;CV;Cabo Verde;D;0
+2021;4;CW;Curaçao;C;0.01
+2021;4;CY;Chipre;C;0
+2021;4;DE;Alemania;C;6.59
+2021;4;DE;Alemania;D;0.25
+2021;4;DK;Dinamarca;C;0.98
+2021;4;DO;República Dominicana;C;0.8
+2021;4;DO;República Dominicana;D;2.83
+2021;4;EC;Ecuador;C;5.16
+2021;4;EC;Ecuador;D;0.97
+2021;4;EE;Estonia;D;0
+2021;4;EG;Egipto;C;0
+2021;4;ES;España;C;32.76
+2021;4;ES;España;D;6.17
+2021;4;ET;Etiopía;C;0
+2021;4;ET;Etiopía;D;0
+2021;4;FI;Finlandia;C;0.03
+2021;4;FR;Francia;C;6.62
+2021;4;FR;Francia;D;0.22
+2021;4;GB;Reino Unido;C;5.34
+2021;4;GB;Reino Unido;D;0.13
+2021;4;GE;Georgia;C;0
+2021;4;GH;Ghana;C;0
+2021;4;GH;Ghana;D;0.29
+2021;4;GR;Grecia;C;0.01
+2021;4;GT;Guatemala;C;0.04
+2021;4;GT;Guatemala;D;0.01
+2021;4;GU;Guam;C;0
+2021;4;HK;Hong Kong;C;0.01
+2021;4;HN;Honduras;C;0.02
+2021;4;HN;Honduras;D;0
+2021;4;HR;Croacia;C;0
+2021;4;HT;Haití;C;0.01
+2021;4;HT;Haití;D;0.17
+2021;4;HU;Hungría;C;0.01
+2021;4;ID;Indonesia;D;0.01
+2021;4;IE;Irlanda;C;0.97
+2021;4;IL;Israel;C;0.75
+2021;4;IL;Israel;D;0.17
+2021;4;IN;India;D;0.11
+2021;4;IT;Italia;C;7.03
+2021;4;IT;Italia;D;1.42
+2021;4;JE;Jersey;C;0.01
+2021;4;JP;Japón;C;0.67
+2021;4;KE;Kenia;C;0
+2021;4;KE;Kenia;D;0.01
+2021;4;KR;Corea del Sur;C;0.01
+2021;4;KY;Islas Caimán;C;0
+2021;4;KZ;Kazajstán;C;0
+2021;4;LB;Líbano;D;0
+2021;4;LC;Santa Lucía;C;0
+2021;4;LI;Liechtenstein;C;0.01
+2021;4;LT;Lituania;C;0.01
+2021;4;LU;Luxemburgo;C;0.03
+2021;4;MA;Marruecos;D;0.01
+2021;4;MC;Mónaco;C;0
+2021;4;MK;Macedonia;C;0
+2021;4;ML;Malí;D;0
+2021;4;MU;Mauricio;C;0
+2021;4;MV;Maldivas;C;0.01
+2021;4;MX;México;C;3.96
+2021;4;MX;México;D;1.34
+2021;4;MY;Malasia;C;0
+2021;4;NC;Nueva Caledonia;C;0.01
+2021;4;NG;Nigeria;D;0.11
+2021;4;NI;Nicaragua;C;0
+2021;4;NI;Nicaragua;D;0.07
+2021;4;NL;Países Bajos;C;1.52
+2021;4;NL;Países Bajos;D;0
+2021;4;NO;Noruega;C;0.51
+2021;4;NZ;Nueva Zelanda;C;0.91
+2021;4;NZ;Nueva Zelanda;D;0.01
+2021;4;OM;Omán;C;0.01
+2021;4;PA;Panamá;C;1.31
+2021;4;PA;Panamá;D;0.17
+2021;4;PE;Perú;C;15.12
+2021;4;PE;Perú;D;20.69
+2021;4;PH;Filipinas;D;0.02
+2021;4;PL;Polonia;C;0.02
+2021;4;PR;Puerto Rico;C;0.01
+2021;4;PT;Portugal;C;0.5
+2021;4;PT;Portugal;D;0.1
+2021;4;PY;Paraguay;C;5.89
+2021;4;PY;Paraguay;D;24.18
+2021;4;QA;Qatar;C;0
+2021;4;RO;Rumania;C;0.02
+2021;4;RU;Rusia;C;1.09
+2021;4;RU;Rusia;D;0.1
+2021;4;SA;Arabia Saudita;C;0
+2021;4;SE;Suecia;C;0.87
+2021;4;SE;Suecia;D;0
+2021;4;SG;Singapur;C;0.01
+2021;4;SK;Eslovaquia;C;0
+2021;4;SN;Senegal;C;0
+2021;4;SN;Senegal;D;0.86
+2021;4;SV;El Salvador;C;0.48
+2021;4;SV;El Salvador;D;0
+2021;4;TG;Togo;D;0.12
+2021;4;TH;Tailandia;D;0
+2021;4;TR;Turquía;C;0
+2021;4;TR;Turquía;D;0.11
+2021;4;TT;Trinidad y Tobago;C;0.01
+2021;4;TW;Taiwan;C;0
+2021;4;UA;Ucrania;C;0
+2021;4;UA;Ucrania;D;0.07
+2021;4;UG;Uganda;C;0
+2021;4;US;Estados Unidos;C;71.9
+2021;4;US;Estados Unidos;D;1.8
+2021;4;UY;Uruguay;C;6.66
+2021;4;UY;Uruguay;D;1.24
+2021;4;VA;Vaticano;C;0
+2021;4;VE;Venezuela;C;0.01
+2021;4;VE;Venezuela;D;0.21
+2021;4;ZA;Sudáfrica;C;0.01
+2021;4;;Namibia;C;0
+2022;1;AD;Andorra;C;0.01
+2022;1;AE;Emiratos Árabes Unidos;C;0.48
+2022;1;AM;Armenia;C;0.01
+2022;1;AM;Armenia;D;0.01
+2022;1;AN;Antillas Neerlandesas;C;0
+2022;1;AO;Angola;C;0.01
+2022;1;AT;Austria;C;0.61
+2022;1;AU;Australia;C;3.14
+2022;1;AU;Australia;D;0.19
+2022;1;AW;Aruba;C;0
+2022;1;AZ;Azerbaiyán;C;0
+2022;1;BD;Bangladesh;D;0.19
+2022;1;BE;Bélgica;C;1.23
+2022;1;BE;Bélgica;D;0.01
+2022;1;BF;Burkina Faso;D;0.01
+2022;1;BG;Bulgaria;C;0
+2022;1;BH;Bahrein;C;0
+2022;1;BO;Bolivia;C;7.02
+2022;1;BO;Bolivia;D;24.61
+2022;1;BQ;Bonaire, San Eustaquio y Saba;C;0
+2022;1;BR;Brasil;C;17.27
+2022;1;BR;Brasil;D;2.63
+2022;1;BS;Bahamas;C;0
+2022;1;CA;Canadá;C;4.37
+2022;1;CA;Canadá;D;0.19
+2022;1;CH;Suiza;C;3.95
+2022;1;CL;Chile;C;24.97
+2022;1;CL;Chile;D;2.49
+2022;1;CM;Camerún;D;0.04
+2022;1;CN;China;C;0.01
+2022;1;CN;China;D;0.28
+2022;1;CO;Colombia;C;4.19
+2022;1;CO;Colombia;D;6.02
+2022;1;CR;Costa Rica;C;0.53
+2022;1;CR;Costa Rica;D;0.15
+2022;1;CW;Curaçao;C;0.01
+2022;1;DE;Alemania;C;7.42
+2022;1;DE;Alemania;D;0.25
+2022;1;DK;Dinamarca;C;1.48
+2022;1;DM;Dominica;C;0
+2022;1;DO;República Dominicana;C;0.76
+2022;1;DO;República Dominicana;D;3.1
+2022;1;DZ;Argelia;D;0
+2022;1;EC;Ecuador;C;6.28
+2022;1;EC;Ecuador;D;0.91
+2022;1;ES;España;C;31.19
+2022;1;ES;España;D;6.59
+2022;1;ET;Etiopía;C;0.01
+2022;1;ET;Etiopía;D;0
+2022;1;FI;Finlandia;C;0.04
+2022;1;FJ;Fiji;C;0
+2022;1;FR;Francia;C;9.94
+2022;1;FR;Francia;D;0.29
+2022;1;GB;Reino Unido;C;6.88
+2022;1;GB;Reino Unido;D;0.13
+2022;1;GH;Ghana;C;0
+2022;1;GH;Ghana;D;0.14
+2022;1;GR;Grecia;C;0.01
+2022;1;GT;Guatemala;C;0.06
+2022;1;GT;Guatemala;D;0.11
+2022;1;GW;Guinea-Bissau;C;0
+2022;1;HK;Hong Kong;C;0
+2022;1;HN;Honduras;C;0.03
+2022;1;HN;Honduras;D;0
+2022;1;HR;Croacia;C;0.01
+2022;1;HT;Haití;C;0.01
+2022;1;HT;Haití;D;0.24
+2022;1;HU;Hungría;C;0.01
+2022;1;HU;Hungría;D;0
+2022;1;ID;Indonesia;D;0.02
+2022;1;IE;Irlanda;C;1.1
+2022;1;IL;Israel;C;1.02
+2022;1;IL;Israel;D;0.21
+2022;1;IM;Isla de Man;C;0
+2022;1;IN;India;C;0.01
+2022;1;IN;India;D;0.11
+2022;1;IT;Italia;C;6.57
+2022;1;IT;Italia;D;1.63
+2022;1;JE;Jersey;C;0
+2022;1;JP;Japón;C;0.55
+2022;1;KE;Kenia;D;0.01
+2022;1;KH;Camboya;C;0
+2022;1;KR;Corea del Sur;C;0
+2022;1;LC;Santa Lucía;C;0
+2022;1;LI;Liechtenstein;C;0
+2022;1;LT;Lituania;C;0.01
+2022;1;LT;Lituania;D;0
+2022;1;LU;Luxemburgo;C;0.03
+2022;1;MA;Marruecos;D;0.08
+2022;1;MC;Mónaco;C;0.01
+2022;1;MK;Macedonia;C;0
+2022;1;ML;Malí;D;0
+2022;1;MT;Malta;C;0
+2022;1;MX;México;C;3.87
+2022;1;MX;México;D;1.4
+2022;1;NC;Nueva Caledonia;C;0
+2022;1;NG;Nigeria;D;0.07
+2022;1;NI;Nicaragua;D;0.07
+2022;1;NL;Países Bajos;C;2.4
+2022;1;NL;Países Bajos;D;0
+2022;1;NO;Noruega;C;0.57
+2022;1;NZ;Nueva Zelanda;C;0.8
+2022;1;NZ;Nueva Zelanda;D;0
+2022;1;PA;Panamá;C;1.12
+2022;1;PA;Panamá;D;0.25
+2022;1;PE;Perú;C;13.33
+2022;1;PE;Perú;D;20.66
+2022;1;PH;Filipinas;C;0
+2022;1;PH;Filipinas;D;0.08
+2022;1;PK;Pakistán;D;0.01
+2022;1;PL;Polonia;C;0.03
+2022;1;PR;Puerto Rico;C;0.02
+2022;1;PT;Portugal;C;0.53
+2022;1;PT;Portugal;D;0.12
+2022;1;PY;Paraguay;C;4.74
+2022;1;PY;Paraguay;D;24.97
+2022;1;QA;Qatar;C;0.02
+2022;1;RO;Rumania;C;0.02
+2022;1;RU;Rusia;C;1.22
+2022;1;SA;Arabia Saudita;C;0
+2022;1;SE;Suecia;C;0.83
+2022;1;SE;Suecia;D;0
+2022;1;SG;Singapur;C;0
+2022;1;SN;Senegal;D;1.37
+2022;1;SV;El Salvador;C;0.52
+2022;1;SV;El Salvador;D;0.01
+2022;1;TR;Turquía;C;0
+2022;1;TR;Turquía;D;0.09
+2022;1;UA;Ucrania;D;0.12
+2022;1;US;Estados Unidos;C;64.62
+2022;1;US;Estados Unidos;D;1.96
+2022;1;UY;Uruguay;C;5.72
+2022;1;UY;Uruguay;D;1
+2022;1;VA;Vaticano;C;0
+2022;1;VE;Venezuela;C;0.05
+2022;1;VE;Venezuela;D;0.29
+2022;1;VN;Viet Nam;C;0
+2022;1;ZA;Sudáfrica;C;0.02
+2022;2;AE;Emiratos Árabes Unidos;C;0.52
+2022;2;AL;Albania;C;0
+2022;2;AM;Armenia;C;0.03
+2022;2;AM;Armenia;D;0.01
+2022;2;AO;Angola;C;0.01
+2022;2;AT;Austria;C;0.47
+2022;2;AU;Australia;C;3.32
+2022;2;AU;Australia;D;0.14
+2022;2;AW;Aruba;C;0.01
+2022;2;AZ;Azerbaiyán;C;0
+2022;2;BA;Bosnia y Herzegovina;C;0
+2022;2;BE;Bélgica;C;0.92
+2022;2;BF;Burkina Faso;D;0.01
+2022;2;BH;Bahrein;C;0
+2022;2;BO;Bolivia;C;7.05
+2022;2;BO;Bolivia;D;30.25
+2022;2;BQ;Bonaire, San Eustaquio y Saba;C;0
+2022;2;BR;Brasil;C;33.87
+2022;2;BR;Brasil;D;2.35
+2022;2;BW;Botswana;C;0
+2022;2;CA;Canadá;C;3.79
+2022;2;CA;Canadá;D;0.19
+2022;2;CH;Suiza;C;3.3
+2022;2;CI;Costa de Marfil;D;0
+2022;2;CL;Chile;C;22.01
+2022;2;CL;Chile;D;2.94
+2022;2;CN;China;C;0.01
+2022;2;CN;China;D;0.3
+2022;2;CO;Colombia;C;4.73
+2022;2;CO;Colombia;D;6.16
+2022;2;CR;Costa Rica;C;0.56
+2022;2;CR;Costa Rica;D;0.14
+2022;2;CU;Cuba;D;0
+2022;2;CW;Curaçao;C;0.01
+2022;2;CY;Chipre;C;0.01
+2022;2;CZ;República Checa;C;0
+2022;2;DE;Alemania;C;5.58
+2022;2;DE;Alemania;D;0.35
+2022;2;DK;Dinamarca;C;0.97
+2022;2;DM;Dominica;C;0
+2022;2;DO;República Dominicana;C;0.66
+2022;2;DO;República Dominicana;D;3.65
+2022;2;DZ;Argelia;D;0
+2022;2;EC;Ecuador;C;8.06
+2022;2;EC;Ecuador;D;0.85
+2022;2;EG;Egipto;D;0
+2022;2;ES;España;C;26.98
+2022;2;ES;España;D;7.64
+2022;2;ET;Etiopía;C;0
+2022;2;FI;Finlandia;C;0.03
+2022;2;FR;Francia;C;8.27
+2022;2;FR;Francia;D;0.27
+2022;2;GB;Reino Unido;C;5.85
+2022;2;GB;Reino Unido;D;0.18
+2022;2;GH;Ghana;D;0.21
+2022;2;GR;Grecia;C;0.01
+2022;2;GT;Guatemala;C;0.07
+2022;2;GT;Guatemala;D;0.07
+2022;2;HK;Hong Kong;C;0
+2022;2;HN;Honduras;C;0.03
+2022;2;HN;Honduras;D;0
+2022;2;HR;Croacia;C;0.01
+2022;2;HT;Haití;C;0.02
+2022;2;HT;Haití;D;0.23
+2022;2;HU;Hungría;C;0
+2022;2;ID;Indonesia;D;0.01
+2022;2;IE;Irlanda;C;0.79
+2022;2;IL;Israel;C;0.6
+2022;2;IL;Israel;D;0.14
+2022;2;IM;Isla de Man;C;0
+2022;2;IN;India;C;0
+2022;2;IN;India;D;0.12
+2022;2;IT;Italia;C;5.85
+2022;2;IT;Italia;D;1.96
+2022;2;JP;Japón;C;0.47
+2022;2;KE;Kenia;D;0.01
+2022;2;KR;Corea del Sur;C;0
+2022;2;LB;Líbano;D;0
+2022;2;LI;Liechtenstein;C;0
+2022;2;LT;Lituania;C;0.02
+2022;2;LU;Luxemburgo;C;0.02
+2022;2;MA;Marruecos;D;0
+2022;2;MK;Macedonia;C;0
+2022;2;MX;México;C;4.01
+2022;2;MX;México;D;1.49
+2022;2;MY;Malasia;C;0
+2022;2;NC;Nueva Caledonia;C;0.01
+2022;2;NG;Nigeria;C;0
+2022;2;NG;Nigeria;D;0
+2022;2;NI;Nicaragua;D;0.06
+2022;2;NL;Países Bajos;C;1.55
+2022;2;NL;Países Bajos;D;0
+2022;2;NO;Noruega;C;0.44
+2022;2;NZ;Nueva Zelanda;C;0.98
+2022;2;OM;Omán;C;0
+2022;2;PA;Panamá;C;1.15
+2022;2;PA;Panamá;D;0.17
+2022;2;PE;Perú;C;12.73
+2022;2;PE;Perú;D;21.7
+2022;2;PH;Filipinas;C;0
+2022;2;PH;Filipinas;D;0.09
+2022;2;PK;Pakistán;D;0.09
+2022;2;PL;Polonia;C;0.04
+2022;2;PR;Puerto Rico;C;0.02
+2022;2;PT;Portugal;C;0.5
+2022;2;PT;Portugal;D;0.2
+2022;2;PY;Paraguay;C;4.39
+2022;2;PY;Paraguay;D;29.68
+2022;2;QA;Qatar;C;0.01
+2022;2;RO;Rumania;C;0.01
+2022;2;RU;Rusia;C;0.01
+2022;2;SA;Arabia Saudita;C;0
+2022;2;SE;Suecia;C;0.76
+2022;2;SG;Singapur;C;0
+2022;2;SI;Eslovenia;C;0.01
+2022;2;SK;Eslovaquia;C;0
+2022;2;SN;Senegal;D;0.71
+2022;2;SV;El Salvador;C;0.6
+2022;2;SV;El Salvador;D;0
+2022;2;TG;Togo;D;0.02
+2022;2;TR;Turquía;C;0.01
+2022;2;TR;Turquía;D;0.11
+2022;2;TW;Taiwan;C;0
+2022;2;UA;Ucrania;D;0.14
+2022;2;US;Estados Unidos;C;63.23
+2022;2;US;Estados Unidos;D;2.09
+2022;2;UY;Uruguay;C;5.97
+2022;2;UY;Uruguay;D;0.97
+2022;2;VE;Venezuela;C;0.44
+2022;2;VE;Venezuela;D;0.38
+2022;2;VN;Viet Nam;C;0.01
+2022;2;ZA;Sudáfrica;C;0.02
+2022;3;AD;Andorra;C;0
+2022;3;AE;Emiratos Árabes Unidos;C;0.56
+2022;3;AG;Antigua y Barbuda;C;0
+2022;3;AM;Armenia;D;0.01
+2022;3;AO;Angola;C;0.01
+2022;3;AT;Austria;C;0.45
+2022;3;AT;Austria;D;0
+2022;3;AU;Australia;C;3.3
+2022;3;AU;Australia;D;0.14
+2022;3;AW;Aruba;C;0
+2022;3;AZ;Azerbaiyán;C;0
+2022;3;BE;Bélgica;C;0.79
+2022;3;BE;Bélgica;D;0.01
+2022;3;BF;Burkina Faso;D;0.01
+2022;3;BH;Bahrein;C;0
+2022;3;BO;Bolivia;C;6.55
+2022;3;BO;Bolivia;D;15.53
+2022;3;BQ;Bonaire, San Eustaquio y Saba;C;0
+2022;3;BR;Brasil;C;46.96
+2022;3;BR;Brasil;D;2.9
+2022;3;BS;Bahamas;C;0
+2022;3;BW;Botswana;C;0
+2022;3;CA;Canadá;C;3.34
+2022;3;CA;Canadá;D;0.36
+2022;3;CH;Suiza;C;3.07
+2022;3;CI;Costa de Marfil;D;0.02
+2022;3;CL;Chile;C;18.83
+2022;3;CL;Chile;D;2.6
+2022;3;CM;Camerún;D;0.03
+2022;3;CN;China;C;0.01
+2022;3;CO;Colombia;C;4.41
+2022;3;CO;Colombia;D;5.35
+2022;3;CR;Costa Rica;C;0.57
+2022;3;CR;Costa Rica;D;0.12
+2022;3;CU;Cuba;D;0
+2022;3;CW;Curaçao;C;0.01
+2022;3;DE;Alemania;C;4.98
+2022;3;DE;Alemania;D;0.31
+2022;3;DK;Dinamarca;C;0.8
+2022;3;DO;República Dominicana;C;0.66
+2022;3;DO;República Dominicana;D;2.58
+2022;3;EC;Ecuador;C;9.3
+2022;3;EC;Ecuador;D;0.85
+2022;3;EE;Estonia;C;0.01
+2022;3;EG;Egipto;C;0
+2022;3;ES;España;C;25.61
+2022;3;ES;España;D;6.86
+2022;3;ET;Etiopía;C;0.01
+2022;3;FI;Finlandia;C;0
+2022;3;FK;Islas Malvinas;C;0
+2022;3;FR;Francia;C;6.93
+2022;3;FR;Francia;D;0.25
+2022;3;GB;Reino Unido;C;4.88
+2022;3;GB;Reino Unido;D;0.16
+2022;3;GE;Georgia;C;0
+2022;3;GH;Ghana;D;0.19
+2022;3;GI;Gibraltar;C;0
+2022;3;GR;Grecia;C;0.01
+2022;3;GT;Guatemala;C;0.07
+2022;3;GT;Guatemala;D;0.07
+2022;3;HK;Hong Kong;C;0
+2022;3;HN;Honduras;C;0.39
+2022;3;HR;Croacia;C;0.01
+2022;3;HT;Haití;C;0.01
+2022;3;HT;Haití;D;0.14
+2022;3;HU;Hungría;C;0
+2022;3;HU;Hungría;D;0
+2022;3;ID;Indonesia;D;0.01
+2022;3;IE;Irlanda;C;0.81
+2022;3;IE;Irlanda;D;0.06
+2022;3;IL;Israel;C;0.55
+2022;3;IL;Israel;D;0.11
+2022;3;IM;Isla de Man;C;0
+2022;3;IN;India;C;0
+2022;3;IN;India;D;0.09
+2022;3;IS;Islandia;D;0
+2022;3;IT;Italia;C;5.55
+2022;3;IT;Italia;D;1.69
+2022;3;JP;Japón;C;0.05
+2022;3;KR;Corea del Sur;C;0
+2022;3;KY;Islas Caimán;C;0
+2022;3;LI;Liechtenstein;C;0
+2022;3;LT;Lituania;C;0.01
+2022;3;LT;Lituania;D;0
+2022;3;LU;Luxemburgo;C;0.02
+2022;3;MA;Marruecos;D;0
+2022;3;MC;Mónaco;C;0
+2022;3;MK;Macedonia;C;0
+2022;3;MX;México;C;3.89
+2022;3;MX;México;D;1.24
+2022;3;MY;Malasia;C;0.01
+2022;3;NC;Nueva Caledonia;C;0.01
+2022;3;NG;Nigeria;C;0
+2022;3;NG;Nigeria;D;0.01
+2022;3;NI;Nicaragua;D;0.06
+2022;3;NL;Países Bajos;C;1.21
+2022;3;NL;Países Bajos;D;0.08
+2022;3;NO;Noruega;C;0.43
+2022;3;NZ;Nueva Zelanda;C;1
+2022;3;NZ;Nueva Zelanda;D;0
+2022;3;OM;Omán;C;0
+2022;3;PA;Panamá;C;1.27
+2022;3;PA;Panamá;D;0.14
+2022;3;PE;Perú;C;13.79
+2022;3;PE;Perú;D;19.2
+2022;3;PH;Filipinas;C;0
+2022;3;PH;Filipinas;D;0.02
+2022;3;PK;Pakistán;D;0.08
+2022;3;PL;Polonia;C;0.02
+2022;3;PR;Puerto Rico;C;0.01
+2022;3;PT;Portugal;C;0.6
+2022;3;PT;Portugal;D;0.18
+2022;3;PY;Paraguay;C;4.27
+2022;3;PY;Paraguay;D;22.49
+2022;3;QA;Qatar;C;0
+2022;3;RO;Rumania;C;0
+2022;3;RU;Rusia;C;0.01
+2022;3;SA;Arabia Saudita;C;0
+2022;3;SE;Suecia;C;0.67
+2022;3;SE;Suecia;D;0
+2022;3;SG;Singapur;C;0
+2022;3;SI;Eslovenia;C;0
+2022;3;SK;Eslovaquia;C;0
+2022;3;SN;Senegal;C;0
+2022;3;SN;Senegal;D;0.49
+2022;3;SV;El Salvador;C;0.6
+2022;3;SV;El Salvador;D;0
+2022;3;TG;Togo;D;0.08
+2022;3;TH;Tailandia;C;0
+2022;3;TR;Turquía;C;0
+2022;3;TR;Turquía;D;0.09
+2022;3;UA;Ucrania;D;0.08
+2022;3;UG;Uganda;D;0
+2022;3;US;Estados Unidos;C;56.88
+2022;3;US;Estados Unidos;D;2.11
+2022;3;UY;Uruguay;C;5.71
+2022;3;UY;Uruguay;D;0.77
+2022;3;VE;Venezuela;C;0.61
+2022;3;VE;Venezuela;D;0.42
+2022;3;ZA;Sudáfrica;C;0.01
+2022;4;AD;Andorra;C;0
+2022;4;AE;Emiratos Árabes Unidos;C;0.67
+2022;4;AG;Antigua y Barbuda;C;0
+2022;4;AL;Albania;C;0
+2022;4;AM;Armenia;C;0
+2022;4;AM;Armenia;D;0.01
+2022;4;AO;Angola;C;0.01
+2022;4;AT;Austria;C;0.71
+2022;4;AT;Austria;D;0
+2022;4;AU;Australia;C;3.7
+2022;4;AU;Australia;D;0.18
+2022;4;AW;Aruba;C;0
+2022;4;AZ;Azerbaiyán;C;0.01
+2022;4;BE;Bélgica;C;1.26
+2022;4;BE;Bélgica;D;0.07
+2022;4;BF;Burkina Faso;D;0
+2022;4;BG;Bulgaria;C;0
+2022;4;BH;Bahrein;C;0
+2022;4;BO;Bolivia;C;6.47
+2022;4;BO;Bolivia;D;24.11
+2022;4;BQ;Bonaire, San Eustaquio y Saba;C;0
+2022;4;BR;Brasil;C;38.8
+2022;4;BR;Brasil;D;5.64
+2022;4;BW;Botswana;C;0
+2022;4;CA;Canadá;C;3.82
+2022;4;CA;Canadá;D;0.15
+2022;4;CH;Suiza;C;3.92
+2022;4;CI;Costa de Marfil;D;0.02
+2022;4;CL;Chile;C;18.98
+2022;4;CL;Chile;D;3.65
+2022;4;CM;Camerún;D;0.02
+2022;4;CN;China;C;0.01
+2022;4;CN;China;D;0.18
+2022;4;CO;Colombia;C;3.8
+2022;4;CO;Colombia;D;5.63
+2022;4;CR;Costa Rica;C;0.56
+2022;4;CR;Costa Rica;D;0.15
+2022;4;CW;Curaçao;C;0.01
+2022;4;CZ;República Checa;C;0
+2022;4;DE;Alemania;C;7.27
+2022;4;DE;Alemania;D;0.27
+2022;4;DK;Dinamarca;C;1.07
+2022;4;DO;República Dominicana;C;0.62
+2022;4;DO;República Dominicana;D;2.01
+2022;4;EC;Ecuador;C;8.43
+2022;4;EC;Ecuador;D;0.8
+2022;4;EG;Egipto;D;0
+2022;4;ES;España;C;26.74
+2022;4;ES;España;D;6.97
+2022;4;FI;Finlandia;C;0.02
+2022;4;FK;Islas Malvinas;C;0
+2022;4;FR;Francia;C;9.88
+2022;4;FR;Francia;D;0.26
+2022;4;GB;Reino Unido;C;6.36
+2022;4;GB;Reino Unido;D;0.14
+2022;4;GE;Georgia;C;0
+2022;4;GH;Ghana;D;0.07
+2022;4;GI;Gibraltar;C;0
+2022;4;GL;Groenlandia;C;0
+2022;4;GQ;Guinea Ecuatorial;C;0.01
+2022;4;GR;Grecia;C;0.01
+2022;4;GR;Grecia;D;0.01
+2022;4;GT;Guatemala;C;0.05
+2022;4;GT;Guatemala;D;0.06
+2022;4;HK;Hong Kong;C;0.01
+2022;4;HN;Honduras;C;0.02
+2022;4;HR;Croacia;C;0
+2022;4;HT;Haití;C;0.01
+2022;4;HT;Haití;D;0.15
+2022;4;HU;Hungría;C;0.01
+2022;4;ID;Indonesia;D;0.01
+2022;4;IE;Irlanda;C;1.14
+2022;4;IL;Israel;C;0.63
+2022;4;IL;Israel;D;0.11
+2022;4;IM;Isla de Man;C;0
+2022;4;IN;India;C;0
+2022;4;IN;India;D;0.1
+2022;4;IT;Italia;C;6.12
+2022;4;IT;Italia;D;1.71
+2022;4;JP;Japón;C;0.06
+2022;4;KR;Corea del Sur;C;0
+2022;4;KY;Islas Caimán;C;0
+2022;4;LB;Líbano;D;0.01
+2022;4;LI;Liechtenstein;C;0
+2022;4;LT;Lituania;C;0.01
+2022;4;LU;Luxemburgo;C;0.02
+2022;4;MA;Marruecos;D;0.06
+2022;4;MO;Macao;C;0
+2022;4;MX;México;C;3.79
+2022;4;MX;México;D;1.23
+2022;4;MZ;Mozambique;C;0
+2022;4;NC;Nueva Caledonia;C;0
+2022;4;NG;Nigeria;C;0
+2022;4;NG;Nigeria;D;0.03
+2022;4;NI;Nicaragua;C;0
+2022;4;NI;Nicaragua;D;0.06
+2022;4;NL;Países Bajos;C;2.59
+2022;4;NL;Países Bajos;D;0.01
+2022;4;NO;Noruega;C;0.59
+2022;4;NP;Nepal;D;0
+2022;4;NZ;Nueva Zelanda;C;1.18
+2022;4;OM;Omán;C;0
+2022;4;PA;Panamá;C;1.24
+2022;4;PA;Panamá;D;0.13
+2022;4;PE;Perú;C;12.76
+2022;4;PE;Perú;D;18.69
+2022;4;PH;Filipinas;C;0
+2022;4;PH;Filipinas;D;0
+2022;4;PK;Pakistán;D;0.06
+2022;4;PL;Polonia;C;0.01
+2022;4;PR;Puerto Rico;C;0.01
+2022;4;PT;Portugal;C;0.79
+2022;4;PT;Portugal;D;0.26
+2022;4;PY;Paraguay;C;3.96
+2022;4;PY;Paraguay;D;23.38
+2022;4;RO;Rumania;C;0.02
+2022;4;RU;Rusia;C;0.01
+2022;4;SA;Arabia Saudita;C;0
+2022;4;SE;Suecia;C;0.71
+2022;4;SG;Singapur;C;0
+2022;4;SN;Senegal;D;0.28
+2022;4;SV;El Salvador;C;0.01
+2022;4;TG;Togo;D;0.07
+2022;4;TH;Tailandia;C;1.81
+2022;4;TR;Turquía;C;0.63
+2022;4;TR;Turquía;D;0.1
+2022;4;TT;Trinidad y Tobago;C;0.01
+2022;4;UA;Ucrania;D;0.07
+2022;4;US;Estados Unidos;C;61.27
+2022;4;US;Estados Unidos;D;1.94
+2022;4;UY;Uruguay;C;5.75
+2022;4;UY;Uruguay;D;1.07
+2022;4;VE;Venezuela;C;0.76
+2022;4;VE;Venezuela;D;0.46
+2022;4;YE;Yemen;C;0.01
+2022;4;ZA;Sudáfrica;C;0.02
+2023;1;AD;Andorra;C;0
+2023;1;AE;Emiratos Árabes Unidos;C;0.54
+2023;1;AM;Armenia;C;0
+2023;1;AM;Armenia;D;0.01
+2023;1;AO;Angola;C;0.01
+2023;1;AT;Austria;C;0.74
+2023;1;AU;Australia;C;3.64
+2023;1;AU;Australia;D;0.21
+2023;1;AW;Aruba;C;0.01
+2023;1;AZ;Azerbaiyán;C;0
+2023;1;BE;Bélgica;C;1.27
+2023;1;BE;Bélgica;D;0.07
+2023;1;BG;Bulgaria;C;0.01
+2023;1;BH;Bahrein;C;0
+2023;1;BO;Bolivia;C;5.75
+2023;1;BO;Bolivia;D;23.55
+2023;1;BR;Brasil;C;27.56
+2023;1;BR;Brasil;D;6.19
+2023;1;CA;Canadá;C;3.87
+2023;1;CA;Canadá;D;0.15
+2023;1;CH;Suiza;C;4.1
+2023;1;CH;Suiza;D;0.07
+2023;1;CI;Costa de Marfil;D;0.01
+2023;1;CL;Chile;C;24.75
+2023;1;CL;Chile;D;4.83
+2023;1;CM;Camerún;D;0.02
+2023;1;CN;China;C;0.01
+2023;1;CN;China;D;0.21
+2023;1;CO;Colombia;C;3.32
+2023;1;CO;Colombia;D;5.56
+2023;1;CR;Costa Rica;C;0.57
+2023;1;CR;Costa Rica;D;0.11
+2023;1;CW;Curaçao;C;0.01
+2023;1;DE;Alemania;C;7.37
+2023;1;DE;Alemania;D;0.35
+2023;1;DK;Dinamarca;C;1.25
+2023;1;DO;República Dominicana;C;0.57
+2023;1;DO;República Dominicana;D;2.22
+2023;1;EC;Ecuador;C;8.39
+2023;1;EC;Ecuador;D;0.72
+2023;1;EE;Estonia;C;0
+2023;1;ES;España;C;26.76
+2023;1;ES;España;D;8.13
+2023;1;FI;Finlandia;C;0.01
+2023;1;FI;Finlandia;D;0
+2023;1;FJ;Fiji;C;0
+2023;1;FK;Islas Malvinas;C;0
+2023;1;FR;Francia;C;10.6
+2023;1;FR;Francia;D;0.31
+2023;1;GB;Reino Unido;C;6.83
+2023;1;GB;Reino Unido;D;0.17
+2023;1;GH;Ghana;D;0.02
+2023;1;GN;Guinea;D;0.02
+2023;1;GQ;Guinea Ecuatorial;C;0.01
+2023;1;GR;Grecia;C;0.01
+2023;1;GT;Guatemala;C;0.05
+2023;1;GT;Guatemala;D;0.02
+2023;1;HK;Hong Kong;C;0
+2023;1;HN;Honduras;C;0.03
+2023;1;HR;Croacia;C;0.01
+2023;1;HT;Haití;C;0.01
+2023;1;HT;Haití;D;0.14
+2023;1;HU;Hungría;C;0.01
+2023;1;IE;Irlanda;C;1.07
+2023;1;IL;Israel;C;0.61
+2023;1;IL;Israel;D;0.09
+2023;1;IM;Isla de Man;C;0
+2023;1;IN;India;C;0
+2023;1;IN;India;D;0.09
+2023;1;IT;Italia;C;6.08
+2023;1;IT;Italia;D;1.97
+2023;1;JP;Japón;C;0.03
+2023;1;KR;Corea del Sur;C;0
+2023;1;LI;Liechtenstein;C;0
+2023;1;LT;Lituania;C;0.01
+2023;1;LU;Luxemburgo;C;0.01
+2023;1;LV;Letonia;C;0
+2023;1;MA;Marruecos;C;0
+2023;1;MA;Marruecos;D;0.07
+2023;1;ML;Malí;C;0
+2023;1;MX;México;C;3.64
+2023;1;MX;México;D;1.21
+2023;1;MY;Malasia;C;0.01
+2023;1;NC;Nueva Caledonia;C;0
+2023;1;NG;Nigeria;C;0
+2023;1;NI;Nicaragua;C;0
+2023;1;NI;Nicaragua;D;0.07
+2023;1;NL;Países Bajos;C;2.76
+2023;1;NO;Noruega;C;0.57
+2023;1;NZ;Nueva Zelanda;C;1.13
+2023;1;NZ;Nueva Zelanda;D;0.09
+2023;1;OM;Omán;C;0
+2023;1;PA;Panamá;C;0.98
+2023;1;PA;Panamá;D;0.13
+2023;1;PE;Perú;C;10.82
+2023;1;PE;Perú;D;19.07
+2023;1;PH;Filipinas;C;0
+2023;1;PH;Filipinas;D;0.01
+2023;1;PK;Pakistán;D;0
+2023;1;PL;Polonia;C;0.01
+2023;1;PL;Polonia;D;0
+2023;1;PR;Puerto Rico;C;0.01
+2023;1;PR;Puerto Rico;D;0
+2023;1;PT;Portugal;C;0.72
+2023;1;PT;Portugal;D;0.37
+2023;1;PY;Paraguay;C;3.13
+2023;1;PY;Paraguay;D;21.31
+2023;1;QA;Qatar;C;0.01
+2023;1;RO;Rumania;C;0.01
+2023;1;RU;Rusia;C;0
+2023;1;SA;Arabia Saudita;C;0
+2023;1;SE;Suecia;C;0.79
+2023;1;SG;Singapur;C;0
+2023;1;SI;Eslovenia;C;0
+2023;1;SN;Senegal;D;0.68
+2023;1;SV;El Salvador;C;0.04
+2023;1;SV;El Salvador;D;0
+2023;1;TH;Tailandia;C;1.88
+2023;1;TR;Turquía;C;1.59
+2023;1;TR;Turquía;D;0.1
+2023;1;TT;Trinidad y Tobago;C;0.02
+2023;1;UA;Ucrania;D;0.08
+2023;1;US;Estados Unidos;C;52.35
+2023;1;US;Estados Unidos;D;2.04
+2023;1;UY;Uruguay;C;4.87
+2023;1;UY;Uruguay;D;0.98
+2023;1;VA;Vaticano;C;0
+2023;1;VE;Venezuela;C;0.66
+2023;1;VE;Venezuela;D;0.51
+2023;1;YE;Yemen;C;0
+2023;1;ZA;Sudáfrica;C;0.02
+2023;2;AD;Andorra;C;0
+2023;2;AE;Emiratos Árabes Unidos;C;0.5
+2023;2;AM;Armenia;C;0.02
+2023;2;AM;Armenia;D;0.01
+2023;2;AO;Angola;C;0.01
+2023;2;AT;Austria;C;0.51
+2023;2;AU;Australia;C;3.25
+2023;2;AU;Australia;D;0.22
+2023;2;AW;Aruba;C;0
+2023;2;AZ;Azerbaiyán;C;0
+2023;2;BE;Bélgica;C;0.87
+2023;2;BE;Bélgica;D;0.06
+2023;2;BG;Bulgaria;C;0.01
+2023;2;BH;Bahrein;C;0
+2023;2;BO;Bolivia;C;5.8
+2023;2;BO;Bolivia;D;23.77
+2023;2;BR;Brasil;C;38.08
+2023;2;BR;Brasil;D;2.14
+2023;2;BW;Botswana;C;0
+2023;2;CA;Canadá;C;3.25
+2023;2;CA;Canadá;D;0.15
+2023;2;CH;Suiza;C;3.28
+2023;2;CH;Suiza;D;0
+2023;2;CI;Costa de Marfil;D;0
+2023;2;CL;Chile;C;26.49
+2023;2;CL;Chile;D;2.98
+2023;2;CM;Camerún;D;0.02
+2023;2;CN;China;C;0.01
+2023;2;CN;China;D;0.26
+2023;2;CO;Colombia;C;3.7
+2023;2;CO;Colombia;D;5.06
+2023;2;CR;Costa Rica;C;0.58
+2023;2;CR;Costa Rica;D;0.11
+2023;2;CW;Curaçao;C;0.01
+2023;2;CZ;República Checa;C;0.01
+2023;2;DE;Alemania;C;4.96
+2023;2;DE;Alemania;D;0.31
+2023;2;DK;Dinamarca;C;0.78
+2023;2;DO;República Dominicana;C;0.58
+2023;2;DO;República Dominicana;D;1.99
+2023;2;EC;Ecuador;C;10.29
+2023;2;EC;Ecuador;D;0.68
+2023;2;ES;España;C;26.32
+2023;2;ES;España;D;7.56
+2023;2;FI;Finlandia;C;0
+2023;2;FJ;Fiji;C;0
+2023;2;FK;Islas Malvinas;C;0
+2023;2;FO;Islas Feroe;C;0
+2023;2;FR;Francia;C;7.87
+2023;2;FR;Francia;D;0.36
+2023;2;GB;Reino Unido;C;5.33
+2023;2;GB;Reino Unido;D;0.16
+2023;2;GH;Ghana;D;0.01
+2023;2;GQ;Guinea Ecuatorial;C;0.01
+2023;2;GR;Grecia;C;0.01
+2023;2;GT;Guatemala;C;0.06
+2023;2;GT;Guatemala;D;0.06
+2023;2;HK;Hong Kong;C;0
+2023;2;HN;Honduras;C;0.03
+2023;2;HR;Croacia;C;0
+2023;2;HT;Haití;D;0.11
+2023;2;HU;Hungría;C;0
+2023;2;ID;Indonesia;D;0
+2023;2;IE;Irlanda;C;0.79
+2023;2;IL;Israel;C;0.53
+2023;2;IL;Israel;D;0.09
+2023;2;IM;Isla de Man;C;0
+2023;2;IN;India;C;0
+2023;2;IN;India;D;0.07
+2023;2;IT;Italia;C;5.73
+2023;2;IT;Italia;D;1.91
+2023;2;JP;Japón;C;0.05
+2023;2;KE;Kenia;D;0
+2023;2;KR;Corea del Sur;C;0
+2023;2;KY;Islas Caimán;C;0
+2023;2;LI;Liechtenstein;C;0
+2023;2;LT;Lituania;C;0.01
+2023;2;LU;Luxemburgo;C;0.01
+2023;2;MK;Macedonia;C;0
+2023;2;MX;México;C;3.82
+2023;2;MX;México;D;1.1
+2023;2;MY;Malasia;C;0.01
+2023;2;NC;Nueva Caledonia;C;0
+2023;2;NI;Nicaragua;C;0
+2023;2;NI;Nicaragua;D;0
+2023;2;NL;Países Bajos;C;1.56
+2023;2;NL;Países Bajos;D;0.06
+2023;2;NO;Noruega;C;0.03
+2023;2;NZ;Nueva Zelanda;C;1
+2023;2;NZ;Nueva Zelanda;D;0.09
+2023;2;OM;Omán;C;0
+2023;2;PA;Panamá;C;1.05
+2023;2;PA;Panamá;D;0.13
+2023;2;PE;Perú;C;11.12
+2023;2;PE;Perú;D;18.23
+2023;2;PH;Filipinas;D;0
+2023;2;PK;Pakistán;D;0.07
+2023;2;PL;Polonia;C;0.02
+2023;2;PR;Puerto Rico;C;0.01
+2023;2;PT;Portugal;C;0.78
+2023;2;PT;Portugal;D;0.31
+2023;2;PY;Paraguay;C;3.28
+2023;2;PY;Paraguay;D;19.44
+2023;2;QA;Qatar;C;0.01
+2023;2;RO;Rumania;C;0.03
+2023;2;RU;Rusia;C;0
+2023;2;SA;Arabia Saudita;C;0
+2023;2;SE;Suecia;C;0.56
+2023;2;SG;Singapur;C;0
+2023;2;SK;Eslovaquia;C;0
+2023;2;SN;Senegal;C;0.01
+2023;2;SN;Senegal;D;0.21
+2023;2;SV;El Salvador;C;0.46
+2023;2;SV;El Salvador;D;0
+2023;2;TG;Togo;D;0.01
+2023;2;TR;Turquía;C;5.9
+2023;2;TR;Turquía;D;0.07
+2023;2;TW;Taiwan;C;0.01
+2023;2;UA;Ucrania;D;0.08
+2023;2;US;Estados Unidos;C;52.06
+2023;2;US;Estados Unidos;D;1.94
+2023;2;UY;Uruguay;C;4.83
+2023;2;UY;Uruguay;D;0.72
+2023;2;VE;Venezuela;C;0.67
+2023;2;VE;Venezuela;D;0.5
+2023;2;YE;Yemen;C;0
+2023;2;ZA;Sudáfrica;C;0.02
+2023;3;AE;Emiratos Árabes Unidos;C;0.6
+2023;3;AM;Armenia;C;0.02
+2023;3;AM;Armenia;D;0
+2023;3;AO;Angola;C;0
+2023;3;AT;Austria;C;0.45
+2023;3;AU;Australia;C;4.27
+2023;3;AU;Australia;D;0.19
+2023;3;AW;Aruba;C;0
+2023;3;BE;Bélgica;C;0.78
+2023;3;BE;Bélgica;D;0.07
+2023;3;BF;Burkina Faso;D;0
+2023;3;BH;Bahrein;C;0
+2023;3;BJ;Benin;D;0
+2023;3;BO;Bolivia;C;6.8
+2023;3;BO;Bolivia;D;11.9
+2023;3;BR;Brasil;C;21.83
+2023;3;BR;Brasil;D;3.08
+2023;3;BW;Botswana;C;0
+2023;3;CA;Canadá;C;3.75
+2023;3;CA;Canadá;D;0.15
+2023;3;CH;Suiza;C;3.97
+2023;3;CI;Costa de Marfil;D;0.01
+2023;3;CL;Chile;C;22.73
+2023;3;CL;Chile;D;3.04
+2023;3;CM;Camerún;D;0.01
+2023;3;CN;China;C;0.01
+2023;3;CO;Colombia;C;4.38
+2023;3;CO;Colombia;D;4.72
+2023;3;CR;Costa Rica;C;0.64
+2023;3;CR;Costa Rica;D;0.13
+2023;3;CW;Curaçao;C;0.01
+2023;3;DE;Alemania;C;4.74
+2023;3;DE;Alemania;D;0.27
+2023;3;DK;Dinamarca;C;0.86
+2023;3;DO;República Dominicana;C;0.73
+2023;3;DO;República Dominicana;D;1.72
+2023;3;EC;Ecuador;C;9.27
+2023;3;EC;Ecuador;D;0.69
+2023;3;EE;Estonia;C;0.01
+2023;3;EG;Egipto;C;0.01
+2023;3;ES;España;C;37.37
+2023;3;ES;España;D;7.07
+2023;3;FI;Finlandia;C;0
+2023;3;FJ;Fiji;C;0
+2023;3;FK;Islas Malvinas;C;0
+2023;3;FO;Islas Feroe;C;0
+2023;3;FR;Francia;C;5.11
+2023;3;FR;Francia;D;0.29
+2023;3;GB;Reino Unido;C;5.24
+2023;3;GB;Reino Unido;D;0.16
+2023;3;GH;Ghana;D;0.01
+2023;3;GQ;Guinea Ecuatorial;C;0.01
+2023;3;GR;Grecia;C;0.01
+2023;3;GT;Guatemala;C;0.05
+2023;3;GT;Guatemala;D;0.07
+2023;3;HK;Hong Kong;C;0.01
+2023;3;HN;Honduras;C;0.02
+2023;3;HN;Honduras;D;0
+2023;3;HR;Croacia;C;0
+2023;3;HT;Haití;D;0.1
+2023;3;HU;Hungría;C;0.01
+2023;3;ID;Indonesia;C;0
+2023;3;ID;Indonesia;D;0.01
+2023;3;IE;Irlanda;C;0.81
+2023;3;IE;Irlanda;D;0.05
+2023;3;IL;Israel;C;0.63
+2023;3;IL;Israel;D;0.07
+2023;3;IM;Isla de Man;C;0
+2023;3;IN;India;C;0.01
+2023;3;IN;India;D;0.07
+2023;3;IT;Italia;C;7.42
+2023;3;IT;Italia;D;1.69
+2023;3;JE;Jersey;C;0
+2023;3;JM;Jamaica;C;0
+2023;3;JP;Japón;C;0.04
+2023;3;JP;Japón;D;0
+2023;3;KG;Kirguistán;C;0
+2023;3;KR;Corea del Sur;C;0
+2023;3;KR;Corea del Sur;D;0
+2023;3;LI;Liechtenstein;C;0.01
+2023;3;LT;Lituania;C;0.01
+2023;3;LU;Luxemburgo;C;0.02
+2023;3;MK;Macedonia;C;0
+2023;3;MX;México;C;4.78
+2023;3;MX;México;D;1.08
+2023;3;NC;Nueva Caledonia;C;0
+2023;3;NG;Nigeria;C;0
+2023;3;NI;Nicaragua;D;0
+2023;3;NL;Países Bajos;C;1.19
+2023;3;NL;Países Bajos;D;0.06
+2023;3;NO;Noruega;C;0.04
+2023;3;NZ;Nueva Zelanda;C;1.23
+2023;3;NZ;Nueva Zelanda;D;0.08
+2023;3;OM;Omán;C;0.01
+2023;3;PA;Panamá;C;1.21
+2023;3;PA;Panamá;D;0.14
+2023;3;PE;Perú;C;12.43
+2023;3;PE;Perú;D;17.3
+2023;3;PH;Filipinas;C;0
+2023;3;PH;Filipinas;D;0
+2023;3;PK;Pakistán;D;0.05
+2023;3;PL;Polonia;C;0.01
+2023;3;PL;Polonia;D;0
+2023;3;PR;Puerto Rico;C;0.01
+2023;3;PT;Portugal;C;1.08
+2023;3;PT;Portugal;D;0.33
+2023;3;PY;Paraguay;C;4.41
+2023;3;PY;Paraguay;D;18.57
+2023;3;QA;Qatar;C;0
+2023;3;RO;Rumania;C;0.01
+2023;3;SA;Arabia Saudita;C;0
+2023;3;SE;Suecia;C;0.6
+2023;3;SG;Singapur;C;0
+2023;3;SI;Eslovenia;C;0
+2023;3;SN;Senegal;C;0.01
+2023;3;SN;Senegal;D;0.08
+2023;3;SV;El Salvador;C;0.37
+2023;3;SV;El Salvador;D;0.02
+2023;3;TH;Tailandia;C;1.5
+2023;3;TR;Turquía;C;0.43
+2023;3;TR;Turquía;D;0.09
+2023;3;TW;Taiwan;C;0.01
+2023;3;UA;Ucrania;D;0.07
+2023;3;US;Estados Unidos;C;66.34
+2023;3;US;Estados Unidos;D;2.05
+2023;3;UY;Uruguay;C;6.8
+2023;3;UY;Uruguay;D;0.73
+2023;3;VA;Vaticano;C;0
+2023;3;VE;Venezuela;C;1.03
+2023;3;VE;Venezuela;D;0.56
+2023;3;YE;Yemen;C;0
+2023;3;ZA;Sudáfrica;C;0.02
+2023;4;AD;Andorra;C;0
+2023;4;AE;Emiratos Árabes Unidos;C;0.6
+2023;4;AM;Armenia;C;0
+2023;4;AM;Armenia;D;0
+2023;4;AO;Angola;C;0.01
+2023;4;AT;Austria;C;0.33
+2023;4;AT;Austria;D;0
+2023;4;AU;Australia;C;3.49
+2023;4;AU;Australia;D;0.18
+2023;4;AW;Aruba;C;0
+2023;4;AZ;Azerbaiyán;C;0
+2023;4;BE;Bélgica;C;0.58
+2023;4;BE;Bélgica;D;0.08
+2023;4;BF;Burkina Faso;D;0
+2023;4;BH;Bahrein;C;0
+2023;4;BO;Bolivia;C;5.21
+2023;4;BO;Bolivia;D;15.27
+2023;4;BR;Brasil;C;8.97
+2023;4;BR;Brasil;D;5.35
+2023;4;CA;Canadá;C;3.68
+2023;4;CA;Canadá;D;0.14
+2023;4;CH;Suiza;C;3.68
+2023;4;CH;Suiza;D;0.06
+2023;4;CI;Costa de Marfil;D;0.01
+2023;4;CL;Chile;C;22.2
+2023;4;CL;Chile;D;3.22
+2023;4;CM;Camerún;D;0
+2023;4;CN;China;C;0
+2023;4;CN;China;D;0.23
+2023;4;CO;Colombia;C;4.35
+2023;4;CO;Colombia;D;4.98
+2023;4;CR;Costa Rica;C;0.64
+2023;4;CR;Costa Rica;D;0.09
+2023;4;CW;Curaçao;C;0.01
+2023;4;CZ;República Checa;C;0
+2023;4;DE;Alemania;C;3.66
+2023;4;DE;Alemania;D;0.28
+2023;4;DK;Dinamarca;C;0.56
+2023;4;DO;República Dominicana;C;0.87
+2023;4;DO;República Dominicana;D;1.41
+2023;4;EC;Ecuador;C;8.29
+2023;4;EC;Ecuador;D;0.58
+2023;4;EG;Egipto;C;0
+2023;4;ES;España;C;33.64
+2023;4;ES;España;D;6.83
+2023;4;FI;Finlandia;C;0.01
+2023;4;FK;Islas Malvinas;C;0
+2023;4;FO;Islas Feroe;C;0
+2023;4;FR;Francia;C;4.15
+2023;4;FR;Francia;D;0.24
+2023;4;GB;Reino Unido;C;3.48
+2023;4;GB;Reino Unido;D;0.12
+2023;4;GE;Georgia;C;0
+2023;4;GH;Ghana;D;0
+2023;4;GQ;Guinea Ecuatorial;C;0
+2023;4;GR;Grecia;C;0.01
+2023;4;GT;Guatemala;C;0.03
+2023;4;GT;Guatemala;D;0.05
+2023;4;HK;Hong Kong;C;0.01
+2023;4;HN;Honduras;C;0.01
+2023;4;HN;Honduras;D;0
+2023;4;HR;Croacia;C;0
+2023;4;HT;Haití;D;0.09
+2023;4;HU;Hungría;C;0.02
+2023;4;ID;Indonesia;C;0
+2023;4;ID;Indonesia;D;0.01
+2023;4;IE;Irlanda;C;0.49
+2023;4;IL;Israel;C;0.55
+2023;4;IL;Israel;D;0.16
+2023;4;IM;Isla de Man;C;0
+2023;4;IN;India;C;0.01
+2023;4;IT;Italia;C;6.41
+2023;4;IT;Italia;D;1.68
+2023;4;JP;Japón;C;0.03
+2023;4;KR;Corea del Sur;C;0
+2023;4;KR;Corea del Sur;D;0
+2023;4;LI;Liechtenstein;C;0
+2023;4;LT;Lituania;C;0
+2023;4;LU;Luxemburgo;C;0.01
+2023;4;MA;Marruecos;D;0
+2023;4;MV;Maldivas;C;0
+2023;4;MX;México;C;4.43
+2023;4;MX;México;D;1
+2023;4;NI;Nicaragua;C;0
+2023;4;NI;Nicaragua;D;0
+2023;4;NL;Países Bajos;C;0.91
+2023;4;NO;Noruega;C;0.3
+2023;4;NZ;Nueva Zelanda;C;0.86
+2023;4;NZ;Nueva Zelanda;D;0.17
+2023;4;OM;Omán;C;0
+2023;4;PA;Panamá;C;0.96
+2023;4;PA;Panamá;D;0.11
+2023;4;PE;Perú;C;9.78
+2023;4;PE;Perú;D;10.79
+2023;4;PH;Filipinas;C;0
+2023;4;PL;Polonia;C;0.02
+2023;4;PL;Polonia;D;0.05
+2023;4;PR;Puerto Rico;C;0.01
+2023;4;PT;Portugal;C;0.84
+2023;4;PT;Portugal;D;0.29
+2023;4;PY;Paraguay;C;4.52
+2023;4;PY;Paraguay;D;16.02
+2023;4;QA;Qatar;C;0
+2023;4;RO;Rumania;C;0.01
+2023;4;SA;Arabia Saudita;C;0
+2023;4;SE;Suecia;C;0.64
+2023;4;SG;Singapur;C;0.01
+2023;4;SI;Eslovenia;C;0
+2023;4;SK;Eslovaquia;C;0.01
+2023;4;SN;Senegal;D;0.38
+2023;4;SV;El Salvador;C;0.31
+2023;4;SV;El Salvador;D;0
+2023;4;TR;Turquía;C;0
+2023;4;TR;Turquía;D;0.01
+2023;4;TW;Taiwan;C;0
+2023;4;UA;Ucrania;D;0.07
+2023;4;US;Estados Unidos;C;58.09
+2023;4;US;Estados Unidos;D;1.67
+2023;4;UY;Uruguay;C;6.75
+2023;4;UY;Uruguay;D;0.91
+2023;4;VE;Venezuela;C;1.2
+2023;4;VE;Venezuela;D;0.57
+2023;4;ZA;Sudáfrica;C;0.01
+2024;1;AD;Andorra;C;0.01
+2024;1;AE;Emiratos Árabes Unidos;C;0.69
+2024;1;AM;Armenia;D;0
+2024;1;AO;Angola;C;0
+2024;1;AT;Austria;C;0.5
+2024;1;AU;Australia;C;5.17
+2024;1;AU;Australia;D;0.2
+2024;1;AW;Aruba;C;0
+2024;1;AZ;Azerbaiyán;C;0.01
+2024;1;BE;Bélgica;C;0.91
+2024;1;BH;Bahrein;C;0
+2024;1;BO;Bolivia;C;5.04
+2024;1;BO;Bolivia;D;10.32
+2024;1;BR;Brasil;C;12.74
+2024;1;BR;Brasil;D;4.18
+2024;1;CA;Canadá;C;4.21
+2024;1;CA;Canadá;D;0.14
+2024;1;CH;Suiza;C;4.5
+2024;1;CI;Costa de Marfil;D;0
+2024;1;CL;Chile;C;22.64
+2024;1;CL;Chile;D;4.2
+2024;1;CM;Camerún;D;0
+2024;1;CN;China;C;0.01
+2024;1;CN;China;D;0.23
+2024;1;CO;Colombia;C;4.1
+2024;1;CO;Colombia;D;3.54
+2024;1;CR;Costa Rica;C;0.65
+2024;1;CR;Costa Rica;D;0.08
+2024;1;CV;Cabo Verde;C;0
+2024;1;CW;Curaçao;C;0
+2024;1;CY;Chipre;C;0
+2024;1;CZ;República Checa;C;0
+2024;1;DE;Alemania;C;5.65
+2024;1;DE;Alemania;D;0.21
+2024;1;DK;Dinamarca;C;1.3
+2024;1;DO;República Dominicana;C;0.78
+2024;1;DO;República Dominicana;D;1.36
+2024;1;EC;Ecuador;C;7.81
+2024;1;EC;Ecuador;D;0.54
+2024;1;ES;España;C;38.56
+2024;1;ES;España;D;6.68
+2024;1;FI;Finlandia;C;0
+2024;1;FK;Islas Malvinas;C;0
+2024;1;FR;Francia;C;6.37
+2024;1;FR;Francia;D;0.2
+2024;1;GB;Reino Unido;C;5.28
+2024;1;GB;Reino Unido;D;0.11
+2024;1;GE;Georgia;C;0
+2024;1;GH;Ghana;D;0
+2024;1;GQ;Guinea Ecuatorial;C;0
+2024;1;GR;Grecia;C;0.01
+2024;1;GT;Guatemala;C;0.04
+2024;1;GT;Guatemala;D;0.07
+2024;1;HK;Hong Kong;C;0.01
+2024;1;HN;Honduras;C;0.03
+2024;1;HN;Honduras;D;0
+2024;1;HR;Croacia;C;0
+2024;1;HT;Haití;C;0.01
+2024;1;HT;Haití;D;0.08
+2024;1;HU;Hungría;C;0.01
+2024;1;ID;Indonesia;C;0
+2024;1;ID;Indonesia;D;0.01
+2024;1;IE;Irlanda;C;1.09
+2024;1;IL;Israel;C;0.08
+2024;1;IL;Israel;D;0.08
+2024;1;IM;Isla de Man;C;0
+2024;1;IN;India;C;0
+2024;1;IN;India;D;0.05
+2024;1;IS;Islandia;C;0
+2024;1;IT;Italia;C;8
+2024;1;IT;Italia;D;1.75
+2024;1;JP;Japón;C;0.02
+2024;1;KG;Kirguistán;C;0
+2024;1;KR;Corea del Sur;C;0
+2024;1;KY;Islas Caimán;C;0
+2024;1;KZ;Kazajstán;C;0.48
+2024;1;LI;Liechtenstein;C;0
+2024;1;LT;Lituania;C;0.03
+2024;1;LU;Luxemburgo;C;0.01
+2024;1;LV;Letonia;C;0
+2024;1;MC;Mónaco;C;0
+2024;1;MX;México;C;4.69
+2024;1;MX;México;D;0.93
+2024;1;MY;Malasia;C;0
+2024;1;NI;Nicaragua;D;0
+2024;1;NL;Países Bajos;C;1.79
+2024;1;NL;Países Bajos;D;0
+2024;1;NO;Noruega;C;0.02
+2024;1;NZ;Nueva Zelanda;C;1.28
+2024;1;PA;Panamá;C;1.2
+2024;1;PE;Perú;C;10.62
+2024;1;PE;Perú;D;11.49
+2024;1;PH;Filipinas;C;0.02
+2024;1;PH;Filipinas;D;0.07
+2024;1;PK;Pakistán;D;0
+2024;1;PL;Polonia;C;0.01
+2024;1;PL;Polonia;D;0.05
+2024;1;PR;Puerto Rico;C;0.01
+2024;1;PT;Portugal;C;1.09
+2024;1;PT;Portugal;D;0.33
+2024;1;PY;Paraguay;C;4.75
+2024;1;PY;Paraguay;D;14.52
+2024;1;QA;Qatar;C;0.01
+2024;1;RO;Rumania;C;0.01
+2024;1;RU;Rusia;C;0
+2024;1;SA;Arabia Saudita;C;0
+2024;1;SE;Suecia;C;0.89
+2024;1;SG;Singapur;C;0
+2024;1;SK;Eslovaquia;C;0
+2024;1;SN;Senegal;D;0.59
+2024;1;SV;El Salvador;C;0.03
+2024;1;SV;El Salvador;D;0
+2024;1;TR;Turquía;C;0.23
+2024;1;TR;Turquía;D;0.08
+2024;1;TW;Taiwan;C;0.01
+2024;1;TZ;Tanzania;D;0
+2024;1;UA;Ucrania;D;0
+2024;1;US;Estados Unidos;C;66.28
+2024;1;US;Estados Unidos;D;1.68
+2024;1;UY;Uruguay;C;7.08
+2024;1;UY;Uruguay;D;0.76
+2024;1;VE;Venezuela;C;1.21
+2024;1;VE;Venezuela;D;0.51
+2024;1;VN;Viet Nam;C;0
+2024;1;ZA;Sudáfrica;C;0.01
+2024;2;AD;Andorra;C;0
+2024;2;AE;Emiratos Árabes Unidos;C;0.63
+2024;2;AM;Armenia;C;0.02
+2024;2;AM;Armenia;D;0.01
+2024;2;AO;Angola;C;0.01
+2024;2;AT;Austria;C;0.02
+2024;2;AU;Australia;C;4.83
+2024;2;AU;Australia;D;0.28
+2024;2;AW;Aruba;C;0.01
+2024;2;AZ;Azerbaiyán;C;0
+2024;2;BE;Bélgica;C;0.94
+2024;2;BE;Bélgica;D;0.1
+2024;2;BF;Burkina Faso;D;0
+2024;2;BH;Bahrein;C;0.01
+2024;2;BO;Bolivia;C;4.74
+2024;2;BO;Bolivia;D;13.26
+2024;2;BR;Brasil;C;26.25
+2024;2;BR;Brasil;D;2.04
+2024;2;BW;Botswana;C;0
+2024;2;CA;Canadá;C;3.96
+2024;2;CA;Canadá;D;0.18
+2024;2;CH;Suiza;C;3.83
+2024;2;CI;Costa de Marfil;D;0
+2024;2;CL;Chile;C;19.3
+2024;2;CL;Chile;D;4.7
+2024;2;CM;Camerún;D;0
+2024;2;CN;China;C;0.01
+2024;2;CN;China;D;0.33
+2024;2;CO;Colombia;C;4.91
+2024;2;CO;Colombia;D;4.29
+2024;2;CR;Costa Rica;C;0.65
+2024;2;CR;Costa Rica;D;0.12
+2024;2;CU;Cuba;C;0
+2024;2;CV;Cabo Verde;C;0
+2024;2;CW;Curaçao;C;0
+2024;2;CY;Chipre;C;0
+2024;2;CZ;República Checa;C;0
+2024;2;DE;Alemania;C;5.24
+2024;2;DE;Alemania;D;0.35
+2024;2;DK;Dinamarca;C;0.96
+2024;2;DO;República Dominicana;C;0.64
+2024;2;DO;República Dominicana;D;1.63
+2024;2;EC;Ecuador;C;12.26
+2024;2;EC;Ecuador;D;0.71
+2024;2;ES;España;C;32.6
+2024;2;ES;España;D;9.39
+2024;2;FI;Finlandia;C;0
+2024;2;FK;Islas Malvinas;C;0.01
+2024;2;FR;Francia;C;8.04
+2024;2;FR;Francia;D;0.32
+2024;2;GB;Reino Unido;C;5.56
+2024;2;GB;Reino Unido;D;0.15
+2024;2;GE;Georgia;C;0
+2024;2;GR;Grecia;C;0
+2024;2;GT;Guatemala;C;0.07
+2024;2;GT;Guatemala;D;0.01
+2024;2;HK;Hong Kong;C;0
+2024;2;HN;Honduras;C;0.54
+2024;2;HN;Honduras;D;0
+2024;2;HR;Croacia;C;0
+2024;2;HT;Haití;C;0.02
+2024;2;HT;Haití;D;0.1
+2024;2;HU;Hungría;C;0.01
+2024;2;ID;Indonesia;C;0.01
+2024;2;ID;Indonesia;D;0.01
+2024;2;IE;Irlanda;C;0.87
+2024;2;IL;Israel;C;0.61
+2024;2;IL;Israel;D;0.11
+2024;2;IN;India;C;0.01
+2024;2;IN;India;D;0.07
+2024;2;IS;Islandia;C;0
+2024;2;IT;Italia;C;6.79
+2024;2;IT;Italia;D;2.26
+2024;2;JM;Jamaica;C;0
+2024;2;JP;Japón;C;0.04
+2024;2;KE;Kenia;C;0
+2024;2;KR;Corea del Sur;C;0
+2024;2;KW;Kuwait;C;0
+2024;2;KY;Islas Caimán;C;0
+2024;2;KZ;Kazajstán;C;0
+2024;2;LI;Liechtenstein;C;0
+2024;2;LT;Lituania;C;0.01
+2024;2;LU;Luxemburgo;C;0.01
+2024;2;MC;Mónaco;C;0
+2024;2;MX;México;C;4.57
+2024;2;MX;México;D;1.18
+2024;2;NC;Nueva Caledonia;C;0.01
+2024;2;NI;Nicaragua;C;0
+2024;2;NI;Nicaragua;D;0
+2024;2;NL;Países Bajos;C;1.71
+2024;2;NL;Países Bajos;D;0.07
+2024;2;NO;Noruega;C;0.47
+2024;2;NZ;Nueva Zelanda;C;1.14
+2024;2;OM;Omán;C;0
+2024;2;PA;Panamá;C;1.27
+2024;2;PA;Panamá;D;0.14
+2024;2;PE;Perú;C;11.63
+2024;2;PE;Perú;D;13.41
+2024;2;PH;Filipinas;C;0.01
+2024;2;PH;Filipinas;D;0.1
+2024;2;PK;Pakistán;D;0.07
+2024;2;PL;Polonia;C;0.01
+2024;2;PR;Puerto Rico;C;0.02
+2024;2;PT;Portugal;C;1.06
+2024;2;PT;Portugal;D;0.46
+2024;2;PY;Paraguay;C;3.84
+2024;2;PY;Paraguay;D;20.11
+2024;2;QA;Qatar;C;0.01
+2024;2;RO;Rumania;C;0.02
+2024;2;SA;Arabia Saudita;C;0
+2024;2;SE;Suecia;C;0.77
+2024;2;SG;Singapur;C;0.01
+2024;2;SN;Senegal;D;0.21
+2024;2;SV;El Salvador;C;0.03
+2024;2;SV;El Salvador;D;0
+2024;2;TG;Togo;D;0.01
+2024;2;TR;Turquía;C;0.01
+2024;2;TR;Turquía;D;0.09
+2024;2;TW;Taiwan;C;0
+2024;2;UA;Ucrania;D;0.08
+2024;2;US;Estados Unidos;C;59.11
+2024;2;US;Estados Unidos;D;2.03
+2024;2;UY;Uruguay;C;5.63
+2024;2;UY;Uruguay;D;0.76
+2024;2;VE;Venezuela;C;1.31
+2024;2;VE;Venezuela;D;0.59
+2024;2;ZA;Sudáfrica;C;0.02
+2024;2;ZA;Sudáfrica;D;0.01
+2024;2;ZM;Zambia;C;0
+2024;3;AD;Andorra;C;0
+2024;3;AE;Emiratos Árabes Unidos;C;0.58
+2024;3;AM;Armenia;C;0.02
+2024;3;AM;Armenia;D;0
+2024;3;AO;Angola;C;0.01
+2024;3;AT;Austria;C;0.01
+2024;3;AU;Australia;C;3.39
+2024;3;AU;Australia;D;0.32
+2024;3;AW;Aruba;C;0
+2024;3;BE;Bélgica;C;0.57
+2024;3;BE;Bélgica;D;0.18
+2024;3;BF;Burkina Faso;D;0
+2024;3;BJ;Benin;D;0
+2024;3;BM;Bermudas;C;0.01
+2024;3;BO;Bolivia;C;3.81
+2024;3;BO;Bolivia;D;11.16
+2024;3;BQ;Bonaire, San Eustaquio y Saba;C;0
+2024;3;BR;Brasil;C;6.86
+2024;3;BR;Brasil;D;3.78
+2024;3;CA;Canadá;C;3.74
+2024;3;CA;Canadá;D;0.26
+2024;3;CH;Suiza;C;3.85
+2024;3;CI;Costa de Marfil;D;0.01
+2024;3;CL;Chile;C;18.14
+2024;3;CL;Chile;D;6.27
+2024;3;CM;Camerún;D;0
+2024;3;CN;China;C;0.01
+2024;3;CO;Colombia;C;4.53
+2024;3;CO;Colombia;D;5.25
+2024;3;CR;Costa Rica;C;0.7
+2024;3;CR;Costa Rica;D;0.14
+2024;3;CU;Cuba;C;0
+2024;3;CW;Curaçao;C;0
+2024;3;DE;Alemania;C;3.26
+2024;3;DE;Alemania;D;0.47
+2024;3;DK;Dinamarca;C;0.39
+2024;3;DO;República Dominicana;C;0.76
+2024;3;DO;República Dominicana;D;1.94
+2024;3;EC;Ecuador;C;8.25
+2024;3;EC;Ecuador;D;0.9
+2024;3;EE;Estonia;C;0
+2024;3;EG;Egipto;C;0
+2024;3;ES;España;C;36.2
+2024;3;ES;España;D;11.33
+2024;3;FI;Finlandia;C;0
+2024;3;FK;Islas Malvinas;C;0.01
+2024;3;FO;Islas Feroe;C;0
+2024;3;FR;Francia;C;4.05
+2024;3;FR;Francia;D;0.4
+2024;3;GB;Reino Unido;C;3.79
+2024;3;GB;Reino Unido;D;0.19
+2024;3;GE;Georgia;C;0.01
+2024;3;GH;Ghana;D;0.01
+2024;3;GR;Grecia;C;0.01
+2024;3;GT;Guatemala;C;0.04
+2024;3;GT;Guatemala;D;0.01
+2024;3;HK;Hong Kong;C;0.01
+2024;3;HN;Honduras;C;0.33
+2024;3;HN;Honduras;D;0
+2024;3;HR;Croacia;C;0
+2024;3;HT;Haití;C;0.02
+2024;3;HT;Haití;D;0.12
+2024;3;HU;Hungría;C;0
+2024;3;ID;Indonesia;C;0.01
+2024;3;ID;Indonesia;D;0
+2024;3;IE;Irlanda;C;0.47
+2024;3;IE;Irlanda;D;0.13
+2024;3;IL;Israel;C;0.75
+2024;3;IL;Israel;D;0.13
+2024;3;IM;Isla de Man;C;0
+2024;3;IN;India;C;0.01
+2024;3;IT;Italia;C;6.65
+2024;3;IT;Italia;D;2.5
+2024;3;JE;Jersey;C;0
+2024;3;JP;Japón;C;0.05
+2024;3;KR;Corea del Sur;C;0.01
+2024;3;KY;Islas Caimán;C;0
+2024;3;KZ;Kazajstán;C;0
+2024;3;LC;Santa Lucía;C;0
+2024;3;LI;Liechtenstein;C;0
+2024;3;LT;Lituania;C;0.02
+2024;3;LU;Luxemburgo;C;0.02
+2024;3;MC;Mónaco;C;0
+2024;3;MX;México;C;4.64
+2024;3;MX;México;D;1.45
+2024;3;NC;Nueva Caledonia;C;0
+2024;3;NI;Nicaragua;C;0
+2024;3;NL;Países Bajos;C;0.75
+2024;3;NL;Países Bajos;D;0.11
+2024;3;NO;Noruega;C;0.01
+2024;3;NZ;Nueva Zelanda;C;0.66
+2024;3;NZ;Nueva Zelanda;D;0.1
+2024;3;PA;Panamá;C;0.96
+2024;3;PA;Panamá;D;0.19
+2024;3;PE;Perú;C;12.38
+2024;3;PE;Perú;D;15.02
+2024;3;PG;Papua Nueva Guinea;C;0
+2024;3;PH;Filipinas;C;0.02
+2024;3;PH;Filipinas;D;0.11
+2024;3;PK;Pakistán;D;0.09
+2024;3;PL;Polonia;C;0
+2024;3;PR;Puerto Rico;C;0.01
+2024;3;PT;Portugal;C;0.91
+2024;3;PT;Portugal;D;0.43
+2024;3;PY;Paraguay;C;4.44
+2024;3;PY;Paraguay;D;40.74
+2024;3;RO;Rumania;C;0
+2024;3;SA;Arabia Saudita;C;0
+2024;3;SE;Suecia;C;0.56
+2024;3;SG;Singapur;C;0.01
+2024;3;SI;Eslovenia;C;0
+2024;3;SK;Eslovaquia;C;0
+2024;3;SN;Senegal;D;0.26
+2024;3;SV;El Salvador;C;0.37
+2024;3;SV;El Salvador;D;0
+2024;3;TR;Turquía;C;0.01
+2024;3;TR;Turquía;D;0.15
+2024;3;TW;Taiwan;C;0.01
+2024;3;UA;Ucrania;D;0.08
+2024;3;US;Estados Unidos;C;56
+2024;3;US;Estados Unidos;D;2.69
+2024;3;UY;Uruguay;C;6.18
+2024;3;UY;Uruguay;D;1.1
+2024;3;VE;Venezuela;C;1.5
+2024;3;VE;Venezuela;D;0.64
+2024;3;VG;Islas Vírgenes Británicas;C;0
+2024;3;ZA;Sudáfrica;C;0.02
+2024;3;ZM;Zambia;C;0
+2024;4;AD;Andorra;C;0.01
+2024;4;AE;Emiratos Árabes Unidos;C;0.95
+2024;4;AM;Armenia;C;0
+2024;4;AM;Armenia;D;0
+2024;4;AO;Angola;C;0.01
+2024;4;AT;Austria;C;0.63
+2024;4;AU;Australia;C;7.87
+2024;4;AU;Australia;D;0.39
+2024;4;AW;Aruba;C;0.01
+2024;4;BE;Bélgica;C;1.19
+2024;4;BE;Bélgica;D;0.24
+2024;4;BH;Bahrein;C;0
+2024;4;BO;Bolivia;C;4.04
+2024;4;BO;Bolivia;D;10.6
+2024;4;BR;Brasil;C;10.4
+2024;4;BR;Brasil;D;5.73
+2024;4;BW;Botswana;C;0
+2024;4;CA;Canadá;C;5.32
+2024;4;CA;Canadá;D;0.31
+2024;4;CH;Suiza;C;5.88
+2024;4;CH;Suiza;D;0.12
+2024;4;CI;Costa de Marfil;D;0.01
+2024;4;CL;Chile;C;20.23
+2024;4;CL;Chile;D;10.75
+2024;4;CM;Camerún;C;0
+2024;4;CN;China;C;0
+2024;4;CN;China;D;0.36
+2024;4;CO;Colombia;C;4.85
+2024;4;CO;Colombia;D;6.92
+2024;4;CR;Costa Rica;C;0.78
+2024;4;CR;Costa Rica;D;0.15
+2024;4;CV;Cabo Verde;C;0
+2024;4;CW;Curaçao;C;0.01
+2024;4;CY;Chipre;C;0.79
+2024;4;CZ;República Checa;C;0.01
+2024;4;DE;Alemania;C;6.29
+2024;4;DE;Alemania;D;0.58
+2024;4;DK;Dinamarca;C;1.62
+2024;4;DO;República Dominicana;C;0.86
+2024;4;DO;República Dominicana;D;2.44
+2024;4;EC;Ecuador;C;8.87
+2024;4;EC;Ecuador;D;1.22
+2024;4;EG;Egipto;C;0
+2024;4;ES;España;C;46.57
+2024;4;ES;España;D;14.67
+2024;4;ET;Etiopía;D;0
+2024;4;FI;Finlandia;C;0.01
+2024;4;FK;Islas Malvinas;C;0
+2024;4;FO;Islas Feroe;C;0
+2024;4;FR;Francia;C;7.54
+2024;4;FR;Francia;D;0.56
+2024;4;GB;Reino Unido;C;6.53
+2024;4;GB;Reino Unido;D;0.3
+2024;4;GE;Georgia;C;0.01
+2024;4;GH;Ghana;D;0
+2024;4;GR;Grecia;C;0
+2024;4;GT;Guatemala;C;0.03
+2024;4;GT;Guatemala;D;0
+2024;4;HK;Hong Kong;C;0.01
+2024;4;HN;Honduras;C;0.01
+2024;4;HN;Honduras;D;0
+2024;4;HR;Croacia;C;0.01
+2024;4;HT;Haití;C;0.01
+2024;4;HT;Haití;D;0.16
+2024;4;HU;Hungría;C;0.01
+2024;4;ID;Indonesia;C;0.01
+2024;4;ID;Indonesia;D;0.01
+2024;4;IE;Irlanda;C;1.35
+2024;4;IE;Irlanda;D;0.1
+2024;4;IL;Israel;C;0.07
+2024;4;IL;Israel;D;0.17
+2024;4;IM;Isla de Man;C;0
+2024;4;IN;India;D;0.11
+2024;4;IT;Italia;C;9.93
+2024;4;IT;Italia;D;3.44
+2024;4;JP;Japón;C;0.05
+2024;4;KR;Corea del Sur;C;0.01
+2024;4;KY;Islas Caimán;C;0
+2024;4;KZ;Kazajstán;C;0
+2024;4;LB;Líbano;C;0.01
+2024;4;LI;Liechtenstein;C;0.01
+2024;4;LT;Lituania;C;0.04
+2024;4;LU;Luxemburgo;C;0.03
+2024;4;LV;Letonia;C;0.01
+2024;4;MC;Mónaco;C;0
+2024;4;MX;México;C;5.1
+2024;4;MX;México;D;1.76
+2024;4;NC;Nueva Caledonia;C;0
+2024;4;NI;Nicaragua;C;0
+2024;4;NI;Nicaragua;D;0.01
+2024;4;NL;Países Bajos;C;2.09
+2024;4;NL;Países Bajos;D;0.12
+2024;4;NO;Noruega;C;0.65
+2024;4;NO;Noruega;D;0
+2024;4;NZ;Nueva Zelanda;C;1.6
+2024;4;OM;Omán;C;0
+2024;4;PA;Panamá;C;1.43
+2024;4;PA;Panamá;D;0.21
+2024;4;PE;Perú;C;13.65
+2024;4;PE;Perú;D;16.48
+2024;4;PH;Filipinas;C;0.01
+2024;4;PH;Filipinas;D;0.11
+2024;4;PK;Pakistán;D;0.09
+2024;4;PL;Polonia;C;0.02
+2024;4;PL;Polonia;D;0
+2024;4;PR;Puerto Rico;C;0
+2024;4;PT;Portugal;C;1.51
+2024;4;PT;Portugal;D;0.46
+2024;4;PY;Paraguay;C;4.91
+2024;4;PY;Paraguay;D;50.44
+2024;4;QA;Qatar;C;0
+2024;4;RO;Rumania;C;0.02
+2024;4;SA;Arabia Saudita;C;0.01
+2024;4;SE;Suecia;C;0.92
+2024;4;SG;Singapur;C;0.01
+2024;4;SI;Eslovenia;C;0
+2024;4;SN;Senegal;D;0.08
+2024;4;SV;El Salvador;C;0.01
+2024;4;SV;El Salvador;D;0
+2024;4;TR;Turquía;C;0
+2024;4;TR;Turquía;D;0.16
+2024;4;TW;Taiwan;C;0.01
+2024;4;US;Estados Unidos;C;76.1
+2024;4;US;Estados Unidos;D;4.02
+2024;4;UY;Uruguay;C;7.36
+2024;4;UY;Uruguay;D;1.89
+2024;4;VC;San Vicente y las Granadinas;C;0
+2024;4;VE;Venezuela;C;1.61
+2024;4;VE;Venezuela;D;0.76
+2024;4;ZA;Sudáfrica;C;0.02
+2025;1;AD;Andorra;C;0.01
+2025;1;AE;Emiratos Árabes Unidos;C;0.75
+2025;1;AM;Armenia;D;0.01
+2025;1;AO;Angola;C;0.01
+2025;1;AT;Austria;C;0.02
+2025;1;AU;Australia;C;3.72
+2025;1;AU;Australia;D;0.43
+2025;1;AW;Aruba;C;0.01
+2025;1;BE;Bélgica;C;0.04
+2025;1;BE;Bélgica;D;0.28
+2025;1;BM;Bermudas;C;0
+2025;1;BN;Brunei;C;0.01
+2025;1;BO;Bolivia;C;1.85
+2025;1;BO;Bolivia;D;10.98
+2025;1;BQ;Bonaire, San Eustaquio y Saba;C;0
+2025;1;BR;Brasil;C;5.08
+2025;1;BR;Brasil;D;3.65
+2025;1;CA;Canadá;C;3.99
+2025;1;CA;Canadá;D;0.39
+2025;1;CH;Suiza;C;4.23
+2025;1;CI;Costa de Marfil;D;0.01
+2025;1;CL;Chile;C;15.92
+2025;1;CL;Chile;D;15.08
+2025;1;CN;China;C;0
+2025;1;CN;China;D;0.5
+2025;1;CO;Colombia;C;3.92
+2025;1;CO;Colombia;D;7.24
+2025;1;CR;Costa Rica;C;0.76
+2025;1;CR;Costa Rica;D;0.17
+2025;1;CW;Curaçao;C;0.01
+2025;1;CY;Chipre;C;0.01
+2025;1;CZ;República Checa;C;0.01
+2025;1;DE;Alemania;C;3.53
+2025;1;DE;Alemania;D;0.67
+2025;1;DK;Dinamarca;C;0.02
+2025;1;DO;República Dominicana;C;0.77
+2025;1;DO;República Dominicana;D;2.67
+2025;1;EC;Ecuador;C;6.12
+2025;1;EC;Ecuador;D;1.28
+2025;1;ES;España;C;34.32
+2025;1;ES;España;D;16.2
+2025;1;FI;Finlandia;C;0
+2025;1;FK;Islas Malvinas;C;0.01
+2025;1;FR;Francia;C;4.11
+2025;1;FR;Francia;D;0.63
+2025;1;GB;Reino Unido;C;3.35
+2025;1;GB;Reino Unido;D;0.34
+2025;1;GH;Ghana;D;0
+2025;1;GR;Grecia;C;0.01
+2025;1;GT;Guatemala;C;0.36
+2025;1;GT;Guatemala;D;0.03
+2025;1;HK;Hong Kong;C;0.01
+2025;1;HN;Honduras;C;0.33
+2025;1;HN;Honduras;D;0
+2025;1;HR;Croacia;C;0
+2025;1;HT;Haití;C;0.01
+2025;1;HT;Haití;D;0.16
+2025;1;HU;Hungría;C;0.01
+2025;1;HU;Hungría;D;0
+2025;1;IE;Irlanda;C;0.04
+2025;1;IE;Irlanda;D;0.15
+2025;1;IL;Israel;C;0.74
+2025;1;IL;Israel;D;0.21
+2025;1;IM;Isla de Man;C;0
+2025;1;IN;India;C;0.01
+2025;1;IN;India;D;0.14
+2025;1;IT;Italia;C;6.76
+2025;1;IT;Italia;D;3.51
+2025;1;JE;Jersey;C;0
+2025;1;JP;Japón;C;0.46
+2025;1;JP;Japón;D;0.11
+2025;1;KR;Corea del Sur;C;0.21
+2025;1;KW;Kuwait;C;0
+2025;1;KY;Islas Caimán;C;0
+2025;1;KZ;Kazajstán;C;0
+2025;1;KZ;Kazajstán;D;0
+2025;1;LI;Liechtenstein;C;0
+2025;1;LT;Lituania;C;0.06
+2025;1;LT;Lituania;D;0
+2025;1;LU;Luxemburgo;C;0.03
+2025;1;MA;Marruecos;D;0.11
+2025;1;MC;Mónaco;C;0
+2025;1;MX;México;C;4.21
+2025;1;MX;México;D;1.74
+2025;1;MY;Malasia;C;0
+2025;1;NC;Nueva Caledonia;C;0
+2025;1;NI;Nicaragua;D;0.01
+2025;1;NL;Países Bajos;C;0.08
+2025;1;NL;Países Bajos;D;0.18
+2025;1;NO;Noruega;C;0.02
+2025;1;NZ;Nueva Zelanda;C;0.01
+2025;1;OM;Omán;C;0
+2025;1;PA;Panamá;C;0.97
+2025;1;PE;Perú;C;11.66
+2025;1;PE;Perú;D;17.9
+2025;1;PH;Filipinas;D;0
+2025;1;PK;Pakistán;D;0.12
+2025;1;PL;Polonia;C;0.02
+2025;1;PL;Polonia;D;0
+2025;1;PR;Puerto Rico;C;0.01
+2025;1;PT;Portugal;C;0.73
+2025;1;PT;Portugal;D;0.59
+2025;1;PY;Paraguay;C;4.18
+2025;1;PY;Paraguay;D;65.65
+2025;1;QA;Qatar;C;0.01
+2025;1;RO;Rumania;C;0.02
+2025;1;SA;Arabia Saudita;C;0.01
+2025;1;SE;Suecia;C;0.02
+2025;1;SG;Singapur;C;0.02
+2025;1;SI;Eslovenia;C;0.01
+2025;1;SK;Eslovaquia;C;0
+2025;1;SN;Senegal;D;0.29
+2025;1;SV;El Salvador;C;0.37
+2025;1;SV;El Salvador;D;0
+2025;1;TH;Tailandia;C;0.01
+2025;1;TR;Turquía;C;0.22
+2025;1;TR;Turquía;D;0.16
+2025;1;TW;Taiwan;C;0
+2025;1;UA;Ucrania;D;0.01
+2025;1;US;Estados Unidos;C;58.86
+2025;1;US;Estados Unidos;D;3.86
+2025;1;UY;Uruguay;C;6.01
+2025;1;UY;Uruguay;D;1.68
+2025;1;VA;Vaticano;C;0
+2025;1;VE;Venezuela;C;1.4
+2025;1;VE;Venezuela;D;0.72
+2025;1;VN;Viet Nam;C;0
+2025;1;ZA;Sudáfrica;C;0.03
+2025;2;AD;Andorra;C;0.01
+2025;2;AE;Emiratos Árabes Unidos;C;0.72
+2025;2;AM;Armenia;C;0.02
+2025;2;AM;Armenia;D;0.01
+2025;2;AO;Angola;C;0.01
+2025;2;AT;Austria;C;0.33
+2025;2;AU;Australia;C;3.85
+2025;2;AU;Australia;D;0.53
+2025;2;AW;Aruba;C;0.01
+2025;2;BE;Bélgica;C;0.61
+2025;2;BE;Bélgica;D;0.3
+2025;2;BM;Bermudas;C;0
+2025;2;BN;Brunei;C;0.01
+2025;2;BO;Bolivia;C;0.7
+2025;2;BO;Bolivia;D;13.06
+2025;2;BR;Brasil;C;5.73
+2025;2;BR;Brasil;D;2.39
+2025;2;BW;Botswana;C;0
+2025;2;CA;Canadá;C;4.18
+2025;2;CA;Canadá;D;0.36
+2025;2;CH;Suiza;C;4.5
+2025;2;CI;Costa de Marfil;D;0.01
+2025;2;CL;Chile;C;16.22
+2025;2;CL;Chile;D;8.83
+2025;2;CN;China;C;0.01
+2025;2;CN;China;D;0.64
+2025;2;CO;Colombia;C;4.49
+2025;2;CO;Colombia;D;8.17
+2025;2;CR;Costa Rica;C;0.82
+2025;2;CR;Costa Rica;D;0.21
+2025;2;CW;Curaçao;C;0.01
+2025;2;CY;Chipre;C;0.1
+2025;2;CZ;República Checa;C;0
+2025;2;DE;Alemania;C;3.74
+2025;2;DE;Alemania;D;0.64
+2025;2;DK;Dinamarca;C;0.43
+2025;2;DO;República Dominicana;C;0.83
+2025;2;DO;República Dominicana;D;2.82
+2025;2;EC;Ecuador;C;6.8
+2025;2;EC;Ecuador;D;1.32
+2025;2;ES;España;C;37.2
+2025;2;ES;España;D;17.27
+2025;2;FI;Finlandia;C;0
+2025;2;FK;Islas Malvinas;C;0
+2025;2;FR;Francia;C;5.5
+2025;2;FR;Francia;D;0.7
+2025;2;GB;Reino Unido;C;4
+2025;2;GB;Reino Unido;D;0.41
+2025;2;GE;Georgia;C;0.02
+2025;2;GN;Guinea;D;0.01
+2025;2;GR;Grecia;C;0.01
+2025;2;GR;Grecia;D;0
+2025;2;GT;Guatemala;C;0.06
+2025;2;GT;Guatemala;D;0.01
+2025;2;HN;Honduras;C;0.32
+2025;2;HR;Croacia;C;0
+2025;2;HR;Croacia;D;0
+2025;2;HT;Haití;C;0.02
+2025;2;HT;Haití;D;0.16
+2025;2;HU;Hungría;C;0
+2025;2;ID;Indonesia;C;0
+2025;2;ID;Indonesia;D;0.01
+2025;2;IE;Irlanda;C;0.46
+2025;2;IE;Irlanda;D;0.2
+2025;2;IL;Israel;C;0.73
+2025;2;IL;Israel;D;0.19
+2025;2;IM;Isla de Man;C;0
+2025;2;IN;India;C;0
+2025;2;IN;India;D;0.16
+2025;2;IS;Islandia;C;0
+2025;2;IT;Italia;C;6.81
+2025;2;IT;Italia;D;3.67
+2025;2;JP;Japón;C;0.05
+2025;2;KH;Camboya;C;0
+2025;2;KR;Corea del Sur;C;0
+2025;2;KR;Corea del Sur;D;0
+2025;2;KY;Islas Caimán;C;0
+2025;2;KZ;Kazajstán;C;0
+2025;2;LB;Líbano;C;0.01
+2025;2;LI;Liechtenstein;C;0
+2025;2;LT;Lituania;C;0.04
+2025;2;LT;Lituania;D;0
+2025;2;LU;Luxemburgo;C;0.03
+2025;2;LV;Letonia;C;0
+2025;2;MC;Mónaco;C;0
+2025;2;MK;Macedonia;C;0
+2025;2;MX;México;C;4.57
+2025;2;MX;México;D;1.86
+2025;2;NC;Nueva Caledonia;C;0.01
+2025;2;NG;Nigeria;C;0
+2025;2;NI;Nicaragua;C;0
+2025;2;NI;Nicaragua;D;0.01
+2025;2;NL;Países Bajos;C;1.01
+2025;2;NL;Países Bajos;D;0.18
+2025;2;NO;Noruega;C;0.07
+2025;2;NZ;Nueva Zelanda;C;0.71
+2025;2;NZ;Nueva Zelanda;D;0.16
+2025;2;OM;Omán;C;0
+2025;2;PA;Panamá;C;1.16
+2025;2;PA;Panamá;D;0.23
+2025;2;PE;Perú;C;12.52
+2025;2;PE;Perú;D;18.37
+2025;2;PH;Filipinas;C;0
+2025;2;PH;Filipinas;D;0.01
+2025;2;PK;Pakistán;D;0.19
+2025;2;PL;Polonia;C;0.01
+2025;2;PR;Puerto Rico;C;0.01
+2025;2;PR;Puerto Rico;D;0
+2025;2;PT;Portugal;C;0.75
+2025;2;PT;Portugal;D;0.59
+2025;2;PY;Paraguay;C;4.47
+2025;2;PY;Paraguay;D;77.05
+2025;2;QA;Qatar;C;0.02
+2025;2;RO;Rumania;C;0.01
+2025;2;SA;Arabia Saudita;C;0.01
+2025;2;SE;Suecia;C;0.47
+2025;2;SG;Singapur;C;0.02
+2025;2;SI;Eslovenia;C;0.01
+2025;2;SK;Eslovaquia;C;0
+2025;2;SN;Senegal;D;0.05
+2025;2;SV;El Salvador;C;0.03
+2025;2;SV;El Salvador;D;0
+2025;2;TG;Togo;D;0.02
+2025;2;TR;Turquía;C;0.02
+2025;2;TR;Turquía;D;0.2
+2025;2;TW;Taiwan;C;0
+2025;2;UA;Ucrania;D;0.01
+2025;2;US;Estados Unidos;C;60.7
+2025;2;US;Estados Unidos;D;3.92
+2025;2;UY;Uruguay;C;6.28
+2025;2;UY;Uruguay;D;1.4
+2025;2;VA;Vaticano;C;0
+2025;2;VE;Venezuela;C;1.51
+2025;2;VE;Venezuela;D;0.8
+2025;2;VN;Viet Nam;C;0
+2025;2;ZA;Sudáfrica;C;0.02
+2025;2;ZA;Sudáfrica;D;0.01
+2025;3;AD;Andorra;C;0.65
+2025;3;AE;Emiratos Árabes Unidos;C;0.74
+2025;3;AL;Albania;C;0
+2025;3;AM;Armenia;D;0.01
+2025;3;AO;Angola;C;0.01
+2025;3;AT;Austria;C;0.02
+2025;3;AT;Austria;D;0
+2025;3;AU;Australia;C;4.03
+2025;3;AU;Australia;D;0.53
+2025;3;BE;Bélgica;C;0.54
+2025;3;BE;Bélgica;D;0.31
+2025;3;BN;Brunei;C;0.01
+2025;3;BO;Bolivia;C;1.12
+2025;3;BO;Bolivia;D;13.19
+2025;3;BR;Brasil;C;5.18
+2025;3;BR;Brasil;D;2.56
+2025;3;BW;Botswana;C;0.01
+2025;3;CA;Canadá;C;4.17
+2025;3;CA;Canadá;D;0.39
+2025;3;CH;Suiza;C;4.58
+2025;3;CH;Suiza;D;0.26
+2025;3;CI;Costa de Marfil;C;0
+2025;3;CI;Costa de Marfil;D;0.01
+2025;3;CL;Chile;C;16.03
+2025;3;CL;Chile;D;8.21
+2025;3;CN;China;C;0.01
+2025;3;CO;Colombia;C;4.79
+2025;3;CO;Colombia;D;8.01
+2025;3;CR;Costa Rica;C;0.74
+2025;3;CR;Costa Rica;D;0.25
+2025;3;CW;Curaçao;C;0.01
+2025;3;CZ;República Checa;D;0
+2025;3;DE;Alemania;C;3.8
+2025;3;DE;Alemania;D;0.75
+2025;3;DK;Dinamarca;C;0.46
+2025;3;DO;República Dominicana;C;0.88
+2025;3;DO;República Dominicana;D;2.78
+2025;3;EC;Ecuador;C;6.52
+2025;3;EC;Ecuador;D;1.4
+2025;3;EG;Egipto;C;0
+2025;3;ES;España;C;40.37
+2025;3;ES;España;D;18.02
+2025;3;FI;Finlandia;C;0.01
+2025;3;FJ;Fiji;C;0
+2025;3;FK;Islas Malvinas;C;0
+2025;3;FR;Francia;C;4.17
+2025;3;FR;Francia;D;0.68
+2025;3;GB;Reino Unido;C;4.13
+2025;3;GB;Reino Unido;D;0.44
+2025;3;GE;Georgia;C;0
+2025;3;GH;Ghana;D;0.01
+2025;3;GN;Guinea;D;0
+2025;3;GR;Grecia;C;0.01
+2025;3;GT;Guatemala;C;0.05
+2025;3;GT;Guatemala;D;0.01
+2025;3;HK;Hong Kong;C;0
+2025;3;HN;Honduras;C;0.35
+2025;3;HR;Croacia;C;0
+2025;3;HR;Croacia;D;0
+2025;3;HT;Haití;C;0.02
+2025;3;HT;Haití;D;0.17
+2025;3;HU;Hungría;C;0.01
+2025;3;ID;Indonesia;C;0
+2025;3;IE;Irlanda;C;0.45
+2025;3;IE;Irlanda;D;0.23
+2025;3;IL;Israel;C;0.85
+2025;3;IL;Israel;D;0.27
+2025;3;IM;Isla de Man;C;0
+2025;3;IN;India;C;0.01
+2025;3;IN;India;D;0.15
+2025;3;IS;Islandia;C;0
+2025;3;IT;Italia;C;7.18
+2025;3;IT;Italia;D;3.57
+2025;3;JE;Jersey;C;0
+2025;3;JP;Japón;C;0.05
+2025;3;JP;Japón;D;0
+2025;3;KE;Kenia;D;0
+2025;3;KR;Corea del Sur;C;0
+2025;3;KR;Corea del Sur;D;0
+2025;3;KW;Kuwait;C;0
+2025;3;KY;Islas Caimán;C;0
+2025;3;LB;Líbano;C;0.01
+2025;3;LC;Santa Lucía;C;0
+2025;3;LI;Liechtenstein;C;0
+2025;3;LT;Lituania;C;0.06
+2025;3;LT;Lituania;D;0
+2025;3;LU;Luxemburgo;C;0.03
+2025;3;MA;Marruecos;D;0
+2025;3;MC;Mónaco;C;0.01
+2025;3;MK;Macedonia;C;0
+2025;3;MX;México;C;4.37
+2025;3;MX;México;D;1.99
+2025;3;MY;Malasia;C;0
+2025;3;NC;Nueva Caledonia;C;0.01
+2025;3;NG;Nigeria;D;0
+2025;3;NI;Nicaragua;C;0
+2025;3;NL;Países Bajos;C;0.97
+2025;3;NL;Países Bajos;D;0.22
+2025;3;NO;Noruega;C;0.33
+2025;3;NZ;Nueva Zelanda;C;0.65
+2025;3;OM;Omán;C;0
+2025;3;PA;Panamá;C;1.01
+2025;3;PA;Panamá;D;0.31
+2025;3;PE;Perú;C;12.54
+2025;3;PE;Perú;D;17.33
+2025;3;PH;Filipinas;C;0
+2025;3;PH;Filipinas;D;0.01
+2025;3;PK;Pakistán;D;0.23
+2025;3;PL;Polonia;C;0.01
+2025;3;PR;Puerto Rico;C;0.01
+2025;3;PR;Puerto Rico;D;0
+2025;3;PT;Portugal;C;0.83
+2025;3;PT;Portugal;D;0.58
+2025;3;PY;Paraguay;C;4.76
+2025;3;PY;Paraguay;D;90.27
+2025;3;QA;Qatar;C;0.03
+2025;3;QA;Qatar;D;0
+2025;3;RO;Rumania;C;0
+2025;3;RU;Rusia;C;0
+2025;3;SA;Arabia Saudita;C;0.01
+2025;3;SE;Suecia;C;0.53
+2025;3;SE;Suecia;D;0
+2025;3;SG;Singapur;C;0.02
+2025;3;SI;Eslovenia;C;0
+2025;3;SK;Eslovaquia;C;0
+2025;3;SN;Senegal;D;0.04
+2025;3;SV;El Salvador;C;0.03
+2025;3;SV;El Salvador;D;0
+2025;3;TH;Tailandia;C;0
+2025;3;TR;Turquía;C;0
+2025;3;TR;Turquía;D;0.24
+2025;3;TT;Trinidad y Tobago;C;0.02
+2025;3;TW;Taiwan;C;0
+2025;3;TZ;Tanzania;D;0
+2025;3;UA;Ucrania;D;0.01
+2025;3;US;Estados Unidos;C;61.33
+2025;3;US;Estados Unidos;D;4.19
+2025;3;UY;Uruguay;C;6.33
+2025;3;UY;Uruguay;D;1.66
+2025;3;VE;Venezuela;C;1.46
+2025;3;VE;Venezuela;D;0.82
+2025;3;VN;Viet Nam;C;0
+2025;3;ZA;Sudáfrica;C;0.02
+2025;3;ZM;Zambia;C;0
+2025;4;AD;Andorra;C;0.68
+2025;4;AE;Emiratos Árabes Unidos;C;0.67
+2025;4;AE;Emiratos Árabes Unidos;D;0.16
+2025;4;AM;Armenia;C;0
+2025;4;AM;Armenia;D;0
+2025;4;AO;Angola;C;0.01
+2025;4;AT;Austria;C;0.41
+2025;4;AU;Australia;C;4.38
+2025;4;AU;Australia;D;0.59
+2025;4;AW;Aruba;C;0
+2025;4;BE;Bélgica;C;0.61
+2025;4;BE;Bélgica;D;0.2
+2025;4;BM;Bermudas;C;0
+2025;4;BN;Brunei;C;0
+2025;4;BO;Bolivia;C;2.24
+2025;4;BO;Bolivia;D;8.3
+2025;4;BQ;Bonaire, San Eustaquio y Saba;C;0
+2025;4;BR;Brasil;C;4.85
+2025;4;BR;Brasil;D;2.21
+2025;4;BW;Botswana;C;0
+2025;4;CA;Canadá;C;4.29
+2025;4;CA;Canadá;D;0.37
+2025;4;CH;Suiza;C;5.17
+2025;4;CH;Suiza;D;0.22
+2025;4;CI;Costa de Marfil;D;0.01
+2025;4;CL;Chile;C;17.93
+2025;4;CL;Chile;D;7.14
+2025;4;CM;Camerún;D;0
+2025;4;CN;China;C;0.02
+2025;4;CN;China;D;0.7
+2025;4;CO;Colombia;C;4.88
+2025;4;CO;Colombia;D;7.36
+2025;4;CR;Costa Rica;C;0.79
+2025;4;CR;Costa Rica;D;0.22
+2025;4;CW;Curaçao;C;0.01
+2025;4;CZ;República Checa;C;0
+2025;4;DE;Alemania;C;4.29
+2025;4;DE;Alemania;D;0.64
+2025;4;DK;Dinamarca;C;0.5
+2025;4;DO;República Dominicana;C;0.96
+2025;4;DO;República Dominicana;D;2.39
+2025;4;EC;Ecuador;C;6.32
+2025;4;EC;Ecuador;D;1.27
+2025;4;ES;España;C;41.02
+2025;4;ES;España;D;15.31
+2025;4;FI;Finlandia;C;0.02
+2025;4;FR;Francia;C;4.55
+2025;4;FR;Francia;D;0.58
+2025;4;GB;Reino Unido;C;3.76
+2025;4;GB;Reino Unido;D;0.37
+2025;4;GE;Georgia;C;0
+2025;4;GH;Ghana;C;0
+2025;4;GH;Ghana;D;0.01
+2025;4;GR;Grecia;C;0
+2025;4;GT;Guatemala;C;0.03
+2025;4;GT;Guatemala;D;0
+2025;4;HK;Hong Kong;C;0
+2025;4;HK;Hong Kong;D;0
+2025;4;HN;Honduras;C;0.01
+2025;4;HR;Croacia;C;0
+2025;4;HT;Haití;C;0.02
+2025;4;HT;Haití;D;0.16
+2025;4;HU;Hungría;C;0
+2025;4;ID;Indonesia;C;0.02
+2025;4;ID;Indonesia;D;0.01
+2025;4;IE;Irlanda;C;0.51
+2025;4;IE;Irlanda;D;0.14
+2025;4;IL;Israel;C;0.49
+2025;4;IL;Israel;D;0.24
+2025;4;IM;Isla de Man;C;0
+2025;4;IN;India;C;0.02
+2025;4;IN;India;D;0.13
+2025;4;IS;Islandia;C;0.01
+2025;4;IT;Italia;C;7.89
+2025;4;IT;Italia;D;3.05
+2025;4;JE;Jersey;C;0
+2025;4;JP;Japón;C;0.07
+2025;4;KR;Corea del Sur;C;0
+2025;4;KW;Kuwait;C;0
+2025;4;KY;Islas Caimán;C;0.01
+2025;4;LB;Líbano;C;0
+2025;4;LI;Liechtenstein;C;0
+2025;4;LT;Lituania;C;0.08
+2025;4;LT;Lituania;D;0
+2025;4;LU;Luxemburgo;C;0.04
+2025;4;MK;Macedonia;C;0
+2025;4;MQ;Martinica;C;0
+2025;4;MT;Malta;C;0
+2025;4;MX;México;C;4.51
+2025;4;MX;México;D;1.8
+2025;4;NC;Nueva Caledonia;C;0
+2025;4;NI;Nicaragua;C;0
+2025;4;NI;Nicaragua;D;0.01
+2025;4;NL;Países Bajos;C;1.1
+2025;4;NL;Países Bajos;D;0.14
+2025;4;NO;Noruega;C;0.83
+2025;4;NZ;Nueva Zelanda;C;0.65
+2025;4;PA;Panamá;C;1.08
+2025;4;PA;Panamá;D;0.26
+2025;4;PE;Perú;C;13.92
+2025;4;PE;Perú;D;15.36
+2025;4;PH;Filipinas;D;0
+2025;4;PK;Pakistán;D;0.16
+2025;4;PL;Polonia;C;0.01
+2025;4;PR;Puerto Rico;C;0.01
+2025;4;PR;Puerto Rico;D;0
+2025;4;PT;Portugal;C;0.99
+2025;4;PT;Portugal;D;0.43
+2025;4;PY;Paraguay;C;5.98
+2025;4;PY;Paraguay;D;62.18
+2025;4;QA;Qatar;C;0.03
+2025;4;RE;Reunión;C;0
+2025;4;RO;Rumania;C;0.01
+2025;4;SA;Arabia Saudita;C;0.01
+2025;4;SE;Suecia;C;0.57
+2025;4;SE;Suecia;D;0
+2025;4;SG;Singapur;C;0.02
+2025;4;SI;Eslovenia;C;0
+2025;4;SK;Eslovaquia;C;0.01
+2025;4;SL;Sierra Leona;C;0
+2025;4;SN;Senegal;D;0.06
+2025;4;SV;El Salvador;C;0.02
+2025;4;SV;El Salvador;D;0
+2025;4;TH;Tailandia;C;0
+2025;4;TR;Turquía;C;0.01
+2025;4;TR;Turquía;D;0.17
+2025;4;TW;Taiwan;C;0
+2025;4;UA;Ucrania;D;0
+2025;4;US;Estados Unidos;C;61.48
+2025;4;US;Estados Unidos;D;3.67
+2025;4;UY;Uruguay;C;6.8
+2025;4;UY;Uruguay;D;1.99
+2025;4;VE;Venezuela;C;1.3
+2025;4;VE;Venezuela;D;0.7
+2025;4;VN;Viet Nam;C;0
+2025;4;ZA;Sudáfrica;C;0.02
+2025;4;ZM;Zambia;C;0
+2026;1;AD;Andorra;C;0.78
+2026;1;AE;Emiratos Árabes Unidos;C;0.68
+2026;1;AM;Armenia;C;0.01
+2026;1;AM;Armenia;D;0.01
+2026;1;AO;Angola;C;0.01
+2026;1;AT;Austria;C;0.33
+2026;1;AT;Austria;D;0
+2026;1;AU;Australia;C;4.06
+2026;1;AU;Australia;D;0.59
+2026;1;AW;Aruba;C;0
+2026;1;BE;Bélgica;C;0.6
+2026;1;BG;Bulgaria;C;0.01
+2026;1;BH;Bahrein;C;0
+2026;1;BM;Bermudas;C;0
+2026;1;BN;Brunei;C;0.01
+2026;1;BO;Bolivia;C;1.89
+2026;1;BO;Bolivia;D;9.65
+2026;1;BQ;Bonaire, San Eustaquio y Saba;C;0
+2026;1;BR;Brasil;C;4.29
+2026;1;BR;Brasil;D;1.66
+2026;1;BW;Botswana;C;0
+2026;1;CA;Canadá;C;4.17
+2026;1;CA;Canadá;D;0.51
+2026;1;CH;Suiza;C;4.96
+2026;1;CH;Suiza;D;0.14
+2026;1;CI;Costa de Marfil;D;0.01
+2026;1;CL;Chile;C;17.38
+2026;1;CL;Chile;D;6.76
+2026;1;CM;Camerún;C;0
+2026;1;CM;Camerún;D;0.01
+2026;1;CN;China;C;0.02
+2026;1;CN;China;D;0.68
+2026;1;CO;Colombia;C;4.24
+2026;1;CO;Colombia;D;6.52
+2026;1;CR;Costa Rica;C;0.75
+2026;1;CR;Costa Rica;D;0.22
+2026;1;CW;Curaçao;C;0.01
+2026;1;CY;Chipre;C;0
+2026;1;CZ;República Checa;C;0
+2026;1;DE;Alemania;C;3.91
+2026;1;DE;Alemania;D;0.55
+2026;1;DK;Dinamarca;C;0.52
+2026;1;DK;Dinamarca;D;0
+2026;1;DO;República Dominicana;C;0.87
+2026;1;DO;República Dominicana;D;2.44
+2026;1;EC;Ecuador;C;5.21
+2026;1;EC;Ecuador;D;1.25
+2026;1;EG;Egipto;C;0
+2026;1;ES;España;C;41.25
+2026;1;ES;España;D;14.55
+2026;1;FI;Finlandia;C;0
+2026;1;FR;Francia;C;4.59
+2026;1;FR;Francia;D;0.57
+2026;1;GB;Reino Unido;C;3.44
+2026;1;GB;Reino Unido;D;0.4
+2026;1;GE;Georgia;C;0.01
+2026;1;GH;Ghana;D;0.01
+2026;1;GI;Gibraltar;C;0
+2026;1;GQ;Guinea Ecuatorial;C;0
+2026;1;GR;Grecia;C;0.01
+2026;1;GT;Guatemala;C;0.03
+2026;1;GT;Guatemala;D;0.02
+2026;1;HK;Hong Kong;C;0
+2026;1;HN;Honduras;C;0.02
+2026;1;HN;Honduras;D;0
+2026;1;HR;Croacia;C;0
+2026;1;HT;Haití;C;0.02
+2026;1;HT;Haití;D;0.17
+2026;1;ID;Indonesia;C;0.01
+2026;1;IE;Irlanda;C;0.5
+2026;1;IE;Irlanda;D;0.12
+2026;1;IL;Israel;C;0.81
+2026;1;IL;Israel;D;0.25
+2026;1;IM;Isla de Man;C;0
+2026;1;IN;India;C;0.02
+2026;1;IN;India;D;0.17
+2026;1;IS;Islandia;C;0.01
+2026;1;IT;Italia;C;7.37
+2026;1;IT;Italia;D;2.86
+2026;1;JE;Jersey;C;0
+2026;1;JP;Japón;C;0.06
+2026;1;JP;Japón;D;0.13
+2026;1;KR;Corea del Sur;C;0.01
+2026;1;KY;Islas Caimán;C;0
+2026;1;LB;Líbano;C;0.01
+2026;1;LI;Liechtenstein;C;0
+2026;1;LT;Lituania;C;0.06
+2026;1;LT;Lituania;D;0
+2026;1;LU;Luxemburgo;C;0.03
+2026;1;MC;Mónaco;C;0.02
+2026;1;MX;México;C;4.44
+2026;1;MX;México;D;1.87
+2026;1;NC;Nueva Caledonia;C;0
+2026;1;NG;Nigeria;D;0
+2026;1;NI;Nicaragua;D;0.01
+2026;1;NL;Países Bajos;C;1.1
+2026;1;NL;Países Bajos;D;0.12
+2026;1;NO;Noruega;C;0.38
+2026;1;NZ;Nueva Zelanda;C;0.6
+2026;1;NZ;Nueva Zelanda;D;0.16
+2026;1;PA;Panamá;C;1.13
+2026;1;PA;Panamá;D;0.27
+2026;1;PE;Perú;C;13.01
+2026;1;PE;Perú;D;14.95
+2026;1;PH;Filipinas;D;0
+2026;1;PK;Pakistán;D;0.19
+2026;1;PL;Polonia;C;0.02
+2026;1;PL;Polonia;D;0
+2026;1;PR;Puerto Rico;C;0
+2026;1;PR;Puerto Rico;D;0
+2026;1;PT;Portugal;C;0.79
+2026;1;PT;Portugal;D;0.49
+2026;1;PY;Paraguay;C;6.36
+2026;1;PY;Paraguay;D;59.62
+2026;1;QA;Qatar;C;0.04
+2026;1;RO;Rumania;C;0.01
+2026;1;RS;Serbia;C;0
+2026;1;SA;Arabia Saudita;C;0.04
+2026;1;SE;Suecia;C;0.52
+2026;1;SE;Suecia;D;0.04
+2026;1;SG;Singapur;C;0.03
+2026;1;SI;Eslovenia;C;0
+2026;1;SN;Senegal;D;0.04
+2026;1;SV;El Salvador;C;0.04
+2026;1;TH;Tailandia;C;0
+2026;1;TR;Turquía;C;0.01
+2026;1;TR;Turquía;D;0.22
+2026;1;TW;Taiwan;C;0
+2026;1;UA;Ucrania;D;0.01
+2026;1;UM;Islas ultramarinas de los Estados Unidos;D;0
+2026;1;US;Estados Unidos;C;62.03
+2026;1;US;Estados Unidos;D;3.61
+2026;1;UY;Uruguay;C;6.73
+2026;1;UY;Uruguay;D;1.59
+2026;1;VA;Vaticano;C;0
+2026;1;VE;Venezuela;C;1.14
+2026;1;VE;Venezuela;D;0.61
+2026;1;VN;Viet Nam;C;0
+2026;1;VN;Viet Nam;D;0
+2026;1;ZA;Sudáfrica;C;0.02
