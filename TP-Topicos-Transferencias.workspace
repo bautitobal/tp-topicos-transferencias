@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_workspace_file>
   <Workspace title="TP-Topicos-Transferencias">
-    <Project filename="Transferencias/Transferencias.cbp" />
+    <Project filename="TDAGen/TDAGen.cbp" />
+    <Project filename="Transferencias/Transferencias.cbp">
+      <Depends filename="TDAGen/TDAGen.cbp" />
+    </Project>
     <Project filename="Programa/Programa.cbp">
+      <Depends filename="TDAGen/TDAGen.cbp" />
       <Depends filename="Transferencias/Transferencias.cbp" />
     </Project>
   </Workspace>
