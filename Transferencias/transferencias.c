@@ -6,7 +6,7 @@ void trozarCampoVariable_Pais(FILE* pPais,tPais* info,char* linea)
 
     char* aux;
 
-    //fgets(linea,TAM_LINEA,pPais);
+
     fgets(linea,TAM_LINEA,pPais);
 
     aux=strchr(linea,'\n');
@@ -40,8 +40,7 @@ void trozarCampoVariable_Transferencia(tTransferencia* info, char* linea)
 {
     char* aux;
     tTransferencia* infoT=(tTransferencia*)info;
-    //fgets(linea,TAM_LINEA,pTransferencia);
-    //fgets(linea,TAM_LINEA,pTransferencia);
+
 
     aux=strchr(linea,'\n');
 
@@ -91,20 +90,20 @@ void GenerarArch_SaldoPorPais(Vector* infoT)
     FILE* pf=AbrirArch(ARCH_TRANSTOTAL_PAISES,"wt");
     if(!pf)
         return;
-    
+
     tTransferencia* vec=(tTransferencia*)infoT->vec;
     tTransferencia* pfin=vec+infoT->ce-1;
-    
+
     Vector* s_pais=vectorCrear(CANT_PAISES,sizeof(tSaldoPais));
     tSaldoPais aux;
     tSaldoPais* pais_aux=(tSaldoPais*)s_pais->vec;
-    
+
     int cantRegistros,i;
     float debito,credito;
     char codActual[TAM_COD];
     char descActual[TAM_DESC_PAIS];
-    
-    
+
+
     while(vec<=pfin)
     {
         cantRegistros=0;
@@ -115,12 +114,12 @@ void GenerarArch_SaldoPorPais(Vector* infoT)
         while(vec <= pfin && strcmpi(codActual, vec->cod_pais) == 0)
         {
             cantRegistros++;
-            
+
             if(vec->operacion == DEBITO)
             debito += vec->monto;
             else
             credito += vec->monto;
-            
+
             vec++;
         }
         aux.cantRegistros=cantRegistros;
@@ -128,14 +127,14 @@ void GenerarArch_SaldoPorPais(Vector* infoT)
         strcpy(aux.desc_pais,descActual);
         aux.credito=credito;
         aux.debito=debito;
-        
+
         vectorInsertarFinal(s_pais,&aux);
-        
+
     }
-    
-    
+
+
     vectorOrdenar(s_pais,cmp_Credito,2);
-    
+
     fprintf(pf,"PAIS_COD;PAIS_DESC;registros;total_credito;total_debito\n");
     for(i=0;i<s_pais->ce;i++)
     {
@@ -144,9 +143,9 @@ void GenerarArch_SaldoPorPais(Vector* infoT)
             pais_aux++;
         }
         CerrarArch(pf);
-        
-        
-        
+
+
+
     }
     int cmp_Credito(void* a, void* b)
     {

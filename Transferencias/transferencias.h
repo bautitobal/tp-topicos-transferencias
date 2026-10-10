@@ -4,11 +4,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../TDAGen/Vector.h"   
+#include "../TDAGen/Vector.h"
 
 
 
-#define ARCH_TRANSFERENCIA "transferencias_personales_clean.csv"
+#define ARCH_TRANSFERENCIA "..\\transferencias_personales_clean.csv"
 #define ARCH_TRANSTOTAL_PAISES "transferencias_totales_paises.csv"
 #define TAM_LINEA 300
 #define TAM_VEC 5411

@@ -4,8 +4,11 @@
 int main()
 {
     FILE* pTransferencia=AbrirArch(ARCH_TRANSFERENCIA,"rt");
+
     if(!pTransferencia)
         return 1;
+
+
 
     Vector* infoT=vectorCrear(TAM_VEC,sizeof(tTransferencia));
     CargarInfoTransferencia(infoT,pTransferencia);
@@ -16,5 +19,5 @@ int main()
     CerrarArch(pTransferencia);
 
     return 0;
-    //comentario test
+
 }
