@@ -88,6 +88,7 @@ void GenerarArch_SaldoPorPais(Vector* infoT)
     if(!pf)
         return;
 
+    vectorOrdenar(infoT,Cmp_T,1);
     tTransferencia* vec=(tTransferencia*)infoT->vec;
     tTransferencia* pfin=vec+infoT->ce-1;
 

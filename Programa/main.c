@@ -9,7 +9,7 @@ int main()
 
     Vector* infoT=vectorCrear(TAM_VEC,sizeof(tTransferencia));
     CargarInfoTransferencia(infoT,pTransferencia);
-    vectorOrdenar(infoT,Cmp_T,1);
+    
 
     GenerarArch_SaldoPorPais(infoT);
     GenerarArch_SaldoPorContinente(infoT);
