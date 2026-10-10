@@ -30,5 +30,6 @@ bool vectorBorrarPorPos(Vector* v, int pos);
 bool vectorDesordBorrar(Vector*v, void* elem,Cmp cmp);
 bool vectorOrdBorrar(Vector*v, void* elem,Cmp cmp);
 bool vectorBorrarTodaAparicion(Vector* v, void* elem,Cmp cmp);
+void vectorDestruir(Vector* v);
 
 #endif // VECTOR_H_INCLUDED

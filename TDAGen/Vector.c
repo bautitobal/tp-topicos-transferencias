@@ -28,7 +28,8 @@ bool vectorInsertarFinal(Vector* v, void* elem)
 void MostrarVec(Vector* v)
 {
     void* temp=v->vec;
-    for(int i=0;i<v->ce;i++)
+    int i;
+    for(i=0;i<v->ce;i++)
     {
         printf("%c ",*(int*)temp);
         temp+=v->tipo;
@@ -50,8 +51,9 @@ bool vectorInsertarEnPos(Vector* v, void* elem,int pos)
     }
     void* DirIns=v->vec+pos*v->tipo;
     void* DirUlt=v->vec+v->ce*v->tipo;
+    void* i;
 
-    for(void* i=DirUlt;i>=DirIns;i-=v->tipo)
+    for(i=DirUlt;i>=DirIns;i-=v->tipo)
         memcpy(i+v->tipo,i,v->tipo);
 
     memcpy(DirIns,elem,v->tipo);
@@ -76,7 +78,8 @@ void vectorOrdenar(Vector* v,Cmp cmp,int opcion)
     void* DirIni=v->vec;
     void* DirUlt=v->vec+v->ce*v->tipo;
     void* menor;
-    for(void* i=DirIni;i<DirUlt;i+=v->tipo)
+    void* i;
+    for(i=DirIni;i<DirUlt;i+=v->tipo)
     {
         switch(opcion)
         {
@@ -94,7 +97,8 @@ void vectorOrdenar(Vector* v,Cmp cmp,int opcion)
 void* Menor(Vector* v, void* actual,Cmp cmp)
 {
     void* menor=actual;
-    for(void* j=actual+v->tipo;j<v->vec+v->ce*v->tipo;j+=v->tipo)
+    void* j;
+    for(j=actual+v->tipo;j<v->vec+v->ce*v->tipo;j+=v->tipo)
             if(cmp(menor,j)>0)
                 menor=j;
     return menor;
@@ -102,7 +106,8 @@ void* Menor(Vector* v, void* actual,Cmp cmp)
 void* Mayor(Vector* v, void* actual,Cmp cmp)
 {
     void* mayor=actual;
-    for(void* j=actual+v->tipo;j<v->vec+v->ce*v->tipo;j+=v->tipo)
+    void* j;
+    for(j=actual+v->tipo;j<v->vec+v->ce*v->tipo;j+=v->tipo)
             if(cmp(mayor,j)<0)
                 mayor=j;
     return mayor;
@@ -168,8 +173,9 @@ bool vectorBorrarPorPos(Vector* v, int pos)
 
     void* DirIni=v->vec+v->tipo*pos;
     void* DirFin=v->vec+v->tipo*v->ce;
+    void* i;
 
-    for(void* i=DirIni;i<DirFin;i+=v->tipo)
+    for(i=DirIni;i<DirFin;i+=v->tipo)
         memcpy(i,i+v->tipo,v->tipo);
     v->ce--;
     return true;
@@ -188,10 +194,18 @@ bool vectorBorrarTodaAparicion(Vector* v, void* elem,Cmp cmp)
 {
     void* DirIni=v->vec;
     void* DirFin=v->vec+v->tipo*v->ce-v->tipo;
-    for(void* i=DirFin;i>=DirIni;i-=v->tipo)
+    void* i;
+    for(i=DirFin;i>=DirIni;i-=v->tipo)
     {
         if(cmp(i,elem)==0)
             vectorBorrarPorPos(v,(i-v->vec)/v->tipo);
     }
     return true;
+}
+void vectorDestruir(Vector* v)
+{
+    v->ce=0;
+    v->tam=0;
+    free(v->vec);
+    free(v);
 }

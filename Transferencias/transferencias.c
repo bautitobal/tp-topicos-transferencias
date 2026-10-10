@@ -1,13 +1,10 @@
 #include "transferencias.h"
 
 
-void trozarCampoVariable_Pais(FILE* pPais,tPais* info,char* linea)
+void trozarCampoVariable_Pais(tPais* info,char* linea)
 {
 
     char* aux;
-
-
-    fgets(linea,TAM_LINEA,pPais);
 
     aux=strchr(linea,'\n');
 
@@ -133,7 +130,7 @@ void GenerarArch_SaldoPorPais(Vector* infoT)
     }
 
 
-    vectorOrdenar(s_pais,cmp_Credito,2);
+    vectorOrdenar(s_pais,cmp_CreditoPais,2);
 
     fprintf(pf,"PAIS_COD;PAIS_DESC;registros;total_credito;total_debito\n");
     for(i=0;i<s_pais->ce;i++)
@@ -141,21 +138,144 @@ void GenerarArch_SaldoPorPais(Vector* infoT)
         fprintf(pf,"%s;%s;%d;%.2f;%.2f\n",pais_aux->cod_pais,pais_aux->desc_pais,
             pais_aux->cantRegistros,pais_aux->credito,pais_aux->debito);
             pais_aux++;
-        }
+    }
+    CerrarArch(pf);
+
+
+
+}
+void GenerarArch_SaldoPorContinente(Vector* infoT)
+{
+    FILE* pf=AbrirArch(ARCH_SALDO_CONTINENTE,"wt");
+    FILE* pPais=AbrirArch(ARCH_PAISES,"rt");
+    if(!pf || !pPais)
+    {
         CerrarArch(pf);
-
-
-
+        CerrarArch(pPais);
+        return;
     }
-    int cmp_Credito(void* a, void* b)
+
+    tTransferencia* vec=(tTransferencia*)infoT->vec;
+    tTransferencia* pfin=vec+infoT->ce-1;
+    tTransferencia* j;
+
+    tPais Pais_aux;
+
+    Vector* s_cont=vectorCrear(7,sizeof(tSaldoContinente));
+    tSaldoContinente* auxContinente=(tSaldoContinente*)s_cont->vec;
+
+    char linea[TAM_LINEA];
+
+    int i;
+
+
+    InicializarVectorSaldoContinente(s_cont);
+
+
+
+    for(j=vec;j<=pfin;j++)
     {
-        tSaldoPais* x= (tSaldoPais*)a;
-        tSaldoPais* y= (tSaldoPais*)b;
-        return (x->credito > y->credito) - (x->credito < y->credito);
+        rewind(pPais);
+        fgets(linea,TAM_LINEA,pPais);
+        while(fgets(linea,TAM_LINEA,pPais))
+        {
+            trozarCampoVariable_Pais(&Pais_aux,linea);
+            if(strcmpi(Pais_aux.cod_pais,j->cod_pais)==0)
+                AcumularSaldosSegunContinente(s_cont,&Pais_aux,j);
+
+        }
     }
-    int Cmp_T(void* a, void* b)
+    vectorOrdenar(s_cont,CmpCredito_Continente,2);
+    fprintf(pf,"CONTINENTE;Registros;Total_Credito;Total_Debito\n");
+
+    for(i=0;i<s_cont->ce;i++)
     {
-        tTransferencia* x= (tTransferencia*)a;
-        tTransferencia* y= (tTransferencia*)b;
-        return strcmpi(x->cod_pais,y->cod_pais);
+        fprintf(pf,"%s;%d;%.2f;%.2f\n",auxContinente->continente,auxContinente->cantRegistros,
+                                        auxContinente->credito,auxContinente->debito);
+        auxContinente++;
     }
+    CerrarArch(pf);
+    CerrarArch(pPais);
+    vectorDestruir(s_cont);
+
+
+
+}
+void InicializarVectorSaldoContinente(Vector* vec)
+{
+    FILE* pPaises=AbrirArch(ARCH_PAISES,"rt");
+    if(!pPaises)
+        return;
+
+    char linea[TAM_LINEA];
+    tPais infoP;
+    tSaldoContinente nuevo;
+
+    fgets(linea,TAM_LINEA,pPaises);
+
+    while(fgets(linea,TAM_LINEA,pPaises))
+    {
+        trozarCampoVariable_Pais(&infoP,linea);
+        tSaldoContinente* ini = (tSaldoContinente*)vec->vec;
+        tSaldoContinente* fin = ini + vec->ce;
+        tSaldoContinente* p = ini;
+
+        while (p < fin && strcmpi(p->continente, infoP.continente) != 0)
+            p++;
+
+        if (p == fin)
+        {
+            strcpy(nuevo.continente, infoP.continente);
+            nuevo.cantRegistros = 0;
+            nuevo.credito = 0;
+            nuevo.debito= 0;
+            vectorInsertarFinal(vec, &nuevo);
+        }
+    }
+    CerrarArch(pPaises);
+    CerrarArch(pPaises);
+
+
+}
+void AcumularSaldosSegunContinente(Vector* vecSaldoContinente, tPais* infoPais,tTransferencia* vecTransferencia)
+{
+    tSaldoContinente* aux=(tSaldoContinente*)vecSaldoContinente->vec;
+    tSaldoContinente* i;
+    tSaldoContinente* pfin=aux+vecSaldoContinente->ce;
+    for(i=aux;i<pfin;i++)
+    {
+        if(strcmpi(infoPais->continente,i->continente)==0)
+        {
+            i->cantRegistros++;
+            if(vecTransferencia->operacion==CREDITO)
+            {
+                i->credito+=vecTransferencia->monto;
+            }
+            else
+            {
+                i->debito+=vecTransferencia->monto;
+            }
+        }
+    }
+
+}
+
+
+int cmp_CreditoPais(void* a, void* b)
+{
+    tSaldoPais* x= (tSaldoPais*)a;
+    tSaldoPais* y= (tSaldoPais*)b;
+    return (x->credito > y->credito) - (x->credito < y->credito);
+}
+int Cmp_T(void* a, void* b)
+{
+    tTransferencia* x= (tTransferencia*)a;
+    tTransferencia* y= (tTransferencia*)b;
+    return strcmpi(x->cod_pais,y->cod_pais);
+}
+int CmpCredito_Continente(void* a, void* b)
+{ 
+    tSaldoContinente* x=(tSaldoContinente*)a;
+    tSaldoContinente* y=(tSaldoContinente*)b;
+    return (x->credito > y->credito) - (x->credito < y->credito);
+}

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "transferencias.h"
+#include "../Transferencias/transferencias.h"
 
 int main()
 {
@@ -12,10 +12,12 @@ int main()
     vectorOrdenar(infoT,Cmp_T,1);
 
     GenerarArch_SaldoPorPais(infoT);
+    GenerarArch_SaldoPorContinente(infoT);
 
     CerrarArch(pTransferencia);
+    vectorDestruir(infoT);
 
     return 0;
-    //comentario test
+
 }
 
