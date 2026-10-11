@@ -289,7 +289,7 @@ void GenerarArch_SaldoTrimestre(Vector* infoT)
         PonerEnCeroVecFloat(vecSaldoTrimestre);
         tieneOperacion = false;
 
-        while(vec < fin && strcmpi(codActual, vec->cod_pais) == 0)
+        while(vec < fin && strcmpi(paisActual, vec->desc_pais) == 0)
         {
             if(vec->anio == anio)
                 AcumularSaldoTrimestre(vec,vecSaldoTrimestre,&tieneOperacion);
@@ -390,5 +390,5 @@ int Cmp_TDesc(void* a, void* b)
 {
     tTransferencia* x = (tTransferencia*)a;
     tTransferencia* y = (tTransferencia*)b;
-    return strcmpi(x->cod_pais, y->cod_pais);
+    return strcmpi(x->desc_pais, y->desc_pais);
 }
