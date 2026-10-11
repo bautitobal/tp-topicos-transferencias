@@ -281,7 +281,7 @@ void GenerarArch_SaldoTrimestre(Vector* infoT)
     anio = ValidarAnio(ANIO_MENOR, ANIO_ACTUAL);
     vectorOrdenar(infoT, Cmp_TDesc, 1);
 
-    fprintf(pf, "Pais    T1  T2  T3  T4\n");
+    fprintf(pf, "%-40s %8s %8s %8s %8s\n","Pais", "T1", "T2", "T3", "T4");
     while(vec < fin)
     {
         strcpy(codActual, vec->cod_pais);
@@ -298,7 +298,7 @@ void GenerarArch_SaldoTrimestre(Vector* infoT)
 
         if(tieneOperacion)
         {
-            fprintf(pf, "%s    %.2f %.2f %.2f %.2f\n", paisActual,
+            fprintf(pf,"%-40s %8.2f %8.2f %8.2f %8.2f\n", paisActual,
                     vecSaldoTrimestre[0], vecSaldoTrimestre[1],
                     vecSaldoTrimestre[2], vecSaldoTrimestre[3]);
         }
