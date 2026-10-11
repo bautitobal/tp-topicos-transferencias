@@ -389,10 +389,12 @@ void AcumularSaldoTrimestre(tTransferencia* infoT, float* saldoTrimestre,bool* t
 void GenerarArch_SaldoAnio(Vector* infoT)
 {
     FILE* pf=AbrirArch(ARCH_SALDO_ANIO,"wt");
+
     if(!pf)
         return;
 
     vectorOrdenar(infoT,Cmp_TAnio,1);
+    
     tTransferencia* vecT= (tTransferencia*)infoT->vec;
     tTransferencia* pfin=vecT+infoT->ce;
 
@@ -408,6 +410,7 @@ void GenerarArch_SaldoAnio(Vector* infoT)
         total_debito=0;
         saldoActual=0;
         variacion=0;
+
         while(vecT<pfin && anioActual==vecT->anio)
         {
             if(vecT->operacion==CREDITO)
