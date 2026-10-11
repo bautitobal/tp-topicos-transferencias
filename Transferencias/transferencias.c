@@ -386,9 +386,67 @@ void AcumularSaldoTrimestre(tTransferencia* infoT, float* saldoTrimestre,bool* t
         *tieneOperacion=true;
 
 }
+void GenerarArch_SaldoAnio(Vector* infoT)
+{
+    FILE* pf=AbrirArch(ARCH_SALDO_ANIO,"wt");
+    if(!pf)
+        return;
+
+    vectorOrdenar(infoT,Cmp_TAnio,1);
+    tTransferencia* vecT= (tTransferencia*)infoT->vec;
+    tTransferencia* pfin=vecT+infoT->ce;
+
+    float total_debito, total_credito, variacion,saldoActual, saldoAnterior=0;
+    int anioActual;
+
+    fprintf(pf,"ANIO;C;D;SALDO;VARIACION\n");
+
+    while(vecT<pfin)
+    {
+        anioActual=vecT->anio;
+        total_credito=0;
+        total_debito=0;
+        saldoActual=0;
+        variacion=0;
+        while(vecT<pfin && anioActual==vecT->anio)
+        {
+            if(vecT->operacion==CREDITO)
+            {
+                total_credito+=vecT->monto;
+            }
+            else
+            {
+                total_debito+=vecT->monto;
+            }
+            vecT++;
+        }
+
+        saldoActual=total_credito-total_debito;
+
+        if(anioActual==ANIO_MENOR)
+        {
+            fprintf(pf,"%d;%.2f;%.2f;%.2f;%s\n",anioActual,total_credito,total_debito,saldoActual,SIN_VARIACION);
+        }
+        else
+        {
+            variacion= ((saldoActual-saldoAnterior)/saldoAnterior)*100;
+            fprintf(pf,"%d;%.2f;%.2f;%.2f;%.2f\n",anioActual,total_credito,total_debito,saldoActual,variacion);
+        }
+        saldoAnterior=saldoActual;
+    }
+    CerrarArch(pf);
+
+}
+
 int Cmp_TDesc(void* a, void* b)
 {
     tTransferencia* x = (tTransferencia*)a;
     tTransferencia* y = (tTransferencia*)b;
     return strcmpi(x->desc_pais, y->desc_pais);
+}
+int Cmp_TAnio(void* a, void* b)
+{
+    tTransferencia* x= (tTransferencia*)a;
+    tTransferencia* y= (tTransferencia*)b;
+    return x->anio - y->anio;
 }
