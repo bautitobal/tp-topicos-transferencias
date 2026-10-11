@@ -13,8 +13,10 @@ int main()
 
     GenerarArch_SaldoPorPais(infoT);
     GenerarArch_SaldoPorContinente(infoT);
+    GenerarArch_SaldoTrimestre(infoT);
 
     CerrarArch(pTransferencia);
+    
     vectorDestruir(infoT);
 
     return 0;

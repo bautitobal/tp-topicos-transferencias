@@ -88,7 +88,7 @@ void GenerarArch_SaldoPorPais(Vector* infoT)
     if(!pf)
         return;
 
-    vectorOrdenar(infoT,Cmp_T,1);
+    vectorOrdenar(infoT,Cmp_TCod,1);
     tTransferencia* vec=(tTransferencia*)infoT->vec;
     tTransferencia* pfin=vec+infoT->ce-1;
 
@@ -260,6 +260,53 @@ void AcumularSaldosSegunContinente(Vector* vecSaldoContinente, tPais* infoPais,t
     }
 
 }
+void GenerarArch_SaldoTrimestre(Vector* infoT)
+{
+    FILE* pf = AbrirArch(ARCH_SALDO_TRIMESTRE, "wt");
+    int anio;
+    bool tieneOperacion;
+    char paisActual[TAM_DESC_PAIS];
+    char codActual[TAM_COD];
+    float vecSaldoTrimestre[TAM_TRIMESTRE];
+    tTransferencia* vec;
+    tTransferencia* fin;
+
+    if(!pf)
+        return;
+
+    vec = (tTransferencia*)infoT->vec;
+    fin = vec + infoT->ce;
+
+    printf("\nIngrese un anio para mostrar en la tabla (2015-Actualidad): ");
+    anio = ValidarAnio(ANIO_MENOR, ANIO_ACTUAL);
+    vectorOrdenar(infoT, Cmp_TDesc, 1);
+
+    fprintf(pf, "Pais    T1  T2  T3  T4\n");
+    while(vec < fin)
+    {
+        strcpy(codActual, vec->cod_pais);
+        strcpy(paisActual, vec->desc_pais);
+        PonerEnCeroVecFloat(vecSaldoTrimestre);
+        tieneOperacion = false;
+
+        while(vec < fin && strcmpi(codActual, vec->cod_pais) == 0)
+        {
+            if(vec->anio == anio)
+                AcumularSaldoTrimestre(vec,vecSaldoTrimestre,&tieneOperacion);
+            vec++;
+        }
+
+        if(tieneOperacion)
+        {
+            fprintf(pf, "%s    %.2f %.2f %.2f %.2f\n", paisActual,
+                    vecSaldoTrimestre[0], vecSaldoTrimestre[1],
+                    vecSaldoTrimestre[2], vecSaldoTrimestre[3]);
+        }
+    }
+
+    CerrarArch(pf);
+}
+
 
 
 int cmp_CreditoPais(void* a, void* b)
@@ -268,7 +315,7 @@ int cmp_CreditoPais(void* a, void* b)
     tSaldoPais* y= (tSaldoPais*)b;
     return (x->credito > y->credito) - (x->credito < y->credito);
 }
-int Cmp_T(void* a, void* b)
+int Cmp_TCod(void* a, void* b)
 {
     tTransferencia* x= (tTransferencia*)a;
     tTransferencia* y= (tTransferencia*)b;
@@ -279,4 +326,69 @@ int CmpCredito_Continente(void* a, void* b)
     tSaldoContinente* x=(tSaldoContinente*)a;
     tSaldoContinente* y=(tSaldoContinente*)b;
     return (x->credito > y->credito) - (x->credito < y->credito);
+}
+int ValidarAnio(int LimI, int LimS)
+{
+    int dato;
+    scanf("%d",&dato);
+    while(dato<LimI || dato>LimS)
+    {
+        printf("\nError - Ingrese un anio entre %d y %d",LimI, LimS);
+        scanf("%d",&dato);
+    }
+    return dato;
+}
+void PonerEnCeroVecFloat(float* vec)
+{
+    int i;
+    float* aux=vec;
+
+    for(i=0;i<TAM_TRIMESTRE;i++)
+    {
+        *aux=0;
+        aux++;
+    }
+}
+void AcumularSaldoTrimestre(tTransferencia* infoT, float* saldoTrimestre,bool* tieneOperacion)
+{
+    tTransferencia* auxT=infoT;
+    switch(auxT->trimestre)
+    {
+        case 1:
+                if(auxT->operacion == CREDITO)
+                    saldoTrimestre[0] += auxT->monto;
+                else
+                    saldoTrimestre[0] -= auxT->monto;
+                break;
+        case 2:
+                if(auxT->operacion == CREDITO)
+                    saldoTrimestre[1] += auxT->monto;
+                else
+                    saldoTrimestre[1] -= auxT->monto;
+                break;
+
+        case 3:
+                if(auxT->operacion == CREDITO)
+                    saldoTrimestre[2] += auxT->monto;
+                else
+                    saldoTrimestre[2] -= auxT->monto;
+                break;
+
+        case 4:
+                if(auxT->operacion == CREDITO)
+                    saldoTrimestre[3] += auxT->monto;
+                else
+                    saldoTrimestre[3] -= auxT->monto;
+                break;
+        
+    }
+    if(auxT->operacion==CREDITO || auxT->operacion==DEBITO)
+        *tieneOperacion=true;
+
+}
+int Cmp_TDesc(void* a, void* b)
+{
+    tTransferencia* x = (tTransferencia*)a;
+    tTransferencia* y = (tTransferencia*)b;
+    return strcmpi(x->cod_pais, y->cod_pais);
 }
