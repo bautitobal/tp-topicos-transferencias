@@ -278,7 +278,7 @@ void GenerarArch_SaldoTrimestre(Vector* infoT)
     fin = vec + infoT->ce;
 
     printf("\nIngrese un anio para mostrar en la tabla (2015-Actualidad): ");
-    anio = ValidarAnio(ANIO_MENOR, ANIO_ACTUAL);
+    anio = ValidarRango_Int(ANIO_MENOR, ANIO_ACTUAL);
     vectorOrdenar(infoT, Cmp_TDesc, 1);
 
     fprintf(pf, "%-40s %8s %8s %8s %8s\n","Pais", "T1", "T2", "T3", "T4");
@@ -327,7 +327,7 @@ int CmpCredito_Continente(void* a, void* b)
     tSaldoContinente* y=(tSaldoContinente*)b;
     return (x->credito > y->credito) - (x->credito < y->credito);
 }
-int ValidarAnio(int LimI, int LimS)
+int ValidarRango_Int(int LimI, int LimS)
 {
     int dato;
     scanf("%d",&dato);
@@ -394,7 +394,7 @@ void GenerarArch_SaldoAnio(Vector* infoT)
         return;
 
     vectorOrdenar(infoT,Cmp_TAnio,1);
-    
+
     tTransferencia* vecT= (tTransferencia*)infoT->vec;
     tTransferencia* pfin=vecT+infoT->ce;
 
@@ -440,6 +440,80 @@ void GenerarArch_SaldoAnio(Vector* infoT)
     CerrarArch(pf);
 
 }
+void GenerarArch_SaldoPais_SegunOperacion(Vector* infoT)
+{
+    FILE* pf= AbrirArch(ARCH_SALDO_PAISES_OPERACION,"wt");
+    if(!pf)
+        return;
+    
+    vectorOrdenar(infoT,Cmp_TDesc,MENOR_A_MAYOR);
+
+    Vector* infoP=vectorCrear(CANT_PAISES,sizeof(tSaldoPais));
+
+    tSaldoPais* vecP= (tSaldoPais*)infoP->vec;
+    tSaldoPais actual;
+
+    tTransferencia* vecT= (tTransferencia*)infoT->vec;
+    tTransferencia* pfinT= vecT+infoT->ce;
+
+    int cantPaisesListar,i;
+    char opcionOperacion;
+
+    printf("\nIngrese la cantidad de paises para listar (1-%d): ",CANT_PAISES);
+    cantPaisesListar=ValidarRango_Int(1,CANT_PAISES);
+    printf("\nIngrese una operacion - Credito (%c) o Debito (%c): ",CREDITO,DEBITO);
+    opcionOperacion=ValidarChar(CREDITO,DEBITO);
+
+    while(vecT<pfinT)
+    {
+        strcpy(actual.desc_pais,vecT->desc_pais);
+        strcpy(actual.cod_pais,vecT->cod_pais);
+        actual.cantRegistros=0;
+        actual.credito=0;
+        actual.debito=0;
+
+        while(vecT<pfinT && strcmpi(actual.desc_pais,vecT->desc_pais)==0)
+        {
+            actual.cantRegistros++;
+            if(vecT->operacion==CREDITO)
+            {
+                actual.credito+=vecT->monto;
+            }
+            else
+            {
+                actual.debito+=vecT->monto;
+            }
+            vecT++;
+        }
+        vectorInsertarFinal(infoP,&actual);
+
+
+    }
+    fprintf(pf,"COD_PAIS;DESC_PAIS;Registros;Total_credito;Total_debito\n");
+    
+    switch(opcionOperacion)
+    {
+        case CREDITO:
+                vectorOrdenar(infoP,Cmp_SPCredito,MAYOR_A_MENOR);
+                break;
+        case DEBITO:
+                vectorOrdenar(infoP,Cmp_SPDebito,MAYOR_A_MENOR);
+                break;
+
+    }  
+    for(i=0;i<cantPaisesListar;i++)
+    {
+        fprintf(pf,"%s;%s,%d;%.2f;%.2f\n",vecP->cod_pais,vecP->desc_pais,vecP->cantRegistros,
+                                            vecP->credito,vecP->debito);
+        vecP++;
+    }
+    CerrarArch(pf);
+
+
+
+
+}
+
 
 int Cmp_TDesc(void* a, void* b)
 {
@@ -452,4 +526,28 @@ int Cmp_TAnio(void* a, void* b)
     tTransferencia* x= (tTransferencia*)a;
     tTransferencia* y= (tTransferencia*)b;
     return x->anio - y->anio;
+}
+int Cmp_SPDebito(void* a, void* b)
+{
+    tSaldoPais* x=(tSaldoPais*)a;
+    tSaldoPais* y=(tSaldoPais*)b;
+    return x->debito - y->debito; 
+}
+int Cmp_SPCredito(void* a, void* b)
+{
+    tSaldoPais* x=(tSaldoPais*)a;
+    tSaldoPais* y=(tSaldoPais*)b;
+    return x->credito - y->credito; 
+}
+
+char ValidarChar(char a, char b)
+{
+    char dato;
+    scanf(" %c",&dato);
+    while(dato!= a && dato!=b)
+    {
+        printf("\nError - La opcion es %c o %c: ",a,b);
+        scanf(" %c",&dato);
+    }
+    return dato;
 }

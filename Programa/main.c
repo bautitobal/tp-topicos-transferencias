@@ -13,8 +13,9 @@ int main()
 
     GenerarArch_SaldoPorPais(infoT);
     GenerarArch_SaldoPorContinente(infoT);
-    GenerarArch_SaldoTrimestre(infoT);
+    //GenerarArch_SaldoTrimestre(infoT);
     GenerarArch_SaldoAnio(infoT);
+    GenerarArch_SaldoPais_SegunOperacion(infoT);
 
 
     CerrarArch(pTransferencia);

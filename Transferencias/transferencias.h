@@ -14,6 +14,7 @@
 #define ARCH_SALDO_CONTINENTE "transferencias_totales_continentes.csv"
 #define ARCH_SALDO_TRIMESTRE "transferencia_totales_trimestres.txt"
 #define ARCH_SALDO_ANIO "transferencia_totales_anio.csv"
+#define ARCH_SALDO_PAISES_OPERACION "transferencias_totales_paises_operacion.csv"
 
 #define TAM_LINEA 300
 #define TAM_VEC 5411
@@ -27,6 +28,8 @@
 #define ANIO_ACTUAL 2026
 #define ANIO_MENOR 2015
 #define SIN_VARIACION "NA"
+#define MENOR_A_MAYOR 1
+#define MAYOR_A_MENOR 2
 
 typedef struct
 {
@@ -76,12 +79,16 @@ void PonerEnCeroVecFloat(float* vec);
 void AcumularSaldoTrimestre(tTransferencia* infoT, float* saldoTrimestre,bool* tieneOperacion);
 void GenerarArch_SaldoTrimestre(Vector* infoT);
 void GenerarArch_SaldoAnio(Vector* infoT);
+void GenerarArch_SaldoPais_SegunOperacion(Vector* infoT);
 
-int ValidarAnio(int LimI, int LimS);
+int ValidarRango_Int(int LimI, int LimS);
 int Cmp_TCod(void* a, void* b);
 int cmp_CreditoPais(void* a, void* b);
 int CmpCredito_Continente(void* a, void* b);
 int Cmp_TDesc(void* a,void* b);
 int Cmp_TAnio(void* a, void* b);
+int Cmp_SPDebito(void* a, void* b);
+int Cmp_SPCredito(void* a, void* b);
+char ValidarChar(char a, char b);
 
 #endif
