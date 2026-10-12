@@ -18,3 +18,7 @@ obj/
 
 # vscode
 .vscode/
+
+# archivos generados
+Programa/**/*.csv
+Programa/**/*.txt
