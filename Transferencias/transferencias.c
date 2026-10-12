@@ -509,11 +509,115 @@ void GenerarArch_SaldoPais_SegunOperacion(Vector* infoT)
     }
     CerrarArch(pf);
 
+}
+void GenerarArch_SaldoContinentePorcentaje(Vector* infoT)
+{
+    FILE* pf=AbrirArch(ARCH_SALDO_CONTINENTE_PORCENTAJE,"w+b");
+    FILE* pPais=AbrirArch(ARCH_PAISES,"rt");
 
+    if(!pf || !pPais)
+    {
+        CerrarArch(pf);
+        CerrarArch(pPais);
+        return;
+    }
 
+    Vector* infoCPorcentaje=vectorCrear(CANT_CONTINENTE,sizeof(tPorcentajeContinente));
+    Vector* s_cont= vectorCrear(CANT_CONTINENTE,sizeof(tSaldoContinente));
+
+    tTransferencia* vecT=(tTransferencia*)infoT->vec;
+    tTransferencia* pfin=vecT+infoT->ce;
+    tTransferencia* i;
+
+    int j;
+
+    tPais Pais_aux;
+
+    tSaldoContinente* pSC_Aux= (tSaldoContinente*)s_cont->vec;
+
+    tPorcentajeContinente PC_Aux;
+    tPorcentajeContinente* pPC_Aux= (tPorcentajeContinente*)infoCPorcentaje->vec;
+
+    float PorcentajeDebito, PorcentajeCredito;
+    float Continente_debito, Continente_credito;
+    float TotalDebito=0,TotalCredito=0;
+
+    char linea[TAM_LINEA];
+
+    InicializarVectorSaldoContinente(s_cont);
+
+    CalcularTotalDeOperaciones(infoT,&TotalDebito,&TotalCredito);
+    
+    for(i=vecT;i<pfin;i++)
+    {
+        rewind(pPais);
+        fgets(linea,TAM_LINEA,pPais);
+        while(fgets(linea,TAM_LINEA,pPais))
+        {
+            trozarCampoVariable_Pais(&Pais_aux,linea);
+            if(strcmpi(Pais_aux.cod_pais,i->cod_pais)==0)
+                AcumularSaldosSegunContinente(s_cont,&Pais_aux,i);
+
+        }
+    }
+
+    for(j=0;j<s_cont->ce;j++)
+    {
+        strcpy(PC_Aux.continente,pSC_Aux->continente);
+        if(TotalCredito!=0 || TotalCredito!=0)
+        {
+            PC_Aux.credito_porcentaje= ((pSC_Aux->credito)/TotalCredito)*100;
+            PC_Aux.debito_porcentaje= ((pSC_Aux->debito)/TotalDebito)*100;
+        }
+        else
+        {
+            PC_Aux.credito_porcentaje=0;
+            PC_Aux.debito_porcentaje=0;
+        }
+       
+        vectorInsertarFinal(infoCPorcentaje,&PC_Aux);
+        pSC_Aux++;
+    }
+
+    vectorOrdenar(infoCPorcentaje,Cmp_Porc_Continente,MENOR_A_MAYOR);
+
+    for(j=0;j<infoCPorcentaje->ce;j++)
+    {
+        fwrite(pPC_Aux,sizeof(tPorcentajeContinente),1,pf);
+        pPC_Aux++;
+    }
+
+    CerrarArch(pf);
+    CerrarArch(pPais);
+
+    LeerArchivo_PorcentajeContinente();
+    
+    vectorDestruir(infoCPorcentaje);
+    vectorDestruir(s_cont);
+}
+void LeerArchivo_PorcentajeContinente()
+{
+    FILE* pf=AbrirArch(ARCH_SALDO_CONTINENTE_PORCENTAJE,"rb");
+    char opcionParaLeer;
+
+    tPorcentajeContinente PC_Aux;
+
+    printf("\nDesea leer el archivo? Si (%c) o N (%c): ",AFIRMATIVO,NEGATIVO);
+    opcionParaLeer=ValidarChar(AFIRMATIVO,NEGATIVO);
+
+    if(opcionParaLeer==AFIRMATIVO)
+    {   
+        printf("%-30s %8s %8s\n","CONTINENTE","C","D");
+        fread(&PC_Aux,sizeof(PC_Aux),1,pf);
+        while(!feof(pf))
+        {
+            printf("%-30s %8.2f %8.2f\n",PC_Aux.continente,PC_Aux.credito_porcentaje,PC_Aux.debito_porcentaje);
+            fread(&PC_Aux,sizeof(PC_Aux),1,pf);
+        }
+    }
+    CerrarArch(pf);
 
 }
-
 
 int Cmp_TDesc(void* a, void* b)
 {
@@ -539,6 +643,12 @@ int Cmp_SPCredito(void* a, void* b)
     tSaldoPais* y=(tSaldoPais*)b;
     return x->credito - y->credito; 
 }
+int Cmp_Porc_Continente(void* a, void* b)
+{
+    tPorcentajeContinente* x = (tPorcentajeContinente*)a;
+    tPorcentajeContinente* y = (tPorcentajeContinente*)b;
+    return strcmpi(x->continente,y->continente);
+}
 
 char ValidarChar(char a, char b)
 {
@@ -551,3 +661,19 @@ char ValidarChar(char a, char b)
     }
     return dato;
 }
+void CalcularTotalDeOperaciones(Vector* vecT, float* totalDebito, float* totalCredito)
+{
+    int i;
+    tTransferencia* aux=(tTransferencia*)vecT->vec; 
+    for(i=0;i<vecT->ce;i++)
+    {
+        if(aux->operacion==CREDITO)
+            *totalCredito+=aux->monto;
+        else
+            *totalDebito+=aux->monto;
+
+        aux++;
+    }
+
+}
+

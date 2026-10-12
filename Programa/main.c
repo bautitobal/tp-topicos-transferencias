@@ -11,11 +11,12 @@ int main()
     CargarInfoTransferencia(infoT,pTransferencia);
     
 
-    GenerarArch_SaldoPorPais(infoT);
-    GenerarArch_SaldoPorContinente(infoT);
+    //GenerarArch_SaldoPorPais(infoT);
+    //GenerarArch_SaldoPorContinente(infoT);
     //GenerarArch_SaldoTrimestre(infoT);
-    GenerarArch_SaldoAnio(infoT);
-    GenerarArch_SaldoPais_SegunOperacion(infoT);
+    //GenerarArch_SaldoAnio(infoT);
+    //GenerarArch_SaldoPais_SegunOperacion(infoT);
+    GenerarArch_SaldoContinentePorcentaje(infoT);
 
 
     CerrarArch(pTransferencia);
