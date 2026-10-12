@@ -16,7 +16,8 @@ int main()
     //GenerarArch_SaldoTrimestre(infoT);
     //GenerarArch_SaldoAnio(infoT);
     //GenerarArch_SaldoPais_SegunOperacion(infoT);
-    GenerarArch_SaldoContinentePorcentaje(infoT);
+    //GenerarArch_SaldoContinentePorcentaje(infoT);
+    GenerarArch_BaseLarga(infoT);
 
 
     CerrarArch(pTransferencia);

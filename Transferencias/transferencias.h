@@ -16,6 +16,7 @@
 #define ARCH_SALDO_ANIO "transferencia_totales_anio.csv"
 #define ARCH_SALDO_PAISES_OPERACION "transferencias_totales_paises_operacion.csv"
 #define ARCH_SALDO_CONTINENTE_PORCENTAJE "transferencias_totales_continente_porcentaje.dat"
+#define ARCH_BASE_LARGA "transferencias_base_larga.csv"
 
 #define TAM_LINEA 300
 #define TAM_VEC 5411
@@ -93,6 +94,8 @@ void GenerarArch_SaldoPais_SegunOperacion(Vector* infoT);
 void GenerarArch_SaldoContinentePorcentaje(Vector* infoT);
 void CalcularTotalDeOperaciones(Vector* infoT, float* totalDebito, float* totalCredito);
 void LeerArchivo_PorcentajeContinente();
+void GenerarArch_BaseLarga(Vector* infoT);
+void EncontrarContinente_SegunPais(char* continente, tTransferencia* auxT, FILE* pPais);
 
 int ValidarRango_Int(int LimI, int LimS);
 int Cmp_TCod(void* a, void* b);
@@ -103,6 +106,7 @@ int Cmp_TAnio(void* a, void* b);
 int Cmp_SPDebito(void* a, void* b);
 int Cmp_SPCredito(void* a, void* b);
 int Cmp_Porc_Continente(void* a, void* b);
+int Cmp_Transferencia_VariosCampos(void* a, void* b);
 char ValidarChar(char a, char b);
 
 #endif

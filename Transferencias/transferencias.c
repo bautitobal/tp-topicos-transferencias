@@ -618,6 +618,68 @@ void LeerArchivo_PorcentajeContinente()
     CerrarArch(pf);
 
 }
+void GenerarArch_BaseLarga(Vector* infoT)
+{
+    FILE* pf= AbrirArch(ARCH_BASE_LARGA,"wt");
+    FILE* pPais=AbrirArch(ARCH_PAISES,"rt");
+
+    if(!pf || !pPais)
+        return;
+    
+    vectorOrdenar(infoT,Cmp_Transferencia_VariosCampos,MENOR_A_MAYOR);
+
+    tTransferencia* vecT= (tTransferencia*)infoT->vec;
+    tTransferencia* pfin=vecT+infoT->ce;
+    tTransferencia auxT;
+
+    char continente[TAM_CONTINENTE];
+
+    fprintf(pf,"ANIO;TRIMESTRE;PAIS_COD;PAIS_DEC;CONTINENTE;OPERACION;MONTO\n");
+
+    while(vecT<pfin)
+    {
+        auxT.anio=vecT->anio;
+        strcpy(auxT.cod_pais,vecT->cod_pais);
+        auxT.trimestre=vecT->trimestre;
+        auxT.operacion=vecT->operacion;
+        strcpy(auxT.desc_pais,vecT->desc_pais);
+        auxT.monto=0;
+
+        while(vecT<pfin &&  auxT.anio==vecT->anio && auxT.trimestre==vecT->trimestre 
+                    && auxT.operacion==vecT->operacion  && strcmpi(auxT.cod_pais,vecT->cod_pais)==0)
+        {
+            auxT.monto+=vecT->monto;
+            vecT++;
+        }
+        EncontrarContinente_SegunPais(continente,&auxT,pPais);
+        fprintf(pf,"%d;%d;%s;%s;%s;%c;%.2f\n",auxT.anio,auxT.trimestre,auxT.cod_pais,auxT.desc_pais,continente,auxT.operacion,auxT.monto);
+        
+        
+
+
+    }
+}
+void EncontrarContinente_SegunPais(char* continente, tTransferencia* auxT, FILE* pPais)
+{
+    bool encontrado=false;
+    tPais vecP;
+    char linea[TAM_LINEA];
+
+    rewind(pPais);
+    fgets(linea,TAM_LINEA,pPais);
+
+    while(fgets(linea,TAM_LINEA,pPais) && !encontrado)
+    {
+        trozarCampoVariable_Pais(&vecP,linea);
+        if(strcmpi(vecP.cod_pais,auxT->cod_pais)==0)
+        {
+            strcpy(continente,vecP.continente);
+            encontrado=true;
+        }
+    }
+
+
+}
 
 int Cmp_TDesc(void* a, void* b)
 {
@@ -648,6 +710,26 @@ int Cmp_Porc_Continente(void* a, void* b)
     tPorcentajeContinente* x = (tPorcentajeContinente*)a;
     tPorcentajeContinente* y = (tPorcentajeContinente*)b;
     return strcmpi(x->continente,y->continente);
+}
+
+int Cmp_Transferencia_VariosCampos(void* a, void* b)
+{
+    tTransferencia* t1 = (tTransferencia*)a;
+    tTransferencia* t2 = (tTransferencia*)b;
+
+    if(t1->anio != t2->anio)
+        return t1->anio - t2->anio;
+
+    if(t1->trimestre != t2->trimestre)
+        return t1->trimestre - t2->trimestre;
+
+    if(strcmpi(t1->cod_pais,t2->cod_pais)!=0)
+        return t1->cod_pais - t2->cod_pais;
+
+    if(t1->operacion != t2->operacion)
+        return t1->operacion - t2->operacion;
+
+    return 0;
 }
 
 char ValidarChar(char a, char b)
