@@ -26,18 +26,22 @@
 #define TAM_DESC_PAIS 51
 #define TAM_CONTINENTE 16
 #define TAM_TRIMESTRE 4
+#define TAM_VEC_MIN 50
+#define TAM_RESPUESTA 3
+
 #define DEBITO 'D'
 #define CREDITO 'C'
+#define AFIRMATIVO 'S'
+#define NEGATIVO 'N'
+
 #define CANT_PAISES 198
 #define CANT_CONTINENTE 7
 #define ANIO_ACTUAL 2026
 #define ANIO_MENOR 2015
-#define SIN_VARIACION "NA"
 #define MENOR_A_MAYOR 1
 #define MAYOR_A_MENOR 2
-#define AFIRMATIVO 'S'
-#define NEGATIVO 'N'
-#define TAM_VEC_MIN 50
+
+#define SIN_VARIACION "NA"
 
 typedef struct
 {
@@ -129,7 +133,8 @@ void CalcularTotalDeOperaciones(Vector* infoT, float* totalDebito, float* totalC
 void LeerArchivo_PorcentajeContinente();
 void EncontrarContinente_SegunPais(char* continente, tTransferencia* auxT, FILE* pPais);
 
-int ValidarRango_Int(int LimI, int LimS);
+int Menu_Principal();
+
 int Cmp_TCod(void* a, void* b);
 int cmp_CreditoPais(void* a, void* b);
 int CmpCredito_Continente(void* a, void* b);
@@ -143,6 +148,8 @@ int Cmp_BaseLarga_Pais_Operacion(void* a, void* b);
 int Cmp_PPT_PromedioCredito(void* a, void* b);
 int Cmp_PPT_DescPais(void* a, void* b);
 int Cmp_Prom_ACO(void* a, void* b);
+
 char ValidarChar(char a, char b);
+int ValidarRango_Int(int LimI, int LimS);
 
 #endif
