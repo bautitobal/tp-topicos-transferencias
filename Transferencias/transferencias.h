@@ -133,8 +133,6 @@ void CalcularTotalDeOperaciones(Vector* infoT, float* totalDebito, float* totalC
 void LeerArchivo_PorcentajeContinente();
 void EncontrarContinente_SegunPais(char* continente, tTransferencia* auxT, FILE* pPais);
 
-int Menu_Principal();
-
 int Cmp_TCod(void* a, void* b);
 int cmp_CreditoPais(void* a, void* b);
 int CmpCredito_Continente(void* a, void* b);
