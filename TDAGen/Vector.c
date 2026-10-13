@@ -17,8 +17,16 @@ Vector* vectorCrear(size_t tam, size_t tipo)
 }
 bool vectorInsertarFinal(Vector* v, void* elem)
 {
+    void* aux;
     if(v->ce==v->tam)
-        return false;
+    {
+        aux=realloc(v->vec,(v->tam+INCREMENTO_VEC)*v->tipo);
+        if(aux)
+        {
+            v->vec=aux;
+            v->tam+=INCREMENTO_VEC;
+        }
+    }
 
     void* temp=v->vec;
     memcpy(temp+v->ce*v->tipo,elem,v->tipo);

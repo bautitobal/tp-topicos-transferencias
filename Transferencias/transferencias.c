@@ -658,6 +658,9 @@ void GenerarArch_BaseLarga(Vector* infoT)
 
 
     }
+    CerrarArch(pf);
+    CerrarArch(pPais);
+
 }
 void EncontrarContinente_SegunPais(char* continente, tTransferencia* auxT, FILE* pPais)
 {
@@ -758,4 +761,142 @@ void CalcularTotalDeOperaciones(Vector* vecT, float* totalDebito, float* totalCr
     }
 
 }
+
+void trozarCampoVariable_BaseLarga(tBase_Larga* infoBL,char* linea)
+{
+    char* aux;
+
+    aux=strchr(linea,'\n');
+
+    *aux='\0';
+    aux=strrchr(linea,';');
+    sscanf(aux+1,"%f",&infoBL->monto);
+
+    *aux='\0';
+    aux=strrchr(linea,';');
+    sscanf(aux+1,"%c",&infoBL->operacion);
+
+    *aux='\0';
+    aux=strrchr(linea,';');
+    strcpy(infoBL->continente,aux+1);
+
+    *aux='\0';
+    aux=strrchr(linea,';');
+    strcpy(infoBL->desc_pais,aux+1);
+
+    *aux='\0';
+    aux=strrchr(linea,';');
+    strcpy(infoBL->cod_pais,aux+1);
+
+    *aux='\0';
+    aux=strrchr(linea,';');
+    sscanf(aux+1,"%d",&infoBL->trimestre);
+
+    *aux='\0';
+    sscanf(linea,"%d",&infoBL->anio);
+
+}
+
+void CargarInfo_BaseLarga(Vector* infoBS, FILE* pf)
+{
+    char linea[TAM_LINEA];
+    tBase_Larga aux;
+
+    fgets(linea,TAM_LINEA,pf);
+
+    while(fgets(linea,TAM_LINEA,pf))
+    {
+        trozarCampoVariable_BaseLarga(&aux,linea);
+        vectorInsertarFinal(infoBS,&aux);
+    }
+}
+void GenerarArch_Promedio_Pais_Trimestre(Vector* infoBL)
+{
+    FILE* pf=AbrirArch(ARCH_PROMEDIO_PAIS_TRIMESTRE,"wt");
+    if(!pf)
+        return;
+    
+    vectorOrdenar(infoBL,Cmp_BaseLarga_Pais_Operacion,MENOR_A_MAYOR);
+
+    Vector* infoPPT=vectorCrear(TAM_VEC_MIN,sizeof(tPromedio_Pais_Trimestre));
+    tPromedio_Pais_Trimestre auxPPT;
+    tPromedio_Pais_Trimestre* pAux;
+
+    tBase_Larga* vecBS= (tBase_Larga*)infoBL->vec;
+    tBase_Larga* pfin=vecBS+infoBL->ce;
+
+    int i;
+
+    fprintf(pf,"PAIS_DESC;OPERACION;Suma_monto;Cant_trimestre;Promedio\n");
+
+    while(vecBS< pfin)
+    {
+        strcpy(auxPPT.desc_pais,vecBS->desc_pais);
+        auxPPT.operacion=vecBS->operacion;
+        auxPPT.cant_trimestre=0;
+        auxPPT.promedio_credito=0;
+        auxPPT.promedio_debito=0;
+        auxPPT.sumaMontos=0;
+        while(vecBS<pfin && strcmpi(auxPPT.desc_pais,vecBS->desc_pais)==0 && auxPPT.operacion==vecBS->operacion)
+        {
+            if(vecBS->monto>0)
+                auxPPT.cant_trimestre++;
+
+            auxPPT.sumaMontos+=vecBS->monto;
+            vecBS++;
+        }
+        if(auxPPT.cant_trimestre!=0)
+        {
+            if(auxPPT.operacion==CREDITO)
+                auxPPT.promedio_credito=auxPPT.sumaMontos/auxPPT.cant_trimestre;
+            else
+                auxPPT.promedio_debito=auxPPT.sumaMontos/auxPPT.cant_trimestre;
+        }
+        vectorInsertarFinal(infoPPT,&auxPPT);
+    }
+    vectorOrdenar(infoPPT,Cmp_PPT_DescPais,MENOR_A_MAYOR);
+    pAux=(tPromedio_Pais_Trimestre*)infoPPT->vec;
+
+    for(i=0;i<infoPPT->ce;i++)
+    {
+        if(pAux->operacion==CREDITO)
+            fprintf(pf,"%s;%c;%.2f;%d;%.2f\n",pAux->desc_pais,pAux->operacion,pAux->sumaMontos,pAux->cant_trimestre,pAux->promedio_credito);
+        else
+            fprintf(pf,"%s;%c;%.2f;%d;%.2f\n",pAux->desc_pais,pAux->operacion,pAux->sumaMontos,pAux->cant_trimestre,pAux->promedio_debito);
+        pAux++;
+    }
+    CerrarArch(pf);
+    vectorDestruir(infoPPT);
+
+}
+
+int Cmp_BaseLarga_Pais_Operacion(void* a, void* b)
+{
+    tBase_Larga* x = (tBase_Larga*)a;
+    tBase_Larga* y = (tBase_Larga*)b; 
+
+    if(strcmpi(x->desc_pais,y->desc_pais)!=0)
+        return strcmpi(x->desc_pais,y->desc_pais);
+
+    if(x->operacion - y->operacion)
+        return x->operacion - y->operacion;
+    
+    return 0;
+
+}
+
+int Cmp_PPT_PromedioCredito(void* a, void* b)
+{
+    tPromedio_Pais_Trimestre* x = (tPromedio_Pais_Trimestre*)a;
+    tPromedio_Pais_Trimestre* y = (tPromedio_Pais_Trimestre*)b;
+    return (x->promedio_credito > y->promedio_credito) - (x->promedio_credito < y->promedio_credito);
+}
+
+int Cmp_PPT_DescPais(void* a, void* b)
+{
+    tPromedio_Pais_Trimestre* x = (tPromedio_Pais_Trimestre*)a;
+    tPromedio_Pais_Trimestre* y = (tPromedio_Pais_Trimestre*)b;
+    return strcmpi(x->desc_pais,y->desc_pais);
+}
+
 
