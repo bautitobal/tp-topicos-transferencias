@@ -869,6 +869,48 @@ void GenerarArch_Promedio_Pais_Trimestre(Vector* infoBL)
     vectorDestruir(infoPPT);
 
 }
+void GenerarArch_Promedio_Anio_Continente_Op(Vector* infoBL)
+{
+    FILE* pf=AbrirArch(ARCH_PROMEDIO_CONTINENTE_ANI_OP,"wt");
+    if(!pf)
+        return;
+
+    vectorOrdenar(infoBL,Cmp_Prom_ACO,MENOR_A_MAYOR);
+
+    tBase_Larga* vecBL = (tBase_Larga*)infoBL->vec;
+    tBase_Larga* pfin = vecBL+infoBL->ce;
+    tBase_Larga aux;
+    
+    int cant_registros;
+    float promedio;
+
+    fprintf(pf,"ANIO;CONTINENTE;OPERACION;Suma_monto;cant_trimestre;PROMEDIO\n");
+
+    while(vecBL<pfin)
+    {
+        aux.anio=vecBL->anio;
+        strcpy(aux.continente,vecBL->continente);
+        aux.operacion=vecBL->operacion;
+        aux.monto=0;
+        cant_registros=0;
+        promedio=0;
+
+        while(vecBL<pfin && aux.anio==vecBL->anio && aux.operacion==vecBL->operacion && strcmpi(aux.continente,vecBL->continente)==0)
+        {
+            aux.monto+=vecBL->monto;
+            if(vecBL->monto>0)
+                cant_registros++;
+            vecBL++;
+        }
+        if(cant_registros!=0)
+            promedio=aux.monto/cant_registros;
+
+        fprintf(pf,"%d;%s;%c;%.2f;%d;%.2f\n",aux.anio,aux.continente,aux.operacion,aux.monto,cant_registros,promedio);
+    }
+
+
+}
+
 
 int Cmp_BaseLarga_Pais_Operacion(void* a, void* b)
 {
@@ -897,6 +939,24 @@ int Cmp_PPT_DescPais(void* a, void* b)
     tPromedio_Pais_Trimestre* x = (tPromedio_Pais_Trimestre*)a;
     tPromedio_Pais_Trimestre* y = (tPromedio_Pais_Trimestre*)b;
     return strcmpi(x->desc_pais,y->desc_pais);
+}
+int Cmp_Prom_ACO(void* a, void* b)
+{
+    tBase_Larga* x = (tBase_Larga*)a;
+    tBase_Larga* y = (tBase_Larga*)b;
+
+    
+    if(x->anio!=y->anio)
+        return x->anio - y->anio;
+        
+    if(strcmpi(x->continente,y->continente)!=0)
+        return strcmpi(x->continente,y->continente);
+    
+    if(x->operacion!=y->operacion)
+            return x->operacion - y->operacion;
+        
+    return 0;
+
 }
 
 

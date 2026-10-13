@@ -18,6 +18,7 @@
 #define ARCH_SALDO_CONTINENTE_PORCENTAJE "transferencias_totales_continente_porcentaje.dat"
 #define ARCH_BASE_LARGA "transferencias_base_larga.csv"
 #define ARCH_PROMEDIO_PAIS_TRIMESTRE "transferencias_promedio_pais_trimestre.csv"
+#define ARCH_PROMEDIO_CONTINENTE_ANI_OP "transferencias_promedio_continente_anio_op.csv"
 
 #define TAM_LINEA 300
 #define TAM_VEC 5411
@@ -118,6 +119,7 @@ void GenerarArch_SaldoPais_SegunOperacion(Vector* infoT);
 void GenerarArch_SaldoContinentePorcentaje(Vector* infoT);
 void GenerarArch_BaseLarga(Vector* infoT);
 void GenerarArch_Promedio_Pais_Trimestre(Vector* infoBL);
+void GenerarArch_Promedio_Anio_Continente_Op(Vector* infoBL);
 
 void AcumularSaldosSegunContinente(Vector* infoC,tPais* infoPais,tTransferencia* vecT);
 void InicializarVectorSaldoContinente(Vector* infoC);
@@ -140,6 +142,7 @@ int Cmp_Transferencia_VariosCampos(void* a, void* b);
 int Cmp_BaseLarga_Pais_Operacion(void* a, void* b);
 int Cmp_PPT_PromedioCredito(void* a, void* b);
 int Cmp_PPT_DescPais(void* a, void* b);
+int Cmp_Prom_ACO(void* a, void* b);
 char ValidarChar(char a, char b);
 
 #endif

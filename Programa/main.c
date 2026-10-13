@@ -27,7 +27,8 @@ int main()
     
     CargarInfo_BaseLarga(infoBS,pTransferencia_BaseLarga);
 
-    GenerarArch_Promedio_Pais_Trimestre(infoBS);
+    //GenerarArch_Promedio_Pais_Trimestre(infoBS);
+    GenerarArch_Promedio_Anio_Continente_Op(infoBS);
 
 
 
