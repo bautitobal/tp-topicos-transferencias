@@ -907,7 +907,7 @@ void GenerarArch_Promedio_Anio_Continente_Op(Vector* infoBL)
 
         fprintf(pf,"%d;%s;%c;%.2f;%d;%.2f\n",aux.anio,aux.continente,aux.operacion,aux.monto,cant_registros,promedio);
     }
-
+    CerrarArch(pf);
 
 }
 

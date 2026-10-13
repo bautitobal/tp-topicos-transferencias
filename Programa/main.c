@@ -12,13 +12,26 @@ int main()
 int Menu_Principal()
 {
     FILE* pTransferencia=AbrirArch(ARCH_TRANSFERENCIA,"rt");
-    FILE* pTransferencia_BaseLarga=AbrirArch(ARCH_BASE_LARGA,"wt+");
+    FILE* pTransferencia_BaseLarga;
 
     Vector* infoT= vectorCrear(TAM_VEC,sizeof(tTransferencia));
     Vector* infoBL= vectorCrear(TAM_VEC_MIN,sizeof(tBase_Larga));
 
+    if(!pTransferencia)
+        return 1;
+
     CargarInfoTransferencia(infoT,pTransferencia);
+    CerrarArch(pTransferencia);
+
+    GenerarArch_BaseLarga(infoT);
+
+    pTransferencia_BaseLarga=AbrirArch(ARCH_BASE_LARGA,"rt");
+
+    if(!pTransferencia_BaseLarga)
+        return 1;
+
     CargarInfo_BaseLarga(infoBL,pTransferencia_BaseLarga);
+    CerrarArch(pTransferencia_BaseLarga);
 
     int opcion;
 
@@ -88,6 +101,7 @@ int Menu_Principal()
             opcion=ValidarRango_Int(1,10);
         }
     }
+    vectorDestruir(infoT);
+    vectorDestruir(infoBL);
     return 0;
 }
-
