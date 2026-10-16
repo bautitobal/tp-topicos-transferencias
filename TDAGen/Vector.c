@@ -4,8 +4,10 @@
 Vector* vectorCrear(size_t tam, size_t tipo)
 {
     Vector* v=malloc(sizeof(Vector));
+
     if(!v)
         return NULL;
+    
     v->vec=malloc(tam*tipo);
     if(!v->vec)
         return NULL;
@@ -28,14 +30,14 @@ bool vectorInsertarFinal(Vector* v, void* elem)
         }
     }
 
-    void* temp=v->vec;
+    char* temp=(char*)v->vec;
     memcpy(temp+v->ce*v->tipo,elem,v->tipo);
     v->ce++;
     return true;
 }
 void MostrarVec(Vector* v)
 {
-    void* temp=v->vec;
+    char* temp=(char*)v->vec;
     int i;
     for(i=0;i<v->ce;i++)
     {

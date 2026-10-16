@@ -140,6 +140,9 @@ void GenerarArch_SaldoPorPais(Vector* infoT)
             pais_aux->cantRegistros,pais_aux->credito,pais_aux->debito);
             pais_aux++;
     }
+
+
+    free(s_pais);
     CerrarArch(pf);
 
 
@@ -202,6 +205,7 @@ void GenerarArch_SaldoPorContinente(Vector* infoT)
 
 
 }
+
 void InicializarVectorSaldoContinente(Vector* vec)
 {
     FILE* pPaises=AbrirArch(ARCH_PAISES,"rt");

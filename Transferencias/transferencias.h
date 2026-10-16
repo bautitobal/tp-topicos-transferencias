@@ -67,6 +67,7 @@ typedef struct
     float credito_porcentaje;
     float debito_porcentaje;
 }tPorcentajeContinente;
+
 typedef struct
 {
     char cod_pais[TAM_COD];
