@@ -8,7 +8,10 @@ Vector* vectorCrear(size_t tam, size_t tipo)
         return NULL;
     v->vec=malloc(tam*tipo);
     if(!v->vec)
+    {
+        free(v);
         return NULL;
+    }
     v->ce=0;
     v->tam=tam;
     v->tipo=tipo;
@@ -21,11 +24,11 @@ bool vectorInsertarFinal(Vector* v, void* elem)
     if(v->ce==v->tam)
     {
         aux=realloc(v->vec,(v->tam+INCREMENTO_VEC)*v->tipo);
-        if(aux)
-        {
-            v->vec=aux;
-            v->tam+=INCREMENTO_VEC;
-        }
+        if(!aux)
+            return false;
+
+        v->vec=aux;
+        v->tam+=INCREMENTO_VEC;
     }
 
     void* temp=v->vec;
@@ -52,10 +55,12 @@ bool vectorInsertarEnPos(Vector* v, void* elem,int pos)
     void* tvec;
     if(v->ce==v->tam)
     {
-        tvec=realloc(v->vec,v->tam*INCREMENTO_VEC);
+        tvec=realloc(v->vec,(v->tam+INCREMENTO_VEC)*v->tipo);
         if(!tvec)
             return false;
+
         v->vec=tvec;
+        v->tam+=INCREMENTO_VEC;
     }
     void* DirIns=v->vec+pos*v->tipo;
     void* DirUlt=v->vec+v->ce*v->tipo;
@@ -143,7 +148,7 @@ int vectorDesordBuscar(Vector* v, void* elem,Cmp cmp)
 
     while(DirIni<DirFin && cmp(elem,DirIni)!=0)
         DirIni+=v->tipo;
-    if(cmp(elem,DirIni)==0)
+    if(DirIni<DirFin && cmp(elem,DirIni)==0)
         pos=(DirIni-v->vec)/v->tipo;
     return pos;
 }
@@ -176,7 +181,7 @@ int vectorOrdBuscar(Vector* v, void* elem,Cmp cmp)
 }
 bool vectorBorrarPorPos(Vector* v, int pos)
 {
-    if(pos<0 || pos>=v->tam)
+    if(pos<0 || pos>=v->ce)
         return false;
 
     void* DirIni=v->vec+v->tipo*pos;

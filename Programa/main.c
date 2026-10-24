@@ -50,10 +50,10 @@ int Menu_Principal()
     puts("\n10. Salir.");
     puts("\n");
 
-    puts("\nIngrese una opcion: ");
+    printf("\nIngrese una opcion: ");
     opcion=ValidarRango_Int(1,10);
 
-    while(strcmpi(respuesta_para_seguir,"No")!=0)
+    while(compararSinMayusculas(respuesta_para_seguir,"No")!=0)
     {
         switch(opcion)
         {
@@ -95,9 +95,9 @@ int Menu_Principal()
                     strcpy(respuesta_para_seguir,"No");
                     break;
         }
-        if(strcmpi(respuesta_para_seguir,"Si")==0)
+        if(compararSinMayusculas(respuesta_para_seguir,"Si")==0)
         {
-            puts("\nIngrese una opcion: ");
+            printf("Ingrese una opcion: ");
             opcion=ValidarRango_Int(1,10);
         }
     }
