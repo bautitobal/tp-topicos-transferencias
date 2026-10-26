@@ -38,11 +38,13 @@ Las operaciones disponibles incluyen:
 
 1. Abrir [`TP-Topicos-Transferencias.workspace`](TP-Topicos-Transferencias.workspace).
 2. Compilar el workspace completo.
-3. Ejecutar el proyecto `Programa`.
+3. Ejecutar el proyecto `Programa`, no `Transferencias`: este último genera una
+   biblioteca y no es una aplicación ejecutable.
 
-El programa utiliza rutas relativas. Por eso, debe ejecutarse desde la carpeta
-`Programa/bin/Debug` o configurarse en Code::Blocks para que el directorio de
-trabajo contenga los archivos de entrada.
+El ejecutable se genera en `Programa/bin/Debug/Programa.exe`. El programa usa
+rutas relativas a la carpeta raíz del repositorio, por lo que el directorio de
+trabajo debe ser `Programa` (por ejemplo, configurándolo en las opciones de
+ejecución de Code::Blocks), no `Programa/bin/Debug`.
 
 ## Archivos de entrada
 

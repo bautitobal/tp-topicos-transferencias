@@ -53,7 +53,7 @@ int Menu_Principal()
     printf("\nIngrese una opcion: ");
     opcion=ValidarRango_Int(1,10);
 
-    while(compararSinMayusculas(respuesta_para_seguir,"No")!=0)
+    while(strcmpi(respuesta_para_seguir,"No")!=0)
     {
         switch(opcion)
         {
@@ -95,7 +95,7 @@ int Menu_Principal()
                     strcpy(respuesta_para_seguir,"No");
                     break;
         }
-        if(compararSinMayusculas(respuesta_para_seguir,"Si")==0)
+        if(strcmpi(respuesta_para_seguir,"Si")==0)
         {
             printf("Ingrese una opcion: ");
             opcion=ValidarRango_Int(1,10);

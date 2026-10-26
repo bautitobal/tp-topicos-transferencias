@@ -222,3 +222,13 @@ void vectorDestruir(Vector* v)
     free(v->vec);
     free(v);
 }
+
+void* vectorGetElementoPorPos(Vector* v, int pos)
+{
+    return v->vec+pos*v->tipo;
+}
+
+size_t vectorGetCantElem(Vector* v)
+{
+    return v->ce;
+}

@@ -108,9 +108,9 @@ typedef struct
     float monto;
 }tBase_Larga;
 
-bool trozarCampoVariable_Pais(tPais *info,char* linea);
-bool trozarCampoVariable_Transferencia(tTransferencia* infoT, char* linea);
-bool trozarCampoVariable_BaseLarga(tBase_Larga* infoBL,char* linea);
+void trozarCampoVariable_Pais(tPais *info,char* linea);
+void trozarCampoVariable_Transferencia(tTransferencia* infoT, char* linea);
+void trozarCampoVariable_BaseLarga(tBase_Larga* infoBL,char* linea);
 int separarCampos(char* linea, char** campos, int cantidad);
 int leerEntero(const char* texto, int* valor);
 int leerReal(const char* texto, float* valor);
