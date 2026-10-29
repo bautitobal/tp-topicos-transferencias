@@ -106,10 +106,10 @@ void GenerarArch_SaldoPorPais(Vector* infoT)
     char descActual[TAM_DESC_PAIS];
 
 
+    vecTransferencia=vectorGetElementoPorPos(infoT,i);
 
     while(i<fin)
     {
-        vecTransferencia=vectorGetElementoPorPos(infoT,i);
         cantRegistros=0;
         debito=0;
         credito=0;
@@ -117,15 +117,15 @@ void GenerarArch_SaldoPorPais(Vector* infoT)
         strcpy(descActual,vecTransferencia->desc_pais);
         while(i < fin && (strcmpi(codActual, vecTransferencia->cod_pais) == 0))
         {
-            vecTransferencia=vectorGetElementoPorPos(infoT,i);
             cantRegistros++;
-
+            
             if(vecTransferencia->operacion == DEBITO)
             debito += vecTransferencia->monto;
             else
             credito += vecTransferencia->monto;
-
-            i++;
+            
+            vecTransferencia=vectorGetElementoPorPos(infoT,++i);
+            
         }
         aux.cantRegistros=cantRegistros;
         strcpy(aux.cod_pais,codActual);
@@ -282,10 +282,6 @@ void GenerarArch_SaldoTrimestre(Vector* infoT)
 
     tTransferencia* vec;
     
-
-
-    //vec = (tTransferencia*)infoT->vec;
-    //fin = vec + infoT->ce;
     PonerEnCeroVecFloat(vecSaldoTrimestre);
 
 
@@ -294,6 +290,8 @@ void GenerarArch_SaldoTrimestre(Vector* infoT)
     vectorOrdenar(infoT, Cmp_TDesc, 1);
 
     fprintf(pf, "%-40s %8s %8s %8s %8s\n","Pais", "T1", "T2", "T3", "T4");
+    vec=vectorGetElementoPorPos(infoT,i);
+
     while(i<ce)
     {
         
@@ -303,10 +301,11 @@ void GenerarArch_SaldoTrimestre(Vector* infoT)
 
         while(i<ce && strcmpi(paisActual, vec->desc_pais) == 0)
         {
-            vec=vectorGetElementoPorPos(infoT,i);
             if(vec->anio == anio)
                 AcumularSaldoTrimestre(vec,vecSaldoTrimestre,&tieneOperacion);
-            i++;
+
+            vec=vectorGetElementoPorPos(infoT,++i);
+            
         }
 
         if(tieneOperacion)
@@ -418,6 +417,8 @@ void GenerarArch_SaldoAnio(Vector* infoT)
 
     fprintf(pf,"ANIO;C;D;SALDO;VARIACION\n");
 
+    vecT=vectorGetElementoPorPos(infoT,i);
+
     while(i<ce)
     {
         anioActual=vecT->anio;
@@ -428,7 +429,6 @@ void GenerarArch_SaldoAnio(Vector* infoT)
 
         while(i<ce && anioActual==vecT->anio)
         {
-            vecT=vectorGetElementoPorPos(infoT,i);
             if(vecT->operacion==CREDITO)
             {
                 total_credito+=vecT->monto;
@@ -437,7 +437,8 @@ void GenerarArch_SaldoAnio(Vector* infoT)
             {
                 total_debito+=vecT->monto;
             }
-            i++;
+            vecT=vectorGetElementoPorPos(infoT,++i);
+           
         }
 
         saldoActual=total_credito-total_debito;
