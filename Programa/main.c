@@ -50,7 +50,7 @@ int Menu_Principal()
     puts("\n10. Salir.");
     puts("\n");
 
-    printf("\nIngrese una opcion: ");
+    printf("\nIngrese una opcion (10 para salir): ");
     opcion=ValidarRango_Int(1,10);
 
     while(strcmpi(respuesta_para_seguir,"No")!=0)
@@ -97,7 +97,7 @@ int Menu_Principal()
         }
         if(strcmpi(respuesta_para_seguir,"Si")==0)
         {
-            printf("Ingrese una opcion: ");
+            printf("\nIngrese una opcion (10 para salir): ");
             opcion=ValidarRango_Int(1,10);
         }
     }

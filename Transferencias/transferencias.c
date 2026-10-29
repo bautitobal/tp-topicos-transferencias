@@ -282,7 +282,7 @@ void GenerarArch_SaldoTrimestre(Vector* infoT)
 
     tTransferencia* vec;
     
-    PonerEnCeroVecFloat(vecSaldoTrimestre);
+    
 
 
     printf("\nIngrese un anio para mostrar en la tabla (2015-Actualidad): ");
@@ -298,7 +298,8 @@ void GenerarArch_SaldoTrimestre(Vector* infoT)
         strcpy(codActual, vec->cod_pais);
         strcpy(paisActual, vec->desc_pais);
         tieneOperacion = false;
-
+        PonerEnCeroVecFloat(vecSaldoTrimestre);
+        
         while(i<ce && strcmpi(paisActual, vec->desc_pais) == 0)
         {
             if(vec->anio == anio)
@@ -746,7 +747,7 @@ int Cmp_Transferencia_VariosCampos(void* a, void* b)
         return t1->trimestre - t2->trimestre;
 
     if(strcmpi(t1->cod_pais,t2->cod_pais)!=0)
-        return t1->cod_pais - t2->cod_pais;
+        return strcmpi(t1->cod_pais,t2->cod_pais);
 
     if(t1->operacion != t2->operacion)
         return t1->operacion - t2->operacion;
