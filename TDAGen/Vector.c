@@ -21,25 +21,30 @@ Vector* vectorCrear(size_t tam, size_t tipo)
 bool vectorInsertarFinal(Vector* v, void* elem)
 {
     void* aux;
+    char* temp;
+
     if(v->ce==v->tam)
     {
-        aux=realloc(v->vec,(v->tam+INCREMENTO_VEC)*v->tipo);
+        aux=realloc(v->vec,(v->tam*INCREMENTO_VEC)*v->tipo);
         if(!aux)
             return false;
 
         v->vec=aux;
-        v->tam+=INCREMENTO_VEC;
+        v->tam*=INCREMENTO_VEC;
     }
 
-    void* temp=v->vec;
+    temp=v->vec;
+
     memcpy(temp+v->ce*v->tipo,elem,v->tipo);
     v->ce++;
     return true;
 }
+
 void MostrarVec(Vector* v)
 {
     void* temp=v->vec;
     int i;
+
     for(i=0;i<v->ce;i++)
     {
         printf("%c ",*(int*)temp);
@@ -49,27 +54,30 @@ void MostrarVec(Vector* v)
 
 bool vectorInsertarEnPos(Vector* v, void* elem,int pos)
 {
+    void* tvec;
+    char* dirIns;
+    char* i;
+
+
     if(pos<0 || pos>v->ce)
         return false;
 
-    void* tvec;
     if(v->ce==v->tam)
     {
-        tvec=realloc(v->vec,(v->tam+INCREMENTO_VEC)*v->tipo);
+        tvec=realloc(v->vec,(v->tam*INCREMENTO_VEC)*v->tipo);
         if(!tvec)
             return false;
 
         v->vec=tvec;
-        v->tam+=INCREMENTO_VEC;
+        v->tam*=INCREMENTO_VEC;
     }
-    void* DirIns=v->vec+pos*v->tipo;
-    void* DirUlt=v->vec+v->ce*v->tipo;
-    void* i;
 
-    for(i=DirUlt;i>=DirIns;i-=v->tipo)
-        memcpy(i+v->tipo,i,v->tipo);
+    dirIns=(char*)v->vec+pos*v->tipo;
 
-    memcpy(DirIns,elem,v->tipo);
+    for(i=(char*)v->vec+v->ce*v->tipo;i>dirIns;i-=v->tipo)
+        memcpy(i,i-v->tipo,v->tipo);
+
+    memcpy(dirIns,elem,v->tipo);
     v->ce++;
     return true;
 

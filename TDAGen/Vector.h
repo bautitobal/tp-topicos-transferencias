@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define INCREMENTO_VEC 5
+#define INCREMENTO_VEC 2
 typedef struct{
 
     void* vec;

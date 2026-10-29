@@ -281,11 +281,10 @@ void GenerarArch_SaldoTrimestre(Vector* infoT)
     float vecSaldoTrimestre[TAM_TRIMESTRE];
 
     tTransferencia* vec;
-    
 
 
-    //vec = (tTransferencia*)infoT->vec;
-    //fin = vec + infoT->ce;
+
+
     PonerEnCeroVecFloat(vecSaldoTrimestre);
 
 
@@ -296,7 +295,7 @@ void GenerarArch_SaldoTrimestre(Vector* infoT)
     fprintf(pf, "%-40s %8s %8s %8s %8s\n","Pais", "T1", "T2", "T3", "T4");
     while(i<ce)
     {
-        
+
         strcpy(codActual, vec->cod_pais);
         strcpy(paisActual, vec->desc_pais);
         tieneOperacion = false;
@@ -408,7 +407,6 @@ void GenerarArch_SaldoAnio(Vector* infoT)
     vectorOrdenar(infoT,Cmp_TAnio,1);
 
     tTransferencia* vecT;
-    //tTransferencia* pfin=vecT+infoT->ce;
 
     float total_debito, total_credito, variacion,saldoActual, saldoAnterior=0;
 
