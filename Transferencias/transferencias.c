@@ -647,15 +647,18 @@ void GenerarArch_BaseLarga(Vector* infoT)
 
     vectorOrdenar(infoT,Cmp_Transferencia_VariosCampos,MENOR_A_MAYOR);
 
-    tTransferencia* vecT= (tTransferencia*)infoT->vec;
-    tTransferencia* pfin=vecT+infoT->ce;
+    tTransferencia* vecT;
     tTransferencia auxT;
+
+    int i=0;
+    int ceTransferencia=vectorGetCantElem(infoT);
 
     char continente[TAM_CONTINENTE];
 
     fprintf(pf,"ANIO;TRIMESTRE;PAIS_COD;PAIS_DEC;CONTINENTE;OPERACION;MONTO\n");
+    vecT=vectorGetElementoPorPos(infoT,i);
 
-    while(vecT<pfin)
+    while(i<ceTransferencia)
     {
         auxT.anio=vecT->anio;
         strcpy(auxT.cod_pais,vecT->cod_pais);
@@ -664,18 +667,14 @@ void GenerarArch_BaseLarga(Vector* infoT)
         strcpy(auxT.desc_pais,vecT->desc_pais);
         auxT.monto=0;
 
-        while(vecT<pfin &&  auxT.anio==vecT->anio && auxT.trimestre==vecT->trimestre
+        while(i<ceTransferencia &&  auxT.anio==vecT->anio && auxT.trimestre==vecT->trimestre
                     && auxT.operacion==vecT->operacion  && strcmpi(auxT.cod_pais,vecT->cod_pais)==0)
         {
             auxT.monto+=vecT->monto;
-            vecT++;
+            vecT=vectorGetElementoPorPos(infoT,++i);
         }
         EncontrarContinente_SegunPais(continente,&auxT,pPais);
         fprintf(pf,"%d;%d;%s;%s;%s;%c;%.2f\n",auxT.anio,auxT.trimestre,auxT.cod_pais,auxT.desc_pais,continente,auxT.operacion,auxT.monto);
-
-
-
-
     }
     CerrarArch(pf);
     CerrarArch(pPais);
@@ -690,7 +689,7 @@ void EncontrarContinente_SegunPais(char* continente, tTransferencia* auxT, FILE*
     rewind(pPais);
     fgets(linea,TAM_LINEA,pPais);
 
-    while(fgets(linea,TAM_LINEA,pPais) && !encontrado)
+    while(!encontrado && fgets(linea,TAM_LINEA,pPais) )
     {
         trozarCampoVariable_Pais(&vecP,linea);
         if(strcmpi(vecP.cod_pais,auxT->cod_pais)==0)
