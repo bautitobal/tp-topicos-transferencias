@@ -266,37 +266,47 @@ void AcumularSaldosSegunContinente(Vector* vecSaldoContinente, tPais* infoPais,t
 void GenerarArch_SaldoTrimestre(Vector* infoT)
 {
     FILE* pf = AbrirArch(ARCH_SALDO_TRIMESTRE, "wt");
-    int anio;
-    bool tieneOperacion;
-    char paisActual[TAM_DESC_PAIS];
-    char codActual[TAM_COD];
-    float vecSaldoTrimestre[TAM_TRIMESTRE];
-    tTransferencia* vec;
-    tTransferencia* fin;
-
     if(!pf)
         return;
 
-    vec = (tTransferencia*)infoT->vec;
-    fin = vec + infoT->ce;
+    int anio;
+    int i=0;
+    int ce=vectorGetCantElem(infoT);
+
+    bool tieneOperacion;
+
+    char paisActual[TAM_DESC_PAIS];
+    char codActual[TAM_COD];
+
+    float vecSaldoTrimestre[TAM_TRIMESTRE];
+
+    tTransferencia* vec;
+    
+
+
+    //vec = (tTransferencia*)infoT->vec;
+    //fin = vec + infoT->ce;
+    PonerEnCeroVecFloat(vecSaldoTrimestre);
+
 
     printf("\nIngrese un anio para mostrar en la tabla (2015-Actualidad): ");
     anio = ValidarRango_Int(ANIO_MENOR, ANIO_ACTUAL);
     vectorOrdenar(infoT, Cmp_TDesc, 1);
 
     fprintf(pf, "%-40s %8s %8s %8s %8s\n","Pais", "T1", "T2", "T3", "T4");
-    while(vec < fin)
+    while(i<ce)
     {
+        
         strcpy(codActual, vec->cod_pais);
         strcpy(paisActual, vec->desc_pais);
-        PonerEnCeroVecFloat(vecSaldoTrimestre);
         tieneOperacion = false;
 
-        while(vec < fin && strcmpi(paisActual, vec->desc_pais) == 0)
+        while(i<ce && strcmpi(paisActual, vec->desc_pais) == 0)
         {
+            vec=vectorGetElementoPorPos(infoT,i);
             if(vec->anio == anio)
                 AcumularSaldoTrimestre(vec,vecSaldoTrimestre,&tieneOperacion);
-            vec++;
+            i++;
         }
 
         if(tieneOperacion)
