@@ -247,7 +247,7 @@ void AcumularSaldosSegunContinente(Vector* vecSaldoContinente, tPais* infoPais,t
     int i;
     for(i=0; i < vectorGetCantElem(vecSaldoContinente); i++)
     {
-        tSaldoContinente* saldo = (tSaldoContinente*)vectorGetElementoPorPos(vecSaldoContinente, i);
+        tSaldoContinente* saldo = vectorGetElementoPorPos(vecSaldoContinente, i);
         if(strcmpi(infoPais->continente, saldo->continente) == 0)
         {
             saldo->cantRegistros++;
@@ -466,13 +466,14 @@ void GenerarArch_SaldoPais_SegunOperacion(Vector* infoT)
 
     Vector* infoP=vectorCrear(CANT_PAISES,sizeof(tSaldoPais));
 
-    tSaldoPais* vecP= (tSaldoPais*)infoP->vec;
+    tSaldoPais* vecP;
     tSaldoPais actual;
 
-    tTransferencia* vecT= (tTransferencia*)infoT->vec;
-    tTransferencia* pfinT= vecT+infoT->ce;
+    tTransferencia* vecT;
+    
 
-    int cantPaisesListar,i;
+    int cantPaisesListar,i,j=0;
+    int ceTransferencia=vectorGetCantElem(infoT);
     char opcionOperacion;
 
     printf("\nIngrese la cantidad de paises para listar (1-%d): ",CANT_PAISES);
@@ -480,7 +481,8 @@ void GenerarArch_SaldoPais_SegunOperacion(Vector* infoT)
     printf("\nIngrese una operacion - Credito (%c) o Debito (%c): ",CREDITO,DEBITO);
     opcionOperacion=ValidarChar(CREDITO,DEBITO);
 
-    while(vecT<pfinT)
+    vecT=vectorGetElementoPorPos(infoT,j);
+    while(j<ceTransferencia)
     {
         strcpy(actual.desc_pais,vecT->desc_pais);
         strcpy(actual.cod_pais,vecT->cod_pais);
@@ -488,7 +490,7 @@ void GenerarArch_SaldoPais_SegunOperacion(Vector* infoT)
         actual.credito=0;
         actual.debito=0;
 
-        while(vecT<pfinT && strcmpi(actual.desc_pais,vecT->desc_pais)==0)
+        while(j<ceTransferencia && strcmpi(actual.desc_pais,vecT->desc_pais)==0)
         {
             actual.cantRegistros++;
             if(vecT->operacion==CREDITO)
@@ -499,7 +501,7 @@ void GenerarArch_SaldoPais_SegunOperacion(Vector* infoT)
             {
                 actual.debito+=vecT->monto;
             }
-            vecT++;
+            vecT=vectorGetElementoPorPos(infoT,++j);
         }
         vectorInsertarFinal(infoP,&actual);
 
@@ -518,9 +520,10 @@ void GenerarArch_SaldoPais_SegunOperacion(Vector* infoT)
     }
     for(i=0;i<cantPaisesListar;i++)
     {
+        vecP=vectorGetElementoPorPos(infoP,i);
         fprintf(pf,"%s;%s,%d;%.2f;%.2f\n",vecP->cod_pais,vecP->desc_pais,vecP->cantRegistros,
                                             vecP->credito,vecP->debito);
-        vecP++;
+        
     }
     CerrarArch(pf);
 
@@ -540,21 +543,19 @@ void GenerarArch_SaldoContinentePorcentaje(Vector* infoT)
     Vector* infoCPorcentaje=vectorCrear(CANT_CONTINENTE,sizeof(tPorcentajeContinente));
     Vector* s_cont= vectorCrear(CANT_CONTINENTE,sizeof(tSaldoContinente));
 
-    tTransferencia* vecT=(tTransferencia*)infoT->vec;
-    tTransferencia* pfin=vecT+infoT->ce;
-    tTransferencia* i;
-
+    tTransferencia* vecT;
+   
+    int i;
+    int ceTransferencia=vectorGetCantElem(infoT);
     int j;
 
     tPais Pais_aux;
 
-    tSaldoContinente* pSC_Aux= (tSaldoContinente*)s_cont->vec;
+    tSaldoContinente* saldoContinente;
 
     tPorcentajeContinente PC_Aux;
-    tPorcentajeContinente* pPC_Aux= (tPorcentajeContinente*)infoCPorcentaje->vec;
+    tPorcentajeContinente* pPC_Aux;
 
-    float PorcentajeDebito, PorcentajeCredito;
-    float Continente_debito, Continente_credito;
     float TotalDebito=0,TotalCredito=0;
 
     char linea[TAM_LINEA];
@@ -563,26 +564,28 @@ void GenerarArch_SaldoContinentePorcentaje(Vector* infoT)
 
     CalcularTotalDeOperaciones(infoT,&TotalDebito,&TotalCredito);
 
-    for(i=vecT;i<pfin;i++)
+    for(i=0;i<ceTransferencia;i++)
     {
         rewind(pPais);
         fgets(linea,TAM_LINEA,pPais);
         while(fgets(linea,TAM_LINEA,pPais))
         {
+            vecT=vectorGetElementoPorPos(infoT,i);
             trozarCampoVariable_Pais(&Pais_aux,linea);
-            if(strcmpi(Pais_aux.cod_pais,i->cod_pais)==0)
-                AcumularSaldosSegunContinente(s_cont,&Pais_aux,i);
+            if(strcmpi(Pais_aux.cod_pais,vecT->cod_pais)==0)
+                AcumularSaldosSegunContinente(s_cont,&Pais_aux,vecT);
 
         }
     }
 
     for(j=0;j<s_cont->ce;j++)
     {
-        strcpy(PC_Aux.continente,pSC_Aux->continente);
-        if(TotalCredito!=0 || TotalCredito!=0)
+        saldoContinente=vectorGetElementoPorPos(s_cont,j);
+        strcpy(PC_Aux.continente,saldoContinente->continente);
+        if(TotalCredito!=0 && TotalDebito!=0)
         {
-            PC_Aux.credito_porcentaje= ((pSC_Aux->credito)/TotalCredito)*100;
-            PC_Aux.debito_porcentaje= ((pSC_Aux->debito)/TotalDebito)*100;
+            PC_Aux.credito_porcentaje= ((saldoContinente->credito)/TotalCredito)*100;
+            PC_Aux.debito_porcentaje= ((saldoContinente->debito)/TotalDebito)*100;
         }
         else
         {
@@ -591,15 +594,16 @@ void GenerarArch_SaldoContinentePorcentaje(Vector* infoT)
         }
 
         vectorInsertarFinal(infoCPorcentaje,&PC_Aux);
-        pSC_Aux++;
+        
     }
 
     vectorOrdenar(infoCPorcentaje,Cmp_Porc_Continente,MENOR_A_MAYOR);
 
-    for(j=0;j<infoCPorcentaje->ce;j++)
+    for(j=0;j<vectorGetCantElem(infoCPorcentaje);j++)
     {
+        pPC_Aux=vectorGetElementoPorPos(infoCPorcentaje,j);
         fwrite(pPC_Aux,sizeof(tPorcentajeContinente),1,pf);
-        pPC_Aux++;
+        
     }
 
     CerrarArch(pf);
@@ -764,15 +768,17 @@ char ValidarChar(char a, char b)
 void CalcularTotalDeOperaciones(Vector* vecT, float* totalDebito, float* totalCredito)
 {
     int i;
-    tTransferencia* aux=(tTransferencia*)vecT->vec;
-    for(i=0;i<vecT->ce;i++)
+    tTransferencia* aux;
+    for(i=0;i<vectorGetCantElem(vecT);i++)
     {
+        aux=vectorGetElementoPorPos(vecT,i);
+
         if(aux->operacion==CREDITO)
             *totalCredito+=aux->monto;
         else
             *totalDebito+=aux->monto;
 
-        aux++;
+        
     }
 
 }
