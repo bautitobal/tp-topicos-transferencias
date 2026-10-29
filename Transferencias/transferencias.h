@@ -4,12 +4,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include "../TDAGen/Vector.h"
 
 
 
-#define ARCH_TRANSFERENCIA "..\\transferencias_personales_clean.csv"
-#define ARCH_PAISES "..\\paises_continentes.csv"
+#define ARCH_TRANSFERENCIA "../transferencias_personales_clean.csv"
+#define ARCH_PAISES "../paises_continentes.csv"
 #define ARCH_TRANSTOTAL_PAISES "transferencias_totales_paises.csv"
 #define ARCH_SALDO_CONTINENTE "transferencias_totales_continentes.csv"
 #define ARCH_SALDO_TRIMESTRE "transferencia_totales_trimestres.txt"
@@ -42,6 +43,8 @@
 #define MAYOR_A_MENOR 2
 
 #define SIN_VARIACION "NA"
+
+int compararSinMayusculas(const char* cadena1, const char* cadena2);
 
 typedef struct
 {
@@ -109,6 +112,9 @@ typedef struct
 void trozarCampoVariable_Pais(tPais *info,char* linea);
 void trozarCampoVariable_Transferencia(tTransferencia* infoT, char* linea);
 void trozarCampoVariable_BaseLarga(tBase_Larga* infoBL,char* linea);
+int separarCampos(char* linea, char** campos, int cantidad);
+int leerEntero(const char* texto, int* valor);
+int leerReal(const char* texto, float* valor);
 
 FILE* AbrirArch(const char* nombre,const char* modo);
 void CerrarArch(FILE* p);

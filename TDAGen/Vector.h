@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define INCREMENTO_VEC 5
+#define INCREMENTO_VEC 2
 typedef struct{
 
     void* vec;
@@ -31,5 +31,7 @@ bool vectorDesordBorrar(Vector*v, void* elem,Cmp cmp);
 bool vectorOrdBorrar(Vector*v, void* elem,Cmp cmp);
 bool vectorBorrarTodaAparicion(Vector* v, void* elem,Cmp cmp);
 void vectorDestruir(Vector* v);
+void* vectorGetElementoPorPos(Vector* v, int pos);
+size_t vectorGetCantElem(Vector*);
 
 #endif // VECTOR_H_INCLUDED
