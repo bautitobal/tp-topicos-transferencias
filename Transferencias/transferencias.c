@@ -839,17 +839,21 @@ void GenerarArch_Promedio_Pais_Trimestre(Vector* infoBL)
     vectorOrdenar(infoBL,Cmp_BaseLarga_Pais_Operacion,MENOR_A_MAYOR);
 
     Vector* infoPPT=vectorCrear(TAM_VEC_MIN,sizeof(tPromedio_Pais_Trimestre));
+
     tPromedio_Pais_Trimestre auxPPT;
     tPromedio_Pais_Trimestre* pAux;
 
-    tBase_Larga* vecBS= (tBase_Larga*)infoBL->vec;
-    tBase_Larga* pfin=vecBS+infoBL->ce;
+    tBase_Larga* vecBS;
+    
 
     int i;
+    int j=0;
+    int ceBaseLarga=vectorGetCantElem(infoBL);
 
     fprintf(pf,"PAIS_DESC;OPERACION;Suma_monto;Cant_trimestre;Promedio\n");
+    vecBS=vectorGetElementoPorPos(infoBL,j);
 
-    while(vecBS< pfin)
+    while(j<ceBaseLarga)
     {
         strcpy(auxPPT.desc_pais,vecBS->desc_pais);
         auxPPT.operacion=vecBS->operacion;
@@ -857,13 +861,13 @@ void GenerarArch_Promedio_Pais_Trimestre(Vector* infoBL)
         auxPPT.promedio_credito=0;
         auxPPT.promedio_debito=0;
         auxPPT.sumaMontos=0;
-        while(vecBS<pfin && strcmpi(auxPPT.desc_pais,vecBS->desc_pais)==0 && auxPPT.operacion==vecBS->operacion)
+        while(j<ceBaseLarga && strcmpi(auxPPT.desc_pais,vecBS->desc_pais)==0 && auxPPT.operacion==vecBS->operacion)
         {
             if(vecBS->monto>0)
                 auxPPT.cant_trimestre++;
 
             auxPPT.sumaMontos+=vecBS->monto;
-            vecBS++;
+            vecBS=vectorGetElementoPorPos(infoBL,++j);
         }
         if(auxPPT.cant_trimestre!=0)
         {
@@ -877,13 +881,15 @@ void GenerarArch_Promedio_Pais_Trimestre(Vector* infoBL)
     vectorOrdenar(infoPPT,Cmp_PPT_DescPais,MENOR_A_MAYOR);
     pAux=(tPromedio_Pais_Trimestre*)infoPPT->vec;
 
-    for(i=0;i<infoPPT->ce;i++)
+    for(i=0;i<vectorGetCantElem(infoPPT);i++)
     {
+        pAux=vectorGetElementoPorPos(infoPPT,i);
+
         if(pAux->operacion==CREDITO)
             fprintf(pf,"%s;%c;%.2f;%d;%.2f\n",pAux->desc_pais,pAux->operacion,pAux->sumaMontos,pAux->cant_trimestre,pAux->promedio_credito);
         else
             fprintf(pf,"%s;%c;%.2f;%d;%.2f\n",pAux->desc_pais,pAux->operacion,pAux->sumaMontos,pAux->cant_trimestre,pAux->promedio_debito);
-        pAux++;
+        
     }
     CerrarArch(pf);
     vectorDestruir(infoPPT);
@@ -897,16 +903,19 @@ void GenerarArch_Promedio_Anio_Continente_Op(Vector* infoBL)
 
     vectorOrdenar(infoBL,Cmp_Prom_ACO,MENOR_A_MAYOR);
 
-    tBase_Larga* vecBL = (tBase_Larga*)infoBL->vec;
-    tBase_Larga* pfin = vecBL+infoBL->ce;
+    tBase_Larga* vecBL;
     tBase_Larga aux;
 
+    int i=0;
+    int ceBaseLarga=vectorGetCantElem(infoBL);
     int cant_registros;
+
     float promedio;
 
     fprintf(pf,"ANIO;CONTINENTE;OPERACION;Suma_monto;cant_trimestre;PROMEDIO\n");
+    vecBL=vectorGetElementoPorPos(infoBL,i);
 
-    while(vecBL<pfin)
+    while(i<ceBaseLarga)
     {
         aux.anio=vecBL->anio;
         strcpy(aux.continente,vecBL->continente);
@@ -915,12 +924,12 @@ void GenerarArch_Promedio_Anio_Continente_Op(Vector* infoBL)
         cant_registros=0;
         promedio=0;
 
-        while(vecBL<pfin && aux.anio==vecBL->anio && aux.operacion==vecBL->operacion && strcmpi(aux.continente,vecBL->continente)==0)
+        while(i<ceBaseLarga && aux.anio==vecBL->anio && aux.operacion==vecBL->operacion && strcmpi(aux.continente,vecBL->continente)==0)
         {
             aux.monto+=vecBL->monto;
             if(vecBL->monto>0)
                 cant_registros++;
-            vecBL++;
+            vecBL=vectorGetElementoPorPos(infoBL,++i);
         }
         if(cant_registros!=0)
             promedio=aux.monto/cant_registros;
