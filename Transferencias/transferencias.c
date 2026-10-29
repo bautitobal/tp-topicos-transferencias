@@ -407,15 +407,18 @@ void GenerarArch_SaldoAnio(Vector* infoT)
 
     vectorOrdenar(infoT,Cmp_TAnio,1);
 
-    tTransferencia* vecT= (tTransferencia*)infoT->vec;
-    tTransferencia* pfin=vecT+infoT->ce;
+    tTransferencia* vecT;
+    //tTransferencia* pfin=vecT+infoT->ce;
 
     float total_debito, total_credito, variacion,saldoActual, saldoAnterior=0;
+
     int anioActual;
+    int i=0;
+    int ce=vectorGetCantElem(infoT);
 
     fprintf(pf,"ANIO;C;D;SALDO;VARIACION\n");
 
-    while(vecT<pfin)
+    while(i<ce)
     {
         anioActual=vecT->anio;
         total_credito=0;
@@ -423,8 +426,9 @@ void GenerarArch_SaldoAnio(Vector* infoT)
         saldoActual=0;
         variacion=0;
 
-        while(vecT<pfin && anioActual==vecT->anio)
+        while(i<ce && anioActual==vecT->anio)
         {
+            vecT=vectorGetElementoPorPos(infoT,i);
             if(vecT->operacion==CREDITO)
             {
                 total_credito+=vecT->monto;
@@ -433,7 +437,7 @@ void GenerarArch_SaldoAnio(Vector* infoT)
             {
                 total_debito+=vecT->monto;
             }
-            vecT++;
+            i++;
         }
 
         saldoActual=total_credito-total_debito;
