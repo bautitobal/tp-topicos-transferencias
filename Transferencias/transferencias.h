@@ -111,9 +111,7 @@ typedef struct
 void trozarCampoVariable_Pais(tPais *info,char* linea);
 void trozarCampoVariable_Transferencia(tTransferencia* infoT, char* linea);
 void trozarCampoVariable_BaseLarga(tBase_Larga* infoBL,char* linea);
-int separarCampos(char* linea, char** campos, int cantidad);
-int leerEntero(const char* texto, int* valor);
-int leerReal(const char* texto, float* valor);
+
 
 FILE* AbrirArch(const char* nombre,const char* modo);
 void CerrarArch(FILE* p);
@@ -130,6 +128,7 @@ void GenerarArch_SaldoContinentePorcentaje(Vector* infoT);
 void GenerarArch_BaseLarga(Vector* infoT);
 void GenerarArch_Promedio_Pais_Trimestre(Vector* infoBL);
 void GenerarArch_Promedio_Anio_Continente_Op(Vector* infoBL);
+
 
 void AcumularSaldosSegunContinente(Vector* infoC,tPais* infoPais,tTransferencia* vecT);
 void InicializarVectorSaldoContinente(Vector* infoC);
