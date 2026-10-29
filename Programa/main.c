@@ -3,9 +3,9 @@
 
 int main()
 {
-    int flag, opcion;
-    char respuesta_para_seguir[TAM_RESPUESTA]="Si";
+    int flag = 0, opcion;
 
+    /*LO DE BASE LARGA DEBERIA QUEDAR EN EL PUNTO 7*/
     FILE* pTransferencia = AbrirArch(ARCH_TRANSFERENCIA,"rt");
     FILE* pTransferencia_BaseLarga;
 
@@ -55,57 +55,58 @@ int main()
         printf("\nIngrese una opcion: ");
         opcion=ValidarRango_Int(1,10);
 
-        while(strcmpi(respuesta_para_seguir,"No")!=0)
         {
             switch(opcion)
             {
-                case 1:
-                        GenerarArch_SaldoPorPais(infoT);
-                        break;
+              case 1:
+                    GenerarArch_SaldoPorPais(infoT);
+                    break;
                 case 2:
-                        GenerarArch_SaldoPorContinente(infoT);
-                        break;
+                    GenerarArch_SaldoPorContinente(infoT);
+                    break;
                 case 3:
-                        GenerarArch_SaldoTrimestre(infoT);
-                        break;
+                    GenerarArch_SaldoTrimestre(infoT);
+                    break;
 
                 case 4:
-                        GenerarArch_SaldoAnio(infoT);
-                        break;
+                    GenerarArch_SaldoAnio(infoT);
+                    break;
 
                 case 5:
-                        GenerarArch_SaldoPais_SegunOperacion(infoT);
-                        break;
+                    GenerarArch_SaldoPais_SegunOperacion(infoT);
+                    break;
 
                 case 6:
-                        GenerarArch_SaldoContinentePorcentaje(infoT);
-                        break;
+                    GenerarArch_SaldoContinentePorcentaje(infoT);
+                    break;
 
                 case 7:
-                        GenerarArch_BaseLarga(infoT);
-                        break;
+                    GenerarArch_BaseLarga(infoT);
+                    break;
 
                 case 8:
-                        GenerarArch_Promedio_Pais_Trimestre(infoBL);
-                        break;
+                    GenerarArch_Promedio_Pais_Trimestre(infoBL);
+                    break;
 
                 case 9:
-                        GenerarArch_Promedio_Anio_Continente_Op(infoBL);
-                        break;
+                    GenerarArch_Promedio_Anio_Continente_Op(infoBL);
+                    break;
 
                 case 10:
-                        strcpy(respuesta_para_seguir,"No");
-                        break;
-            }
-            if(strcmpi(respuesta_para_seguir,"Si")==0)
-            {
-                printf("Ingrese una opcion: ");
-                opcion = ValidarRango_Int(1,10);
-            }
+                    flag=1;
+                    break;
+                    
+                default:
+                    printf("\nESCOJE UN NUMERO DEL 1 AL 10");
+                    break;
+          }
+
+
         }
-        vectorDestruir(infoT);
-        vectorDestruir(infoBL);
-        }
+    }
+
+    vectorDestruir(infoT);
+    vectorDestruir(infoBL);
     return 0;
 }
 

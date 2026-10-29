@@ -28,6 +28,7 @@ bool vectorInsertarFinal(Vector* v, void* elem)
     if(v->ce==v->tam)
     {
         aux=realloc(v->vec,(v->tam*INCREMENTO_VEC)*v->tipo);
+        
         if(!aux)
             return false;
 
@@ -49,7 +50,7 @@ void MostrarVec(Vector* v)
 
     for(i=0;i<v->ce;i++)
     {
-        printf("%c ",*(int*)temp);
+        printf("%c ",*(char*)temp);
         temp+=v->tipo;
     }
 }
@@ -98,41 +99,42 @@ bool vectorOrdInsertar(Vector* v, void* elem,Cmp cmp)
 
 void vectorOrdenar(Vector* v,Cmp cmp,int opcion)
 {
-    void* DirIni=v->vec;
-    void* DirUlt=v->vec+v->ce*v->tipo;
-    void* menor;
-    void* i;
-    for(i=DirIni;i<DirUlt;i+=v->tipo)
+    char* dirFin=(char*)v->vec+v->ce*v->tipo;
+    char* extremo;
+    char* i;
+
+    for(i=(char*)v->vec;i<dirFin;i+=v->tipo)
     {
-        switch(opcion)
-        {
-            case 1: menor=Menor(v,i,cmp);
-                    break;
-            case 2: menor=Mayor(v,i,cmp);
-                    break;
-        }
+        if(opcion==1)
+            extremo=Menor(v,i,cmp);
+        else
+            extremo=Mayor(v,i,cmp);
 
-
-        Swap(menor,i,v->tipo);
-
+        Swap(extremo,i,v->tipo);
     }
 }
+
 void* Menor(Vector* v, void* actual,Cmp cmp)
 {
-    void* menor=actual;
-    void* j;
-    for(j=actual+v->tipo;j<v->vec+v->ce*v->tipo;j+=v->tipo)
-            if(cmp(menor,j)>0)
-                menor=j;
+    char* menor=(char*)actual;
+    char* fin=(char*)v->vec+v->ce*v->tipo;
+    char* j;
+
+    for(j=menor+v->tipo;j<fin;j+=v->tipo)
+        if(cmp(menor,j)>0)
+            menor=j;
     return menor;
 }
+
 void* Mayor(Vector* v, void* actual,Cmp cmp)
 {
-    void* mayor=actual;
-    void* j;
-    for(j=actual+v->tipo;j<v->vec+v->ce*v->tipo;j+=v->tipo)
-            if(cmp(mayor,j)<0)
-                mayor=j;
+    char* mayor=(char*)actual;
+    char* fin=(char*)v->vec+v->ce*v->tipo;
+    char* j;
+
+    for(j=mayor+v->tipo;j<fin;j+=v->tipo)
+        if(cmp(mayor,j)<0)
+            mayor=j;
     return mayor;
 }
 
@@ -150,6 +152,7 @@ void Swap(void* a, void* b, size_t tipo)
         y++;
     }
 }
+
 int vectorDesordBuscar(Vector* v, void* elem,Cmp cmp)
 {
     void* DirIni=v->vec;
@@ -162,6 +165,7 @@ int vectorDesordBuscar(Vector* v, void* elem,Cmp cmp)
         pos=(DirIni-v->vec)/v->tipo;
     return pos;
 }
+
 int vectorOrdBuscar(Vector* v, void* elem,Cmp cmp)
 {
     void* LimI=v->vec;
@@ -189,6 +193,7 @@ int vectorOrdBuscar(Vector* v, void* elem,Cmp cmp)
     return pos;
 
 }
+
 bool vectorBorrarPorPos(Vector* v, int pos)
 {
     if(pos<0 || pos>=v->ce)
@@ -203,16 +208,19 @@ bool vectorBorrarPorPos(Vector* v, int pos)
     v->ce--;
     return true;
 }
+
 bool vectorDesordBorrar(Vector*v, void* elem,Cmp cmp)
 {
     int pos=vectorDesordBuscar(v,elem,cmp);
     return vectorBorrarPorPos(v,pos);
 }
+
 bool vectorOrdBorrar(Vector*v, void* elem,Cmp cmp)
 {
     int pos=vectorOrdBuscar(v,elem,cmp);
     return vectorBorrarPorPos(v,pos);
 }
+
 bool vectorBorrarTodaAparicion(Vector* v, void* elem,Cmp cmp)
 {
     void* DirIni=v->vec;
@@ -225,12 +233,16 @@ bool vectorBorrarTodaAparicion(Vector* v, void* elem,Cmp cmp)
     }
     return true;
 }
+
 void vectorDestruir(Vector* v)
 {
-    v->ce=0;
-    v->tam=0;
-    free(v->vec);
-    free(v);
+    if(v != NULL)
+    {
+        v->ce=0;
+        v->tam=0;
+        free(v->vec);
+        free(v);
+    }
 }
 
 void* vectorGetElementoPorPos(Vector* v, int pos)
