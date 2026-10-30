@@ -57,9 +57,8 @@ gcc -std=c90 -Wall -Wextra -pedantic \
   -I. -ITDAGen -ITransferencias -o programa
 ```
 
-La compilación finaliza correctamente. El código todavía presenta advertencias
-del compilador relacionadas principalmente con declaraciones posteriores a
-sentencias, conversiones de tipos y aritmética con punteros genéricos.
+La compilación finaliza correctamente y no presenta advertencias con las
+opciones indicadas.
 
 ## Archivos de entrada
 
