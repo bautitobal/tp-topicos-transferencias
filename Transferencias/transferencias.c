@@ -1,5 +1,16 @@
 #include "transferencias.h"
 
+static float RedondearDosDecimales(float valor)
+{
+    int centesimos;
+
+    if(valor >= 0)
+        centesimos=(int)(valor*100+0.5f);
+    else
+        centesimos=(int)(valor*100-0.5f);
+
+    return (float)centesimos/100;
+}
 
 bool trozarCampoVariable_Pais(tPais* info,char* linea)
 {
@@ -520,8 +531,8 @@ int GenerarArch_SaldoAnio(Vector* infoT)
 
     vectorOrdenar(infoT,Cmp_TAnio,1);
 
-    fprintf(pf,"ANIO;C;D;SALDO;VARIACION\n");
-    printf("\n%-6s %12s %12s %12s %12s\n","ANIO","C","D","SALDO","VARIACION");
+    fprintf(pf,"ANIO;C;D;SALDO;VAR_PCT_SALDO\n");
+    printf("\n%-6s %12s %12s %12s %12s\n","ANIO","C","D","SALDO","VAR_PCT_SALDO");
 
     vecT=vectorGetElementoPorPos(infoT,i);
 
@@ -547,7 +558,7 @@ int GenerarArch_SaldoAnio(Vector* infoT)
            
         }
 
-        saldoActual=total_credito-total_debito;
+        saldoActual=RedondearDosDecimales(total_credito-total_debito);
 
         if(anioActual==ANIO_MENOR)
         {
@@ -1053,7 +1064,7 @@ int GenerarArch_Promedio_Pais_Trimestre(Vector* infoBL)
         return SIN_MEM;
     }
 
-    fprintf(pf,"PAIS_DESC;OPERACION;Suma_monto;Cant_trimestre;Promedio\n");
+    fprintf(pf,"PAIS_DESC;OPERACION;Suma_monto;cant_trimestres;PROMEDIO\n");
     printf("\n%-40s %10s %12s %15s %10s\n","PAIS_DESC","OPERACION","suma_monto","cant_trimestres","PROMEDIO");
     vecBS=vectorGetElementoPorPos(infoBL,j);
 

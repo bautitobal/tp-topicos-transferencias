@@ -42,7 +42,7 @@
 #define MENOR_A_MAYOR 1
 #define MAYOR_A_MENOR 2
 
-#define SIN_VARIACION "-"
+#define SIN_VARIACION "NA"
 
 int compararSinMayusculas(const char* cadena1, const char* cadena2);
 
