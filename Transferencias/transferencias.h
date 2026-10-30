@@ -109,33 +109,32 @@ typedef struct
 }tBase_Larga;
 
 void trozarCampoVariable_Pais(tPais *info,char* linea);
-void trozarCampoVariable_Transferencia(tTransferencia* infoT, char* linea);
-void trozarCampoVariable_BaseLarga(tBase_Larga* infoBL,char* linea);
+void trozarCampoVariable_Transferencia(tTransferencia* transferencia, char* linea);
+void trozarCampoVariable_BaseLarga(tBase_Larga* baseLarga,char* linea);
 
 
 FILE* AbrirArch(const char* nombre,const char* modo);
-void CerrarArch(FILE* p);
 
-void CargarInfoTransferencia(Vector* infoT, FILE* pf);
-void CargarInfo_BaseLarga(Vector* infoBS, FILE* pf);
+int CargarInfoTransferencia(Vector* transferencia, FILE* pf);
+int CargarInfo_BaseLarga(Vector* baseLarga, FILE* pf);
 
-void GenerarArch_SaldoPorPais(Vector* infoT);
-void GenerarArch_SaldoPorContinente(Vector* infoT);
-void GenerarArch_SaldoTrimestre(Vector* infoT);
-void GenerarArch_SaldoAnio(Vector* infoT);
-void GenerarArch_SaldoPais_SegunOperacion(Vector* infoT);
-void GenerarArch_SaldoContinentePorcentaje(Vector* infoT);
-void GenerarArch_BaseLarga(Vector* infoT);
-void GenerarArch_Promedio_Pais_Trimestre(Vector* infoBL);
-void GenerarArch_Promedio_Anio_Continente_Op(Vector* infoBL);
+int GenerarArch_SaldoPorPais(Vector* transferencia);
+int GenerarArch_SaldoPorContinente(Vector* transferencia);
+int GenerarArch_SaldoTrimestre(Vector* transferencia);
+int GenerarArch_SaldoAnio(Vector* transferencia);
+int GenerarArch_SaldoPais_SegunOperacion(Vector* transferencia);
+int GenerarArch_SaldoContinentePorcentaje(Vector* transferencia);
+int GenerarArch_BaseLarga(Vector* transferencia);
+int GenerarArch_Promedio_Pais_Trimestre(Vector* baseLarga);
+int GenerarArch_Promedio_Anio_Continente_Op(Vector* baseLarga);
 
 
-void AcumularSaldosSegunContinente(Vector* infoC,tPais* infoPais,tTransferencia* vecT);
-void InicializarVectorSaldoContinente(Vector* infoC);
+void AcumularSaldosSegunContinente(Vector* continente, tPais* pais, tTransferencia* transferencia);
+int InicializarVectorSaldoContinente(Vector* continente);
 void PonerEnCeroVecFloat(float* vec);
-void AcumularSaldoTrimestre(tTransferencia* infoT, float* saldoTrimestre,bool* tieneOperacion);
-void CalcularTotalDeOperaciones(Vector* infoT, float* totalDebito, float* totalCredito);
-void LeerArchivo_PorcentajeContinente();
+void AcumularSaldoTrimestre(tTransferencia* transferencia, float* saldoTrimestre,bool* tieneOperacion);
+void CalcularTotalDeOperaciones(Vector* transferencia, float* totalDebito, float* totalCredito);
+int LeerArchivo_PorcentajeContinente();
 void EncontrarContinente_SegunPais(char* continente, tTransferencia* auxT, FILE* pPais);
 
 int Cmp_TCod(void* a, void* b);

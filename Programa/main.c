@@ -1,11 +1,19 @@
 #include <stdio.h>
 #include "../Transferencias/transferencias.h"
+#include "../codigoError.h"
+
 int Menu_Principal();
 
 int main()
 {
-    Menu_Principal();
-    return 0;
+    int codRet = Menu_Principal();
+
+    if (codRet == ERROR_ARCH)
+        printf("Error al trabajar con archivos\n");
+    if (codRet == SIN_MEM)
+        printf("Error: memoria insuficiente\n");
+
+    return codRet;
 
 }
 
@@ -13,25 +21,67 @@ int Menu_Principal()
 {
     FILE* pTransferencia=AbrirArch(ARCH_TRANSFERENCIA,"rt");
     FILE* pTransferencia_BaseLarga;
+    int codRet = TODO_OK;
 
-    Vector* infoT= vectorCrear(TAM_VEC,sizeof(tTransferencia));
-    Vector* infoBL= vectorCrear(TAM_VEC_MIN,sizeof(tBase_Larga));
+    Vector* infoT;
+    Vector* infoBL;
 
     if(!pTransferencia)
-        return 1;
+        return ERROR_ARCH;
 
-    CargarInfoTransferencia(infoT,pTransferencia);
-    CerrarArch(pTransferencia);
+    infoT = vectorCrear(TAM_VEC,sizeof(tTransferencia));
 
-    GenerarArch_BaseLarga(infoT);
+    if(infoT == NULL)
+    {
+        fclose(pTransferencia);
+        return SIN_MEM;
+    }
+
+    infoBL = vectorCrear(TAM_VEC_MIN,sizeof(tBase_Larga));
+
+    if(infoBL == NULL)
+    {
+        vectorDestruir(infoT);
+        fclose(pTransferencia);
+        return SIN_MEM;
+    }
+
+    if(!pTransferencia)
+        return ERROR_ARCH;
+
+    codRet = CargarInfoTransferencia(infoT,pTransferencia);
+    fclose(pTransferencia);
+
+    if (codRet != TODO_OK)
+    {
+        vectorDestruir(infoT);
+        vectorDestruir(infoBL);    
+        return codRet;
+    }
+
+    codRet = GenerarArch_BaseLarga(infoT);
+
+    if (codRet != TODO_OK)
+    {
+        vectorDestruir(infoT);
+        vectorDestruir(infoBL);    
+        return codRet;
+    }
 
     pTransferencia_BaseLarga=AbrirArch(ARCH_BASE_LARGA,"rt");
 
     if(!pTransferencia_BaseLarga)
-        return 1;
+        return ERROR_ARCH;
 
-    CargarInfo_BaseLarga(infoBL,pTransferencia_BaseLarga);
-    CerrarArch(pTransferencia_BaseLarga);
+    codRet = CargarInfo_BaseLarga(infoBL,pTransferencia_BaseLarga);
+    fclose(pTransferencia_BaseLarga);
+
+    if(codRet != TODO_OK)
+    {
+        vectorDestruir(infoT);
+        vectorDestruir(infoBL);
+        return codRet;
+    }
 
     int opcion;
 
@@ -53,49 +103,53 @@ int Menu_Principal()
     printf("\nIngrese una opcion (10 para salir): ");
     opcion=ValidarRango_Int(1,10);
 
-    while(strcmpi(respuesta_para_seguir,"No")!=0)
+    while(compararSinMayusculas(respuesta_para_seguir,"No")!=0)
     {
         switch(opcion)
         {
             case 1:
-                    GenerarArch_SaldoPorPais(infoT);
+                    codRet = GenerarArch_SaldoPorPais(infoT);
                     break;
             case 2:
-                    GenerarArch_SaldoPorContinente(infoT);
+                    codRet = GenerarArch_SaldoPorContinente(infoT);
                     break;
             case 3:
-                    GenerarArch_SaldoTrimestre(infoT);
+                    codRet = GenerarArch_SaldoTrimestre(infoT);
                     break;
 
             case 4:
-                    GenerarArch_SaldoAnio(infoT);
+                    codRet = GenerarArch_SaldoAnio(infoT);
                     break;
 
             case 5:
-                    GenerarArch_SaldoPais_SegunOperacion(infoT);
+                    codRet = GenerarArch_SaldoPais_SegunOperacion(infoT);
                     break;
 
             case 6:
-                    GenerarArch_SaldoContinentePorcentaje(infoT);
+                    codRet = GenerarArch_SaldoContinentePorcentaje(infoT);
                     break;
 
             case 7:
-                    GenerarArch_BaseLarga(infoT);
+                    codRet = GenerarArch_BaseLarga(infoT);
                     break;
 
             case 8:
-                    GenerarArch_Promedio_Pais_Trimestre(infoBL);
+                    codRet = GenerarArch_Promedio_Pais_Trimestre(infoBL);
                     break;
 
             case 9:
-                    GenerarArch_Promedio_Anio_Continente_Op(infoBL);
+                    codRet = GenerarArch_Promedio_Anio_Continente_Op(infoBL);
                     break;
 
             case 10:
                     strcpy(respuesta_para_seguir,"No");
+                    puts("Programa finalizado correctamente\n");
                     break;
         }
-        if(strcmpi(respuesta_para_seguir,"Si")==0)
+        if(codRet != TODO_OK)
+            break;
+
+        if(compararSinMayusculas(respuesta_para_seguir,"Si")==0)
         {
             printf("\nIngrese una opcion (10 para salir): ");
             opcion=ValidarRango_Int(1,10);
@@ -103,5 +157,5 @@ int Menu_Principal()
     }
     vectorDestruir(infoT);
     vectorDestruir(infoBL);
-    return 0;
+    return codRet;
 }

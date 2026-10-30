@@ -18,23 +18,30 @@ Vector* vectorCrear(size_t tam, size_t tipo)
     return v;
 
 }
-bool vectorInsertarFinal(Vector* v, void* elem)
+int vectorInsertarFinal(Vector* v, void* elem)
 {
     void* aux;
-    if(v->ce==v->tam)
-    {
-        aux=realloc(v->vec,(v->tam+INCREMENTO_VEC)*v->tipo);
-        if(!aux)
-            return false;
 
-        v->vec=aux;
-        v->tam+=INCREMENTO_VEC;
+
+    if(v->ce == v->tam)
+    {
+        if(v->tam > ((size_t)-1) - INCREMENTO_VEC || v->tam + INCREMENTO_VEC > ((size_t)-1) / v->tipo)
+            return SIN_MEM;
+
+        aux = realloc(v->vec, (v->tam + INCREMENTO_VEC) * v->tipo);
+
+        if(!aux)
+            return SIN_MEM;
+
+        v->vec = aux;
+        v->tam += INCREMENTO_VEC;
     }
 
-    void* temp=v->vec;
-    memcpy(temp+v->ce*v->tipo,elem,v->tipo);
+    memcpy((char*)v->vec + v->ce * v->tipo, elem, v->tipo);
+
     v->ce++;
-    return true;
+
+    return TODO_OK;
 }
 void MostrarVec(Vector* v)
 {
@@ -47,43 +54,57 @@ void MostrarVec(Vector* v)
     }
 }
 
-bool vectorInsertarEnPos(Vector* v, void* elem,int pos)
+int vectorInsertarEnPos(Vector* v, void* elem, int pos)
 {
-    if(pos<0 || pos>v->ce)
-        return false;
+    void* aux;
+    void* destino;
 
-    void* tvec;
-    if(v->ce==v->tam)
+    if(v->ce == v->tam)
     {
-        tvec=realloc(v->vec,(v->tam+INCREMENTO_VEC)*v->tipo);
-        if(!tvec)
-            return false;
+        if(v->tam > ((size_t)-1) - INCREMENTO_VEC || v->tam + INCREMENTO_VEC > ((size_t)-1) / v->tipo)
+            return SIN_MEM;
 
-        v->vec=tvec;
-        v->tam+=INCREMENTO_VEC;
+        aux = realloc(v->vec, (v->tam + INCREMENTO_VEC) * v->tipo);
+
+        if(!aux)
+            return SIN_MEM;
+
+        v->vec = aux;
+        v->tam += INCREMENTO_VEC;
     }
-    void* DirIns=v->vec+pos*v->tipo;
-    void* DirUlt=v->vec+v->ce*v->tipo;
-    void* i;
 
-    for(i=DirUlt;i>=DirIns;i-=v->tipo)
-        memcpy(i+v->tipo,i,v->tipo);
+    destino = (unsigned char*)v->vec + pos * v->tipo;
 
-    memcpy(DirIns,elem,v->tipo);
+    memmove((unsigned char*)destino + v->tipo, destino, (v->ce - pos) * v->tipo);
+
+    memcpy(destino, elem, v->tipo);
+
     v->ce++;
-    return true;
 
-
+    return TODO_OK;
 }
-bool vectorOrdInsertar(Vector* v, void* elem,Cmp cmp)
+int vectorOrdInsertar(Vector* v, void* elem, Cmp cmp)
 {
-    void* DirIni=v->vec;
-    void* DirUlt=v->vec+v->ce*v->tipo-v->tipo;
+    int pos = 0;
+    int codRet;
+    void* actual;
 
+    if(!v)
+        return SIN_MEM;
 
-    while(DirIni<=DirUlt && cmp(elem,DirIni)>0)
-        DirIni+=v->tipo;
-    return vectorInsertarEnPos(v,elem,(DirIni-v->vec)/v->tipo);
+    while(pos < v->ce)
+    {
+        actual = vectorGetElementoPorPos(v, pos);
+
+        if(cmp(elem, actual) <= 0)
+            break;
+
+        pos++;
+    }
+
+    codRet = vectorInsertarEnPos(v, elem, pos);
+
+    return codRet;
 }
 
 void vectorOrdenar(Vector* v,Cmp cmp,int opcion)
@@ -217,6 +238,9 @@ bool vectorBorrarTodaAparicion(Vector* v, void* elem,Cmp cmp)
 }
 void vectorDestruir(Vector* v)
 {
+    // libero recursos antes cuando falla malloc
+    if(!v)
+        return;
     v->ce=0;
     v->tam=0;
     free(v->vec);
