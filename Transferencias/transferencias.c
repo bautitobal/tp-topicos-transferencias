@@ -163,12 +163,14 @@ int GenerarArch_SaldoPorPais(Vector* infoT)
     vectorOrdenar(s_pais,cmp_CreditoPais,2);
 
     fprintf(pf,"PAIS_COD;PAIS_DESC;registros;total_credito;total_debito\n");
+    printf("\n%-9s %-40s %10s %14s %14s\n","PAIS_COD","PAIS_DESC","registros","total_credito","total_debito");
     for(j=0;j<finPais;j++)
     {
         pais_aux=vectorGetElementoPorPos(s_pais,j);
         fprintf(pf,"%s;%s;%d;%.2f;%.2f\n",pais_aux->cod_pais,pais_aux->desc_pais,
         pais_aux->cantRegistros,pais_aux->credito,pais_aux->debito);
-
+        printf("%-9s %-40s %10d %14.2f %14.2f\n",pais_aux->cod_pais,pais_aux->desc_pais,
+        pais_aux->cantRegistros,pais_aux->credito,pais_aux->debito);
     }
     fclose(pf);
     vectorDestruir(s_pais);
@@ -230,11 +232,14 @@ int GenerarArch_SaldoPorContinente(Vector* infoT)
 
     vectorOrdenar(s_cont,CmpCredito_Continente,2);
     fprintf(pf,"CONTINENTE;Registros;Total_Credito;Total_Debito\n");
+    printf("\n%-16s %10s %14s %14s\n","CONTINENTE","Registros","Total_Credito","Total_Debito");
 
     for(i=0;i<vectorGetCantElem(s_cont);i++)
     {
         tSaldoContinente* saldo = vectorGetElementoPorPos(s_cont,i);
         fprintf(pf,"%s;%d;%.2f;%.2f\n", saldo->continente, saldo->cantRegistros,
+                                        saldo->credito, saldo->debito);
+        printf("%-16s %10d %14.2f %14.2f\n", saldo->continente, saldo->cantRegistros,
                                         saldo->credito, saldo->debito);
     }
     fclose(pf);
@@ -336,6 +341,7 @@ int GenerarArch_SaldoTrimestre(Vector* infoT)
     vectorOrdenar(infoT, Cmp_TDesc, 1);
 
     fprintf(pf, "%-40s %8s %8s %8s %8s\n","Pais", "T1", "T2", "T3", "T4");
+    printf("\n%-40s %8s %8s %8s %8s\n","Pais", "T1", "T2", "T3", "T4");
     vec=vectorGetElementoPorPos(infoT,i);
 
     while(i<ce)
@@ -358,6 +364,9 @@ int GenerarArch_SaldoTrimestre(Vector* infoT)
         if(tieneOperacion)
         {
             fprintf(pf,"%-40s %8.2f %8.2f %8.2f %8.2f\n", paisActual,
+                    vecSaldoTrimestre[0], vecSaldoTrimestre[1],
+                    vecSaldoTrimestre[2], vecSaldoTrimestre[3]);
+            printf("%-40s %8.2f %8.2f %8.2f %8.2f\n", paisActual,
                     vecSaldoTrimestre[0], vecSaldoTrimestre[1],
                     vecSaldoTrimestre[2], vecSaldoTrimestre[3]);
         }
@@ -390,12 +399,23 @@ int CmpCredito_Continente(void* a, void* b)
 int ValidarRango_Int(int LimI, int LimS)
 {
     int dato;
-    scanf("%d",&dato);
-    while(dato<LimI || dato>LimS)
+    int leidos;
+    int c;
+
+    leidos=scanf("%d",&dato);
+    while(leidos!=EOF && (leidos!=1 || dato<LimI || dato>LimS))
     {
-        printf("\nError - Ingrese un anio entre %d y %d",LimI, LimS);
-        scanf("%d",&dato);
+        /* descarta lo que quedo en el buffer (por ejemplo, letras) */
+        while((c=getchar())!='\n' && c!=EOF);
+
+        printf("\nError - Ingrese un numero entre %d y %d: ",LimI, LimS);
+        leidos=scanf("%d",&dato);
     }
+
+    /* sin mas entrada disponible se toma el limite superior */
+    if(leidos==EOF)
+        dato=LimS;
+
     return dato;
 }
 void PonerEnCeroVecFloat(float* vec)
@@ -464,6 +484,7 @@ int GenerarArch_SaldoAnio(Vector* infoT)
     int ce=vectorGetCantElem(infoT);
 
     fprintf(pf,"ANIO;C;D;SALDO;VARIACION\n");
+    printf("\n%-6s %12s %12s %12s %12s\n","ANIO","C","D","SALDO","VARIACION");
 
     vecT=vectorGetElementoPorPos(infoT,i);
 
@@ -494,11 +515,13 @@ int GenerarArch_SaldoAnio(Vector* infoT)
         if(anioActual==ANIO_MENOR)
         {
             fprintf(pf,"%d;%.2f;%.2f;%.2f;%s\n",anioActual,total_credito,total_debito,saldoActual,SIN_VARIACION);
+            printf("%-6d %12.2f %12.2f %12.2f %12s\n",anioActual,total_credito,total_debito,saldoActual,SIN_VARIACION);
         }
         else
         {
             variacion= ((saldoActual-saldoAnterior)/saldoAnterior)*100;
             fprintf(pf,"%d;%.2f;%.2f;%.2f;%.2f\n",anioActual,total_credito,total_debito,saldoActual,variacion);
+            printf("%-6d %12.2f %12.2f %12.2f %12.2f\n",anioActual,total_credito,total_debito,saldoActual,variacion);
         }
         saldoAnterior=saldoActual;
     }
@@ -571,8 +594,6 @@ int GenerarArch_SaldoPais_SegunOperacion(Vector* infoT)
         }
 
     }
-    fprintf(pf,"COD_PAIS;DESC_PAIS;Registros;Total_credito;Total_debito\n");
-
     switch(opcionOperacion)
     {
         case CREDITO:
@@ -582,14 +603,23 @@ int GenerarArch_SaldoPais_SegunOperacion(Vector* infoT)
                 vectorOrdenar(infoP,Cmp_SPDebito,MAYOR_A_MENOR);
                 break;
     }
+
+    if(cantPaisesListar > (int)vectorGetCantElem(infoP))
+        cantPaisesListar = vectorGetCantElem(infoP);
+
+    fprintf(pf,"PUESTO;PAIS_COD;PAIS_DESC;registros;total_credito;total_debito\n");
+    printf("\n%-7s %-9s %-40s %10s %14s %14s\n","PUESTO","PAIS_COD","PAIS_DESC","registros",
+                                                "total_credito","total_debito");
     for(i=0;i<cantPaisesListar;i++)
     {
         vecP=vectorGetElementoPorPos(infoP,i);
-        fprintf(pf,"%s;%s;%d;%.2f;%.2f\n",vecP->cod_pais,vecP->desc_pais,vecP->cantRegistros,
+        fprintf(pf,"%d;%s;%s;%d;%.2f;%.2f\n",i+1,vecP->cod_pais,vecP->desc_pais,vecP->cantRegistros,
                                             vecP->credito,vecP->debito);
-        
+        printf("%-7d %-9s %-40s %10d %14.2f %14.2f\n",i+1,vecP->cod_pais,vecP->desc_pais,
+                                            vecP->cantRegistros,vecP->credito,vecP->debito);
     }
     fclose(pf);
+    vectorDestruir(infoP);
     return TODO_OK;
 }
 int GenerarArch_SaldoContinentePorcentaje(Vector* infoT)
@@ -814,13 +844,13 @@ int Cmp_SPDebito(void* a, void* b)
 {
     tSaldoPais* x=(tSaldoPais*)a;
     tSaldoPais* y=(tSaldoPais*)b;
-    return x->debito - y->debito;
+    return (x->debito > y->debito) - (x->debito < y->debito);
 }
 int Cmp_SPCredito(void* a, void* b)
 {
     tSaldoPais* x=(tSaldoPais*)a;
     tSaldoPais* y=(tSaldoPais*)b;
-    return x->credito - y->credito;
+    return (x->credito > y->credito) - (x->credito < y->credito);
 }
 int Cmp_Porc_Continente(void* a, void* b)
 {
@@ -960,8 +990,10 @@ int GenerarArch_Promedio_Pais_Trimestre(Vector* infoBL)
     int j=0;
     int ceBaseLarga=vectorGetCantElem(infoBL);
     int codRet;
+    float promedio;
 
     fprintf(pf,"PAIS_DESC;OPERACION;Suma_monto;Cant_trimestre;Promedio\n");
+    printf("\n%-40s %10s %12s %15s %10s\n","PAIS_DESC","OPERACION","suma_monto","cant_trimestres","PROMEDIO");
     vecBS=vectorGetElementoPorPos(infoBL,j);
 
     while(j<ceBaseLarga)
@@ -1004,10 +1036,12 @@ int GenerarArch_Promedio_Pais_Trimestre(Vector* infoBL)
         pAux=vectorGetElementoPorPos(infoPPT,i);
 
         if(pAux->operacion==CREDITO)
-            fprintf(pf,"%s;%c;%.2f;%d;%.2f\n",pAux->desc_pais,pAux->operacion,pAux->sumaMontos,pAux->cant_trimestre,pAux->promedio_credito);
+            promedio=pAux->promedio_credito;
         else
-            fprintf(pf,"%s;%c;%.2f;%d;%.2f\n",pAux->desc_pais,pAux->operacion,pAux->sumaMontos,pAux->cant_trimestre,pAux->promedio_debito);
-        
+            promedio=pAux->promedio_debito;
+
+        fprintf(pf,"%s;%c;%.2f;%d;%.2f\n",pAux->desc_pais,pAux->operacion,pAux->sumaMontos,pAux->cant_trimestre,promedio);
+        printf("%-40s %10c %12.2f %15d %10.2f\n",pAux->desc_pais,pAux->operacion,pAux->sumaMontos,pAux->cant_trimestre,promedio);
     }
     fclose(pf);
     vectorDestruir(infoPPT);
@@ -1035,6 +1069,7 @@ int GenerarArch_Promedio_Anio_Continente_Op(Vector* infoBL)
     float promedio;
 
     fprintf(pf,"ANIO;CONTINENTE;OPERACION;Suma_monto;cant_trimestre;PROMEDIO\n");
+    printf("\n%-6s %-16s %10s %12s %15s %10s\n","ANIO","CONTINENTE","OPERACION","suma_monto","cant_trimestres","PROMEDIO");
     vecBL=vectorGetElementoPorPos(infoBL,i);
 
     while(i<ceBaseLarga)
@@ -1057,6 +1092,7 @@ int GenerarArch_Promedio_Anio_Continente_Op(Vector* infoBL)
             promedio=aux.monto/cant_registros;
 
         fprintf(pf,"%d;%s;%c;%.2f;%d;%.2f\n",aux.anio,aux.continente,aux.operacion,aux.monto,cant_registros,promedio);
+        printf("%-6d %-16s %10c %12.2f %15d %10.2f\n",aux.anio,aux.continente,aux.operacion,aux.monto,cant_registros,promedio);
     }
     fclose(pf);
     return TODO_OK;

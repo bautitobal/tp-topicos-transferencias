@@ -16,7 +16,7 @@
 #define ARCH_SALDO_TRIMESTRE "transferencia_totales_trimestres.txt"
 #define ARCH_SALDO_ANIO "transferencia_totales_anio.csv"
 #define ARCH_SALDO_PAISES_OPERACION "transferencias_totales_paises_operacion.csv"
-#define ARCH_SALDO_CONTINENTE_PORCENTAJE "transferencias_totales_continente_porcentaje.dat"
+#define ARCH_SALDO_CONTINENTE_PORCENTAJE "participacion_continentes.dat"
 #define ARCH_BASE_LARGA "transferencias_base_larga.csv"
 #define ARCH_PROMEDIO_PAIS_TRIMESTRE "transferencias_promedio_pais_trimestre.csv"
 #define ARCH_PROMEDIO_CONTINENTE_ANI_OP "transferencias_promedio_continente_anio_op.csv"

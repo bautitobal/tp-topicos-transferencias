@@ -3,6 +3,7 @@
 #include "../codigoError.h"
 
 int Menu_Principal();
+int CargarBaseLarga(Vector** infoBL);
 
 int main()
 {
@@ -20,11 +21,11 @@ int main()
 int Menu_Principal()
 {
     FILE* pTransferencia=AbrirArch(ARCH_TRANSFERENCIA,"rt");
-    FILE* pTransferencia_BaseLarga;
     int codRet = TODO_OK;
 
     Vector* infoT;
-    Vector* infoBL;
+    /* la base larga se carga recien cuando se elige la opcion 8 o 9 */
+    Vector* infoBL = NULL;
 
     if(!pTransferencia)
         return ERROR_ARCH;
@@ -37,49 +38,12 @@ int Menu_Principal()
         return SIN_MEM;
     }
 
-    infoBL = vectorCrear(TAM_VEC_MIN,sizeof(tBase_Larga));
-
-    if(infoBL == NULL)
-    {
-        vectorDestruir(infoT);
-        fclose(pTransferencia);
-        return SIN_MEM;
-    }
-
-    if(!pTransferencia)
-        return ERROR_ARCH;
-
     codRet = CargarInfoTransferencia(infoT,pTransferencia);
     fclose(pTransferencia);
 
     if (codRet != TODO_OK)
     {
         vectorDestruir(infoT);
-        vectorDestruir(infoBL);    
-        return codRet;
-    }
-
-    codRet = GenerarArch_BaseLarga(infoT);
-
-    if (codRet != TODO_OK)
-    {
-        vectorDestruir(infoT);
-        vectorDestruir(infoBL);    
-        return codRet;
-    }
-
-    pTransferencia_BaseLarga=AbrirArch(ARCH_BASE_LARGA,"rt");
-
-    if(!pTransferencia_BaseLarga)
-        return ERROR_ARCH;
-
-    codRet = CargarInfo_BaseLarga(infoBL,pTransferencia_BaseLarga);
-    fclose(pTransferencia_BaseLarga);
-
-    if(codRet != TODO_OK)
-    {
-        vectorDestruir(infoT);
-        vectorDestruir(infoBL);
         return codRet;
     }
 
@@ -134,11 +98,15 @@ int Menu_Principal()
                     break;
 
             case 8:
-                    codRet = GenerarArch_Promedio_Pais_Trimestre(infoBL);
+                    codRet = CargarBaseLarga(&infoBL);
+                    if(codRet == TODO_OK)
+                        codRet = GenerarArch_Promedio_Pais_Trimestre(infoBL);
                     break;
 
             case 9:
-                    codRet = GenerarArch_Promedio_Anio_Continente_Op(infoBL);
+                    codRet = CargarBaseLarga(&infoBL);
+                    if(codRet == TODO_OK)
+                        codRet = GenerarArch_Promedio_Anio_Continente_Op(infoBL);
                     break;
 
             case 10:
@@ -146,6 +114,12 @@ int Menu_Principal()
                     puts("Programa finalizado correctamente\n");
                     break;
         }
+        if(codRet == SIN_BASE_LARGA)
+        {
+            puts("\nPrimero genere el archivo intermedio con la opcion 7.");
+            codRet = TODO_OK;
+        }
+
         if(codRet != TODO_OK)
             break;
 
@@ -157,5 +131,30 @@ int Menu_Principal()
     }
     vectorDestruir(infoT);
     vectorDestruir(infoBL);
+    return codRet;
+}
+
+int CargarBaseLarga(Vector** infoBL)
+{
+    FILE* pBaseLarga;
+    int codRet;
+
+    if(*infoBL != NULL)
+        return TODO_OK;
+
+    pBaseLarga=AbrirArch(ARCH_BASE_LARGA,"rt");
+    if(!pBaseLarga)
+        return SIN_BASE_LARGA;
+
+    *infoBL = vectorCrear(TAM_VEC_MIN,sizeof(tBase_Larga));
+    if(*infoBL == NULL)
+    {
+        fclose(pBaseLarga);
+        return SIN_MEM;
+    }
+
+    codRet = CargarInfo_BaseLarga(*infoBL,pBaseLarga);
+    fclose(pBaseLarga);
+
     return codRet;
 }
