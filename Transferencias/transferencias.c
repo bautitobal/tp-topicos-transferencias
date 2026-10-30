@@ -585,7 +585,7 @@ int GenerarArch_SaldoPais_SegunOperacion(Vector* infoT)
     for(i=0;i<cantPaisesListar;i++)
     {
         vecP=vectorGetElementoPorPos(infoP,i);
-        fprintf(pf,"%s;%s,%d;%.2f;%.2f\n",vecP->cod_pais,vecP->desc_pais,vecP->cantRegistros,
+        fprintf(pf,"%s;%s;%d;%.2f;%.2f\n",vecP->cod_pais,vecP->desc_pais,vecP->cantRegistros,
                                             vecP->credito,vecP->debito);
         
     }
@@ -750,7 +750,7 @@ int GenerarArch_BaseLarga(Vector* infoT)
 
     char continente[TAM_CONTINENTE];
 
-    fprintf(pBaseLarga,"ANIO;TRIMESTRE;PAIS_COD;PAIS_DEC;CONTINENTE;OPERACION;MONTO\n");
+    fprintf(pBaseLarga,"ANIO;TRIMESTRE;PAIS_COD;PAIS_DESC;CONTINENTE;OPERACION;MONTO\n");
     vecT=vectorGetElementoPorPos(infoT,i);
 
     while(i<ceTransferencia)
