@@ -294,6 +294,12 @@ int InicializarVectorSaldoContinente(Vector* vec)
             nuevo.credito = 0;
             nuevo.debito = 0;
             codRet = vectorInsertarFinal(vec, &nuevo);
+
+            if(codRet != TODO_OK)
+            {
+                fclose(pPaises);
+                return codRet;
+            }
         }
     }
     fclose(pPaises);
