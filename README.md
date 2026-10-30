@@ -52,7 +52,7 @@ y `../paises_continentes.csv`), por lo que el directorio de trabajo debe ser
 También se puede compilar directamente desde la raíz del repositorio:
 
 ```bash
-gcc -std=c90 -Wall -Wextra -pedantic \
+gcc -std=c90 -Wall -Wextra \
   Programa/main.c Transferencias/transferencias.c TDAGen/Vector.c \
   -I. -ITDAGen -ITransferencias -o programa
 ```

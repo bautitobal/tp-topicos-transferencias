@@ -25,7 +25,6 @@
     <Compiler>
       <Add option="-Wall" />
       <Add option="-Wextra" />
-      <Add option="-pedantic" />
       <Add option="-std=c90" />
     </Compiler>
     <Unit filename="transferencias.c"><Option compilerVar="CC" /></Unit>
