@@ -455,7 +455,7 @@ int GenerarArch_SaldoAnio(Vector* infoT)
     vectorOrdenar(infoT,Cmp_TAnio,1);
 
     tTransferencia* vecT;
-    //tTransferencia* pfin=vecT+infoT->ce;
+    /*tTransferencia* pfin=vecT+infoT->ce;*/
 
     float total_debito, total_credito, variacion,saldoActual, saldoAnterior=0;
 
