@@ -202,12 +202,15 @@ int vectorOrdBuscar(Vector* v, void* elem,Cmp cmp)
 }
 bool vectorBorrarPorPos(Vector* v, int pos)
 {
+    void* DirIni;
+    void* DirFin;
+    void* i;
+
     if(pos<0 || pos>=v->ce)
         return false;
 
-    void* DirIni=v->vec+v->tipo*pos;
-    void* DirFin=v->vec+v->tipo*v->ce;
-    void* i;
+    DirIni=v->vec+v->tipo*pos;
+    DirFin=v->vec+v->tipo*v->ce;
 
     for(i=DirIni;i<DirFin;i+=v->tipo)
         memcpy(i,i+v->tipo,v->tipo);
@@ -238,7 +241,7 @@ bool vectorBorrarTodaAparicion(Vector* v, void* elem,Cmp cmp)
 }
 void vectorDestruir(Vector* v)
 {
-    // libero recursos antes cuando falla malloc
+    /* libero recursos antes cuando falla malloc */
     if(!v)
         return;
     v->ce=0;

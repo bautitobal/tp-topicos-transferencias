@@ -3,6 +3,7 @@
 #include "../codigoError.h"
 
 int Menu_Principal();
+void MostrarMenu();
 int CargarBaseLarga(Vector** infoBL);
 
 int main()
@@ -22,6 +23,9 @@ int Menu_Principal()
 {
     FILE* pTransferencia=AbrirArch(ARCH_TRANSFERENCIA,"rt");
     int codRet = TODO_OK;
+    int opcion;
+
+    char respuesta_para_seguir[TAM_RESPUESTA]="Si";
 
     Vector* infoT;
     /* la base larga se carga recien cuando se elige la opcion 8 o 9 */
@@ -47,24 +51,7 @@ int Menu_Principal()
         return codRet;
     }
 
-    int opcion;
-
-    char respuesta_para_seguir[TAM_RESPUESTA]="Si";
-
-    puts("\n\nMENU PRINCIPAL");
-    puts("\n1. Totales por pais.");
-    puts("\n2. Totales por continente.");
-    puts("\n3. Saldo trimestral por pais.");
-    puts("\n4. Totales anuales y variacion interanual.");
-    puts("\n5. Ranking de paises.");
-    puts("\n6. Participacion porcentual por continente.");
-    puts("\n7. Generacion del archivo intermedio transferencias_base_larga.csv.");
-    puts("\n8. Promedio trimestral por pais");
-    puts("\n9. Promedio trimestral por continente, operacion y anio.");
-    puts("\n10. Salir.");
-    puts("\n");
-
-    printf("\nIngrese una opcion (10 para salir): ");
+    MostrarMenu();
     opcion=ValidarRango_Int(1,10);
 
     while(compararSinMayusculas(respuesta_para_seguir,"No")!=0)
@@ -125,13 +112,31 @@ int Menu_Principal()
 
         if(compararSinMayusculas(respuesta_para_seguir,"Si")==0)
         {
-            printf("\nIngrese una opcion (10 para salir): ");
+            MostrarMenu();
             opcion=ValidarRango_Int(1,10);
         }
     }
     vectorDestruir(infoT);
     vectorDestruir(infoBL);
     return codRet;
+}
+
+void MostrarMenu()
+{
+    puts("\n\nMENU PRINCIPAL");
+    puts("\n1. Totales por pais.");
+    puts("\n2. Totales por continente.");
+    puts("\n3. Saldo trimestral por pais.");
+    puts("\n4. Totales anuales y variacion interanual.");
+    puts("\n5. Ranking de paises.");
+    puts("\n6. Participacion porcentual por continente.");
+    puts("\n7. Generacion del archivo intermedio transferencias_base_larga.csv.");
+    puts("\n8. Promedio trimestral por pais");
+    puts("\n9. Promedio trimestral por continente, operacion y anio.");
+    puts("\n10. Salir.");
+    puts("\n");
+
+    printf("\nIngrese una opcion (10 para salir): ");
 }
 
 int CargarBaseLarga(Vector** infoBL)

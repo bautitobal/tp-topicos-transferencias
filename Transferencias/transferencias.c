@@ -90,26 +90,15 @@ int CargarInfoTransferencia(Vector* infoT, FILE* pTransferencia)
 int GenerarArch_SaldoPorPais(Vector* infoT)
 {
     FILE* pf=AbrirArch(ARCH_TRANSTOTAL_PAISES,"wt");
-    if(!pf)
-        return ERROR_ARCH;
-
-    
-    vectorOrdenar(infoT,Cmp_TCod,1);
 
     tTransferencia* vecTransferencia;
 
     int i=0;
     int fin=vectorGetCantElem(infoT);
+    int finPais;
     int codRet;
 
-
-
-    Vector* s_pais=vectorCrear(CANT_PAISES,sizeof(tSaldoPais));
-    if (s_pais == NULL)
-    {
-        fclose(pf);
-        return SIN_MEM;
-    }
+    Vector* s_pais;
 
     tSaldoPais aux;
     tSaldoPais* pais_aux;
@@ -119,6 +108,17 @@ int GenerarArch_SaldoPorPais(Vector* infoT)
     char codActual[TAM_COD];
     char descActual[TAM_DESC_PAIS];
 
+    if(!pf)
+        return ERROR_ARCH;
+
+    vectorOrdenar(infoT,Cmp_TCod,1);
+
+    s_pais=vectorCrear(CANT_PAISES,sizeof(tSaldoPais));
+    if (s_pais == NULL)
+    {
+        fclose(pf);
+        return SIN_MEM;
+    }
 
     vecTransferencia=vectorGetElementoPorPos(infoT,i);
 
@@ -157,7 +157,7 @@ int GenerarArch_SaldoPorPais(Vector* infoT)
         }
 
     }
-    int finPais=vectorGetCantElem(s_pais);
+    finPais=vectorGetCantElem(s_pais);
 
 
     vectorOrdenar(s_pais,cmp_CreditoPais,2);
@@ -183,16 +183,28 @@ int GenerarArch_SaldoPorContinente(Vector* infoT)
 {
     FILE* pf=AbrirArch(ARCH_SALDO_CONTINENTE,"wt");
     FILE* pPais=AbrirArch(ARCH_PAISES,"rt");
-    if(!pf || !pPais)
-    {
-        fclose(pf);    
-        fclose(pPais);
-        return ERROR_ARCH;
-    }
 
     tTransferencia* vec;
     tPais Pais_aux;
-    Vector* s_cont=vectorCrear(7,sizeof(tSaldoContinente));
+    tSaldoContinente* saldo;
+    Vector* s_cont;
+
+    char linea[TAM_LINEA];
+    int i;
+    int j;
+    int codRet;
+    int ceInfoT=vectorGetCantElem(infoT);
+
+    if(!pf || !pPais)
+    {
+        if(pf)
+            fclose(pf);
+        if(pPais)
+            fclose(pPais);
+        return ERROR_ARCH;
+    }
+
+    s_cont=vectorCrear(CANT_CONTINENTE,sizeof(tSaldoContinente));
 
     if (s_cont == NULL)
     {
@@ -200,12 +212,6 @@ int GenerarArch_SaldoPorContinente(Vector* infoT)
         fclose(pPais);
         return SIN_MEM;
     }
-
-    char linea[TAM_LINEA];
-    int i;
-    int j;
-    int codRet;
-    int ceInfoT=vectorGetCantElem(infoT);
 
     codRet = InicializarVectorSaldoContinente(s_cont);
 
@@ -236,7 +242,7 @@ int GenerarArch_SaldoPorContinente(Vector* infoT)
 
     for(i=0;i<vectorGetCantElem(s_cont);i++)
     {
-        tSaldoContinente* saldo = vectorGetElementoPorPos(s_cont,i);
+        saldo = vectorGetElementoPorPos(s_cont,i);
         fprintf(pf,"%s;%d;%.2f;%.2f\n", saldo->continente, saldo->cantRegistros,
                                         saldo->credito, saldo->debito);
         printf("%-16s %10d %14.2f %14.2f\n", saldo->continente, saldo->cantRegistros,
@@ -251,16 +257,18 @@ int GenerarArch_SaldoPorContinente(Vector* infoT)
 int InicializarVectorSaldoContinente(Vector* vec)
 {
     FILE* pPaises=AbrirArch(ARCH_PAISES,"rt");
-    if(!pPaises)
-        return ERROR_ARCH;
 
     char linea[TAM_LINEA];
 
     tPais infoP;
     tSaldoContinente nuevo;
+    tSaldoContinente* saldo;
     int i;
     bool existe;
     int codRet;
+
+    if(!pPaises)
+        return ERROR_ARCH;
 
     fgets(linea,TAM_LINEA,pPaises);
 
@@ -271,7 +279,7 @@ int InicializarVectorSaldoContinente(Vector* vec)
 
         for(i=0; i < vectorGetCantElem(vec); i++)
         {
-            tSaldoContinente* saldo = vectorGetElementoPorPos(vec, i);
+            saldo = vectorGetElementoPorPos(vec, i);
             if(compararSinMayusculas(saldo->continente, infoP.continente) == 0)
             {
                 existe = true;
@@ -315,16 +323,13 @@ void AcumularSaldosSegunContinente(Vector* vecSaldoContinente, tPais* infoPais,t
 int GenerarArch_SaldoTrimestre(Vector* infoT)
 {
     FILE* pf = AbrirArch(ARCH_SALDO_TRIMESTRE, "wt");
-    if(!pf)
-        return ERROR_ARCH;
 
-    
     int anio;
 
     int i=0;
     int ce=vectorGetCantElem(infoT);
 
-        bool tieneOperacion;
+    bool tieneOperacion;
 
     char paisActual[TAM_DESC_PAIS];
     char codActual[TAM_COD];
@@ -332,9 +337,9 @@ int GenerarArch_SaldoTrimestre(Vector* infoT)
     float vecSaldoTrimestre[TAM_TRIMESTRE];
 
     tTransferencia* vec;
-    
-    
 
+    if(!pf)
+        return ERROR_ARCH;
 
     printf("\nIngrese un anio para mostrar en la tabla (2015-Actualidad): ");
     anio = ValidarRango_Int(ANIO_MENOR, ANIO_ACTUAL);
@@ -469,11 +474,6 @@ int GenerarArch_SaldoAnio(Vector* infoT)
 {
     FILE* pf=AbrirArch(ARCH_SALDO_ANIO,"wt");
 
-    if(!pf)
-        return ERROR_ARCH;
-
-    vectorOrdenar(infoT,Cmp_TAnio,1);
-
     tTransferencia* vecT;
     /*tTransferencia* pfin=vecT+infoT->ce;*/
 
@@ -482,6 +482,11 @@ int GenerarArch_SaldoAnio(Vector* infoT)
     int anioActual;
     int i=0;
     int ce=vectorGetCantElem(infoT);
+
+    if(!pf)
+        return ERROR_ARCH;
+
+    vectorOrdenar(infoT,Cmp_TAnio,1);
 
     fprintf(pf,"ANIO;C;D;SALDO;VARIACION\n");
     printf("\n%-6s %12s %12s %12s %12s\n","ANIO","C","D","SALDO","VARIACION");
@@ -532,30 +537,30 @@ int GenerarArch_SaldoPais_SegunOperacion(Vector* infoT)
 {
     int codRet;
     FILE* pf= AbrirArch(ARCH_SALDO_PAISES_OPERACION,"wt");
+
+    Vector* infoP;
+
+    tSaldoPais* vecP;
+    tSaldoPais actual;
+
+    tTransferencia* vecT;
+
+    int cantPaisesListar,i,j=0;
+    int ceTransferencia=vectorGetCantElem(infoT);
+    char opcionOperacion;
+
     if(!pf)
         return ERROR_ARCH;
 
-    
     vectorOrdenar(infoT,Cmp_TDesc,MENOR_A_MAYOR);
 
-
-    Vector* infoP=vectorCrear(CANT_PAISES,sizeof(tSaldoPais));
+    infoP=vectorCrear(CANT_PAISES,sizeof(tSaldoPais));
 
     if (infoP == NULL)
     {
         fclose(pf);
         return SIN_MEM;
     }
-
-    tSaldoPais* vecP;
-    tSaldoPais actual;
-
-    tTransferencia* vecT;
-    
-
-    int cantPaisesListar,i,j=0;
-    int ceTransferencia=vectorGetCantElem(infoT);
-    char opcionOperacion;
 
     printf("\nIngrese la cantidad de paises para listar (1-%d): ",CANT_PAISES);
     cantPaisesListar=ValidarRango_Int(1,CANT_PAISES);
@@ -627,26 +632,11 @@ int GenerarArch_SaldoContinentePorcentaje(Vector* infoT)
     FILE* pf=AbrirArch(ARCH_SALDO_CONTINENTE_PORCENTAJE,"w+b");
     FILE* pPais=AbrirArch(ARCH_PAISES,"rt");
 
-    if(!pf || !pPais)
-    {
-        return ERROR_ARCH;
-    }
-
-    Vector* infoCPorcentaje=vectorCrear(CANT_CONTINENTE,sizeof(tPorcentajeContinente));
-    Vector* s_cont= vectorCrear(CANT_CONTINENTE,sizeof(tSaldoContinente));
-
-    if (infoCPorcentaje == NULL || s_cont == NULL)
-    {
-        vectorDestruir(infoCPorcentaje);
-        vectorDestruir(s_cont);
-
-        fclose(pPais);
-        fclose(pf);
-        return SIN_MEM;
-    }
+    Vector* infoCPorcentaje;
+    Vector* s_cont;
 
     tTransferencia* vecT;
-   
+
     int i;
     int ceTransferencia=vectorGetCantElem(infoT);
     int j;
@@ -662,6 +652,28 @@ int GenerarArch_SaldoContinentePorcentaje(Vector* infoT)
     float TotalDebito=0,TotalCredito=0;
 
     char linea[TAM_LINEA];
+
+    if(!pf || !pPais)
+    {
+        if(pf)
+            fclose(pf);
+        if(pPais)
+            fclose(pPais);
+        return ERROR_ARCH;
+    }
+
+    infoCPorcentaje=vectorCrear(CANT_CONTINENTE,sizeof(tPorcentajeContinente));
+    s_cont= vectorCrear(CANT_CONTINENTE,sizeof(tSaldoContinente));
+
+    if (infoCPorcentaje == NULL || s_cont == NULL)
+    {
+        vectorDestruir(infoCPorcentaje);
+        vectorDestruir(s_cont);
+
+        fclose(pPais);
+        fclose(pf);
+        return SIN_MEM;
+    }
 
     codRet = InicializarVectorSaldoContinente(s_cont);
 
@@ -723,27 +735,21 @@ int GenerarArch_SaldoContinentePorcentaje(Vector* infoT)
     fclose(pf);
     fclose(pPais);
 
-    codRet = LeerArchivo_PorcentajeContinente();
-
-    if (codRet != TODO_OK)
-        return codRet;
-
     vectorDestruir(infoCPorcentaje);
     vectorDestruir(s_cont);
 
-    return TODO_OK;
+    return LeerArchivo_PorcentajeContinente();
 }
 int LeerArchivo_PorcentajeContinente()
 {
     FILE* pf=AbrirArch(ARCH_SALDO_CONTINENTE_PORCENTAJE,"rb");
 
-    if (!pf)
-        return ERROR_ARCH;
-
     char opcionParaLeer;
 
     tPorcentajeContinente PC_Aux;
 
+    if (!pf)
+        return ERROR_ARCH;
 
     printf("\nDesea leer el archivo? Si (%c) o N (%c): ",AFIRMATIVO,NEGATIVO);
     opcionParaLeer=ValidarChar(AFIRMATIVO,NEGATIVO);
@@ -766,12 +772,6 @@ int GenerarArch_BaseLarga(Vector* infoT)
     FILE* pBaseLarga = AbrirArch(ARCH_BASE_LARGA,"wt");
     FILE* pPais=AbrirArch(ARCH_PAISES,"rt");
 
-    if(!pBaseLarga || !pPais)
-        return ERROR_ARCH;
-
-
-    vectorOrdenar(infoT,Cmp_Transferencia_VariosCampos,MENOR_A_MAYOR);
-
     tTransferencia* vecT;
     tTransferencia auxT;
 
@@ -779,6 +779,17 @@ int GenerarArch_BaseLarga(Vector* infoT)
     int ceTransferencia=vectorGetCantElem(infoT);
 
     char continente[TAM_CONTINENTE];
+
+    if(!pBaseLarga || !pPais)
+    {
+        if(pBaseLarga)
+            fclose(pBaseLarga);
+        if(pPais)
+            fclose(pPais);
+        return ERROR_ARCH;
+    }
+
+    vectorOrdenar(infoT,Cmp_Transferencia_VariosCampos,MENOR_A_MAYOR);
 
     fprintf(pBaseLarga,"ANIO;TRIMESTRE;PAIS_COD;PAIS_DESC;CONTINENTE;OPERACION;MONTO\n");
     vecT=vectorGetElementoPorPos(infoT,i);
@@ -965,32 +976,32 @@ int CargarInfo_BaseLarga(Vector* infoBS, FILE* pf)
 int GenerarArch_Promedio_Pais_Trimestre(Vector* infoBL)
 {
     FILE* pf=AbrirArch(ARCH_PROMEDIO_PAIS_TRIMESTRE,"wt");
-    if(!pf)
-        return ERROR_ARCH;
 
-    
-    vectorOrdenar(infoBL,Cmp_BaseLarga_Pais_Operacion,MENOR_A_MAYOR);
-
-
-    Vector* infoPPT=vectorCrear(TAM_VEC_MIN,sizeof(tPromedio_Pais_Trimestre));
-
-    if (infoPPT == NULL)
-    {
-        fclose(pf);
-        return SIN_MEM;
-    }
+    Vector* infoPPT;
 
     tPromedio_Pais_Trimestre auxPPT;
     tPromedio_Pais_Trimestre* pAux;
 
     tBase_Larga* vecBS;
-    
 
     int i;
     int j=0;
     int ceBaseLarga=vectorGetCantElem(infoBL);
     int codRet;
     float promedio;
+
+    if(!pf)
+        return ERROR_ARCH;
+
+    vectorOrdenar(infoBL,Cmp_BaseLarga_Pais_Operacion,MENOR_A_MAYOR);
+
+    infoPPT=vectorCrear(TAM_VEC_MIN,sizeof(tPromedio_Pais_Trimestre));
+
+    if (infoPPT == NULL)
+    {
+        fclose(pf);
+        return SIN_MEM;
+    }
 
     fprintf(pf,"PAIS_DESC;OPERACION;Suma_monto;Cant_trimestre;Promedio\n");
     printf("\n%-40s %10s %12s %15s %10s\n","PAIS_DESC","OPERACION","suma_monto","cant_trimestres","PROMEDIO");
@@ -1052,12 +1063,6 @@ int GenerarArch_Promedio_Pais_Trimestre(Vector* infoBL)
 int GenerarArch_Promedio_Anio_Continente_Op(Vector* infoBL)
 {
     FILE* pf=AbrirArch(ARCH_PROMEDIO_CONTINENTE_ANI_OP,"wt");
-    if(!pf)
-        return ERROR_ARCH;
-
-    
-    vectorOrdenar(infoBL,Cmp_Prom_ACO,MENOR_A_MAYOR);
-
 
     tBase_Larga* vecBL;
     tBase_Larga aux;
@@ -1067,6 +1072,11 @@ int GenerarArch_Promedio_Anio_Continente_Op(Vector* infoBL)
     int cant_registros;
 
     float promedio;
+
+    if(!pf)
+        return ERROR_ARCH;
+
+    vectorOrdenar(infoBL,Cmp_Prom_ACO,MENOR_A_MAYOR);
 
     fprintf(pf,"ANIO;CONTINENTE;OPERACION;Suma_monto;cant_trimestre;PROMEDIO\n");
     printf("\n%-6s %-16s %10s %12s %15s %10s\n","ANIO","CONTINENTE","OPERACION","suma_monto","cant_trimestres","PROMEDIO");
