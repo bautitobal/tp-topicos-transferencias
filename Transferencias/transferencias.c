@@ -27,7 +27,7 @@ FILE* AbrirArch(const char* nombre, const char* modo)
     if(!pf)
     {
         printf("\nError al abrir el archivo %s\n", nombre);
-        return ERROR_ARCH;
+        return NULL;
     }
     
     return pf;
