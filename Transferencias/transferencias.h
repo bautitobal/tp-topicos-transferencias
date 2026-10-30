@@ -108,9 +108,9 @@ typedef struct
     float monto;
 }tBase_Larga;
 
-void trozarCampoVariable_Pais(tPais *info,char* linea);
-void trozarCampoVariable_Transferencia(tTransferencia* transferencia, char* linea);
-void trozarCampoVariable_BaseLarga(tBase_Larga* baseLarga,char* linea);
+bool trozarCampoVariable_Pais(tPais *info,char* linea);
+bool trozarCampoVariable_Transferencia(tTransferencia* transferencia, char* linea);
+bool trozarCampoVariable_BaseLarga(tBase_Larga* baseLarga,char* linea);
 
 
 FILE* AbrirArch(const char* nombre,const char* modo);

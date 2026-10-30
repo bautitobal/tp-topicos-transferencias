@@ -1,24 +1,31 @@
 #include "transferencias.h"
 
 
-void trozarCampoVariable_Pais(tPais* info,char* linea)
+bool trozarCampoVariable_Pais(tPais* info,char* linea)
 {
 
     char* aux;
 
+    /* la ultima linea del archivo puede no tener '\n' */
     aux=strchr(linea,'\n');
+    if(aux)
+        *aux='\0';
 
-    *aux='\0';
     aux=strrchr(linea,';');
+    if(!aux)
+        return false;
     strcpy(info->continente,aux+1);
 
     *aux='\0';
     aux=strrchr(linea,';');
+    if(!aux)
+        return false;
     strcpy(info->desc_pais,aux+1);
 
     *aux='\0';
     strcpy(info->cod_pais,linea);
 
+    return true;
 }
 FILE* AbrirArch(const char* nombre, const char* modo)
 {    
@@ -33,37 +40,50 @@ FILE* AbrirArch(const char* nombre, const char* modo)
     return pf;
 }
 
-void trozarCampoVariable_Transferencia(tTransferencia* info, char* linea)
+bool trozarCampoVariable_Transferencia(tTransferencia* info, char* linea)
 {
     char* aux;
     tTransferencia* infoT=(tTransferencia*)info;
 
 
+    /* la ultima linea del archivo puede no tener '\n' */
     aux=strchr(linea,'\n');
+    if(aux)
+        *aux='\0';
 
-    *aux='\0';
     aux=strrchr(linea,';');
+    if(!aux)
+        return false;
     sscanf(aux+1,"%f",&infoT->monto);
 
     *aux='\0';
     aux=strrchr(linea,';');
+    if(!aux)
+        return false;
     sscanf(aux+1,"%c",&infoT->operacion);
 
     *aux='\0';
     aux=strrchr(linea,';');
+    if(!aux)
+        return false;
     strcpy(infoT->desc_pais,aux+1);
 
     *aux='\0';
     aux=strrchr(linea,';');
+    if(!aux)
+        return false;
     strcpy(infoT->cod_pais,aux+1);
 
     *aux='\0';
     aux=strrchr(linea,';');
+    if(!aux)
+        return false;
     sscanf(aux+1,"%d",&infoT->trimestre);
 
     *aux='\0';
     sscanf(linea,"%d",&infoT->anio);
 
+    return true;
 }
 
 int CargarInfoTransferencia(Vector* infoT, FILE* pTransferencia)
@@ -76,7 +96,10 @@ int CargarInfoTransferencia(Vector* infoT, FILE* pTransferencia)
 
     while(fgets(linea_T,TAM_LINEA,pTransferencia))
     {
-        trozarCampoVariable_Transferencia(&aux,linea_T);
+        /* se saltean las lineas vacias o incompletas */
+        if(!trozarCampoVariable_Transferencia(&aux,linea_T))
+            continue;
+
         codRet = vectorInsertarFinal(infoT,&aux);
 
         if (codRet != TODO_OK)
@@ -230,8 +253,8 @@ int GenerarArch_SaldoPorContinente(Vector* infoT)
         fgets(linea,TAM_LINEA,pPais);
         while(fgets(linea,TAM_LINEA,pPais))
         {
-            trozarCampoVariable_Pais(&Pais_aux,linea);
-            if(compararSinMayusculas(Pais_aux.cod_pais,vec->cod_pais)==0)
+            if(trozarCampoVariable_Pais(&Pais_aux,linea) &&
+               compararSinMayusculas(Pais_aux.cod_pais,vec->cod_pais)==0)
                 AcumularSaldosSegunContinente(s_cont,&Pais_aux,vec);
         }
     }
@@ -240,7 +263,7 @@ int GenerarArch_SaldoPorContinente(Vector* infoT)
     fprintf(pf,"CONTINENTE;Registros;Total_Credito;Total_Debito\n");
     printf("\n%-16s %10s %14s %14s\n","CONTINENTE","Registros","Total_Credito","Total_Debito");
 
-    for(i=0;i<vectorGetCantElem(s_cont);i++)
+    for(i=0;i<(int)vectorGetCantElem(s_cont);i++)
     {
         saldo = vectorGetElementoPorPos(s_cont,i);
         fprintf(pf,"%s;%d;%.2f;%.2f\n", saldo->continente, saldo->cantRegistros,
@@ -274,10 +297,13 @@ int InicializarVectorSaldoContinente(Vector* vec)
 
     while(fgets(linea,TAM_LINEA,pPaises))
     {
-        trozarCampoVariable_Pais(&infoP,linea);
+        /* se saltean las lineas vacias o incompletas */
+        if(!trozarCampoVariable_Pais(&infoP,linea))
+            continue;
+
         existe = false;
 
-        for(i=0; i < vectorGetCantElem(vec); i++)
+        for(i=0; i < (int)vectorGetCantElem(vec); i++)
         {
             saldo = vectorGetElementoPorPos(vec, i);
             if(compararSinMayusculas(saldo->continente, infoP.continente) == 0)
@@ -308,7 +334,7 @@ int InicializarVectorSaldoContinente(Vector* vec)
 void AcumularSaldosSegunContinente(Vector* vecSaldoContinente, tPais* infoPais,tTransferencia* vecTransferencia)
 {
     int i;
-    for(i=0; i < vectorGetCantElem(vecSaldoContinente); i++)
+    for(i=0; i < (int)vectorGetCantElem(vecSaldoContinente); i++)
     {
         tSaldoContinente* saldo = vectorGetElementoPorPos(vecSaldoContinente, i);
         if(compararSinMayusculas(infoPais->continente, saldo->continente) == 0)
@@ -701,14 +727,14 @@ int GenerarArch_SaldoContinentePorcentaje(Vector* infoT)
         while(fgets(linea,TAM_LINEA,pPais))
         {
             vecT=vectorGetElementoPorPos(infoT,i);
-            trozarCampoVariable_Pais(&Pais_aux,linea);
-            if(compararSinMayusculas(Pais_aux.cod_pais,vecT->cod_pais)==0)
+            if(trozarCampoVariable_Pais(&Pais_aux,linea) &&
+               compararSinMayusculas(Pais_aux.cod_pais,vecT->cod_pais)==0)
                 AcumularSaldosSegunContinente(s_cont,&Pais_aux,vecT);
 
         }
     }
 
-    for(j=0;j<s_cont->ce;j++)
+    for(j=0;j<(int)vectorGetCantElem(s_cont);j++)
     {
         saldoContinente=vectorGetElementoPorPos(s_cont,j);
         strcpy(PC_Aux.continente,saldoContinente->continente);
@@ -731,7 +757,7 @@ int GenerarArch_SaldoContinentePorcentaje(Vector* infoT)
 
     vectorOrdenar(infoCPorcentaje,Cmp_Porc_Continente,MENOR_A_MAYOR);
 
-    for(j=0;j<vectorGetCantElem(infoCPorcentaje);j++)
+    for(j=0;j<(int)vectorGetCantElem(infoCPorcentaje);j++)
     {
         pPC_Aux=vectorGetElementoPorPos(infoCPorcentaje,j);
         fwrite(pPC_Aux,sizeof(tPorcentajeContinente),1,pf);
@@ -834,8 +860,8 @@ void EncontrarContinente_SegunPais(char* continente, tTransferencia* auxT, FILE*
 
     while(!encontrado && fgets(linea,TAM_LINEA,pPais) )
     {
-        trozarCampoVariable_Pais(&vecP,linea);
-        if(compararSinMayusculas(vecP.cod_pais,auxT->cod_pais)==0)
+        if(trozarCampoVariable_Pais(&vecP,linea) &&
+           compararSinMayusculas(vecP.cod_pais,auxT->cod_pais)==0)
         {
             strcpy(continente,vecP.continente);
             encontrado=true;
@@ -911,7 +937,7 @@ void CalcularTotalDeOperaciones(Vector* vecT, float* totalDebito, float* totalCr
 {
     int i;
     tTransferencia* aux;
-    for(i=0;i<vectorGetCantElem(vecT);i++)
+    for(i=0;i<(int)vectorGetCantElem(vecT);i++)
     {
         aux=vectorGetElementoPorPos(vecT,i);
 
@@ -925,39 +951,54 @@ void CalcularTotalDeOperaciones(Vector* vecT, float* totalDebito, float* totalCr
 
 }
 
-void trozarCampoVariable_BaseLarga(tBase_Larga* infoBL,char* linea)
+bool trozarCampoVariable_BaseLarga(tBase_Larga* infoBL,char* linea)
 {
     char* aux;
 
+    /* la ultima linea del archivo puede no tener '\n' */
     aux=strchr(linea,'\n');
+    if(aux)
+        *aux='\0';
 
-    *aux='\0';
     aux=strrchr(linea,';');
+    if(!aux)
+        return false;
     sscanf(aux+1,"%f",&infoBL->monto);
 
     *aux='\0';
     aux=strrchr(linea,';');
+    if(!aux)
+        return false;
     sscanf(aux+1,"%c",&infoBL->operacion);
 
     *aux='\0';
     aux=strrchr(linea,';');
+    if(!aux)
+        return false;
     strcpy(infoBL->continente,aux+1);
 
     *aux='\0';
     aux=strrchr(linea,';');
+    if(!aux)
+        return false;
     strcpy(infoBL->desc_pais,aux+1);
 
     *aux='\0';
     aux=strrchr(linea,';');
+    if(!aux)
+        return false;
     strcpy(infoBL->cod_pais,aux+1);
 
     *aux='\0';
     aux=strrchr(linea,';');
+    if(!aux)
+        return false;
     sscanf(aux+1,"%d",&infoBL->trimestre);
 
     *aux='\0';
     sscanf(linea,"%d",&infoBL->anio);
 
+    return true;
 }
 
 int CargarInfo_BaseLarga(Vector* infoBS, FILE* pf)
@@ -970,7 +1011,10 @@ int CargarInfo_BaseLarga(Vector* infoBS, FILE* pf)
 
     while(fgets(linea,TAM_LINEA,pf))
     {
-        trozarCampoVariable_BaseLarga(&aux,linea);
+        /* se saltean las lineas vacias o incompletas */
+        if(!trozarCampoVariable_BaseLarga(&aux,linea))
+            continue;
+
         codRet = vectorInsertarFinal(infoBS,&aux);
 
         if (codRet != TODO_OK)
@@ -1048,7 +1092,7 @@ int GenerarArch_Promedio_Pais_Trimestre(Vector* infoBL)
     vectorOrdenar(infoPPT,Cmp_PPT_DescPais,MENOR_A_MAYOR);
     pAux=(tPromedio_Pais_Trimestre*)infoPPT->vec;
 
-    for(i=0;i<vectorGetCantElem(infoPPT);i++)
+    for(i=0;i<(int)vectorGetCantElem(infoPPT);i++)
     {
         pAux=vectorGetElementoPorPos(infoPPT,i);
 

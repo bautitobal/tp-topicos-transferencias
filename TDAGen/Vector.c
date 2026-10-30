@@ -47,7 +47,7 @@ void MostrarVec(Vector* v)
 {
     void* temp=v->vec;
     int i;
-    for(i=0;i<v->ce;i++)
+    for(i=0;i<(int)v->ce;i++)
     {
         printf("%c ",*(int*)temp);
         temp+=v->tipo;
@@ -92,7 +92,7 @@ int vectorOrdInsertar(Vector* v, void* elem, Cmp cmp)
     if(!v)
         return SIN_MEM;
 
-    while(pos < v->ce)
+    while(pos < (int)v->ce)
     {
         actual = vectorGetElementoPorPos(v, pos);
 
@@ -121,6 +121,8 @@ void vectorOrdenar(Vector* v,Cmp cmp,int opcion)
                     break;
             case 2: menor=Mayor(v,i,cmp);
                     break;
+            default: /* opcion invalida: no se ordena */
+                    return;
         }
 
 
@@ -206,7 +208,7 @@ bool vectorBorrarPorPos(Vector* v, int pos)
     void* DirFin;
     void* i;
 
-    if(pos<0 || pos>=v->ce)
+    if(pos<0 || pos>=(int)v->ce)
         return false;
 
     DirIni=v->vec+v->tipo*pos;
