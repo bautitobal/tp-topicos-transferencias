@@ -7,6 +7,8 @@
 #include "../codigoError.h"
 
 #define INCREMENTO_VEC 5
+/* vector dinámico genérico: almacena elementos de cualquier tipo mediante
+   el tamaño de cada elemento y mantiene cantidad y capacidad actuales. */
 typedef struct{
 
     void* vec;
@@ -14,6 +16,7 @@ typedef struct{
     size_t tam;
     size_t tipo;
 }Vector;
+/* las funciones de comparación devuelven un valor negativo, cero o positivo. */
 typedef int (*Cmp)(void* a,void* b);
 
 Vector* vectorCrear(size_t tam,size_t tipo);

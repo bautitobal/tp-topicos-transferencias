@@ -1,4 +1,4 @@
-/* TP TOPICOS 2026*/
+/* tp topicos 2026*/
 
 #include <stdio.h>
 #include "../Transferencias/transferencias.h"
@@ -10,6 +10,7 @@ int CargarBaseLarga(Vector** infoBL);
 
 int main()
 {
+    /* el menú concentra la ejecución y traduce los errores a mensajes. */
     int codRet = Menu_Principal();
 
     if (codRet == ERROR_ARCH)
@@ -23,6 +24,8 @@ int main()
 
 int Menu_Principal()
 {
+    /* carga las transferencias una sola vez y ejecuta la opción elegida
+       hasta que el usuario solicite salir. */
     FILE* pTransferencia=AbrirArch(ARCH_TRANSFERENCIA,"rt");
     int codRet = TODO_OK;
     int opcion;
@@ -30,7 +33,7 @@ int Menu_Principal()
     char respuesta_para_seguir[TAM_RESPUESTA]="Si";
 
     Vector* infoT;
-    /* la base larga se carga recien cuando se elige la opcion 8 o 9 */
+    /* la base larga se carga recién cuando se elige la opción 8 o 9. */
     Vector* infoBL = NULL;
 
     if(!pTransferencia)
@@ -125,6 +128,7 @@ int Menu_Principal()
 
 void MostrarMenu()
 {
+    /* muestra las consultas disponibles y sus números de opción. */
     puts("\n\nMENU PRINCIPAL");
     puts("\n1. Totales por pais.");
     puts("\n2. Totales por continente.");
@@ -143,6 +147,7 @@ void MostrarMenu()
 
 int CargarBaseLarga(Vector** infoBL)
 {
+    /* abre y carga la base larga bajo demanda; si ya está cargada, la reutiliza. */
     FILE* pBaseLarga;
     int codRet;
 

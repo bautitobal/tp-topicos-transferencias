@@ -48,6 +48,7 @@ int compararSinMayusculas(const char* cadena1, const char* cadena2);
 
 typedef struct
 {
+    /* código y descripción del país junto con su continente. */
     char cod_pais[TAM_COD];
     char desc_pais[TAM_DESC_PAIS];
     char continente[TAM_CONTINENTE];
@@ -56,6 +57,7 @@ typedef struct
 
 typedef struct
 {
+    /* registro original de una transferencia. */
     int anio;
     int trimestre;
     char cod_pais[TAM_COD];
@@ -66,12 +68,14 @@ typedef struct
 
 typedef struct
 {
+    /* porcentajes de crédito y débito correspondientes a un continente. */
     char continente[TAM_CONTINENTE];
     float credito_porcentaje;
     float debito_porcentaje;
 }tPorcentajeContinente;
 typedef struct
 {
+    /* totales acumulados para un país. */
     char cod_pais[TAM_COD];
     char desc_pais[TAM_DESC_PAIS];
     int cantRegistros;
@@ -81,6 +85,7 @@ typedef struct
 
 typedef struct
 {
+    /* totales acumulados para un continente. */
     char continente[TAM_CONTINENTE];
     int cantRegistros;
     float credito;
@@ -89,6 +94,7 @@ typedef struct
 
 typedef struct 
 {
+    /* promedios agrupados por país y tipo de operación. */
     char desc_pais[TAM_DESC_PAIS];
     char operacion;
     float sumaMontos;
@@ -99,6 +105,7 @@ typedef struct
 
 typedef struct
 {
+    /* registro de la base larga, que agrega el continente al movimiento. */
     int anio;
     int trimestre;
     char cod_pais[TAM_COD];
