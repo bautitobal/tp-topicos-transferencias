@@ -40,6 +40,7 @@ bool trozarCampoVariable_Pais(tPais* info,char* linea)
 
     return true;
 }
+
 FILE* AbrirArch(const char* nombre, const char* modo)
 {    
     /* centraliza la apertura de archivos y el mensaje de error. */
@@ -47,7 +48,7 @@ FILE* AbrirArch(const char* nombre, const char* modo)
 
     if(!pf)
     {
-        printf("\nError al abrir el archivo %s\n", nombre);
+        printf("\nError al abrir el archivo %s \n", nombre);
         return NULL;
     }
     
@@ -118,7 +119,7 @@ int CargarInfoTransferencia(Vector* infoT, FILE* pTransferencia)
 
         codRet = vectorInsertarFinal(infoT,&aux); 
 
-        if (codRet != TODO_OK)
+        if (codRet != TODO_OK) /*En caso de error devuelve el motivo*/
             return codRet;
     }
 
@@ -131,14 +132,14 @@ int GenerarArch_SaldoPorPais(Vector* infoT)
     /* agrupa las transferencias por país y genera sus totales de crédito y débito. */
     FILE* pf=AbrirArch(ARCH_TRANSTOTAL_PAISES,"wt");
 
-    tTransferencia* vecTransferencia;
+    tTransferencia* vecTransferencia; /*Crea un puntero a una estructura vecTransferencia*/
 
     int i=0;
-    int fin=vectorGetCantElem(infoT);
+    int fin=vectorGetCantElem(infoT); /*Verifica la cantidad de elementos para apuntar al final*/
     int finPais;
     int codRet;
 
-    Vector* s_pais;
+    Vector* s_pais; 
 
     tSaldoPais aux;
     tSaldoPais* pais_aux;
@@ -148,21 +149,22 @@ int GenerarArch_SaldoPorPais(Vector* infoT)
     char codActual[TAM_COD];
     char descActual[TAM_DESC_PAIS];
 
-    if(!pf)
+    if(!pf) /*En caso de no poder abrirlo*/
         return ERROR_ARCH;
 
     vectorOrdenar(infoT,Cmp_TCod,1);
 
-    s_pais=vectorCrear(CANT_PAISES,sizeof(tSaldoPais));
-    if (s_pais == NULL)
+    s_pais = vectorCrear(CANT_PAISES,sizeof(tSaldoPais)); /*Crea un vector de paises*/
+    
+    if (s_pais == NULL) /*Verifica que haya espacio para el vector*/
     {
         fclose(pf);
         return SIN_MEM;
     }
 
-    vecTransferencia=vectorGetElementoPorPos(infoT,i);
+    vecTransferencia=vectorGetElementoPorPos(infoT,i); /*Busca el registro de la pos=i*/
 
-    while(i<fin)
+    while(i<fin) /*Controla la cantidad de registros del archivo original*/
     {
         cantRegistros=0;
         debito=0;
@@ -181,6 +183,7 @@ int GenerarArch_SaldoPorPais(Vector* infoT)
             vecTransferencia=vectorGetElementoPorPos(infoT,++i);
             
         }
+
         aux.cantRegistros=cantRegistros;
         strcpy(aux.cod_pais,codActual);
         strcpy(aux.desc_pais,descActual);
@@ -189,7 +192,7 @@ int GenerarArch_SaldoPorPais(Vector* infoT)
 
         codRet = vectorInsertarFinal(s_pais,&aux);
 
-        if (codRet != TODO_OK)
+        if (codRet != TODO_OK) /*Prueba de fallos*/
         {
             vectorDestruir(s_pais);
             fclose(pf);

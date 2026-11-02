@@ -50,14 +50,14 @@ int Menu_Principal() /*Llama al menú principal el cual se ejecuta constantement
     codRet = CargarInfoTransferencia(infoT, pTransferencia); 
     fclose(pTransferencia);
 
-    if (codRet != TODO_OK)
+    if (codRet != TODO_OK) /*Si el codigo de retorno es distinto al OK, destruye el vector y aborta el sistema*/
     {
         vectorDestruir(infoT);
         return codRet;
     }
 
-    MostrarMenu();
-    opcion=ValidarRango_Int(1,10);
+    MostrarMenu(); 
+    opcion=ValidarRango_Int(1,10); 
 
     while(compararSinMayusculas(respuesta_para_seguir,"No")!=0)
     {
