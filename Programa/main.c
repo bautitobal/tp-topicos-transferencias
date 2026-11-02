@@ -22,32 +22,32 @@ int main()
 
 }
 
-int Menu_Principal()
+int Menu_Principal() /*Llama al menú principal el cual se ejecuta constantemente con la eleccion de cada accion*/
 {
     /* carga las transferencias una sola vez y ejecuta la opción elegida
        hasta que el usuario solicite salir. */
-    FILE* pTransferencia=AbrirArch(ARCH_TRANSFERENCIA,"rt");
-    int codRet = TODO_OK;
+    FILE* pTransferencia=AbrirArch(ARCH_TRANSFERENCIA,"rt"); /*Abre el archivo "../transferencias_personales_clean.csv"*/
+    int codRet = TODO_OK; /*0 por defecto*/
     int opcion;
 
-    char respuesta_para_seguir[TAM_RESPUESTA]="Si";
+    char respuesta_para_seguir[TAM_RESPUESTA]="Si"; /*FLAG*/
 
     Vector* infoT;
     /* la base larga se carga recién cuando se elige la opción 8 o 9. */
     Vector* infoBL = NULL;
 
-    if(!pTransferencia)
+    if(!pTransferencia) /*Verifica que no haya errores al abrir el archivo*/
         return ERROR_ARCH;
 
-    infoT = vectorCrear(TAM_VEC,sizeof(tTransferencia));
+    infoT = vectorCrear(TAM_VEC,sizeof(tTransferencia)); /*Crea el vector informacion de las transferencias*/
 
-    if(infoT == NULL)
+    if(infoT == NULL) /*Verifica que se haya podido reservar memoria para el vector*/
     {
         fclose(pTransferencia);
         return SIN_MEM;
     }
 
-    codRet = CargarInfoTransferencia(infoT,pTransferencia);
+    codRet = CargarInfoTransferencia(infoT, pTransferencia); 
     fclose(pTransferencia);
 
     if (codRet != TODO_OK)

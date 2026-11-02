@@ -104,19 +104,19 @@ bool trozarCampoVariable_Transferencia(tTransferencia* info, char* linea)
 int CargarInfoTransferencia(Vector* infoT, FILE* pTransferencia)
 {
     /* salta el encabezado, valida cada registro y lo agrega al vector. */
-    tTransferencia aux;
-    char linea_T[TAM_LINEA];
+    tTransferencia aux;  
+    char linea_T[TAM_LINEA]; /*El registro actual que lee*/
     int codRet;
 
-    fgets(linea_T,TAM_LINEA,pTransferencia);
+    fgets(linea_T,TAM_LINEA,pTransferencia); /*Lee el encabezado (titulos) pero no lo usa para nada*/
 
     while(fgets(linea_T,TAM_LINEA,pTransferencia))
     {
         /* se saltean las lineas vacias o incompletas */
-        if(!trozarCampoVariable_Transferencia(&aux,linea_T))
+        if(!trozarCampoVariable_Transferencia(&aux, linea_T)) /*Llena la estructura con sus campos*/
             continue;
 
-        codRet = vectorInsertarFinal(infoT,&aux);
+        codRet = vectorInsertarFinal(infoT,&aux); 
 
         if (codRet != TODO_OK)
             return codRet;
