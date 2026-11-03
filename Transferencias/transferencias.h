@@ -115,50 +115,68 @@ typedef struct
     float monto;
 }tBase_Larga;
 
-bool trozarCampoVariable_Pais(tPais *info,char* linea);
-bool trozarCampoVariable_Transferencia(tTransferencia* transferencia, char* linea);
-bool trozarCampoVariable_BaseLarga(tBase_Larga* baseLarga,char* linea);
+/* Los prototipos siguen el mismo orden que las funciones en transferencias.c */
 
-
+/* ---- funciones compartidas (se usan desde más de un punto) ----
+   compararSinMayusculas está declarada más arriba, junto a los #define */
 FILE* AbrirArch(const char* nombre,const char* modo);
-
-int CargarInfoTransferencia(Vector* transferencia, FILE* pf);
-int CargarInfo_BaseLarga(Vector* baseLarga, FILE* pf);
-
-int GenerarArch_SaldoPorPais(Vector* transferencia);
-int GenerarArch_SaldoPorContinente(Vector* transferencia);
-int GenerarArch_SaldoTrimestre(Vector* transferencia);
-int GenerarArch_SaldoAnio(Vector* transferencia);
-int GenerarArch_SaldoPais_SegunOperacion(Vector* transferencia);
-int GenerarArch_SaldoContinentePorcentaje(Vector* transferencia);
-int GenerarArch_BaseLarga(Vector* transferencia);
-int GenerarArch_Promedio_Pais_Trimestre(Vector* baseLarga);
-int GenerarArch_Promedio_Anio_Continente_Op(Vector* baseLarga);
-
-
-void AcumularSaldosSegunContinente(Vector* continente, tPais* pais, tTransferencia* transferencia);
+int ValidarRango_Int(int LimI, int LimS);
+char ValidarChar(char a, char b);
+bool trozarCampoVariable_Pais(tPais *info,char* linea);
 int InicializarVectorSaldoContinente(Vector* continente);
-void PonerEnCeroVecFloat(float* vec);
-void AcumularSaldoTrimestre(tTransferencia* transferencia, float* saldoTrimestre,bool* tieneOperacion);
-void CalcularTotalDeOperaciones(Vector* transferencia, float* totalDebito, float* totalCredito);
-int LeerArchivo_PorcentajeContinente();
-void EncontrarContinente_SegunPais(char* continente, tTransferencia* auxT, FILE* pPais);
+void AcumularSaldosSegunContinente(Vector* continente, tPais* pais, tTransferencia* transferencia);
+int Cmp_TDesc(void* a,void* b);
 
+/* ---- carga inicial de las transferencias ---- */
+bool trozarCampoVariable_Transferencia(tTransferencia* transferencia, char* linea);
+int CargarInfoTransferencia(Vector* transferencia, FILE* pf);
+
+/* ---- opción 1: totales por país ---- */
+int GenerarArch_SaldoPorPais(Vector* transferencia);
 int Cmp_TCod(void* a, void* b);
 int cmp_CreditoPais(void* a, void* b);
-int CmpCredito_Continente(void* a, void* b);
-int Cmp_TDesc(void* a,void* b);
-int Cmp_TAnio(void* a, void* b);
-int Cmp_SPDebito(void* a, void* b);
-int Cmp_SPCredito(void* a, void* b);
-int Cmp_Porc_Continente(void* a, void* b);
-int Cmp_Transferencia_VariosCampos(void* a, void* b);
-int Cmp_BaseLarga_Pais_Operacion(void* a, void* b);
-int Cmp_PPT_PromedioCredito(void* a, void* b);
-int Cmp_PPT_DescPais(void* a, void* b);
-int Cmp_Prom_ACO(void* a, void* b);
 
-char ValidarChar(char a, char b);
-int ValidarRango_Int(int LimI, int LimS);
+/* ---- opción 2: totales por continente ---- */
+int GenerarArch_SaldoPorContinente(Vector* transferencia);
+int CmpCredito_Continente(void* a, void* b);
+
+/* ---- opción 3: saldo trimestral por país ---- */
+int GenerarArch_SaldoTrimestre(Vector* transferencia);
+void PonerEnCeroVecFloat(float* vec);
+void AcumularSaldoTrimestre(tTransferencia* transferencia, float* saldoTrimestre,bool* tieneOperacion);
+
+/* ---- opción 4: totales anuales y variación interanual ---- */
+int GenerarArch_SaldoAnio(Vector* transferencia);
+int Cmp_TAnio(void* a, void* b);
+
+/* ---- opción 5: ranking de países por crédito o débito ---- */
+int GenerarArch_SaldoPais_SegunOperacion(Vector* transferencia);
+int Cmp_SPCredito(void* a, void* b);
+int Cmp_SPDebito(void* a, void* b);
+
+/* ---- opción 6: participación porcentual por continente ---- */
+int GenerarArch_SaldoContinentePorcentaje(Vector* transferencia);
+void CalcularTotalDeOperaciones(Vector* transferencia, float* totalDebito, float* totalCredito);
+int Cmp_Porc_Continente(void* a, void* b);
+int LeerArchivo_PorcentajeContinente();
+
+/* ---- opción 7: generación de la base larga ---- */
+int GenerarArch_BaseLarga(Vector* transferencia);
+int Cmp_Transferencia_VariosCampos(void* a, void* b);
+void EncontrarContinente_SegunPais(char* continente, tTransferencia* auxT, FILE* pPais);
+
+/* ---- carga de la base larga (opciones 8 y 9) ---- */
+bool trozarCampoVariable_BaseLarga(tBase_Larga* baseLarga,char* linea);
+int CargarInfo_BaseLarga(Vector* baseLarga, FILE* pf);
+
+/* ---- opción 8: promedio trimestral por país ---- */
+int GenerarArch_Promedio_Pais_Trimestre(Vector* baseLarga);
+int Cmp_BaseLarga_Pais_Operacion(void* a, void* b);
+int Cmp_PPT_DescPais(void* a, void* b);
+int Cmp_PPT_PromedioCredito(void* a, void* b);
+
+/* ---- opción 9: promedio por continente, operación y año ---- */
+int GenerarArch_Promedio_Anio_Continente_Op(Vector* baseLarga);
+int Cmp_Prom_ACO(void* a, void* b);
 
 #endif

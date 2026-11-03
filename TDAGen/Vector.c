@@ -1,6 +1,14 @@
 #include "Vector.h"
 
 
+/* Usada en:
+   - opción 1: GenerarArch_SaldoPorPais
+   - opción 2: GenerarArch_SaldoPorContinente
+   - opción 5: GenerarArch_SaldoPais_SegunOperacion
+   - opción 6: GenerarArch_SaldoContinentePorcentaje
+   - opción 8: GenerarArch_Promedio_Pais_Trimestre
+   - main.c: Menu_Principal
+   - main.c: CargarBaseLarga (opciones 8 y 9) */
 Vector* vectorCrear(size_t tam, size_t tipo)
 {
     /* reserva el vector y su almacenamiento inicial. */
@@ -19,6 +27,14 @@ Vector* vectorCrear(size_t tam, size_t tipo)
     return v;
 
 }
+/* Usada en:
+   - CargarInfoTransferencia (carga inicial)
+   - opción 1: GenerarArch_SaldoPorPais
+   - InicializarVectorSaldoContinente (opciones 2 y 6)
+   - opción 5: GenerarArch_SaldoPais_SegunOperacion
+   - opción 6: GenerarArch_SaldoContinentePorcentaje
+   - CargarInfo_BaseLarga (opciones 8 y 9)
+   - opción 8: GenerarArch_Promedio_Pais_Trimestre */
 int vectorInsertarFinal(Vector* v, void* elem)
 {
     /* agrega un elemento al final y amplía la capacidad cuando es necesario. */
@@ -45,6 +61,7 @@ int vectorInsertarFinal(Vector* v, void* elem)
 
     return TODO_OK;
 }
+/* No se usa actualmente en el programa (queda disponible como parte del TDA). */
 void MostrarVec(Vector* v)
 {
     /* muestra los elementos como caracteres; sirve como rutina de prueba. */
@@ -57,6 +74,8 @@ void MostrarVec(Vector* v)
     }
 }
 
+/* No se usa actualmente en el programa: sólo la llama vectorOrdInsertar,
+   que tampoco se usa (queda disponible como parte del TDA). */
 int vectorInsertarEnPos(Vector* v, void* elem, int pos)
 {
     /* inserta un elemento en una posición y desplaza los siguientes. */
@@ -87,6 +106,7 @@ int vectorInsertarEnPos(Vector* v, void* elem, int pos)
 
     return TODO_OK;
 }
+/* No se usa actualmente en el programa (queda disponible como parte del TDA). */
 int vectorOrdInsertar(Vector* v, void* elem, Cmp cmp)
 {
     /* busca la posición ordenada del elemento y luego lo inserta. */
@@ -112,6 +132,16 @@ int vectorOrdInsertar(Vector* v, void* elem, Cmp cmp)
     return codRet;
 }
 
+/* Usada en:
+   - opción 1: GenerarArch_SaldoPorPais
+   - opción 2: GenerarArch_SaldoPorContinente
+   - opción 3: GenerarArch_SaldoTrimestre
+   - opción 4: GenerarArch_SaldoAnio
+   - opción 5: GenerarArch_SaldoPais_SegunOperacion
+   - opción 6: GenerarArch_SaldoContinentePorcentaje
+   - opción 7: GenerarArch_BaseLarga
+   - opción 8: GenerarArch_Promedio_Pais_Trimestre
+   - opción 9: GenerarArch_Promedio_Anio_Continente_Op */
 void vectorOrdenar(Vector* v,Cmp cmp,int opcion)
 {
     /* ordena mediante selección, de menor a mayor o de mayor a menor. */
@@ -136,6 +166,7 @@ void vectorOrdenar(Vector* v,Cmp cmp,int opcion)
 
     }
 }
+/* Usada en: vectorOrdenar (Vector.c), que usan las opciones 1 a 9. */
 void* Menor(Vector* v, void* actual,Cmp cmp)
 {
     /* devuelve la dirección del menor elemento desde la posición indicada. */
@@ -146,6 +177,7 @@ void* Menor(Vector* v, void* actual,Cmp cmp)
                 menor=j;
     return menor;
 }
+/* Usada en: vectorOrdenar (Vector.c), que usan las opciones 1 a 9. */
 void* Mayor(Vector* v, void* actual,Cmp cmp)
 {
     /* devuelve la dirección del mayor elemento desde la posición indicada. */
@@ -157,6 +189,7 @@ void* Mayor(Vector* v, void* actual,Cmp cmp)
     return mayor;
 }
 
+/* Usada en: vectorOrdenar (Vector.c), que usan las opciones 1 a 9. */
 void Swap(void* a, void* b, size_t tipo)
 {
     /* intercambia byte a byte dos elementos genéricos. */
@@ -172,6 +205,8 @@ void Swap(void* a, void* b, size_t tipo)
         y++;
     }
 }
+/* No se usa actualmente en el programa: sólo la llama vectorDesordBorrar,
+   que tampoco se usa (queda disponible como parte del TDA). */
 int vectorDesordBuscar(Vector* v, void* elem,Cmp cmp)
 {
     /* busca linealmente un elemento en un vector sin ordenar. */
@@ -185,6 +220,8 @@ int vectorDesordBuscar(Vector* v, void* elem,Cmp cmp)
         pos=(DirIni-v->vec)/v->tipo;
     return pos;
 }
+/* No se usa actualmente en el programa: sólo la llama vectorOrdBorrar,
+   que tampoco se usa (queda disponible como parte del TDA). */
 int vectorOrdBuscar(Vector* v, void* elem,Cmp cmp)
 {
     /* busca mediante división binaria en un vector ordenado. */
@@ -213,6 +250,8 @@ int vectorOrdBuscar(Vector* v, void* elem,Cmp cmp)
     return pos;
 
 }
+/* No se usa actualmente en el programa: sólo la llaman vectorDesordBorrar, vectorOrdBorrar y vectorBorrarTodaAparicion,
+   que tampoco se usan (quedan disponibles como parte del TDA). */
 bool vectorBorrarPorPos(Vector* v, int pos)
 {
     /* elimina una posición y compacta el almacenamiento restante. */
@@ -231,18 +270,21 @@ bool vectorBorrarPorPos(Vector* v, int pos)
     v->ce--;
     return true;
 }
+/* No se usa actualmente en el programa (queda disponible como parte del TDA). */
 bool vectorDesordBorrar(Vector*v, void* elem,Cmp cmp)
 {
     /* busca y elimina la primera coincidencia en un vector sin ordenar. */
     int pos=vectorDesordBuscar(v,elem,cmp);
     return vectorBorrarPorPos(v,pos);
 }
+/* No se usa actualmente en el programa (queda disponible como parte del TDA). */
 bool vectorOrdBorrar(Vector*v, void* elem,Cmp cmp)
 {
     /* busca y elimina la primera coincidencia en un vector ordenado. */
     int pos=vectorOrdBuscar(v,elem,cmp);
     return vectorBorrarPorPos(v,pos);
 }
+/* No se usa actualmente en el programa (queda disponible como parte del TDA). */
 bool vectorBorrarTodaAparicion(Vector* v, void* elem,Cmp cmp)
 {
     /* elimina todas las apariciones que coinciden con el elemento indicado. */
@@ -256,6 +298,13 @@ bool vectorBorrarTodaAparicion(Vector* v, void* elem,Cmp cmp)
     }
     return true;
 }
+/* Usada en:
+   - opción 1: GenerarArch_SaldoPorPais
+   - opción 2: GenerarArch_SaldoPorContinente
+   - opción 5: GenerarArch_SaldoPais_SegunOperacion
+   - opción 6: GenerarArch_SaldoContinentePorcentaje
+   - opción 8: GenerarArch_Promedio_Pais_Trimestre
+   - main.c: Menu_Principal */
 void vectorDestruir(Vector* v)
 {
     /* libera el bloque de datos y la estructura del vector. */
@@ -268,12 +317,39 @@ void vectorDestruir(Vector* v)
     free(v);
 }
 
+/* Usada en:
+   - opción 1: GenerarArch_SaldoPorPais
+   - opción 2: GenerarArch_SaldoPorContinente
+   - InicializarVectorSaldoContinente (opciones 2 y 6)
+   - AcumularSaldosSegunContinente (opciones 2 y 6)
+   - opción 3: GenerarArch_SaldoTrimestre
+   - opción 4: GenerarArch_SaldoAnio
+   - opción 5: GenerarArch_SaldoPais_SegunOperacion
+   - opción 6: GenerarArch_SaldoContinentePorcentaje
+   - opción 7: GenerarArch_BaseLarga
+   - CalcularTotalDeOperaciones (opción 6)
+   - opción 8: GenerarArch_Promedio_Pais_Trimestre
+   - opción 9: GenerarArch_Promedio_Anio_Continente_Op
+   - vectorOrdInsertar (Vector.c) */
 void* vectorGetElementoPorPos(Vector* v, int pos)
 {
     /* calcula y devuelve la dirección del elemento solicitado. */
     return v->vec+pos*v->tipo;
 }
 
+/* Usada en:
+   - opción 1: GenerarArch_SaldoPorPais
+   - opción 2: GenerarArch_SaldoPorContinente
+   - InicializarVectorSaldoContinente (opciones 2 y 6)
+   - AcumularSaldosSegunContinente (opciones 2 y 6)
+   - opción 3: GenerarArch_SaldoTrimestre
+   - opción 4: GenerarArch_SaldoAnio
+   - opción 5: GenerarArch_SaldoPais_SegunOperacion
+   - opción 6: GenerarArch_SaldoContinentePorcentaje
+   - opción 7: GenerarArch_BaseLarga
+   - CalcularTotalDeOperaciones (opción 6)
+   - opción 8: GenerarArch_Promedio_Pais_Trimestre
+   - opción 9: GenerarArch_Promedio_Anio_Continente_Op */
 size_t vectorGetCantElem(Vector* v)
 {
     /* informa cuántos elementos válidos contiene el vector. */

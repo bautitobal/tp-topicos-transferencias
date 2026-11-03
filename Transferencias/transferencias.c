@@ -1,46 +1,45 @@
 #include "transferencias.h"
 
-static float RedondearDosDecimales(float valor)
+/* ======================================================================== */
+/* FUNCIONES COMPARTIDAS                                                    */
+/* Se usan desde más de un punto del programa. Encima de cada una se        */
+/* aclara en qué opciones/funciones se utiliza. Las funciones que usa       */
+/* una sola opción están más abajo, en la sección de esa opción.            */
+/* ======================================================================== */
+
+/* USADA EN VARIOS PUNTOS (compara textos sin distinguir mayúsculas):
+   - opción 1: GenerarArch_SaldoPorPais y el comparador Cmp_TCod
+   - opción 2: GenerarArch_SaldoPorContinente, InicializarVectorSaldoContinente
+               y AcumularSaldosSegunContinente
+   - opción 3: GenerarArch_SaldoTrimestre y el comparador Cmp_TDesc
+   - opción 5: GenerarArch_SaldoPais_SegunOperacion y el comparador Cmp_TDesc
+   - opción 6: GenerarArch_SaldoContinentePorcentaje, InicializarVectorSaldoContinente,
+               AcumularSaldosSegunContinente y el comparador Cmp_Porc_Continente
+   - opción 7: GenerarArch_BaseLarga, EncontrarContinente_SegunPais y el
+               comparador Cmp_Transferencia_VariosCampos
+   - opción 8: GenerarArch_Promedio_Pais_Trimestre y los comparadores
+               Cmp_BaseLarga_Pais_Operacion y Cmp_PPT_DescPais
+   - opción 9: GenerarArch_Promedio_Anio_Continente_Op y el comparador Cmp_Prom_ACO
+   - main.c: Menu_Principal (para comprobar si la respuesta es "No") */
+int compararSinMayusculas(const char* c1, const char* c2)
 {
-    /* redondea un importe a dos decimales evitando truncar valores negativos. */
-    int centesimos;
+    /* compara dos cadenas ignorando diferencias entre mayúsculas y minúsculas. */
+    while(*c1 && *c2 && tolower((unsigned char)*c1) == tolower((unsigned char)*c2))
+    {
+        c1++;
+        c2++;
+    }
 
-    if(valor >= 0)
-        centesimos=(int)(valor*100+0.5f);
-    else
-        centesimos=(int)(valor*100-0.5f);
-
-    return (float)centesimos/100;
+    return tolower((unsigned char)*c1) - tolower((unsigned char)*c2);
 }
 
-bool trozarCampoVariable_Pais(tPais* info,char* linea)
-{
-    /* separa una línea de países usando ';' y completa su estructura. */
-
-    char* aux;
-
-    /* la ultima linea del archivo puede no tener '\n' */
-    aux=strchr(linea,'\n');
-    if(aux)
-        *aux='\0';
-
-    aux=strrchr(linea,';');
-    if(!aux)
-        return false;
-    strcpy(info->continente,aux+1);
-
-    *aux='\0';
-    aux=strrchr(linea,';');
-    if(!aux)
-        return false;
-    strcpy(info->desc_pais,aux+1);
-
-    *aux='\0';
-    strcpy(info->cod_pais,linea);
-
-    return true;
-}
-
+/* USADA EN VARIOS PUNTOS (abre un archivo y avisa por pantalla si no puede):
+   - opciones 1 a 9: todas las funciones GenerarArch_* abren con ella su archivo
+     de salida (la opción 7 también abre paises_continentes.csv)
+   - opciones 2 y 6: InicializarVectorSaldoContinente (abre paises_continentes.csv)
+   - opción 6: LeerArchivo_PorcentajeContinente (abre el archivo .dat generado)
+   - main.c: Menu_Principal (abre el CSV de transferencias) y
+     CargarBaseLarga (abre la base larga) */
 FILE* AbrirArch(const char* nombre, const char* modo)
 {    
     /* centraliza la apertura de archivos y el mensaje de error. */
@@ -55,9 +54,209 @@ FILE* AbrirArch(const char* nombre, const char* modo)
     return pf;
 }
 
+/* USADA EN VARIOS PUNTOS (pide un entero por teclado hasta que esté entre LimI y LimS):
+   - main.c: Menu_Principal (opción del menú, de 1 a 10)
+   - opción 3: GenerarArch_SaldoTrimestre (año a consultar)
+   - opción 5: GenerarArch_SaldoPais_SegunOperacion (cantidad de países a listar) */
+int ValidarRango_Int(int LimI, int LimS)
+{
+    /* lee un entero hasta recibir un valor dentro del rango solicitado. */
+    int dato;
+    int leidos;
+    int c;
+
+    leidos=scanf("%d",&dato);
+    while(leidos!=EOF && (leidos!=1 || dato<LimI || dato>LimS))
+    {
+        /* descarta lo que quedo en el buffer (por ejemplo, letras) */
+        while((c=getchar())!='\n' && c!=EOF);
+
+        printf("\nError - Ingrese un numero entre %d y %d: ",LimI, LimS);
+        leidos=scanf("%d",&dato);
+    }
+
+    /* sin mas entrada disponible se toma el limite superior */
+    if(leidos==EOF)
+        dato=LimS;
+
+    return dato;
+}
+
+/* USADA EN VARIOS PUNTOS (pide un carácter por teclado hasta que sea uno de los dos permitidos):
+   - opción 5: GenerarArch_SaldoPais_SegunOperacion (elegir crédito 'C' o débito 'D')
+   - opción 6: LeerArchivo_PorcentajeContinente (responder 'S' o 'N' para leer el archivo) */
+char ValidarChar(char a, char b)
+{
+    /* lee una opción de carácter hasta que coincida con una de las permitidas. */
+    char dato;
+    scanf(" %c",&dato);
+    while(dato!= a && dato!=b)
+    {
+        printf("\nError - La opcion es %c o %c: ",a,b);
+        scanf(" %c",&dato);
+    }
+    return dato;
+}
+
+/* USADA EN VARIOS PUNTOS (separa una línea de paises_continentes.csv):
+   - opción 2: GenerarArch_SaldoPorContinente
+   - opciones 2 y 6: InicializarVectorSaldoContinente
+   - opción 6: GenerarArch_SaldoContinentePorcentaje
+   - opción 7: EncontrarContinente_SegunPais */
+bool trozarCampoVariable_Pais(tPais* info,char* linea)
+{
+    /* separa una línea de paises_continentes.csv y completa la estructura tPais.
+       formato de la línea: PAIS_COD;PAIS_DESC;CONTINENTE
+
+       la línea se recorre de derecha a izquierda: se busca el último ';' con
+       strrchr, se copia lo que hay a su derecha y se lo reemplaza por '\0'. así
+       la línea se va acortando hasta que sólo queda el código de país.
+       OJO: modifica el contenido de 'linea'.
+
+       devuelve true si pudo completar los tres campos, false si a la línea le
+       faltan separadores (línea vacía o incompleta). */
+
+    char* aux;
+
+    /* la ultima linea del archivo puede no tener '\n' */
+    aux=strchr(linea,'\n');
+    if(aux)
+        *aux='\0';
+
+    /* último campo: CONTINENTE */
+    aux=strrchr(linea,';');
+    if(!aux)
+        return false;
+    strcpy(info->continente,aux+1);
+
+    /* campo del medio: PAIS_DESC */
+    *aux='\0';
+    aux=strrchr(linea,';');
+    if(!aux)
+        return false;
+    strcpy(info->desc_pais,aux+1);
+
+    /* lo único que queda en la línea es el primer campo: PAIS_COD */
+    *aux='\0';
+    strcpy(info->cod_pais,linea);
+
+    return true;
+}
+
+/* USADA EN VARIOS PUNTOS (arma el vector con un saldo en cero por cada continente):
+   - opción 2: GenerarArch_SaldoPorContinente
+   - opción 6: GenerarArch_SaldoContinentePorcentaje */
+int InicializarVectorSaldoContinente(Vector* vec)
+{
+    /* carga una entrada inicial para cada continente presente en el archivo auxiliar. */
+    FILE* pPaises=AbrirArch(ARCH_PAISES,"rt");
+
+    char linea[TAM_LINEA];
+
+    tPais infoP;
+    tSaldoContinente nuevo;
+    tSaldoContinente* saldo;
+    int i;
+    bool existe;
+    int codRet;
+
+    if(!pPaises)
+        return ERROR_ARCH;
+
+    fgets(linea,TAM_LINEA,pPaises);
+
+    while(fgets(linea,TAM_LINEA,pPaises))
+    {
+        /* se saltean las lineas vacias o incompletas */
+        if(!trozarCampoVariable_Pais(&infoP,linea))
+            continue;
+
+        existe = false;
+
+        for(i=0; i < (int)vectorGetCantElem(vec); i++)
+        {
+            saldo = vectorGetElementoPorPos(vec, i);
+            if(compararSinMayusculas(saldo->continente, infoP.continente) == 0)
+            {
+                existe = true;
+                i = vectorGetCantElem(vec);
+            }
+        }
+
+        if(!existe)
+        {
+            strcpy(nuevo.continente, infoP.continente);
+            nuevo.cantRegistros = 0;
+            nuevo.credito = 0;
+            nuevo.debito = 0;
+            codRet = vectorInsertarFinal(vec, &nuevo);
+
+            if(codRet != TODO_OK)
+            {
+                fclose(pPaises);
+                return codRet;
+            }
+        }
+    }
+    fclose(pPaises);
+    return TODO_OK;
+}
+
+/* USADA EN VARIOS PUNTOS (suma una transferencia al saldo de su continente):
+   - opción 2: GenerarArch_SaldoPorContinente
+   - opción 6: GenerarArch_SaldoContinentePorcentaje */
+void AcumularSaldosSegunContinente(Vector* vecSaldoContinente, tPais* infoPais,tTransferencia* vecTransferencia)
+{
+    /* actualiza el continente del país con el importe de una transferencia. */
+    int i;
+    for(i=0; i < (int)vectorGetCantElem(vecSaldoContinente); i++)
+    {
+        tSaldoContinente* saldo = vectorGetElementoPorPos(vecSaldoContinente, i);
+        if(compararSinMayusculas(infoPais->continente, saldo->continente) == 0)
+        {
+            saldo->cantRegistros++;
+            if(vecTransferencia->operacion == CREDITO)
+            {
+                saldo->credito += vecTransferencia->monto;
+            }
+            else
+            {
+                saldo->debito += vecTransferencia->monto;
+            }
+            return;
+        }
+    }
+}
+
+/* USADA EN VARIOS PUNTOS (comparador para vectorOrdenar, ordena por nombre de país):
+   - opción 3: GenerarArch_SaldoTrimestre
+   - opción 5: GenerarArch_SaldoPais_SegunOperacion */
+int Cmp_TDesc(void* a, void* b)
+{
+    /* ordena transferencias alfabéticamente por descripción de país. */
+    tTransferencia* x = (tTransferencia*)a;
+    tTransferencia* y = (tTransferencia*)b;
+    return compararSinMayusculas(x->desc_pais, y->desc_pais);
+}
+
+/* ======================================================================== */
+/* CARGA INICIAL DE LAS TRANSFERENCIAS                                      */
+/* Se ejecuta una sola vez al iniciar el programa (Menu_Principal, main.c). */
+/* ======================================================================== */
+
 bool trozarCampoVariable_Transferencia(tTransferencia* info, char* linea)
 {
-    /* extrae los campos de una transferencia desde el final de la línea. */
+    /* separa una línea de transferencias_personales_clean.csv y completa tTransferencia.
+       formato de la línea: ANIO;TRIMESTRE;PAIS_COD;PAIS_DESC;OPERACION;MONTO
+
+       usa la misma técnica que trozarCampoVariable_Pais: va de derecha a izquierda,
+       copia/convierte lo que hay después del último ';' y lo corta con '\0'.
+       los campos numéricos se convierten con sscanf (%f monto, %d trimestre y año)
+       y la operación se lee como un carácter ('C' crédito, 'D' débito).
+       OJO: modifica el contenido de 'linea'. no se verifica el valor devuelto
+       por sscanf, o sea que no se valida que los números sean correctos.
+
+       devuelve true si la línea tenía todos los separadores, false si no. */
     char* aux;
     tTransferencia* infoT=(tTransferencia*)info;
 
@@ -67,35 +266,41 @@ bool trozarCampoVariable_Transferencia(tTransferencia* info, char* linea)
     if(aux)
         *aux='\0';
 
+    /* 6to campo (último): MONTO */
     aux=strrchr(linea,';');
     if(!aux)
         return false;
     sscanf(aux+1,"%f",&infoT->monto);
 
+    /* 5to campo: OPERACION */
     *aux='\0';
     aux=strrchr(linea,';');
     if(!aux)
         return false;
     sscanf(aux+1,"%c",&infoT->operacion);
 
+    /* 4to campo: PAIS_DESC */
     *aux='\0';
     aux=strrchr(linea,';');
     if(!aux)
         return false;
     strcpy(infoT->desc_pais,aux+1);
 
+    /* 3er campo: PAIS_COD */
     *aux='\0';
     aux=strrchr(linea,';');
     if(!aux)
         return false;
     strcpy(infoT->cod_pais,aux+1);
 
+    /* 2do campo: TRIMESTRE */
     *aux='\0';
     aux=strrchr(linea,';');
     if(!aux)
         return false;
     sscanf(aux+1,"%d",&infoT->trimestre);
 
+    /* lo único que queda en la línea es el primer campo: ANIO */
     *aux='\0';
     sscanf(linea,"%d",&infoT->anio);
 
@@ -126,6 +331,10 @@ int CargarInfoTransferencia(Vector* infoT, FILE* pTransferencia)
     codRet = TODO_OK;
     return codRet;
 }
+
+/* ======================================================================== */
+/* OPCIÓN 1 - Totales por país                                              */
+/* ======================================================================== */
 
 int GenerarArch_SaldoPorPais(Vector* infoT)
 {
@@ -222,6 +431,27 @@ int GenerarArch_SaldoPorPais(Vector* infoT)
     return codRet;
 
 }
+
+int Cmp_TCod(void* a, void* b)
+{
+    /* ordena transferencias por código de país. */
+    tTransferencia* x= (tTransferencia*)a;
+    tTransferencia* y= (tTransferencia*)b;
+    return compararSinMayusculas(x->cod_pais,y->cod_pais);
+}
+
+int cmp_CreditoPais(void* a, void* b)
+{
+    /* compara dos saldos de país por el total de crédito. */
+    tSaldoPais* x= (tSaldoPais*)a;
+    tSaldoPais* y= (tSaldoPais*)b;
+    return (x->credito > y->credito) - (x->credito < y->credito);
+}
+
+/* ======================================================================== */
+/* OPCIÓN 2 - Totales por continente                                        */
+/* ======================================================================== */
+
 int GenerarArch_SaldoPorContinente(Vector* infoT)
 {
     /* relaciona cada transferencia con su país y acumula los totales por continente. */
@@ -298,83 +528,19 @@ int GenerarArch_SaldoPorContinente(Vector* infoT)
 
     return TODO_OK;
 }
-int InicializarVectorSaldoContinente(Vector* vec)
+
+int CmpCredito_Continente(void* a, void* b)
 {
-    /* carga una entrada inicial para cada continente presente en el archivo auxiliar. */
-    FILE* pPaises=AbrirArch(ARCH_PAISES,"rt");
-
-    char linea[TAM_LINEA];
-
-    tPais infoP;
-    tSaldoContinente nuevo;
-    tSaldoContinente* saldo;
-    int i;
-    bool existe;
-    int codRet;
-
-    if(!pPaises)
-        return ERROR_ARCH;
-
-    fgets(linea,TAM_LINEA,pPaises);
-
-    while(fgets(linea,TAM_LINEA,pPaises))
-    {
-        /* se saltean las lineas vacias o incompletas */
-        if(!trozarCampoVariable_Pais(&infoP,linea))
-            continue;
-
-        existe = false;
-
-        for(i=0; i < (int)vectorGetCantElem(vec); i++)
-        {
-            saldo = vectorGetElementoPorPos(vec, i);
-            if(compararSinMayusculas(saldo->continente, infoP.continente) == 0)
-            {
-                existe = true;
-                i = vectorGetCantElem(vec);
-            }
-        }
-
-        if(!existe)
-        {
-            strcpy(nuevo.continente, infoP.continente);
-            nuevo.cantRegistros = 0;
-            nuevo.credito = 0;
-            nuevo.debito = 0;
-            codRet = vectorInsertarFinal(vec, &nuevo);
-
-            if(codRet != TODO_OK)
-            {
-                fclose(pPaises);
-                return codRet;
-            }
-        }
-    }
-    fclose(pPaises);
-    return TODO_OK;
+    /* compara dos saldos de continente por el total de crédito. */
+    tSaldoContinente* x=(tSaldoContinente*)a;
+    tSaldoContinente* y=(tSaldoContinente*)b;
+    return (x->credito > y->credito) - (x->credito < y->credito);
 }
-void AcumularSaldosSegunContinente(Vector* vecSaldoContinente, tPais* infoPais,tTransferencia* vecTransferencia)
-{
-    /* actualiza el continente del país con el importe de una transferencia. */
-    int i;
-    for(i=0; i < (int)vectorGetCantElem(vecSaldoContinente); i++)
-    {
-        tSaldoContinente* saldo = vectorGetElementoPorPos(vecSaldoContinente, i);
-        if(compararSinMayusculas(infoPais->continente, saldo->continente) == 0)
-        {
-            saldo->cantRegistros++;
-            if(vecTransferencia->operacion == CREDITO)
-            {
-                saldo->credito += vecTransferencia->monto;
-            }
-            else
-            {
-                saldo->debito += vecTransferencia->monto;
-            }
-            return;
-        }
-    }
-}
+
+/* ======================================================================== */
+/* OPCIÓN 3 - Saldo trimestral por país                                     */
+/* ======================================================================== */
+
 int GenerarArch_SaldoTrimestre(Vector* infoT)
 {
     /* calcula el saldo de cada país separado por trimestre para un año elegido. */
@@ -437,52 +603,6 @@ int GenerarArch_SaldoTrimestre(Vector* infoT)
     return TODO_OK;
 }
 
-
-
-int cmp_CreditoPais(void* a, void* b)
-{
-    /* compara dos saldos de país por el total de crédito. */
-    tSaldoPais* x= (tSaldoPais*)a;
-    tSaldoPais* y= (tSaldoPais*)b;
-    return (x->credito > y->credito) - (x->credito < y->credito);
-}
-int Cmp_TCod(void* a, void* b)
-{
-    /* ordena transferencias por código de país. */
-    tTransferencia* x= (tTransferencia*)a;
-    tTransferencia* y= (tTransferencia*)b;
-    return compararSinMayusculas(x->cod_pais,y->cod_pais);
-}
-int CmpCredito_Continente(void* a, void* b)
-{
-    /* compara dos saldos de continente por el total de crédito. */
-    tSaldoContinente* x=(tSaldoContinente*)a;
-    tSaldoContinente* y=(tSaldoContinente*)b;
-    return (x->credito > y->credito) - (x->credito < y->credito);
-}
-int ValidarRango_Int(int LimI, int LimS)
-{
-    /* lee un entero hasta recibir un valor dentro del rango solicitado. */
-    int dato;
-    int leidos;
-    int c;
-
-    leidos=scanf("%d",&dato);
-    while(leidos!=EOF && (leidos!=1 || dato<LimI || dato>LimS))
-    {
-        /* descarta lo que quedo en el buffer (por ejemplo, letras) */
-        while((c=getchar())!='\n' && c!=EOF);
-
-        printf("\nError - Ingrese un numero entre %d y %d: ",LimI, LimS);
-        leidos=scanf("%d",&dato);
-    }
-
-    /* sin mas entrada disponible se toma el limite superior */
-    if(leidos==EOF)
-        dato=LimS;
-
-    return dato;
-}
 void PonerEnCeroVecFloat(float* vec)
 {
     /* reinicia los cuatro acumuladores trimestrales. */
@@ -495,6 +615,7 @@ void PonerEnCeroVecFloat(float* vec)
         aux++;
     }
 }
+
 void AcumularSaldoTrimestre(tTransferencia* infoT, float* saldoTrimestre,bool* tieneOperacion)
 {
     /* suma créditos y resta débitos en el acumulador del trimestre indicado. */
@@ -532,6 +653,24 @@ void AcumularSaldoTrimestre(tTransferencia* infoT, float* saldoTrimestre,bool* t
         *tieneOperacion=true;
 
 }
+
+/* ======================================================================== */
+/* OPCIÓN 4 - Totales anuales y variación interanual                        */
+/* ======================================================================== */
+
+static float RedondearDosDecimales(float valor)
+{
+    /* redondea un importe a dos decimales evitando truncar valores negativos. */
+    int centesimos;
+
+    if(valor >= 0)
+        centesimos=(int)(valor*100+0.5f);
+    else
+        centesimos=(int)(valor*100-0.5f);
+
+    return (float)centesimos/100;
+}
+
 int GenerarArch_SaldoAnio(Vector* infoT)
 {
     /* agrupa por año, calcula el saldo anual y su variación interanual. */
@@ -596,6 +735,19 @@ int GenerarArch_SaldoAnio(Vector* infoT)
     fclose(pf);
     return TODO_OK;
 }
+
+int Cmp_TAnio(void* a, void* b)
+{
+    /* ordena transferencias cronológicamente por año. */
+    tTransferencia* x= (tTransferencia*)a;
+    tTransferencia* y= (tTransferencia*)b;
+    return x->anio - y->anio;
+}
+
+/* ======================================================================== */
+/* OPCIÓN 5 - Ranking de países por crédito o débito                        */
+/* ======================================================================== */
+
 int GenerarArch_SaldoPais_SegunOperacion(Vector* infoT)
 {
     /* construye un ranking de países según crédito o débito, elegido por el usuario. */
@@ -691,6 +843,27 @@ int GenerarArch_SaldoPais_SegunOperacion(Vector* infoT)
     vectorDestruir(infoP);
     return TODO_OK;
 }
+
+int Cmp_SPCredito(void* a, void* b)
+{
+    /* compara saldos de país por el total de crédito. */
+    tSaldoPais* x=(tSaldoPais*)a;
+    tSaldoPais* y=(tSaldoPais*)b;
+    return (x->credito > y->credito) - (x->credito < y->credito);
+}
+
+int Cmp_SPDebito(void* a, void* b)
+{
+    /* compara saldos de país por el total de débito. */
+    tSaldoPais* x=(tSaldoPais*)a;
+    tSaldoPais* y=(tSaldoPais*)b;
+    return (x->debito > y->debito) - (x->debito < y->debito);
+}
+
+/* ======================================================================== */
+/* OPCIÓN 6 - Participación porcentual por continente                       */
+/* ======================================================================== */
+
 int GenerarArch_SaldoContinentePorcentaje(Vector* infoT)
 {
     /* calcula la participación porcentual de cada continente y la guarda en binario. */
@@ -805,6 +978,34 @@ int GenerarArch_SaldoContinentePorcentaje(Vector* infoT)
 
     return LeerArchivo_PorcentajeContinente();
 }
+
+void CalcularTotalDeOperaciones(Vector* vecT, float* totalDebito, float* totalCredito)
+{
+    /* acumula por separado todos los importes de crédito y débito. */
+    int i;
+    tTransferencia* aux;
+    for(i=0;i<(int)vectorGetCantElem(vecT);i++)
+    {
+        aux=vectorGetElementoPorPos(vecT,i);
+
+        if(aux->operacion==CREDITO)
+            *totalCredito+=aux->monto;
+        else
+            *totalDebito+=aux->monto;
+
+        
+    }
+
+}
+
+int Cmp_Porc_Continente(void* a, void* b)
+{
+    /* ordena porcentajes de continente por nombre. */
+    tPorcentajeContinente* x = (tPorcentajeContinente*)a;
+    tPorcentajeContinente* y = (tPorcentajeContinente*)b;
+    return compararSinMayusculas(x->continente,y->continente);
+}
+
 int LeerArchivo_PorcentajeContinente()
 {
     /* pregunta si se desea leer y mostrar el archivo binario generado. */
@@ -833,9 +1034,32 @@ int LeerArchivo_PorcentajeContinente()
     fclose(pf);
     return TODO_OK;
 }
+
+/* ======================================================================== */
+/* OPCIÓN 7 - Generación de la base larga                                   */
+/* ======================================================================== */
+
 int GenerarArch_BaseLarga(Vector* infoT)
 {
-    /* consolida movimientos por año, trimestre, país y operación, agregando continente. */
+    /* genera transferencias_base_larga.csv (opción 7 del menú).
+
+       a partir de las transferencias originales (infoT) arma una fila por cada
+       combinación de AÑO + TRIMESTRE + PAÍS + OPERACIÓN, con el MONTO sumado, y le
+       agrega el CONTINENTE del país (que se busca en paises_continentes.csv).
+       formato de salida: ANIO;TRIMESTRE;PAIS_COD;PAIS_DESC;CONTINENTE;OPERACION;MONTO
+
+       pasos:
+       1. ordena infoT por año, trimestre, país y operación, para que los registros
+          de una misma combinación queden uno a continuación del otro.
+          OJO: ordena el vector original en el lugar.
+       2. recorre el vector agrupando registros consecutivos con la misma clave
+          y acumulando su monto (si la clave no se repite, el monto queda igual).
+       3. por cada grupo busca el continente y escribe la línea en el archivo.
+
+       esta base es la entrada de las opciones 8 y 9 (promedios), que la leen
+       con CargarInfo_BaseLarga.
+
+       devuelve TODO_OK, o ERROR_ARCH si no pudo abrir alguno de los dos archivos. */
     FILE* pBaseLarga = AbrirArch(ARCH_BASE_LARGA,"wt");
     FILE* pPais=AbrirArch(ARCH_PAISES,"rt");
 
@@ -856,13 +1080,16 @@ int GenerarArch_BaseLarga(Vector* infoT)
         return ERROR_ARCH;
     }
 
+    /* ordena por año, trimestre, código de país y operación */
     vectorOrdenar(infoT,Cmp_Transferencia_VariosCampos,MENOR_A_MAYOR);
 
     fprintf(pBaseLarga,"ANIO;TRIMESTRE;PAIS_COD;PAIS_DESC;CONTINENTE;OPERACION;MONTO\n");
     vecT=vectorGetElementoPorPos(infoT,i);
 
+    /* cada vuelta de este while procesa un grupo (una clave distinta) */
     while(i<ceTransferencia)
     {
+        /* auxT guarda la clave del grupo y acumula el monto */
         auxT.anio=vecT->anio;
         strcpy(auxT.cod_pais,vecT->cod_pais);
         auxT.trimestre=vecT->trimestre;
@@ -870,12 +1097,15 @@ int GenerarArch_BaseLarga(Vector* infoT)
         strcpy(auxT.desc_pais,vecT->desc_pais);
         auxT.monto=0;
 
+        /* mientras el registro tenga la misma clave que el grupo, suma su monto
+           y avanza. al salir, vecT apunta al primer registro del grupo siguiente */
         while(i<ceTransferencia &&  auxT.anio==vecT->anio && auxT.trimestre==vecT->trimestre
                     && auxT.operacion==vecT->operacion  && compararSinMayusculas(auxT.cod_pais,vecT->cod_pais)==0)
         {
             auxT.monto+=vecT->monto;
             vecT=vectorGetElementoPorPos(infoT,++i);
         }
+        /* grupo terminado: busca su continente y escribe la fila */
         EncontrarContinente_SegunPais(continente,&auxT,pPais);
         fprintf(pBaseLarga,"%d;%d;%s;%s;%s;%c;%.2f\n",auxT.anio,auxT.trimestre,auxT.cod_pais,auxT.desc_pais,continente,auxT.operacion,auxT.monto);
     }
@@ -883,64 +1113,6 @@ int GenerarArch_BaseLarga(Vector* infoT)
     fclose(pPais);
 
     return TODO_OK;
-}
-void EncontrarContinente_SegunPais(char* continente, tTransferencia* auxT, FILE* pPais)
-{
-    /* busca en el archivo auxiliar el continente correspondiente al código de país. */
-    bool encontrado=false;
-    tPais vecP;
-    char linea[TAM_LINEA];
-
-    rewind(pPais);
-    fgets(linea,TAM_LINEA,pPais);
-
-    while(!encontrado && fgets(linea,TAM_LINEA,pPais) )
-    {
-        if(trozarCampoVariable_Pais(&vecP,linea) &&
-           compararSinMayusculas(vecP.cod_pais,auxT->cod_pais)==0)
-        {
-            strcpy(continente,vecP.continente);
-            encontrado=true;
-        }
-    }
-
-
-}
-
-int Cmp_TDesc(void* a, void* b)
-{
-    /* ordena transferencias alfabéticamente por descripción de país. */
-    tTransferencia* x = (tTransferencia*)a;
-    tTransferencia* y = (tTransferencia*)b;
-    return compararSinMayusculas(x->desc_pais, y->desc_pais);
-}
-int Cmp_TAnio(void* a, void* b)
-{
-    /* ordena transferencias cronológicamente por año. */
-    tTransferencia* x= (tTransferencia*)a;
-    tTransferencia* y= (tTransferencia*)b;
-    return x->anio - y->anio;
-}
-int Cmp_SPDebito(void* a, void* b)
-{
-    /* compara saldos de país por el total de débito. */
-    tSaldoPais* x=(tSaldoPais*)a;
-    tSaldoPais* y=(tSaldoPais*)b;
-    return (x->debito > y->debito) - (x->debito < y->debito);
-}
-int Cmp_SPCredito(void* a, void* b)
-{
-    /* compara saldos de país por el total de crédito. */
-    tSaldoPais* x=(tSaldoPais*)a;
-    tSaldoPais* y=(tSaldoPais*)b;
-    return (x->credito > y->credito) - (x->credito < y->credito);
-}
-int Cmp_Porc_Continente(void* a, void* b)
-{
-    /* ordena porcentajes de continente por nombre. */
-    tPorcentajeContinente* x = (tPorcentajeContinente*)a;
-    tPorcentajeContinente* y = (tPorcentajeContinente*)b;
-    return compararSinMayusculas(x->continente,y->continente);
 }
 
 int Cmp_Transferencia_VariosCampos(void* a, void* b)
@@ -964,40 +1136,55 @@ int Cmp_Transferencia_VariosCampos(void* a, void* b)
     return 0;
 }
 
-char ValidarChar(char a, char b)
+void EncontrarContinente_SegunPais(char* continente, tTransferencia* auxT, FILE* pPais)
 {
-    /* lee una opción de carácter hasta que coincida con una de las permitidas. */
-    char dato;
-    scanf(" %c",&dato);
-    while(dato!= a && dato!=b)
+    /* busca en paises_continentes.csv el continente del país de 'auxT' (por su
+       PAIS_COD, sin distinguir mayúsculas) y lo copia en 'continente'.
+
+       'pPais' tiene que estar abierto en modo lectura. se vuelve al principio del
+       archivo con rewind en cada llamada y se lee línea por línea hasta encontrar
+       el código; no hay que cargar el archivo completo en memoria.
+       OJO: si el código no figura en el archivo, 'continente' no se modifica
+       (queda con el valor que tenía antes de llamar a la función). */
+    bool encontrado=false;
+    tPais vecP;
+    char linea[TAM_LINEA];
+
+    /* vuelve al inicio y saltea la línea de encabezado */
+    rewind(pPais);
+    fgets(linea,TAM_LINEA,pPais);
+
+    while(!encontrado && fgets(linea,TAM_LINEA,pPais) )
     {
-        printf("\nError - La opcion es %c o %c: ",a,b);
-        scanf(" %c",&dato);
-    }
-    return dato;
-}
-void CalcularTotalDeOperaciones(Vector* vecT, float* totalDebito, float* totalCredito)
-{
-    /* acumula por separado todos los importes de crédito y débito. */
-    int i;
-    tTransferencia* aux;
-    for(i=0;i<(int)vectorGetCantElem(vecT);i++)
-    {
-        aux=vectorGetElementoPorPos(vecT,i);
-
-        if(aux->operacion==CREDITO)
-            *totalCredito+=aux->monto;
-        else
-            *totalDebito+=aux->monto;
-
-        
+        if(trozarCampoVariable_Pais(&vecP,linea) &&
+           compararSinMayusculas(vecP.cod_pais,auxT->cod_pais)==0)
+        {
+            strcpy(continente,vecP.continente);
+            encontrado=true;
+        }
     }
 
+
 }
+
+/* ======================================================================== */
+/* CARGA DE LA BASE LARGA                                                   */
+/* La usan las opciones 8 y 9: CargarBaseLarga (main.c) la carga la         */
+/* primera vez que se elige una de las dos.                                 */
+/* ======================================================================== */
 
 bool trozarCampoVariable_BaseLarga(tBase_Larga* infoBL,char* linea)
 {
-    /* divide una línea de la base larga y convierte sus campos numéricos. */
+    /* separa una línea de transferencias_base_larga.csv y completa tBase_Larga.
+       formato de la línea: ANIO;TRIMESTRE;PAIS_COD;PAIS_DESC;CONTINENTE;OPERACION;MONTO
+
+       es igual a trozarCampoVariable_Transferencia pero con un campo más
+       (CONTINENTE, entre PAIS_DESC y OPERACION). va de derecha a izquierda:
+       copia/convierte lo que hay después del último ';' y lo corta con '\0'.
+       OJO: modifica el contenido de 'linea'. no se valida el contenido de los
+       campos numéricos.
+
+       devuelve true si la línea tenía todos los separadores, false si no. */
     char* aux;
 
     /* la ultima linea del archivo puede no tener '\n' */
@@ -1005,41 +1192,48 @@ bool trozarCampoVariable_BaseLarga(tBase_Larga* infoBL,char* linea)
     if(aux)
         *aux='\0';
 
+    /* 7mo campo (último): MONTO */
     aux=strrchr(linea,';');
     if(!aux)
         return false;
     sscanf(aux+1,"%f",&infoBL->monto);
 
+    /* 6to campo: OPERACION */
     *aux='\0';
     aux=strrchr(linea,';');
     if(!aux)
         return false;
     sscanf(aux+1,"%c",&infoBL->operacion);
 
+    /* 5to campo: CONTINENTE */
     *aux='\0';
     aux=strrchr(linea,';');
     if(!aux)
         return false;
     strcpy(infoBL->continente,aux+1);
 
+    /* 4to campo: PAIS_DESC */
     *aux='\0';
     aux=strrchr(linea,';');
     if(!aux)
         return false;
     strcpy(infoBL->desc_pais,aux+1);
 
+    /* 3er campo: PAIS_COD */
     *aux='\0';
     aux=strrchr(linea,';');
     if(!aux)
         return false;
     strcpy(infoBL->cod_pais,aux+1);
 
+    /* 2do campo: TRIMESTRE */
     *aux='\0';
     aux=strrchr(linea,';');
     if(!aux)
         return false;
     sscanf(aux+1,"%d",&infoBL->trimestre);
 
+    /* lo único que queda en la línea es el primer campo: ANIO */
     *aux='\0';
     sscanf(linea,"%d",&infoBL->anio);
 
@@ -1048,11 +1242,17 @@ bool trozarCampoVariable_BaseLarga(tBase_Larga* infoBL,char* linea)
 
 int CargarInfo_BaseLarga(Vector* infoBS, FILE* pf)
 {
-    /* lee la base larga, descarta líneas inválidas y carga las válidas. */
+    /* carga en el vector 'infoBS' todos los registros de transferencias_base_larga.csv
+       (el archivo que genera la opción 7 del menú).
+
+       'pf' tiene que estar abierto en modo lectura. no lo cierra: lo hace quien lo abrió.
+       devuelve TODO_OK, o el código de error de vectorInsertarFinal (ej: SIN_MEM)
+       si no se pudo agregar un registro. */
     char linea[TAM_LINEA];
     tBase_Larga aux;
     int codRet;
 
+    /* lee el encabezado (ANIO;TRIMESTRE;...) y lo descarta */
     fgets(linea,TAM_LINEA,pf);
 
     while(fgets(linea,TAM_LINEA,pf))
@@ -1069,6 +1269,11 @@ int CargarInfo_BaseLarga(Vector* infoBS, FILE* pf)
 
     return TODO_OK;
 }
+
+/* ======================================================================== */
+/* OPCIÓN 8 - Promedio trimestral por país                                  */
+/* ======================================================================== */
+
 int GenerarArch_Promedio_Pais_Trimestre(Vector* infoBL)
 {
     /* agrupa la base larga por país y operación para calcular promedios. */
@@ -1157,6 +1362,44 @@ int GenerarArch_Promedio_Pais_Trimestre(Vector* infoBL)
 
     return TODO_OK;
 }
+
+int Cmp_BaseLarga_Pais_Operacion(void* a, void* b)
+{
+    /* ordena la base larga por país y luego por tipo de operación. */
+    tBase_Larga* x = (tBase_Larga*)a;
+    tBase_Larga* y = (tBase_Larga*)b;
+
+    if(compararSinMayusculas(x->desc_pais,y->desc_pais)!=0)
+        return compararSinMayusculas(x->desc_pais,y->desc_pais);
+
+    if(x->operacion - y->operacion)
+        return x->operacion - y->operacion;
+
+    return 0;
+
+}
+
+int Cmp_PPT_DescPais(void* a, void* b)
+{
+    /* ordena resultados de promedio por descripción de país. */
+    tPromedio_Pais_Trimestre* x = (tPromedio_Pais_Trimestre*)a;
+    tPromedio_Pais_Trimestre* y = (tPromedio_Pais_Trimestre*)b;
+    return compararSinMayusculas(x->desc_pais,y->desc_pais);
+}
+
+/* NO SE USA ACTUALMENTE en ninguna parte del programa. */
+int Cmp_PPT_PromedioCredito(void* a, void* b)
+{
+    /* compara resultados de promedio usando el promedio de crédito. */
+    tPromedio_Pais_Trimestre* x = (tPromedio_Pais_Trimestre*)a;
+    tPromedio_Pais_Trimestre* y = (tPromedio_Pais_Trimestre*)b;
+    return (x->promedio_credito > y->promedio_credito) - (x->promedio_credito < y->promedio_credito);
+}
+
+/* ======================================================================== */
+/* OPCIÓN 9 - Promedio por continente, operación y año                      */
+/* ======================================================================== */
+
 int GenerarArch_Promedio_Anio_Continente_Op(Vector* infoBL)
 {
     /* agrupa por año, continente y operación para calcular promedios. */
@@ -1206,38 +1449,6 @@ int GenerarArch_Promedio_Anio_Continente_Op(Vector* infoBL)
     return TODO_OK;
 }
 
-
-int Cmp_BaseLarga_Pais_Operacion(void* a, void* b)
-{
-    /* ordena la base larga por país y luego por tipo de operación. */
-    tBase_Larga* x = (tBase_Larga*)a;
-    tBase_Larga* y = (tBase_Larga*)b;
-
-    if(compararSinMayusculas(x->desc_pais,y->desc_pais)!=0)
-        return compararSinMayusculas(x->desc_pais,y->desc_pais);
-
-    if(x->operacion - y->operacion)
-        return x->operacion - y->operacion;
-
-    return 0;
-
-}
-
-int Cmp_PPT_PromedioCredito(void* a, void* b)
-{
-    /* compara resultados de promedio usando el promedio de crédito. */
-    tPromedio_Pais_Trimestre* x = (tPromedio_Pais_Trimestre*)a;
-    tPromedio_Pais_Trimestre* y = (tPromedio_Pais_Trimestre*)b;
-    return (x->promedio_credito > y->promedio_credito) - (x->promedio_credito < y->promedio_credito);
-}
-
-int Cmp_PPT_DescPais(void* a, void* b)
-{
-    /* ordena resultados de promedio por descripción de país. */
-    tPromedio_Pais_Trimestre* x = (tPromedio_Pais_Trimestre*)a;
-    tPromedio_Pais_Trimestre* y = (tPromedio_Pais_Trimestre*)b;
-    return compararSinMayusculas(x->desc_pais,y->desc_pais);
-}
 int Cmp_Prom_ACO(void* a, void* b)
 {
     /* ordena la base larga por año, continente y operación. */
@@ -1256,16 +1467,4 @@ int Cmp_Prom_ACO(void* a, void* b)
 
     return 0;
 
-}
-
-int compararSinMayusculas(const char* c1, const char* c2)
-{
-    /* compara dos cadenas ignorando diferencias entre mayúsculas y minúsculas. */
-    while(*c1 && *c2 && tolower((unsigned char)*c1) == tolower((unsigned char)*c2))
-    {
-        c1++;
-        c2++;
-    }
-
-    return tolower((unsigned char)*c1) - tolower((unsigned char)*c2);
 }
