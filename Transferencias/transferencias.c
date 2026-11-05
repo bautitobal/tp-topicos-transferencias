@@ -55,9 +55,10 @@ FILE* AbrirArch(const char* nombre, const char* modo)
 }
 
 /* USADA EN VARIOS PUNTOS (pide un entero por teclado hasta que esté entre LimI y LimS):
-   - main.c: Menu_Principal (opción del menú, de 1 a 10)
+   - main.c: Menu_Principal (opción del menú, de 1 a 12)
    - opción 3: GenerarArch_SaldoTrimestre (año a consultar)
-   - opción 5: GenerarArch_SaldoPais_SegunOperacion (cantidad de países a listar) */
+   - opción 5: GenerarArch_SaldoPais_SegunOperacion (cantidad de países a listar)
+   - opción 10: RankPorSaldoNeto (año y cantidad de países a mostrar) */
 int ValidarRango_Int(int LimI, int LimS)
 {
     /* lee un entero hasta recibir un valor dentro del rango solicitado. */
@@ -1467,4 +1468,268 @@ int Cmp_Prom_ACO(void* a, void* b)
 
     return 0;
 
+}
+
+/* ======================================================================== */
+/* OPCIÓN 10 - Ranking de países según el saldo neto                        */
+/* ======================================================================== */
+
+int RankPorSaldoNeto(Vector* infoT)
+{
+    /* genera un ranking de países según su saldo neto (créditos - débitos).
+
+       pide un año (o 0 para todo el período) y la cantidad de países a mostrar.
+       usa las transferencias ya cargadas en memoria, no vuelve a leer el CSV.
+       no incluye los códigos agregados W0 (Mundo) y _X (Indeterminado).
+
+       pasos:
+       1. pide y valida el año.
+       2. ordena infoT por código de país (OJO: ordena el vector original en
+          el lugar, igual que las otras opciones) y acumula crédito y débito de
+          cada país, cargando un registro por país en el vector 'ranking'.
+       3. pide y valida la cantidad de países (no puede superar los disponibles).
+       4. ordena 'ranking' por saldo neto, lo muestra y lo destruye.
+
+       devuelve TODO_OK, o SIN_MEM / el código de error de vectorInsertarFinal. */
+    size_t i=0;
+    size_t ce;
+    int anio;
+    int cantPaisesListar;
+    int codRet;
+    float acumC, acumD;
+    bool esAgregado, hayDatos;
+
+    Vector* ranking;
+    tTransferenciaPorMonto aux;
+    tTransferenciaPorMonto* pMonto;
+    tTransferencia* vecT;
+
+    if(!infoT)
+        return SIN_MEM;
+
+    ce = vectorGetCantElem(infoT);
+
+    printf("\nIngrese un anio (%d-%d) o 0 para todo el periodo: ",ANIO_MENOR,ANIO_ACTUAL);
+    anio = ValidarRango_Int(0,ANIO_ACTUAL);
+    while(anio != 0 && anio < ANIO_MENOR)
+    {
+        printf("\nError - Ingrese 0 (todo el periodo) o un anio entre %d y %d: ",ANIO_MENOR,ANIO_ACTUAL);
+        anio = ValidarRango_Int(0,ANIO_ACTUAL);
+    }
+
+    ranking = vectorCrear(CANT_PAISES,sizeof(tTransferenciaPorMonto));
+
+    if(!ranking)
+        return SIN_MEM;
+
+    /* deja juntas las transferencias de un mismo país */
+    vectorOrdenar(infoT,Cmp_TCod,MENOR_A_MAYOR);
+
+    vecT = vectorGetElementoPorPos(infoT,i);
+
+    /* cada vuelta de este while procesa un país */
+    while(i<ce)
+    {
+        strcpy(aux.cod_pais,vecT->cod_pais);
+        strcpy(aux.desc_pais,vecT->desc_pais);
+        acumC = 0;
+        acumD = 0;
+        hayDatos = false;
+        esAgregado = (compararSinMayusculas(aux.cod_pais,COD_MUNDO) == 0 ||
+                      compararSinMayusculas(aux.cod_pais,COD_INDETERMINADO) == 0);
+
+        while(i<ce && compararSinMayusculas(aux.cod_pais,vecT->cod_pais) == 0)
+        {
+            if(!esAgregado && (anio == 0 || vecT->anio == anio))
+            {
+                hayDatos = true;
+                if(vecT->operacion == CREDITO)
+                    acumC += vecT->monto;
+                else
+                    acumD += vecT->monto;
+            }
+            vecT = vectorGetElementoPorPos(infoT,++i);
+        }
+
+        /* sólo entran al ranking los países con movimientos en el año elegido */
+        if(hayDatos)
+        {
+            aux.total_credito = acumC;
+            aux.total_debito = acumD;
+            aux.total_neto = RedondearDosDecimales(acumC - acumD);
+
+            codRet = vectorInsertarFinal(ranking,&aux);
+
+            if(codRet != TODO_OK)
+            {
+                vectorDestruir(ranking);
+                return codRet;
+            }
+        }
+    }
+
+    if(vectorGetCantElem(ranking) == 0)
+    {
+        printf("\nNo hay transferencias para el anio indicado.\n");
+        vectorDestruir(ranking);
+        return TODO_OK;
+    }
+
+    printf("\nIngrese la cantidad de paises para mostrar (1-%d): ",(int)vectorGetCantElem(ranking));
+    cantPaisesListar = ValidarRango_Int(1,(int)vectorGetCantElem(ranking));
+
+    vectorOrdenar(ranking,Cmp_TPM_Neto,MAYOR_A_MENOR);
+
+    printf("\n%-7s %-9s %-40s %14s %14s %14s\n","puesto","PAIS_COD","PAIS_DESC",
+                                                "total_credito","total_debito","saldo_neto");
+    for(i=0;i<(size_t)cantPaisesListar;i++)
+    {
+        pMonto = vectorGetElementoPorPos(ranking,i);
+        printf("%-7d %-9s %-40s %14.2f %14.2f %14.2f\n",(int)i+1,pMonto->cod_pais,pMonto->desc_pais,
+                                                 pMonto->total_credito,pMonto->total_debito,pMonto->total_neto);
+    }
+
+    vectorDestruir(ranking);
+    return TODO_OK;
+}
+
+int Cmp_TPM_Neto(void* a, void* b)
+{
+    /* compara dos países por su saldo neto (crédito - débito). si empatan, el
+       código de país que va antes alfabéticamente se considera "mayor", para que
+       con MAYOR_A_MENOR quede primero en el ranking. */
+    tTransferenciaPorMonto* x = (tTransferenciaPorMonto*)a;
+    tTransferenciaPorMonto* y = (tTransferenciaPorMonto*)b;
+
+    if(x->total_neto != y->total_neto)
+        return (x->total_neto > y->total_neto) - (x->total_neto < y->total_neto);
+
+    return compararSinMayusculas(y->cod_pais,x->cod_pais);
+}
+
+/* ======================================================================== */
+/* OPCIÓN 11 - Evolución anual de las operaciones de un país                */
+/* ======================================================================== */
+
+int EvolucionAnualPais(Vector* infoT)
+{
+    /* muestra, año por año, los créditos, débitos, saldo neto y variación
+       porcentual del saldo de un país elegido por el usuario.
+
+       usa las transferencias ya cargadas en memoria, no vuelve a leer el CSV,
+       y no modifica infoT.
+
+       pasos:
+       1. pide el código de país.
+       2. recorre infoT para comprobar que el país exista y para obtener el
+          primer y el último año de toda la base.
+       3. por cada año entre esos dos (aunque el país no tenga operaciones, en
+          ese caso los importes quedan en cero) acumula crédito y débito, calcula
+          el saldo y la variación respecto del año anterior:
+              variación % = (saldo actual - saldo anterior) / |saldo anterior| * 100
+          - primer año de la serie: no se calcula (SIN_VARIACION).
+          - saldo anterior igual a cero: no es calculable (NO_CALCULABLE).
+
+       si el país no existe avisa por pantalla y vuelve al menú.
+       devuelve TODO_OK, o SIN_MEM si infoT es nulo. */
+    char codIngresado[20];
+    char cod[TAM_COD];
+    char desc[TAM_DESC_PAIS];
+    int c;
+    int anio, anioMin, anioMax;
+    size_t i;
+    size_t ce;
+    bool existe=false;
+    float credito, debito, saldo, variacion;
+    float saldoAnterior=0;
+
+    tTransferencia* vecT;
+
+    if(!infoT)
+        return SIN_MEM;
+
+    ce = vectorGetCantElem(infoT);
+
+    if(ce == 0)
+    {
+        printf("\nNo hay transferencias cargadas.\n");
+        return TODO_OK;
+    }
+
+    printf("\nIngrese el codigo de un pais (por ejemplo CA): ");
+    if(scanf("%19s",codIngresado) != 1)
+        codIngresado[0] = '\0';
+    /* descarta lo que quedó en el buffer (por ejemplo, el enter) */
+    while((c=getchar())!='\n' && c!=EOF);
+
+    vecT = vectorGetElementoPorPos(infoT,0);
+    anioMin = vecT->anio;
+    anioMax = vecT->anio;
+
+    for(i=0;i<ce;i++)
+    {
+        vecT = vectorGetElementoPorPos(infoT,i);
+
+        if(vecT->anio < anioMin)
+            anioMin = vecT->anio;
+        if(vecT->anio > anioMax)
+            anioMax = vecT->anio;
+
+        if(!existe && compararSinMayusculas(codIngresado,vecT->cod_pais) == 0)
+        {
+            existe = true;
+            strcpy(cod,vecT->cod_pais);
+            strcpy(desc,vecT->desc_pais);
+        }
+    }
+
+    if(!existe)
+    {
+        printf("\nEl pais con codigo \"%s\" no existe en la base de datos.\n",codIngresado);
+        return TODO_OK;
+    }
+
+    printf("\n%-9s %-40s %-6s %14s %14s %14s %14s\n","PAIS_COD","PAIS_DESC","ANIO",
+                                                      "total_credito","total_debito","saldo_neto","VAR_PCT_SALDO");
+
+    for(anio=anioMin;anio<=anioMax;anio++)
+    {
+        credito = 0;
+        debito = 0;
+
+        for(i=0;i<ce;i++)
+        {
+            vecT = vectorGetElementoPorPos(infoT,i);
+
+            if(vecT->anio == anio && compararSinMayusculas(cod,vecT->cod_pais) == 0)
+            {
+                if(vecT->operacion == CREDITO)
+                    credito += vecT->monto;
+                else
+                    debito += vecT->monto;
+            }
+        }
+
+        saldo = RedondearDosDecimales(credito - debito);
+
+        printf("%-9s %-40s %-6d %14.2f %14.2f %14.2f ",cod,desc,anio,credito,debito,saldo);
+
+        if(anio == anioMin)
+        {
+            printf("%14s\n",SIN_VARIACION);
+        }
+        else if(saldoAnterior == 0)
+        {
+            printf("%14s\n",NO_CALCULABLE);
+        }
+        else
+        {
+            variacion = (saldo - saldoAnterior) / (saldoAnterior < 0 ? -saldoAnterior : saldoAnterior) * 100;
+            printf("%14.2f\n",variacion);
+        }
+
+        saldoAnterior = saldo;
+    }
+
+    return TODO_OK;
 }

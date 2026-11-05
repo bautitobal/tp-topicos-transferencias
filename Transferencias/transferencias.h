@@ -43,6 +43,9 @@
 #define MAYOR_A_MENOR 2
 
 #define SIN_VARIACION "NA"
+#define COD_MUNDO "W0"
+#define COD_INDETERMINADO "_X"
+#define NO_CALCULABLE "N/C"
 
 int compararSinMayusculas(const char* cadena1, const char* cadena2);
 
@@ -115,6 +118,14 @@ typedef struct
     float monto;
 }tBase_Larga;
 
+typedef struct{
+    char cod_pais[TAM_COD];
+    char desc_pais[TAM_DESC_PAIS];
+    float total_credito;
+    float total_debito;
+    float total_neto;
+} tTransferenciaPorMonto;
+
 /* Los prototipos siguen el mismo orden que las funciones en transferencias.c */
 
 /* ---- funciones compartidas (se usan desde más de un punto) ----
@@ -178,5 +189,12 @@ int Cmp_PPT_PromedioCredito(void* a, void* b);
 /* ---- opción 9: promedio por continente, operación y año ---- */
 int GenerarArch_Promedio_Anio_Continente_Op(Vector* baseLarga);
 int Cmp_Prom_ACO(void* a, void* b);
+
+/* ---- opción 10: ranking de países según el saldo neto ---- */
+int RankPorSaldoNeto(Vector* infoT);
+int Cmp_TPM_Neto(void*, void*);
+
+/* ---- opción 11: evolución anual de las operaciones de un país ---- */
+int EvolucionAnualPais(Vector* infoT);
 
 #endif

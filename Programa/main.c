@@ -57,7 +57,7 @@ int Menu_Principal() /*Llama al menú principal el cual se ejecuta constantement
     }
 
     MostrarMenu(); 
-    opcion=ValidarRango_Int(1,10); 
+    opcion=ValidarRango_Int(1,12); 
 
     while(compararSinMayusculas(respuesta_para_seguir,"No")!=0)
     {
@@ -102,6 +102,14 @@ int Menu_Principal() /*Llama al menú principal el cual se ejecuta constantement
                     break;
 
             case 10:
+                    codRet = RankPorSaldoNeto(infoT);
+                    break;
+
+            case 11:
+                    codRet = EvolucionAnualPais(infoT);
+                    break;
+
+            case 12:
                     strcpy(respuesta_para_seguir,"No");
                     puts("Programa finalizado correctamente\n");
                     break;
@@ -118,7 +126,7 @@ int Menu_Principal() /*Llama al menú principal el cual se ejecuta constantement
         if(compararSinMayusculas(respuesta_para_seguir,"Si")==0)
         {
             MostrarMenu();
-            opcion=ValidarRango_Int(1,10);
+            opcion=ValidarRango_Int(1,12);
         }
     }
     vectorDestruir(infoT);
@@ -139,10 +147,12 @@ void MostrarMenu()
     puts("\n7. Generacion del archivo intermedio transferencias_base_larga.csv.");
     puts("\n8. Promedio trimestral por pais");
     puts("\n9. Promedio trimestral por continente, operacion y anio.");
-    puts("\n10. Salir.");
+    puts("\n10. Ranking de paises segun saldo neto.");
+    puts("\n11. Evolucion anual de las operaciones de un pais.");
+    puts("\n12. Salir.");
     puts("\n");
 
-    printf("\nIngrese una opcion (10 para salir): ");
+    printf("\nIngrese una opcion (12 para salir): ");
 }
 
 int CargarBaseLarga(Vector** infoBL)
